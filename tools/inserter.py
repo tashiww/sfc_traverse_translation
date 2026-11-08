@@ -29,6 +29,39 @@ CONTROL_CODES = {
     "<wait_auto>": bytes([0xFE, 0x00]),
     "<end_dlg>": bytes([0xFF]),
     "<wait_btn>": bytes([0xFE, 0x00]),
+    "<wait_prompt>": bytes([0xFE, 0x00]),
+}
+
+# Special Token Visual Widths (in pixels) for Proportional Word-Wrapping
+SPECIAL_TOKEN_WIDTHS = {
+    # Control codes (0 visual width)
+    "<wait_auto>": 0,
+    "<wait_btn>": 0,
+    "<wait_prompt>": 0,
+    "<end_dlg>": 0,
+    "<br>": 0,
+    "<page>": 0,
+    # Equipment Icons (16x16 native font glyphs)
+    "[Sword]": 16,
+    "[Axe]": 16,
+    "[Shield]": 16,
+    "[Armor]": 16,
+    # Dynamic user-supplied names (estimated pixel budget for pre-break)
+    "[protag]": 48, # ~6-8 letters
+    "[sub]": 48,
+    "[pet]": 40,
+    # Native Japanese symbols / full-width characters (16 px)
+    "★": 16,
+    "☆": 16,
+    "「": 16,
+    "」": 16,
+    "…": 16,
+    "・": 16,
+    "、": 16,
+    "。": 16,
+    "！": 16,
+    "？": 16,
+    "ー": 16,
 }
 
 def load_char_widths() -> dict:
@@ -122,8 +155,8 @@ def word_wrap_text(text: str, max_px: int = 216, char_widths: dict = None) -> st
             if not line:
                 continue
 
-            # Tokenize by words and tags
-            tokens = re.findall(r"<[^>]+>|\S+|\s+", line)
+            # Tokenize by tags (<...>, [...]), words, or whitespace
+            tokens = re.findall(r"<[^>]+>|\[[^\]]+\]|\S+|\s+", line)
             cur_line = []
             cur_line_px = 0
 
@@ -133,7 +166,12 @@ def word_wrap_text(text: str, max_px: int = 216, char_widths: dict = None) -> st
                     cur_line.append(tok)
                     continue
 
-                tok_px = sum(char_widths.get(c, 6) for c in tok)
+                if tok in SPECIAL_TOKEN_WIDTHS:
+                    tok_px = SPECIAL_TOKEN_WIDTHS[tok]
+                elif tok.isspace():
+                    tok_px = sum(char_widths.get(c, 4) for c in tok)
+                else:
+                    tok_px = sum(SPECIAL_TOKEN_WIDTHS.get(c, char_widths.get(c, 6)) for c in tok)
 
                 if tok.isspace():
                     # Whitespace
@@ -146,7 +184,7 @@ def word_wrap_text(text: str, max_px: int = 216, char_widths: dict = None) -> st
                         cur_line = []
                         cur_line_px = 0
                 else:
-                    # Normal word
+                    # Normal word or token
                     if cur_line_px + tok_px <= max_px or cur_line_px == 0:
                         cur_line.append(tok)
                         cur_line_px += tok_px
@@ -165,24 +203,31 @@ def word_wrap_text(text: str, max_px: int = 216, char_widths: dict = None) -> st
 
 
 def encode_dialogue_string(text: str, rev_tbl: dict = None) -> bytes:
-    """Encodes translated dialogue string with control codes and ASCII/Japanese characters."""
+    """Encodes translated dialogue string with control codes, tags, and ASCII/Japanese characters."""
     res = bytearray()
-    token_re = re.compile(r"<([^>]+)>|.")
+    token_re = re.compile(r"<([^>]+)>|\[([^\]]+)\]|.")
 
     for m in token_re.finditer(text):
-        tag = m.group(1)
+        tag_angle = m.group(1)
+        tag_bracket = m.group(2)
         ch = m.group(0)
 
-        if tag is not None:
-            full_tag = f"<{tag}>"
+        if tag_angle is not None:
+            full_tag = f"<{tag_angle}>"
             if full_tag in CONTROL_CODES:
                 res.extend(CONTROL_CODES[full_tag])
             else:
                 # Try hex tag <FCAD>, <00>, etc.
                 try:
-                    res.extend(bytes.fromhex(tag))
+                    res.extend(bytes.fromhex(tag_angle))
                 except ValueError:
                     res.extend(full_tag.encode("ascii", "replace"))
+        elif tag_bracket is not None:
+            full_tag = f"[{tag_bracket}]"
+            if rev_tbl and full_tag in rev_tbl:
+                res.extend(rev_tbl[full_tag])
+            else:
+                res.extend(full_tag.encode("ascii", "replace"))
         else:
             if ch == "\n":
                 res.append(0xFF) # Line break in Traverse
