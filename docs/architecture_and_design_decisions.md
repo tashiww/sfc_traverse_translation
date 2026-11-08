@@ -1,0 +1,162 @@
+# Traverse: Starlight & Prairie - Master Architecture & Design Decisions Reference
+
+**Last Updated:** November 2026  
+**Target Platform:** Super Nintendo Entertainment System (SNES) — HiROM FastROM 4MB  
+**Clean ROM Checksum:** CRC32 `739D115C`, SHA1 `5639BF450D268EFE486B2A8C1AE930CD18C3B3BE`  
+**Git Author:** `tashiww <moetashi@gmail.com>`  
+
+---
+
+## 1. Character Encoding Architecture & The "ASCII vs Native" Truth
+
+Consoles are not ASCII terminals; the SNES PPU displays text by indexing VRAM tile numbers. To prevent engine bugs, collisions, and soft-locks, *Traverse* uses multiple distinct, purpose-built character mapping subsystems.
+
+### 1.1 Traverse Native Character Table (The ROM Hardware Codepage)
+Clean Japanese *Traverse* uses a native character table (`tables/ja_tbl.tbl` / `tables/old_ref_table.tbl`):
+* `0x00`: **Native Space / Indentation**.
+* `0x01`–`0x0A`: Digits `0` through `9`.
+* `0x0B`–`0x24`: Uppercase letters `A` through `Z` (native 8x16 font glyphs).
+* `0x86`: Japanese Exclamation mark (`！`).
+* `0x87`: Japanese Question mark (`？`).
+* `0x88`: Japanese Comma (`、`).
+* `0x89`: Japanese Period (`。`).
+* `0x8A`: Japanese Dash (`ー`).
+* `0x8C`: Japanese Dot (`・`).
+* `0x8B`: Blank tile / filler byte (used on naming screen).
+* `0xFB`, `0xFC`, `0xFD`: 2-byte Kanji page prefix bytes.
+* `0xFE`: Box wait / pause / advance / close dialogue box.
+* `0xFF`: Newline / string terminator.
+
+> [!WARNING]
+> **Why Forcing Standard ASCII Directly on the Native Engine Caused Bugs Earlier:**
+> 1. Treating `0x00` as a null-terminator caused runaway screen scrolling, because Traverse uses `0x00` for native leading space indentation.
+> 2. Punctuation (`!`, `?`, `-`, `.`) does not exist at ASCII positions (`0x21`, `0x3F`) in the native 8x16 font; it lives at `$86`, `$87`, `$8A`, `$8C`.
+> 3. Single-byte Hiragana starts at `0x30`–`0x5C`. If the native font receives ASCII bytes (`A`–`Z` = `0x41`–`0x5A`), it prints Hiragana instead of English.
+
+---
+
+### 1.2 Subsystem A: Dialogue VWF Engine (`RenderEnglishVWF`)
+* **Location in ROM:** Bank `$CA` (`$CA:8000`+, PC `0x0A8000`).
+* **Hook Point:** `$C0:F511` (replaces native fixed-width caller `JSL $DC:CA99`).
+* **Encoding Format in Script Files:** Clean UTF-8 text in `.txt` files.
+* **Internal Font Mapping:**
+  * Uses a dedicated 96-glyph proportional font in Bank `$CA` (`asm/vwf/vwf_font.bin` and `vwf_widths.bin`).
+  * Index 0 corresponds to ASCII space (`0x20`), Index 1 to `!`, up to Index 94 (`~`).
+* **Dual-Space Compatibility:**
+  * Both native space (`0x00`) and ASCII space (`0x20`) invoke `AdvanceSpace` (`cursor_x += 4px`), completely eliminating the null-terminator collision bug.
+* **Intelligent Dual-Language Detection:**
+  * Scans the string at `[$A3]`. If Kanji prefixes (`$FB`–`$FD`) or untranslated Japanese character codes are detected, it executes `JML $DCCA99` to fall back to the native Japanese fixed-width renderer.
+  * English text is rendered through the VWF sub-pixel rasterizer. Untranslated Japanese scenes never display jumbled English characters.
+* **Dynamic Player Name Expansion:**
+  * `$F0` = Protagonist name (`[protag]`, read from `$7E:EEC9`).
+  * `$F1` = Sub-protagonist name (`[sub]`, read from `$7E:EED2`).
+  * `$F2` = Pet name (`[pet]`, read from `$7E:EEDB`).
+  * Real-time decoding: Translates native naming codes (`$0B`–`$24` -> `A`–`Z`, `$01`–`$0A` -> `0`–`9`, `$8A` -> `-`, `$8C` -> `.`) directly into VWF glyphs on the fly.
+
+---
+
+### 1.3 Subsystem B: Character Naming Screen & Input Grid
+* **Grid Table:** Bank `$DB` at `$DB:A782` (PC `0x1BA782`).
+  * Page 0 (9 rows × 10 cols) was rewired from Hiragana to English:
+    * Row 0: `A B C D E F G H I J` (`$0B`–`$14`)
+    * Row 1: `K L M N O P Q R S T` (`$15`–`$1E`)
+    * Row 2: `U V W X Y Z - . ! ?` (`$1F`–`$24`, `$8A`, `$8C`, `$86`, `$87`)
+    * Row 3: `0 1 2 3 4 5 6 7 8 9` (`$01`–`$0A`)
+    * Rows 4–8: Blank cells (`$00`).
+* **Default Character Names in ROM:** Bank `$DB` at `$DB:B7CA` (PC `0x1BB7CA`).
+  * Protagonist 1 (Gant): `$11, $0B, $18, $1E, $8B, $8B, $8B, $8B, $FF`
+  * Protagonist 2 Sub (Sonia): `$1D, $19, $18, $13, $0B, $8B, $8B, $8B, $FF`
+  * Pet (Boancho): `$0C, $19, $0B, $18, $0D, $12, $19, $8B, $FF`
+
+---
+
+### 1.4 Subsystem C: 8x8 Menu Font
+* **Location in ROM:** PC `0x00A39A` (SNES `$C0:A39A`, 1,104 bytes, 69 tiles).
+* **Format:** 2bpp SNES tiles, duplicated nibble (`(nibble << 4) | nibble`).
+* **Glyph Set:**
+  * Punctuation: `, . : / - !` and space.
+  * Digits: `0`–`9`.
+  * Uppercase: `A`–`Z`.
+  * Lowercase: `a`–`z`.
+* **Generator:** [`tools/build_font8x8.py`](tools/build_font8x8.py).
+* **Used by:** Save/load screen, date/time HUD, equipment menus, world map banner, shop listings.
+
+---
+
+### 1.5 Subsystem D: World Map & Geographic Location Tables
+* **Location in ROM:** Bank `$C1` (`$C1:4300`, PC `0x014300`).
+* **Table Structure:** 60 16-bit big-endian pointers (`ptr_type: "16bit_be"`).
+* **String Allocation:** Relocated to Bank `$C1` free space pool at PC `0x015D00` (8,960 bytes available; 60 locations consume 715 bytes).
+* **Tomria Town Bugfix:** The clean Japanese ROM contained a typo at `0x01432C` (`45 00` instead of `46 00`). Our inserter rewrites the pointer to point to `"Tomria Town"` in Bank `$C1` free space.
+
+---
+
+## 2. Typography & Rendering Standards
+
+Across both the 16x16 dialogue VWF and the 8x8 menu font, strict typography rules are enforced:
+
+| Property | Rule / Dimension | Purpose |
+|---|---|---|
+| **Baseline** | **Row 6** strictly across ALL characters | Prevents letters from "jumping" or uneven baselines |
+| **Cap-Height** | Rows 0–6 (7px tall) or Rows 1–6 (6px tall) | Clean, bold uppercase readability |
+| **x-Height** | Rows 3–6 (4px tall) | Balanced lowercase proportions |
+| **Ascenders** | Rows 0–6 or 1–6 (b, d, f, h, k, l, t) | Clear visual distinction from x-height |
+| **Descenders** | Row 7 (g, j, p, q, y, commas) | Extends naturally below baseline |
+| **Drop Shadow** | 1px Right + 1px Down exterior shadow | Masked via `Plane 1 &= ~Plane 0` to prevent self-shadowing |
+| **Dialogue Width** | Max line width 216px (27 8x8 tile columns) | Leaves 16px margin on right edge of window |
+
+---
+
+## 3. Tooling & Script Editor Compatibility (`tashi_script_editor`)
+
+The Python build system is 100% compatible with the user's 10-year-old C# translation editor (`tashi_script_editor`) without modifying or recompiling the C# application.
+
+### 3.1 Script File Parsing & Serialization
+* **Format:**
+  ```json
+  {"prefix":"","ptr_pos":82688,"str_pos":83290,"ptr_hex":"14300","str_hex":"1455A","table":"menu","repoint":false,"ptr_type":"16bit_be"}
+  # ドトキアの街 (length: 6, max_len: 16)
+  Dotkia Town
+  ```
+* **Handling Omitted Fields:**
+  The C# editor serializes `ptr_pos` as a decimal integer and omits `length` / `max_len`. [`tools/inserter.py`](tools/inserter.py) extracts `length` and `max_len` directly from the `# (length: X, max_len: Y)` comment line whenever they are absent in the JSON header.
+* **File Precedence:**
+  Whenever a file named `translated_<name>.txt` exists in `translations/`, the inserter automatically loads it and suppresses the untranslated `<name>.txt` template.
+* **"Normal" vs "Menu" Toggle Support:**
+  * **Entry Level:** If an entry has `"table": "menu"`, it is encoded as single-line UI text without paragraph word-wrapping. If `"table": "normal"`, it is word-wrapped to 216px for dialogue VWF.
+  * **File Level:** If an entry omits `"table"`, the file defaults naturally (`dialogue_*.txt` &rarr; `"normal"`, `location_names.txt` &rarr; `"menu"`).
+
+---
+
+## 4. Memory Pools & Free Space Allocation
+
+| Bank | PC Range | SNES Range | Capacity | Current Content |
+|---|---|---|---|---|
+| **Bank `$CA`** | `0x0A0000`–`0x0AFFFF` | `$CA:8000`–`$CA:FFFF` | 65,536 B | VWF rasterizer engine code, VWF 2bpp glyph bitmaps, width tables, scenario dialogue overflow |
+| **Bank `$C1`** | `0x015D00`–`0x017FFF` | `$C1:DD00`–`$C1:FFFF` | 8,960 B | 60 world map location names, 16-bit big-endian pointer table targets |
+| **Bank `$DB`** | `0x1BF530`–`0x1BFFFF` | `$DB:F530`–`$DB:FFFF` | 2,768 B | Opening prologue dialogue stream at `0x1BAA0F`, naming screen grid table at `0x1BA782`, default names at `0x1BB7CA` |
+
+---
+
+## 5. Story, Characters & Canonical Lore
+
+* **Protagonist:** **Gant** (Default hero)
+* **Sub-Protagonist:** **Sonia** (Default companion)
+* **Pet:** **Boancho** (Default pet)
+* **Father:** **Galahad** (Retired hero turned alcoholic)
+* **Mother:** **Remy** (Galahad's wife, died in childbirth)
+
+---
+
+## 6. Build & Release Automation
+
+```bash
+# Full clean additive build from clean Japanese ROM + release patch generation:
+python3 build.py --patch
+```
+
+* **Clean ROM Verification:** CRC32 `739D115C`
+* **Asar 65816 Assembly:** Assembles `asm/main.asm` (hooks `asm/vwf/vwf.asm`, injects `font8x8.bin`, reconfigures naming grid).
+* **Script & Table Insertion:** Inserts dialogue streams, menu strings, and Bank `$C1` locations via `tools/inserter.py`.
+* **Checksum Recalculation:** Automatically updates SNES header checksum and complement.
+* **Patch Generation:** Produces clean release patches in `patches/*.bps` and `patches/*.ips`.
