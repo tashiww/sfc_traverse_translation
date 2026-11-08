@@ -87,8 +87,153 @@ RenderEnglishVWF:
     LDY #$0000
     BRA .char_loop
 
-.handle_space:
-    ; Space: advance cursor_x by 4 pixels without drawing:
+.char_loop:
+    SEP #$20            ; 8-bit A
+    LDA [$A3],Y
+    INY
+    CMP #$FF            ; End of line / newline
+    BNE +
+    JMP .line_done
++   CMP #$FE            ; End of dialogue box
+    BNE +
+    JMP .hit_fe
++   CMP #$F0            ; Dynamic character name tags ($F0 = protag, $F1 = sub, $F2 = pet)
+    BCC +
+    CMP #$F3
+    BCS +
+    JMP .handle_var_name
++   CMP #$00            ; Traverse space
+    BNE +
+    JSR AdvanceSpace
+    BRA .char_loop
++   CMP #$20            ; ASCII space
+    BNE +
+    JSR AdvanceSpace
+    BRA .char_loop
++   CMP #$21
+    BCC .char_loop      ; Skip unprintable
+    CMP #$7F
+    BCS .char_loop      ; Skip non-ASCII
+
+    ; Printable ASCII character (0x21 - 0x7E)
+    JSR DrawSingleChar
+    BRA .char_loop
+
+; ----------------------------------------------------------------------------
+; Dynamic Variable Name Expansion ($F0=[protag], $F1=[sub], $F2=[pet])
+; ----------------------------------------------------------------------------
+.handle_var_name:
+    ; A has $F0 ($7E:EEC9), $F1 ($7E:EED2), or $F2 ($7E:EEDB)
+    CMP #$F0
+    BNE +
+    LDX #$EEC9
+    BRA .got_var_buf
++   CMP #$F1
+    BNE +
+    LDX #$EED2
+    BRA .got_var_buf
++   LDX #$EEDB
+.got_var_buf:
+    PHY                 ; Save caller string offset Y
+.var_char_loop:
+    SEP #$20            ; 8-bit A
+    LDA.l $7E0000,X     ; Read character from WRAM buffer ($7E:EEC9, etc.)
+    INX
+    CMP #$FF            ; End of name marker
+    BEQ .var_done
+    CMP #$00            ; Null terminator
+    BEQ .var_done
+    CMP #$8B            ; Japanese blank filler
+    BEQ .var_done
+    CMP #$20            ; ASCII space
+    BNE +
+    JSR AdvanceSpace
+    BRA .var_char_loop
++   CMP #$21
+    BCC .var_char_loop  ; Skip unprintable
+    CMP #$7F
+    BCS .var_char_loop  ; Skip non-ASCII
+    JSR DrawSingleChar
+    BRA .var_char_loop
+.var_done:
+    PLY                 ; Restore caller string offset Y
+    JMP .char_loop
+
+.hit_fe:
+    DEY                 ; Back up Y so caller peeks 0xFE
+    BRA .line_done
+
+.line_done:
+    ; If typewriter was not active, trigger one frame DMA to commit VRAM:
+    SEP #$20            ; 8-bit A
+    LDA $A6
+    BNE +
+    STZ $B8
+    STZ $B6             ; Mode 0: glyph buffer DMA
+    LDA.l $004210
+-   LDA.l $004210
+    BPL -
++
+
+    ; Calculate total consumed tile columns:
+    ; total_cols = (cursor_x + 7) >> 3
+    REP #$20            ; 16-bit A
+    LDA $E0             ; cursor_x
+    CLC
+    ADC #$0007
+    LSR : LSR : LSR     ; total_cols
+    BNE +
+    LDA #$0001          ; At least 1 column
++   STA $EE             ; Store total_cols in $EE
+
+    ; Clean up any speculative columns (from total_cols to max_col):
+    ; If max_col >= total_cols, clear those tilemap entries to $0000 so
+    ; the next line's first tile never ghosts onto the end of this line!
+-   LDA $DE             ; max_col
+    CMP $EE             ; vs total_cols
+    BCC .cols_cleaned   ; if max_col < total_cols, done!
+    ASL                 ; max_col * 2
+    CLC
+    ADC $E8             ; + x_start ($E8)
+    TAX
+    LDA #$0000
+    STA $7EC780,X       ; Clear Top tilemap entry
+    STA $7EC7C0,X       ; Clear Bottom tilemap entry
+    DEC $DE             ; max_col--
+    BRA -
+
+.cols_cleaned:
+    ; Update caller Base Tile ID:
+    ; Base Tile ID += total_cols * 2
+    REP #$20            ; 16-bit A
+    LDA $EE             ; Explicitly reload total_cols!
+    ASL                 ; total_cols * 2
+    SEP #$20            ; 8-bit A
+    CLC
+    ADC $06,S           ; caller Base Tile ID (offset $06,S)
+    STA $06,S           ; Updated Base Tile ID!
+
+    ; Compute final tilemap offset for caller:
+    ; X = x_start + (total_cols * 2)
+    REP #$20            ; 16-bit A
+    LDA $EE             ; total_cols
+    ASL                 ; total_cols * 2
+    CLC
+    ADC $E8             ; + x_start ($E8)
+    TAX                 ; X = final tilemap byte offset!
+
+    ; Restore caller DB and P:
+    SEP #$20            ; 8-bit A
+    REP #$10            ; 16-bit X, Y
+    PLB
+    PLP
+    RTL
+
+; ----------------------------------------------------------------------------
+; AdvanceSpace:
+; Advances cursor_x by 4 pixels and initializes newly crossed tile columns.
+; ----------------------------------------------------------------------------
+AdvanceSpace:
     REP #$20            ; 16-bit A
     LDA $E0             ; cursor_x
     CLC
@@ -102,30 +247,21 @@ RenderEnglishVWF:
     BEQ +
     JSR InitTileColumn
     STA $DE             ; max_col updated
-+   BRA .char_loop
++   SEP #$20            ; 8-bit A
+    RTS
 
-.char_loop:
-    SEP #$20            ; 8-bit A
-    LDA [$A3],Y
-    INY
-    CMP #$FF            ; End of line / newline
-    BNE +
-    JMP .line_done
-+   CMP #$FE            ; End of dialogue box
-    BNE +
-    JMP .hit_fe
-+   CMP #$00            ; Traverse space
-    BEQ .handle_space
-    CMP #$20            ; ASCII space
-    BEQ .handle_space
-    CMP #$21
-    BCC .char_loop      ; Skip unprintable
-    CMP #$7F
-    BCS .char_loop      ; Skip non-ASCII
-
-    ; Printable ASCII character (0x21 - 0x7E)
+; ----------------------------------------------------------------------------
+; DrawSingleChar:
+; Real-time 2bpp sub-pixel VWF glyph rasterizer with exterior drop shadow
+; Input:
+;   A = ASCII character code (0x21 - 0x7E)
+; Preserves:
+;   Caller X, Y
+; ----------------------------------------------------------------------------
+DrawSingleChar:
     STA $F0             ; Save ASCII character in $F0
-    PHY                 ; Save string offset Y (16-bit)
+    PHY                 ; Save caller Y
+    PHX                 ; Save caller X
 
     ; Look up character width:
     SEC
@@ -228,13 +364,6 @@ RenderEnglishVWF:
 .do_tick:
     PHA                 ; Save typewriter code on stack (1 byte)
 
-    ; Set Y to point to current character in [$A3] (saved_Y - 1):
-    REP #$20            ; 16-bit A
-    LDA $02,S           ; Saved string offset Y (pushed at line start)
-    DEC A
-    TAY                 ; Y points to the character in [$A3]
-    SEP #$20            ; 8-bit A
-
     PHB                 ; Save DB ($CA)
     PEA $0000 : PLB : PLB ; DB = $00
 
@@ -245,78 +374,9 @@ RenderEnglishVWF:
     PLA                 ; Clean up pushed code
 
 .skip_tw:
-    PLY                 ; Restore string offset Y (16-bit)
-    JMP .char_loop
-
-.hit_fe:
-    DEY                 ; Back up Y so caller peeks 0xFE
-    BRA .line_done
-
-.line_done:
-    ; If typewriter was not active, trigger one frame DMA to commit VRAM:
-    SEP #$20            ; 8-bit A
-    LDA $A6
-    BNE +
-    STZ $B8
-    STZ $B6             ; Mode 0: glyph buffer DMA
-    LDA.l $004210
--   LDA.l $004210
-    BPL -
-+
-
-    ; Calculate total consumed tile columns:
-    ; total_cols = (cursor_x + 7) >> 3
-    REP #$20            ; 16-bit A
-    LDA $E0             ; cursor_x
-    CLC
-    ADC #$0007
-    LSR : LSR : LSR     ; total_cols
-    BNE +
-    LDA #$0001          ; At least 1 column
-+   STA $EE             ; Store total_cols in $EE
-
-    ; Clean up any speculative columns (from total_cols to max_col):
-    ; If max_col >= total_cols, clear those tilemap entries to $0000 so
-    ; the next line's first tile never ghosts onto the end of this line!
--   LDA $DE             ; max_col
-    CMP $EE             ; vs total_cols
-    BCC .cols_cleaned   ; if max_col < total_cols, done!
-    ASL                 ; max_col * 2
-    CLC
-    ADC $E8             ; + x_start ($E8)
-    TAX
-    LDA #$0000
-    STA $7EC780,X       ; Clear Top tilemap entry
-    STA $7EC7C0,X       ; Clear Bottom tilemap entry
-    DEC $DE             ; max_col--
-    BRA -
-
-.cols_cleaned:
-    ; Update caller Base Tile ID:
-    ; Base Tile ID += total_cols * 2
-    REP #$20            ; 16-bit A
-    LDA $EE             ; Explicitly reload total_cols!
-    ASL                 ; total_cols * 2
-    SEP #$20            ; 8-bit A
-    CLC
-    ADC $06,S           ; caller Base Tile ID (offset $06,S)
-    STA $06,S           ; Updated Base Tile ID!
-
-    ; Compute final tilemap offset for caller:
-    ; X = x_start + (total_cols * 2)
-    REP #$20            ; 16-bit A
-    LDA $EE             ; total_cols
-    ASL                 ; total_cols * 2
-    CLC
-    ADC $E8             ; + x_start ($E8)
-    TAX                 ; X = final tilemap byte offset!
-
-    ; Restore caller DB and P:
-    SEP #$20            ; 8-bit A
-    REP #$10            ; 16-bit X, Y
-    PLB
-    PLP
-    RTL
+    PLX                 ; Restore caller X
+    PLY                 ; Restore caller Y
+    RTS
 
 ; ----------------------------------------------------------------------------
 ; Subroutine: InitTileColumn
