@@ -146,6 +146,66 @@ def dump_item_tables(data: bytes, out_file: Path, tbl: dict = None):
     print(f"Dumped {total} item/equipment strings to {out_file.relative_to(ROOT_DIR)}")
 
 
+def dump_location_names(data: bytes, out_file: Path, tbl: dict = None):
+    """
+    Dumps the 60 world map location names from Bank $C1 (0x014300 / 0x01455A).
+    Formatted for tashi_script_editor with JSON metadata, #JP comments, length & max_len.
+    Translates Index 22 ('トムリアの街' -> 'Tomria') as a working test.
+    """
+    ptr_table_base = 0x014300
+    num_entries = 60
+
+    with open(out_file, "w", encoding="utf-8") as f:
+        for i in range(num_entries):
+            ptr_pos = ptr_table_base + i * 2
+            b0 = data[ptr_pos]
+            b1 = data[ptr_pos + 1]
+            offset = (b0 << 8) | b1
+            # Entry 22 bugfix: 0x4500 is a ROM typo, real string is at 0x4600
+            if i == 22 and offset == 0x4500:
+                offset = 0x4600
+
+            str_pos = 0x010000 + offset
+            end = data.find(b"\xFF", str_pos)
+            raw = data[str_pos:end]
+
+            # Decode characters
+            jp_text = ""
+            for b in raw:
+                hk = f"{b:02x}"
+                if tbl and hk in tbl:
+                    jp_text += tbl[hk]
+                else:
+                    jp_text += f"[{hex(b)}]"
+
+            # Estimate max_len in 8x16 VWF: ~16 characters fit easily on world map header
+            max_len = 16
+
+            meta = {
+                "str_num": i,
+                "prefix": "",
+                "ptr_pos": ptr_pos,
+                "str_pos": str_pos,
+                "ptr_hex": f"0x{ptr_pos:06X}",
+                "str_hex": f"0x{str_pos:06X}",
+                "length": len(raw),
+                "max_len": max_len,
+                "table": "locations",
+                "repoint": False,
+                "ptr_type": "16bit_be",
+            }
+
+            f.write(json.dumps(meta) + "\n")
+            f.write(f"#{jp_text} (length: {len(raw)}, max_len: {max_len})\n")
+            if i == 22:
+                f.write("Tomria\n")
+            else:
+                f.write("\n")
+            f.write("\n")
+
+    print(f"Dumped {num_entries} location names to {out_file.relative_to(ROOT_DIR)} (Index 22 -> Tomria)")
+
+
 def dump_dialogue_bank(data: bytes, bank_num: int, out_file: Path, tbl: dict = None):
     """Dumps dialogue strings from scenario Banks $F1-$F9."""
     bank_off = bank_num * 0x10000
@@ -195,6 +255,9 @@ def dump_dialogue_bank(data: bytes, bank_num: int, out_file: Path, tbl: dict = N
 def main():
     parser = argparse.ArgumentParser(description="Traverse Script Dumper")
     parser.add_argument("--all", action="store_true", help="Dump all scenario dialogue banks ($F1-$F9)")
+    parser.add_argument("--locations", action="store_true", help="Dump location names table")
+    parser.add_argument("--items", action="store_true", help="Dump item tables")
+    parser.add_argument("--c1", action="store_true", help="Dump Bank $C1 battle/system strings")
     args = parser.parse_args()
 
     if not ROM_PATH.exists():
@@ -208,12 +271,18 @@ def main():
     tbl = load_tbl(tbl_path) if tbl_path.exists() else None
 
     # 1. Dump Bank $C1 battle/system strings
-    dump_bank_c1_battle_strings(data, OUTPUT_DIR / "dialogue_bank_C1.txt", tbl)
+    if args.c1:
+        dump_bank_c1_battle_strings(data, OUTPUT_DIR / "dialogue_bank_C1.txt", tbl)
 
     # 2. Dump item tables
-    dump_item_tables(data, OUTPUT_DIR / "items.txt", tbl)
+    if args.items:
+        dump_item_tables(data, OUTPUT_DIR / "items.txt", tbl)
 
-    # 3. Dump scenario dialogue banks
+    # 3. Dump location names table
+    if args.locations or not (OUTPUT_DIR / "location_names.txt").exists():
+        dump_location_names(data, OUTPUT_DIR / "location_names.txt", tbl)
+
+    # 4. Dump scenario dialogue banks
     if args.all:
         total = 0
         for b in range(0x31, 0x3A):
