@@ -58,6 +58,10 @@ def step_apply_asm():
     if font_d3_script.exists():
         subprocess.run([sys.executable, str(font_d3_script)], check=True, capture_output=True)
 
+    font_vwf_script = ROOT_DIR / "tools" / "build_font_vwf.py"
+    if font_vwf_script.exists():
+        subprocess.run([sys.executable, str(font_vwf_script)], check=True, capture_output=True)
+
     main_asm = ROOT_DIR / "asm" / "main.asm"
     if not main_asm.exists():
         print("      No asm/main.asm found, skipping assembly stage.")

@@ -3,18 +3,14 @@
 Traverse: Starlight & Prairie - Bank $D3 (16x16 Font) Builder
 Builds the complete 16KB 16x16 English font for Bank $D3 (0x130000 - 0x134000).
 
-Formats each glyph into 4 SNES 2bpp 8x8 tiles (64 bytes):
-- Tile 0: Top-Left (0..7, 0..7)
-- Tile 1: Top-Right (8..15, 0..7)
-- Tile 2: Bottom-Left (0..7, 8..15)
-- Tile 3: Bottom-Right (8..15, 8..15)
-
-Covers:
-- ASCII characters 0x20..0x7E (full standard printable ASCII)
-- Native uppercase letters 0x0B..0x24 ('A'..'Z')
-- Native digits 0x01..0x0A ('0'..'9')
-- Native symbols 0x86 ('!'), 0x87 ('?'), 0x8A ('-'), 0x8C ('.')
-- Preserves native icons (★, ○, ☆, △) at 0xEC..0xEF from clean ROM
+Directly driven by tables/en_tbl.tbl following least resistance with native ASM:
+- Tile 0x00: Space (64 bytes of 0x00)
+- Tiles 0x01..0x0A: Digits '0'..'9'
+- Tiles 0x0B..0x24: Uppercase 'A'..'Z' (Slot 0x20 is 'V')
+- Tiles 0x25..0x3E: Lowercase 'a'..'z'
+- Tiles 0x3F..0x44: Extended symbols (;, %, &, $, ~, _)
+- Tiles 0x81..0x8F: Native punctuation (+, /, *, ', ", !, ?, ,, ., -, …, ·, (, ), :)
+- Tiles 0xEC..0xEF: Native game icons (★, ○, ☆, △) preserved from clean ROM
 """
 
 import sys
@@ -32,35 +28,69 @@ from tools.build_font8x16 import (
 )
 
 CLEAN_ROM_PATH = ROOT_DIR / "rom" / "Traverse - Starlight & Prairie (Japan).sfc"
+TABLE_PATH = ROOT_DIR / "tables" / "en_tbl.tbl"
 OUT_BIN = ROOT_DIR / "asm" / "vwf" / "font_bank_d3.bin"
 
 
-def make_16x16_tile_bytes(code: int, glyphs: dict) -> bytes:
-    """Converts an ASCII glyph into a 64-byte 16x16 SNES 2bpp glyph with exterior shadow."""
-    if code == 32:  # Space
+def parse_tbl(path: Path) -> dict:
+    tbl = {}
+    with open(path, "r", encoding="utf-8") as f:
+        for line in f:
+            line = line.strip("\r\n")
+            if not line or line.startswith("#") or "=" not in line:
+                continue
+            k, v = line.split("=", 1)
+            code = int(k, 16)
+            tbl[code] = v
+    return tbl
+
+
+def get_raw_bitmap(char: str, glyphs: dict) -> list:
+    """Returns 16-row 1bpp bitmap for character, with fallbacks for special symbols."""
+    if char == "…":
+        # 3 dots aligned to Row 11:
+        bm = [0] * 16
+        bm[10] = 0b01010100
+        bm[11] = 0b01010100
+        return bm
+    elif char == "·":
+        # Centered dot at Row 8:
+        bm = [0] * 16
+        bm[7] = 0b00011000
+        bm[8] = 0b00011000
+        return bm
+
+    code = ord(char)
+    return glyphs.get(code, [0] * 16)
+
+
+def make_16x16_tile_bytes(char: str, glyphs: dict) -> bytes:
+    """Converts a character into a 64-byte 16x16 SNES 2bpp glyph with exterior shadow."""
+    if char == " ":
         return bytes(64)
 
-    raw = glyphs.get(code, [0] * 16)
-    bm = align_glyph_baseline(code, raw)
+    raw = get_raw_bitmap(char, glyphs)
+    bm = align_glyph_baseline(ord(char) if len(char) == 1 else 0, raw)
     sh = compute_exterior_shadow(bm, mode="exterior")
 
     # Native Traverse 16x16 bounding box standard: x_offset = 2
-    x_off = 2
-    grid = [[0] * 16 for _ in range(16)]
-    for r in range(16):
-        b = bm[r]
-        s = sh[r]
-        for c in range(8):
-            if (b >> (7 - c)) & 1:
-                grid[r][x_off + c] = 1  # Foreground
-            elif (s >> (7 - c)) & 1:
-                grid[r][x_off + c] = 2  # Drop shadow
+    x_offset = 2
+    grid = [[0 for _ in range(16)] for _ in range(16)]
+    for y in range(16):
+        for x in range(8):
+            fg = (bm[y] >> (7 - x)) & 1
+            shadow = (sh[y] >> (7 - x)) & 1
+            gx = x + x_offset
+            if 0 <= gx < 16:
+                if fg:
+                    grid[y][gx] = 1
+                elif shadow:
+                    grid[y][gx] = 2
 
-    # Encode into 4 SNES 2bpp tiles:
-    # Tile 0: Top-Left, Tile 1: Top-Right, Tile 2: Bottom-Left, Tile 3: Bottom-Right
+    # Pack 16x16 grid into 4 8x8 SNES 2bpp tiles (64 bytes):
+    tiles_origin = [(0, 0), (8, 0), (0, 8), (8, 8)]
     res = bytearray(64)
-    tile_offsets = [(0, 0), (8, 0), (0, 8), (8, 8)]
-    for t_idx, (tox, toy) in enumerate(tile_offsets):
+    for t_idx, (tox, toy) in enumerate(tiles_origin):
         for r in range(8):
             p0 = 0
             p1 = 0
@@ -77,6 +107,7 @@ def make_16x16_tile_bytes(code: int, glyphs: dict) -> bytes:
 
 def build_font_bank_d3():
     glyphs = parse_bdf_glyphs(BDF_PATH)
+    en_tbl = parse_tbl(TABLE_PATH)
 
     # Initialize with clean ROM's Bank $D3 16KB so native icons (0xEC..0xEF) are retained:
     if CLEAN_ROM_PATH.exists():
@@ -85,35 +116,18 @@ def build_font_bank_d3():
     else:
         font_buf = bytearray(16384)
 
-    # 1. Inject full ASCII range 0x20..0x7E:
-    for code in range(32, 127):
-        font_buf[code * 64 : (code + 1) * 64] = make_16x16_tile_bytes(code, glyphs)
-
-    # 2. Map Native digits 0x01..0x0A (from ASCII '0'..'9'):
-    for d in range(10):
-        ascii_code = 0x30 + d
-        native_code = 0x01 + d
-        font_buf[native_code * 64 : (native_code + 1) * 64] = font_buf[ascii_code * 64 : (ascii_code + 1) * 64]
-
-    # 3. Map Native uppercase 0x0B..0x24 (from ASCII 'A'..'Z'):
-    for l in range(26):
-        ascii_code = 0x41 + l
-        native_code = 0x0B + l
-        if native_code == 0x20:
-            # DO NOT stomp slot 0x20 (ASCII Space)! Letter 'V' is at ASCII 0x56.
+    # Populate Bank $D3 directly by table code:
+    for code, text in en_tbl.items():
+        if code >= 0xEC:
+            # Special icons or tags (leave clean ROM icons or handled elsewhere)
             continue
-        font_buf[native_code * 64 : (native_code + 1) * 64] = font_buf[ascii_code * 64 : (ascii_code + 1) * 64]
+        if len(text) == 1:
+            tile_bytes = make_16x16_tile_bytes(text, glyphs)
+            font_buf[code * 64 : (code + 1) * 64] = tile_bytes
 
-    # 4. Ensure Space slots are strictly BLANK (64 bytes of 0x00):
-    font_buf[0x20 * 64 : 0x21 * 64] = bytes(64)  # ASCII Space (MUST ALWAYS BE ZERO!)
+    # Ensure space slots are strictly blank (64 bytes of 0x00):
     font_buf[0x00 * 64 : 0x01 * 64] = bytes(64)  # Native Space
-    font_buf[0x8B * 64 : 0x8C * 64] = bytes(64)  # Native Blank Filler
-
-    # 5. Map Native punctuation:
-    font_buf[0x86 * 64 : 0x87 * 64] = font_buf[0x21 * 64 : 0x22 * 64]  # Native '!'
-    font_buf[0x87 * 64 : 0x88 * 64] = font_buf[0x3F * 64 : 0x40 * 64]  # Native '?'
-    font_buf[0x8A * 64 : 0x8B * 64] = font_buf[0x2D * 64 : 0x2E * 64]  # Native '-'
-    font_buf[0x8C * 64 : 0x8D * 64] = font_buf[0x2E * 64 : 0x2F * 64]  # Native '.'
+    font_buf[0x8B * 64 : 0x8C * 64] = bytes(64)  # Native Blank / Ellipsis filler
 
     OUT_BIN.parent.mkdir(parents=True, exist_ok=True)
     OUT_BIN.write_bytes(font_buf)

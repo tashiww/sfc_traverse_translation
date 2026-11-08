@@ -1,0 +1,116 @@
+# ============================================================================
+# Traverse: Starlight & Prairie - Master English Table (en_tbl.tbl)
+# Follows least resistance with SNES native ASM codepage
+# ============================================================================
+
+# --- Space ---
+00= 
+
+# --- Digits 0 - 9 ---
+01=0
+02=1
+03=2
+04=3
+05=4
+06=5
+07=6
+08=7
+09=8
+0a=9
+
+# --- Uppercase Letters A - Z ---
+0b=A
+0c=B
+0d=C
+0e=D
+0f=E
+10=F
+11=G
+12=H
+13=I
+14=J
+15=K
+16=L
+17=M
+18=N
+19=O
+1a=P
+1b=Q
+1c=R
+1d=S
+1e=T
+1f=U
+20=V
+21=W
+22=X
+23=Y
+24=Z
+
+# --- Lowercase Letters a - z ---
+25=a
+26=b
+27=c
+28=d
+29=e
+2a=f
+2b=g
+2c=h
+2d=i
+2e=j
+2f=k
+30=l
+31=m
+32=n
+33=o
+34=p
+35=q
+36=r
+37=s
+38=t
+39=u
+3a=v
+3b=w
+3c=x
+3d=y
+3e=z
+
+# --- Extended Punctuation & Symbols ---
+3f=;
+40=%
+41=&
+42=$
+43=~
+44=_
+
+# --- Native Traverse Punctuation & Symbols ---
+81=+
+82=/
+83=*
+84='
+85="
+86=!
+87=?
+88=,
+89=.
+8a=-
+8b=…
+8c=·
+8d=(
+8e=)
+8f=:
+
+# --- Native Traverse Game Icons ---
+ec=★
+ed=○
+ee=☆
+ef=△
+
+# --- Dynamic Variable Expansion ---
+f0=[protag]
+f1=[sub]
+f2=[pet]
+
+# --- Control Codes ---
+80=\n
+fe=[wait]
+ff=[end]

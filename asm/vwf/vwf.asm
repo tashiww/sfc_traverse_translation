@@ -31,7 +31,7 @@ org $DCCAA1
 ; ----------------------------------------------------------------------------
 org $CA7000
 StringRedirectTable:
-    fillbyte $00 : fill 8192
+    fillbyte $00 : fill 4096
 
 ; ----------------------------------------------------------------------------
 ; Engine Code & Font Data in Bank $CA Free Space ($CA8000+)
@@ -55,7 +55,7 @@ org $CA8000
 ;   $EA: bit_shift   (16-bit: cursor_x & 7)
 ;   $EC: dest_off    (16-bit: destination byte offset in $7E:CE80)
 ;   $EE: char_width  (16-bit: character proportional width / total_cols)
-;   $F0: char_raw    (8-bit: current ASCII character code)
+;   $F0: char_raw    (8-bit: current table character code)
 ; ----------------------------------------------------------------------------
 
 ; ----------------------------------------------------------------------------
@@ -185,10 +185,10 @@ RenderEnglishVWF:
     SEP #$20            ; 8-bit A
     LDA [$A3],Y
     INY
-    CMP #$FF            ; End of message / dialogue box!
+    CMP #$FF            ; End of message / dialogue box ($FF)
     BNE +
     JMP .line_done
-+   CMP #$0A            ; Newline ('\n') -> next line in same dialogue box!
++   CMP #$80            ; In-box newline ($80) -> next line in same dialogue box!
     BNE +
     JMP .do_newline
 +   CMP #$FE            ; If $FE $00 delimiter:
@@ -203,48 +203,12 @@ RenderEnglishVWF:
     CMP #$F3
     BCS +
     JMP .handle_var_name
-+   CMP #$00            ; Traverse space
++   CMP #$00            ; Native Space ($00)
     BNE +
     JSR AdvanceSpace
     BRA .char_loop
-+   CMP #$20            ; ASCII space
-    BNE +
-    JSR AdvanceSpace
-    BRA .char_loop
-+   ; Check Native uppercase ($0B..$24 -> 'A'..'Z'):
-    CMP #$0B
-    BCC +
-    CMP #$25
-    BCS +
-    CLC
-    ADC #$36            ; $0B + $36 = $41 ('A')
++   ; Character in en_tbl: direct table index (zero ASCII math!)
     JSR DrawSingleChar
-    JMP .char_loop
-+
-    ; Check Native digits ($01..$0A -> '0'..'9'):
-    CMP #$01
-    BCC +
-    CMP #$0B
-    BCS +
-    CLC
-    ADC #$2F            ; $01 + $2F = $30 ('0')
-    JSR DrawSingleChar
-    JMP .char_loop
-+
-    ; Check Native punctuation ($86='!', $87='?', $8A='-', $8C='.'):
-    CMP #$86 : BNE + : LDA #$21 : JSR DrawSingleChar : JMP .char_loop
-+   CMP #$87 : BNE + : LDA #$3F : JSR DrawSingleChar : JMP .char_loop
-+   CMP #$8A : BNE + : LDA #$2D : JSR DrawSingleChar : JMP .char_loop
-+   CMP #$8C : BNE + : LDA #$2E : JSR DrawSingleChar : JMP .char_loop
-+
-    CMP #$21
-    BCC .skip_char      ; Skip unprintable
-    CMP #$7F
-    BCS .skip_char      ; Skip non-ASCII
-
-    ; Printable ASCII character (0x21 - 0x7E)
-    JSR DrawSingleChar
-.skip_char:
     JMP .char_loop
 
 .do_newline:
@@ -317,67 +281,12 @@ RenderEnglishVWF:
     INX
     CMP #$FF            ; End of name marker
     BEQ .var_done
-    CMP #$00            ; Null terminator
+    CMP #$00            ; Null terminator / blank
     BEQ .var_done
     CMP #$8B            ; Japanese blank filler
     BEQ .var_done
 
-    ; Check Traverse native uppercase encoding ($0B..$24 -> 'A'..'Z'):
-    CMP #$0B
-    BCC +
-    CMP #$25
-    BCS +
-    CLC
-    ADC #$36            ; $0B + $36 = $41 ('A')
-    JSR DrawSingleChar
-    BRA .var_char_loop
-+
-    ; Check Traverse native digit encoding ($01..$0A -> '0'..'9'):
-    CMP #$01
-    BCC +
-    CMP #$0B
-    BCS +
-    CLC
-    ADC #$2F            ; $01 + $2F = $30 ('0')
-    JSR DrawSingleChar
-    BRA .var_char_loop
-+
-    ; Check native dash symbol ($8A -> '-'):
-    CMP #$8A
-    BNE +
-    LDA #$2D            ; ASCII '-'
-    JSR DrawSingleChar
-    BRA .var_char_loop
-+
-    ; Check native dot symbol ($8C -> '.'):
-    CMP #$8C
-    BNE +
-    LDA #$2E            ; ASCII '.'
-    JSR DrawSingleChar
-    BRA .var_char_loop
-+
-    ; Check native exclamation symbol ($86 -> '!'):
-    CMP #$86
-    BNE +
-    LDA #$21            ; ASCII '!'
-    JSR DrawSingleChar
-    BRA .var_char_loop
-+
-    ; Check native question symbol ($87 -> '?'):
-    CMP #$87
-    BNE +
-    LDA #$3F            ; ASCII '?'
-    JSR DrawSingleChar
-    BRA .var_char_loop
-+
-    CMP #$20            ; ASCII space
-    BNE +
-    JSR AdvanceSpace
-    BRA .var_char_loop
-+   CMP #$21
-    BCC .var_char_loop  ; Skip unprintable
-    CMP #$7F
-    BCS .var_char_loop  ; Skip non-ASCII
+    ; Name bytes in WRAM already match en_tbl.tbl directly (zero conversion needed!):
     JSR DrawSingleChar
     BRA .var_char_loop
 .var_done:
@@ -501,28 +410,26 @@ AdvanceSpace:
 ; DrawSingleChar:
 ; Real-time 2bpp sub-pixel VWF glyph rasterizer with exterior drop shadow
 ; Input:
-;   A = ASCII character code (0x21 - 0x7E)
+;   A = Character code in en_tbl (0x01 - 0xEF)
 ; Preserves:
 ;   Caller X, Y
 ; ----------------------------------------------------------------------------
 DrawSingleChar:
-    STA $F0             ; Save ASCII character in $F0
+    STA $F0             ; Save character code in $F0
     PHY                 ; Save caller Y
     PHX                 ; Save caller X
 
-    ; Look up character width:
-    SEC
-    SBC #$20
+    ; Look up character width directly by table code (zero ASCII math!):
     REP #$20            ; 16-bit A
     AND #$00FF
-    TAX                 ; X = char index (0..94)
+    TAX                 ; X = char code (0..255)
     SEP #$20
     LDA.l WidthTableVWF,X
     REP #$20
     AND #$00FF
     STA $EE             ; $EE = char_width
 
-    ; Calculate font data offset: char_index * 32 bytes
+    ; Calculate font data offset: char_code * 32 bytes
     TXA
     ASL : ASL : ASL : ASL : ASL
     STA $E4             ; $E4 = font_ptr

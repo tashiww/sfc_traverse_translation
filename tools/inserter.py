@@ -20,7 +20,7 @@ from tools.rom_utils import load_tbl
 
 DEFAULT_ROM = ROOT_DIR / "build" / "traverse_en.sfc"
 DEFAULT_TRANSLATIONS = ROOT_DIR / "translations"
-DEFAULT_TABLE = ROOT_DIR / "tables" / "ja_tbl.tbl"
+DEFAULT_TABLE = ROOT_DIR / "tables" / "en_tbl.tbl"
 VWF_WIDTHS_PATH = ROOT_DIR / "asm" / "vwf" / "vwf_widths.bin"
 
 # Real Dialogue Control Codes in Traverse Text Engine
@@ -65,24 +65,15 @@ SPECIAL_TOKEN_WIDTHS = {
 }
 
 def load_char_widths() -> dict:
+    widths = {}
+    tbl = load_tbl(DEFAULT_TABLE, reverse=True)
     if VWF_WIDTHS_PATH.exists():
         widths_bin = VWF_WIDTHS_PATH.read_bytes()
-        return {chr(32 + i): widths_bin[i] for i in range(len(widths_bin))}
-    # Fallback sensible widths
-    return {
-        ' ': 4, '!': 3, '"': 5, '#': 7, '$': 6, '%': 8, '&': 7, "'": 3,
-        '(': 4, ')': 4, '*': 5, '+': 6, ',': 3, '-': 5, '.': 3, '/': 6,
-        '0': 6, '1': 5, '2': 6, '3': 6, '4': 6, '5': 6, '6': 6, '7': 6,
-        '8': 6, '9': 6, ':': 3, ';': 3, '<': 6, '=': 6, '>': 6, '?': 6,
-        '@': 8, 'A': 6, 'B': 6, 'C': 6, 'D': 6, 'E': 6, 'F': 6, 'G': 6,
-        'H': 6, 'I': 4, 'J': 5, 'K': 6, 'L': 5, 'M': 8, 'N': 6, 'O': 6,
-        'P': 6, 'Q': 6, 'R': 6, 'S': 6, 'T': 6, 'U': 6, 'V': 6, 'W': 8,
-        'X': 6, 'Y': 6, 'Z': 6, '[': 4, '\\': 6, ']': 4, '^': 6, '_': 6,
-        '`': 4, 'a': 6, 'b': 6, 'c': 5, 'd': 6, 'e': 5, 'f': 5, 'g': 6,
-        'h': 6, 'i': 3, 'j': 4, 'k': 5, 'l': 3, 'm': 8, 'n': 6, 'o': 6,
-        'p': 6, 'q': 6, 'r': 5, 's': 5, 't': 5, 'u': 6, 'v': 6, 'w': 8,
-        'x': 5, 'y': 6, 'z': 5, '{': 4, '|': 3, '}': 4, '~': 6,
-    }
+        for char, code_b in tbl.items():
+            code = code_b[0]
+            if code < len(widths_bin):
+                widths[char] = widths_bin[code]
+    return widths
 
 CHAR_WIDTHS = load_char_widths()
 
@@ -220,8 +211,8 @@ KNOWN_SPEAKERS = {
 def get_token_px_width(token: str) -> int:
     if "[protag]" in token or "[sub]" in token or "[pet]" in token:
         t = token.replace("[protag]", "Gant").replace("[sub]", "Soni").replace("[pet]", "Boan")
-        return sum(CHAR_WIDTHS.get(ord(c), 6) for c in t)
-    return sum(CHAR_WIDTHS.get(ord(c), 6) for c in token)
+        return sum(CHAR_WIDTHS.get(c, 6) for c in t)
+    return sum(CHAR_WIDTHS.get(c, 6) for c in token)
 
 
 def word_wrap_to_lines(text: str, max_px: int = 216) -> list[str]:
@@ -229,7 +220,7 @@ def word_wrap_to_lines(text: str, max_px: int = 216) -> list[str]:
     lines = []
     cur_line = []
     cur_px = 0
-    space_px = CHAR_WIDTHS.get(0x20, 4)
+    space_px = CHAR_WIDTHS.get(" ", 4)
 
     for word in words:
         w_px = get_token_px_width(word)
@@ -246,8 +237,25 @@ def word_wrap_to_lines(text: str, max_px: int = 216) -> list[str]:
     return lines
 
 
-def encode_dialogue_string(text: str, rev_tbl: dict = None) -> bytes:
-    """Encodes translated dialogue string with speaker name and dialogue body in ASCII VWF with newlines."""
+def encode_text_with_tbl(text: str, tbl: dict) -> bytes:
+    res = bytearray()
+    tokens = re.split(r"(\[[^\]]+\])", text)
+    for tok in tokens:
+        if not tok:
+            continue
+        if tok in tbl:
+            res.extend(tbl[tok])
+        else:
+            for ch in tok:
+                if ch in tbl:
+                    res.extend(tbl[ch])
+                else:
+                    res.extend(tbl.get("?", b"\x87"))
+    return bytes(res)
+
+
+def encode_dialogue_string(text: str, tbl: dict) -> bytes:
+    """Encodes translated dialogue string with speaker name and dialogue body in native table VWF."""
     parts = text.split("<wait_auto>")
     res = bytearray()
 
@@ -261,38 +269,15 @@ def encode_dialogue_string(text: str, rev_tbl: dict = None) -> bytes:
         body_text = " ".join(p.strip() for p in parts if p.strip())
 
     if speaker_part:
-        if speaker_part == "[protag]":
-            res.append(0xF0)
-        elif speaker_part == "[sub]":
-            res.append(0xF1)
-        elif speaker_part == "[pet]":
-            res.append(0xF2)
-        else:
-            res.extend(speaker_part.encode("ascii", "replace"))
-        res.append(0x0A)  # Newline after speaker name!
+        res.extend(encode_text_with_tbl(speaker_part, tbl))
+        res.append(0x80)  # In-box newline after speaker name!
 
     # Word wrap dialogue body into lines <= 216px:
     wrapped_lines = word_wrap_to_lines(body_text, max_px=216)
     for idx, line in enumerate(wrapped_lines):
         if idx > 0:
-            res.append(0x0A)  # Newline between dialogue lines
-        token_re = re.compile(r"(\[[^\]]+\])")
-        toks = token_re.split(line)
-        for tok in toks:
-            if not tok:
-                continue
-            if tok == "[protag]":
-                res.append(0xF0)
-            elif tok == "[sub]":
-                res.append(0xF1)
-            elif tok == "[pet]":
-                res.append(0xF2)
-            else:
-                for ch in tok:
-                    if 0x20 <= ord(ch) <= 0x7E:
-                        res.append(ord(ch))
-                    else:
-                        res.append(ord("?"))
+            res.append(0x80)  # In-box newline between dialogue lines
+        res.extend(encode_text_with_tbl(line, tbl))
 
     res.append(0xFF)  # Dialogue box terminator!
     return bytes(res)
@@ -304,8 +289,8 @@ class ScriptInserter:
         self.translations_dir = translations_dir
         self.tbl_path = tbl_path
 
-        # Free space pool in Bank $CA ($CA:A000 - $CA:FF00 = 24,320 bytes in safe upper half)
-        self.pool_start = 0x0AA000
+        # Free space pool in Bank $CA ($CA:B000 - $CA:FF00 = 20,224 bytes in safe upper half)
+        self.pool_start = 0x0AB000
         self.pool_cur = self.pool_start
         self.pool_max = 0x0AFF00
 
@@ -323,15 +308,7 @@ class ScriptInserter:
         self.pool_db_cur = self.pool_db_start
         self.pool_db_max = 0x1BFFFF
 
-        self.tbl = load_tbl(tbl_path)
-        # Reverse mapping: char -> bytes (only for non-ASCII)
-        self.rev_tbl = {}
-        for k, v in self.tbl.items():
-            if len(v) == 1 and ord(v) > 0x7E and v not in self.rev_tbl:
-                try:
-                    self.rev_tbl[v] = bytes.fromhex(k)
-                except ValueError:
-                    pass
+        self.en_tbl = load_tbl(tbl_path, reverse=True)
 
     def allocate_pool(self, size: int, bank: str = "CA") -> int:
         if bank == "0xC1":
@@ -380,9 +357,9 @@ class ScriptInserter:
             if entry["is_translated"]:
                 if table_mode == "menu":
                     clean_text = entry["en_text"].strip()
-                    encoded = clean_text.encode("ascii", "replace") + b"\xFF"
+                    encoded = encode_text_with_tbl(clean_text, self.en_tbl) + b"\xFF"
                 else:
-                    encoded = encode_dialogue_string(entry["en_text"], self.rev_tbl)
+                    encoded = encode_dialogue_string(entry["en_text"], self.en_tbl)
 
                 # Greenfield Allocation Strategy:
                 # Always allocate full dialogue strings in unmapped Bank $CA free space pool!
@@ -438,29 +415,20 @@ class ScriptInserter:
         # Construct dialogue stream:
         stream = bytearray()
 
-        # Construct dialogue stream in 100% English ASCII:
-
+        # Construct dialogue stream using native table en_tbl:
         # Box 1: Midwife
-        # Speaker: "Midwife" + Newline (0xFF)
-        stream.extend(b"Midwife\xFF")
-        # Line 2: Fits on single proportional line (207px) + End of Box (0xFF 0xFE)
-        stream.extend(b"At this rate, Remy won't make it...\xFF\xFE")
+        stream.extend(encode_text_with_tbl("Midwife", self.en_tbl) + b"\x80")
+        stream.extend(encode_text_with_tbl("At this rate, Remy won't make it...", self.en_tbl) + b"\xFF\xFE")
 
         # Box 2: Galahad
-        # Speaker: "Galahad" + Newline (0xFF)
-        stream.extend(b"Galahad\xFF")
-        # Line 2: English dialogue line 1 (137px) + Newline (0xFF)
-        stream.extend(b"Cut the crap! You saying\xFF")
-        # Line 3: English dialogue line 2 (107px) + End of Box (0xFF 0xFE)
-        stream.extend(b"Remy is gonna die?!\xFF\xFE")
+        stream.extend(encode_text_with_tbl("Galahad", self.en_tbl) + b"\x80")
+        stream.extend(encode_text_with_tbl("Cut the crap! You saying", self.en_tbl) + b"\x80")
+        stream.extend(encode_text_with_tbl("Remy is gonna die?!", self.en_tbl) + b"\xFF\xFE")
 
         # Box 3: Midwife
-        # Speaker: "Midwife" + Newline (0xFF)
-        stream.extend(b"Midwife\xFF")
-        # Line 2: English dialogue line 1 (202px) + Newline (0xFF)
-        stream.extend(b"It's not certain yet. But to save\xFF")
-        # Line 3: English dialogue line 2 (174px) + End of Box (0xFF 0xFE)
-        stream.extend(b"the baby, Remy's body won't...\xFF\xFE")
+        stream.extend(encode_text_with_tbl("Midwife", self.en_tbl) + b"\x80")
+        stream.extend(encode_text_with_tbl("It's not certain yet. But to save", self.en_tbl) + b"\x80")
+        stream.extend(encode_text_with_tbl("the baby, Remy's body won't...", self.en_tbl) + b"\xFF\xFE")
 
         dest_pc = 0x1BAA0F
         rom_bytes[dest_pc : dest_pc + len(stream)] = stream
@@ -491,8 +459,8 @@ class ScriptInserter:
             if not text:
                 continue
 
-            # Encode location names in standard ASCII (matches updated Bank $D3 font):
-            encoded = text.encode("ascii", "replace") + b"\xFF"
+            # Encode location names using native table en_tbl:
+            encoded = encode_text_with_tbl(text, self.en_tbl) + b"\xFF"
             orig_pc = int(meta["str_pos"]) if isinstance(meta["str_pos"], int) else int(meta["str_pos"], 16)
             orig_len = meta.get("length", 0)
             if not orig_len:
