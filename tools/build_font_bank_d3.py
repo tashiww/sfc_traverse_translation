@@ -99,10 +99,17 @@ def build_font_bank_d3():
     for l in range(26):
         ascii_code = 0x41 + l
         native_code = 0x0B + l
+        if native_code == 0x20:
+            # DO NOT stomp slot 0x20 (ASCII Space)! Letter 'V' is at ASCII 0x56.
+            continue
         font_buf[native_code * 64 : (native_code + 1) * 64] = font_buf[ascii_code * 64 : (ascii_code + 1) * 64]
 
-    # 4. Map Native punctuation:
+    # 4. Ensure Space slots are strictly BLANK (64 bytes of 0x00):
+    font_buf[0x20 * 64 : 0x21 * 64] = bytes(64)  # ASCII Space (MUST ALWAYS BE ZERO!)
     font_buf[0x00 * 64 : 0x01 * 64] = bytes(64)  # Native Space
+    font_buf[0x8B * 64 : 0x8C * 64] = bytes(64)  # Native Blank Filler
+
+    # 5. Map Native punctuation:
     font_buf[0x86 * 64 : 0x87 * 64] = font_buf[0x21 * 64 : 0x22 * 64]  # Native '!'
     font_buf[0x87 * 64 : 0x88 * 64] = font_buf[0x3F * 64 : 0x40 * 64]  # Native '?'
     font_buf[0x8A * 64 : 0x8B * 64] = font_buf[0x2D * 64 : 0x2E * 64]  # Native '-'

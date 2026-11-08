@@ -21,16 +21,17 @@ org $DCCAA1
 ; Dynamic String Redirection Table in Bank $CA
 ; Allows any dialogue string in any bank to be transparently repointed to
 ; unmapped free space in Bank $CA without modifying original bytecode.
-; Format per entry (6 bytes):
+; Format per entry (8 bytes):
 ;   +0: orig_addr (16-bit LE)
 ;   +2: orig_bank (8-bit)
 ;   +3: new_addr  (16-bit LE)
 ;   +5: new_bank  (8-bit)
+;   +6: orig_len  (16-bit LE)
 ; Table ends with $0000 (16-bit orig_addr == 0).
 ; ----------------------------------------------------------------------------
 org $CA7000
 StringRedirectTable:
-    fillbyte $00 : fill 4096
+    fillbyte $00 : fill 8192
 
 ; ----------------------------------------------------------------------------
 ; Engine Code & Font Data in Bank $CA Free Space ($CA8000+)
@@ -39,6 +40,12 @@ org $CA8000
 
 ; ----------------------------------------------------------------------------
 ; Direct Page Scratch Allocations (Local to VWF Line Renderer):
+;   $D4: current_col (16-bit: current col parameter)
+;   $D6: current_row (16-bit: current row parameter)
+;   $D8: orig_addr   (16-bit: saved caller $A3)
+;   $DA: orig_bank   (8-bit: saved caller $A5)
+;   $DB: is_redirect (8-bit: 0=normal, 1=redirected)
+;   $DC: orig_len    (16-bit: original string byte budget)
 ;   $DE: max_col     (16-bit: highest initialized tile column)
 ;   $E0: cursor_x    (16-bit: horizontal pixel position 0..223)
 ;   $E2: col_start   (16-bit: cursor_x >> 3)
@@ -47,7 +54,7 @@ org $CA8000
 ;   $E8: x_start     (16-bit: starting tilemap byte offset)
 ;   $EA: bit_shift   (16-bit: cursor_x & 7)
 ;   $EC: dest_off    (16-bit: destination byte offset in $7E:CE80)
-;   $EE: char_width  (16-bit: character proportional width)
+;   $EE: char_width  (16-bit: character proportional width / total_cols)
 ;   $F0: char_raw    (8-bit: current ASCII character code)
 ; ----------------------------------------------------------------------------
 
@@ -80,6 +87,9 @@ RenderEnglishVWF:
     ; ------------------------------------------------------------------------
     REP #$30            ; 16-bit A, X, Y
     PHX
+    STZ $D8             ; Clear saved orig_addr
+    STZ $DA             ; Clear orig_bank / is_redirect
+    STZ $DC             ; Clear orig_len
     LDX #$0000
 .redirect_loop:
     LDA.l StringRedirectTable,X     ; 16-bit orig_addr
@@ -91,7 +101,18 @@ RenderEnglishVWF:
     CMP $A5                         ; Compare bank byte
     REP #$20                        ; 16-bit A
     BNE +
-    ; Match found! Repoint [$A3] to new 24-bit pointer in Bank $CA pool:
+    ; Match found! Save original caller state:
+    LDA $A3
+    STA $D8                         ; $D8 = saved orig_addr
+    SEP #$20
+    LDA $A5
+    STA $DA                         ; $DA = saved orig_bank
+    LDA #$01
+    STA $DB                         ; $DB = is_redirect flag = 1
+    REP #$20
+    LDA.l StringRedirectTable+6,X   ; 16-bit orig_len
+    STA $DC                         ; $DC = saved orig_len
+    ; Repoint read pointer [$A3] to new 24-bit pointer in Bank $CA pool:
     LDA.l StringRedirectTable+3,X   ; 16-bit new_addr
     STA $A3
     SEP #$20                        ; 8-bit A
@@ -101,7 +122,7 @@ RenderEnglishVWF:
     BRA .redirect_done
 +   TXA
     CLC
-    ADC #$0006                      ; Next entry (6 bytes)
+    ADC #$0008                      ; Next entry (8 bytes)
     TAX
     BRA .redirect_loop
 
@@ -111,26 +132,29 @@ RenderEnglishVWF:
     PHK
     PLB                 ; DB = Current Bank ($CA)
 
-    ; Calculate starting tilemap byte offset from Row and Col:
-    REP #$30            ; 16-bit A, X, Y
-    LDA $08,S           ; Row parameter
-    AND #$00FF
-    XBA                 ; A = Row << 8
-    LSR : LSR           ; A = Row * 64 bytes
-    SEP #$20            ; 8-bit A
-    CLC
-    ADC $07,S
-    ADC $07,S           ; + (Col * 2)
-    REP #$20            ; 16-bit A
-    AND #$07FE          ; Safety mask
-    STA $E8             ; $E8 = x_start
-
     ; Read starting Base Tile ID from caller stack:
     SEP #$20            ; 8-bit A
     LDA $06,S           ; caller Base Tile ID
     REP #$20            ; 16-bit A
     AND #$00FF
     STA $E6             ; $E6 = base_tile
+
+    ; Read starting Col from caller stack:
+    SEP #$20            ; 8-bit A
+    LDA $07,S           ; Col parameter
+    REP #$20            ; 16-bit A
+    AND #$00FF
+    STA $D4             ; $D4 = current_col
+
+    ; Read starting Row from caller stack:
+    SEP #$20            ; 8-bit A
+    LDA $08,S           ; Row parameter
+    REP #$20            ; 16-bit A
+    AND #$00FF
+    STA $D6             ; $D6 = current_row
+
+    ; Calculate starting tilemap byte offset:
+    JSR .calc_row_offset
 
     ; Initialize line variables:
     STZ $DE             ; max_col = 0
@@ -144,16 +168,36 @@ RenderEnglishVWF:
     LDY #$0000
     BRA .char_loop
 
+.calc_row_offset:
+    REP #$30            ; 16-bit A, X, Y
+    LDA $D6             ; current_row
+    AND #$00FF
+    XBA                 ; A = Row << 8
+    LSR : LSR           ; A = Row * 64 bytes
+    CLC
+    ADC $D4
+    ADC $D4             ; + (Col * 2)
+    AND #$07FE          ; Safety mask
+    STA $E8             ; $E8 = x_start
+    RTS
+
 .char_loop:
     SEP #$20            ; 8-bit A
     LDA [$A3],Y
     INY
-    CMP #$FF            ; End of line / newline
+    CMP #$FF            ; End of message / dialogue box!
     BNE +
     JMP .line_done
-+   CMP #$FE            ; End of dialogue box
++   CMP #$0A            ; Newline ('\n') -> next line in same dialogue box!
     BNE +
-    JMP .hit_fe
+    JMP .do_newline
++   CMP #$FE            ; If $FE $00 delimiter:
+    BNE +
+    LDA [$A3],Y         ; Peek next byte
+    CMP #$00
+    BNE .char_loop
+    INY                 ; Skip $00
+    BRA .char_loop
 +   CMP #$F0            ; Dynamic character name tags ($F0 = protag, $F1 = sub, $F2 = pet)
     BCC +
     CMP #$F3
@@ -188,26 +232,10 @@ RenderEnglishVWF:
     JMP .char_loop
 +
     ; Check Native punctuation ($86='!', $87='?', $8A='-', $8C='.'):
-    CMP #$86
-    BNE +
-    LDA #$21
-    JSR DrawSingleChar
-    JMP .char_loop
-+   CMP #$87
-    BNE +
-    LDA #$3F
-    JSR DrawSingleChar
-    JMP .char_loop
-+   CMP #$8A
-    BNE +
-    LDA #$2D
-    JSR DrawSingleChar
-    JMP .char_loop
-+   CMP #$8C
-    BNE +
-    LDA #$2E
-    JSR DrawSingleChar
-    JMP .char_loop
+    CMP #$86 : BNE + : LDA #$21 : JSR DrawSingleChar : JMP .char_loop
++   CMP #$87 : BNE + : LDA #$3F : JSR DrawSingleChar : JMP .char_loop
++   CMP #$8A : BNE + : LDA #$2D : JSR DrawSingleChar : JMP .char_loop
++   CMP #$8C : BNE + : LDA #$2E : JSR DrawSingleChar : JMP .char_loop
 +
     CMP #$21
     BCC .skip_char      ; Skip unprintable
@@ -217,6 +245,54 @@ RenderEnglishVWF:
     ; Printable ASCII character (0x21 - 0x7E)
     JSR DrawSingleChar
 .skip_char:
+    JMP .char_loop
+
+.do_newline:
+    ; Clean up speculative columns on this line:
+    REP #$20            ; 16-bit A
+    LDA $E0             ; cursor_x
+    CLC
+    ADC #$0007
+    LSR : LSR : LSR     ; total_cols
+    BNE +
+    LDA #$0001
++   STA $EE
+-   LDA $DE             ; max_col
+    CMP $EE
+    BCC .nl_cleaned
+    ASL
+    CLC
+    ADC $E8             ; + x_start
+    TAX
+    LDA #$0000
+    STA $7EC780,X       ; Clear top
+    STA $7EC7C0,X       ; Clear bottom
+    DEC $DE
+    BRA -
+
+.nl_cleaned:
+    ; Advance base_tile by total_cols * 2:
+    LDA $EE             ; total_cols
+    ASL
+    CLC
+    ADC $E6             ; base_tile
+    STA $E6
+
+    ; Advance current_row by 2:
+    LDA $D6             ; current_row
+    CLC
+    ADC #$0002
+    STA $D6
+
+    ; Reset line variables:
+    STZ $DE             ; max_col = 0
+    STZ $E0             ; cursor_x = 0
+
+    ; Recalculate x_start and initialize tile column 0 for new line:
+    JSR .calc_row_offset
+    LDA #$0000
+    JSR InitTileColumn
+
     JMP .char_loop
 
 ; ----------------------------------------------------------------------------
@@ -308,10 +384,6 @@ RenderEnglishVWF:
     PLY                 ; Restore caller string offset Y
     JMP .char_loop
 
-.hit_fe:
-    DEY                 ; Back up Y so caller peeks 0xFE
-    BRA .line_done
-
 .line_done:
     ; If typewriter was not active, trigger one frame DMA to commit VRAM:
     SEP #$20            ; 8-bit A
@@ -324,7 +396,7 @@ RenderEnglishVWF:
     BPL -
 +
 
-    ; Calculate total consumed tile columns:
+    ; Calculate total consumed tile columns for the final line:
     ; total_cols = (cursor_x + 7) >> 3
     REP #$20            ; 16-bit A
     LDA $E0             ; cursor_x
@@ -359,7 +431,7 @@ RenderEnglishVWF:
     ASL                 ; total_cols * 2
     SEP #$20            ; 8-bit A
     CLC
-    ADC $06,S           ; caller Base Tile ID (offset $06,S)
+    ADC $E6             ; Add to current base_tile ($E6)
     STA $06,S           ; Updated Base Tile ID!
 
     ; Compute final tilemap offset for caller:
@@ -371,6 +443,32 @@ RenderEnglishVWF:
     ADC $E8             ; + x_start ($E8)
     TAX                 ; X = final tilemap byte offset!
 
+    ; ------------------------------------------------------------------------
+    ; State Restoration for String Redirection:
+    ; ------------------------------------------------------------------------
+    SEP #$20            ; 8-bit A
+    LDA $DB             ; is_redirect
+    BEQ .restore_normal
+
+    ; Redirected string:
+    ; 1. Restore caller $A3 to original Bank $F3 address:
+    REP #$20            ; 16-bit A
+    LDA $D8             ; saved orig_addr
+    STA $A3
+    ; 2. Restore caller $A5 to original Bank $F3:
+    SEP #$20            ; 8-bit A
+    LDA $DA             ; saved orig_bank
+    STA $A5
+    ; 3. Return Y = orig_len so caller advances past original Bank $F3 string:
+    REP #$10            ; 16-bit X, Y
+    LDY $DC             ; Y = orig_len!
+    BRA .exit_renderer
+
+.restore_normal:
+    ; Normal non-redirected string:
+    ; Y already has consumed bytes count!
+
+.exit_renderer:
     ; Restore caller DB and P:
     SEP #$20            ; 8-bit A
     REP #$10            ; 16-bit X, Y

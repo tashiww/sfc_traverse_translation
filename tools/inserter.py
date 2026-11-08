@@ -217,82 +217,84 @@ KNOWN_SPEAKERS = {
 }
 
 
-def encode_speaker_part(speaker: str) -> bytes:
-    """Encodes speaker name using Traverse native 8x16 font tile codes for JSL $DC:E7A3."""
-    if speaker == "[protag]":
-        return b"\xF0"
-    if speaker == "[sub]":
-        return b"\xF1"
-    if speaker == "[pet]":
-        return b"\xF2"
-    res = bytearray()
-    for ch in speaker.upper():
-        res.append(NATIVE_UPPERCASE.get(ch, 0x00))
-    return bytes(res)
+def get_token_px_width(token: str) -> int:
+    if "[protag]" in token or "[sub]" in token or "[pet]" in token:
+        t = token.replace("[protag]", "Gant").replace("[sub]", "Soni").replace("[pet]", "Boan")
+        return sum(CHAR_WIDTHS.get(ord(c), 6) for c in t)
+    return sum(CHAR_WIDTHS.get(ord(c), 6) for c in token)
+
+
+def word_wrap_to_lines(text: str, max_px: int = 216) -> list[str]:
+    words = text.split()
+    lines = []
+    cur_line = []
+    cur_px = 0
+    space_px = CHAR_WIDTHS.get(0x20, 4)
+
+    for word in words:
+        w_px = get_token_px_width(word)
+        needed = w_px if not cur_line else space_px + w_px
+        if cur_line and cur_px + needed > max_px:
+            lines.append(" ".join(cur_line))
+            cur_line = [word]
+            cur_px = w_px
+        else:
+            cur_line.append(word)
+            cur_px += needed
+    if cur_line:
+        lines.append(" ".join(cur_line))
+    return lines
 
 
 def encode_dialogue_string(text: str, rev_tbl: dict = None) -> bytes:
-    """Encodes translated dialogue string with speaker name (native font) and dialogue body (ASCII VWF)."""
+    """Encodes translated dialogue string with speaker name and dialogue body in ASCII VWF with newlines."""
     parts = text.split("<wait_auto>")
     res = bytearray()
 
     # Check if first part before <wait_auto> is a speaker name:
-    if len(parts) > 1 and (parts[0].strip().upper() in KNOWN_SPEAKERS or len(parts[0].strip()) <= 10):
-        speaker = parts[0].strip()
-        res.extend(encode_speaker_part(speaker))
-        res.extend(b"\xFE\x00")
-        body_parts = parts[1:]
+    first_part = parts[0].strip()
+    speaker_part = None
+    if len(parts) > 1 and (first_part.upper() in KNOWN_SPEAKERS or first_part.startswith("[") or len(first_part) <= 12):
+        speaker_part = first_part
+        body_text = " ".join(p.strip() for p in parts[1:] if p.strip())
     else:
-        body_parts = parts
+        body_text = " ".join(p.strip() for p in parts if p.strip())
 
-    for p_idx, part in enumerate(body_parts):
-        if p_idx > 0:
-            res.extend(b"\xFE\x00")
-        token_re = re.compile(r"<([^>]+)>|\[([^\]]+)\]|.")
-        for m in token_re.finditer(part):
-            tag_angle = m.group(1)
-            tag_bracket = m.group(2)
-            ch = m.group(0)
+    if speaker_part:
+        if speaker_part == "[protag]":
+            res.append(0xF0)
+        elif speaker_part == "[sub]":
+            res.append(0xF1)
+        elif speaker_part == "[pet]":
+            res.append(0xF2)
+        else:
+            res.extend(speaker_part.encode("ascii", "replace"))
+        res.append(0x0A)  # Newline after speaker name!
 
-            if tag_angle is not None:
-                full_tag = f"<{tag_angle}>"
-                if full_tag in CONTROL_CODES:
-                    res.extend(CONTROL_CODES[full_tag])
-                else:
-                    try:
-                        res.extend(bytes.fromhex(tag_angle))
-                    except ValueError:
-                        res.extend(full_tag.encode("ascii", "replace"))
-            elif tag_bracket is not None:
-                full_tag = f"[{tag_bracket}]"
-                if full_tag == "[protag]":
-                    res.append(0xF0)
-                elif full_tag == "[sub]":
-                    res.append(0xF1)
-                elif full_tag == "[pet]":
-                    res.append(0xF2)
-                elif rev_tbl and full_tag in rev_tbl:
-                    val = rev_tbl[full_tag]
-                    if isinstance(val, int):
-                        res.append(val)
-                    elif isinstance(val, str):
-                        res.extend(bytes.fromhex(val))
-                    else:
-                        res.extend(val)
-                else:
-                    res.extend(full_tag.encode("ascii", "replace"))
+    # Word wrap dialogue body into lines <= 216px:
+    wrapped_lines = word_wrap_to_lines(body_text, max_px=216)
+    for idx, line in enumerate(wrapped_lines):
+        if idx > 0:
+            res.append(0x0A)  # Newline between dialogue lines
+        token_re = re.compile(r"(\[[^\]]+\])")
+        toks = token_re.split(line)
+        for tok in toks:
+            if not tok:
+                continue
+            if tok == "[protag]":
+                res.append(0xF0)
+            elif tok == "[sub]":
+                res.append(0xF1)
+            elif tok == "[pet]":
+                res.append(0xF2)
             else:
-                if ch == "\n":
-                    res.append(0xFF) # Line break in Traverse
-                elif 0x20 <= ord(ch) <= 0x7E:
-                    # Standard ASCII for English VWF
-                    res.append(ord(ch))
-                elif rev_tbl and ch in rev_tbl:
-                    res.extend(rev_tbl[ch])
-                else:
-                    res.append(ord("?"))
+                for ch in tok:
+                    if 0x20 <= ord(ch) <= 0x7E:
+                        res.append(ord(ch))
+                    else:
+                        res.append(ord("?"))
 
-    res.append(0xFF) # String terminator
+    res.append(0xFF)  # Dialogue box terminator!
     return bytes(res)
 
 
@@ -302,10 +304,10 @@ class ScriptInserter:
         self.translations_dir = translations_dir
         self.tbl_path = tbl_path
 
-        # Free space pool in Bank $CA (0x0A0000 - 0x0A6FFF = 28,672 bytes)
-        self.pool_start = 0x0A0000
+        # Free space pool in Bank $CA ($CA:A000 - $CA:FF00 = 24,320 bytes in safe upper half)
+        self.pool_start = 0x0AA000
         self.pool_cur = self.pool_start
-        self.pool_max = 0x0A6F00
+        self.pool_max = 0x0AFF00
 
         # String Redirection Table at 0x0A7000 (Bank $CA, $CA:7000 - $CA:7FFF = 4096 bytes)
         self.redirect_table_pc = 0x0A7000
@@ -380,10 +382,7 @@ class ScriptInserter:
                     clean_text = entry["en_text"].strip()
                     encoded = clean_text.encode("ascii", "replace") + b"\xFF"
                 else:
-                    # 1. Word wrap English text for dialogue VWF
-                    wrapped = word_wrap_text(entry["en_text"], max_px=216)
-                    # 2. Encode to binary
-                    encoded = encode_dialogue_string(wrapped, self.rev_tbl)
+                    encoded = encode_dialogue_string(entry["en_text"], self.rev_tbl)
 
                 # Greenfield Allocation Strategy:
                 # Always allocate full dialogue strings in unmapped Bank $CA free space pool!
@@ -405,17 +404,14 @@ class ScriptInserter:
                     orig_bank = int(orig_bank_str, 16) if isinstance(orig_bank_str, str) else int(orig_bank_str)
                     new_addr = dest_pc & 0xFFFF
                     new_bank = (dest_pc >> 16) + 0xC0
-                    self.redirect_entries.append((orig_addr, orig_bank, new_addr, new_bank))
-                    print(f"      [Redirect] Relocated 0x{orig_pc:06X} ($ {orig_bank:02X}:{orig_addr:04X}) -> 0x{dest_pc:06X} ($ {new_bank:02X}:{new_addr:04X}) in Bank $CA pool")
+                    self.redirect_entries.append((orig_addr, orig_bank, new_addr, new_bank, orig_len))
+                    print(f"      [Redirect] Relocated 0x{orig_pc:06X} ($ {orig_bank:02X}:{orig_addr:04X}) -> 0x{dest_pc:06X} ($ {new_bank:02X}:{new_addr:04X}) in Bank $CA pool (orig_len={orig_len})")
 
                 if not dry_run:
                     rom_bytes[dest_pc : dest_pc + len(encoded)] = encoded
-                    # Dual-write in-place: also write into original space so inline peeking sees valid English
-                    fit_len = min(len(encoded), orig_len + 1)
-                    if fit_len > 0:
-                        rom_bytes[orig_pc : orig_pc + fit_len] = encoded[:fit_len]
-                        if len(encoded) < orig_len + 1:
-                            rom_bytes[orig_pc + len(encoded) : orig_pc + orig_len + 1] = b"\xFF" * (orig_len + 1 - len(encoded))
+                    # Bank $F3 scenario stream remains clean and uncorrupted!
+                    # RenderEnglishVWF intercepts orig_addr/orig_bank, renders from Bank $CA,
+                    # and returns Y = orig_len so caller advances past the pristine Bank $F3 string cleanly.
 
                 translated_count += 1
                 bytes_written += len(encoded)
@@ -556,12 +552,12 @@ class ScriptInserter:
                 print(f"  [{s_file.name}] {trans}/{tot} translated ({b_written} bytes injected)")
 
         if not dry_run and len(self.redirect_entries) > 0:
-            for idx, (orig_addr, orig_bank, new_addr, new_bank) in enumerate(self.redirect_entries):
-                pos = self.redirect_table_pc + idx * 6
-                struct.pack_into("<HBHB", rom_data, pos, orig_addr, orig_bank, new_addr, new_bank)
-            term_pos = self.redirect_table_pc + len(self.redirect_entries) * 6
+            for idx, (orig_addr, orig_bank, new_addr, new_bank, orig_len) in enumerate(self.redirect_entries):
+                pos = self.redirect_table_pc + idx * 8
+                struct.pack_into("<HBHBH", rom_data, pos, orig_addr, orig_bank, new_addr, new_bank, orig_len)
+            term_pos = self.redirect_table_pc + len(self.redirect_entries) * 8
             rom_data[term_pos : term_pos + 2] = b"\x00\x00"
-            print(f"      [Redirect Table] Wrote {len(self.redirect_entries)} redirection entries to 0x{self.redirect_table_pc:06X}.")
+            print(f"      [Redirect Table] Wrote {len(self.redirect_entries)} redirection entries (8B each) to 0x{self.redirect_table_pc:06X}.")
 
         if not dry_run and total_translated > 0:
             self.rom_path.write_bytes(rom_data)
