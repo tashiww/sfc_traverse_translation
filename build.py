@@ -74,6 +74,8 @@ def step_insert_scripts():
     if stats['total_translated'] > 0:
         print(f"      Bank $C1 pool: {stats['pool_c1_used']} bytes written.")
         print(f"      Bank $CA pool: {stats['pool_ca_used']} bytes written.")
+        if stats.get('pool_db_used', 0) > 0:
+            print(f"      Bank $DB pool: {stats['pool_db_used']} bytes written.")
 
 
 def step_finalize_rom():

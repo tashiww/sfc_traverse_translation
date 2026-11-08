@@ -6,3 +6,7 @@ __pycache__/
 # Ignore ROM files and dumps, but keep the directory tracked
 rom/*
 !rom/.gitkeep
+
+# Ignore generated patch files, keep directory tracked
+patches/*
+!patches/.gitkeep

@@ -214,6 +214,11 @@ class ScriptInserter:
         self.pool_c1_cur = self.pool_c1_start
         self.pool_c1_max = 0x018000
 
+        # Free space pool in Bank $DB (0x1BF530 - 0x1BFFFF = 2,768 bytes)
+        self.pool_db_start = 0x1BF530
+        self.pool_db_cur = self.pool_db_start
+        self.pool_db_max = 0x1BFFFF
+
         self.tbl = load_tbl(tbl_path)
         # Reverse mapping: char -> bytes (only for non-ASCII)
         self.rev_tbl = {}
@@ -239,6 +244,9 @@ class ScriptInserter:
         return addr
 
     def insert_file(self, rom_bytes: bytearray, script_file: Path, dry_run: bool = False) -> tuple[int, int, int]:
+        if script_file.name == "dialogue_prologue.txt":
+            return self.insert_prologue_stream(rom_bytes, script_file, dry_run=dry_run)
+
         entries = parse_script_file(script_file)
         if not entries:
             return 0, 0, 0
@@ -285,6 +293,56 @@ class ScriptInserter:
 
         return len(entries), translated_count, bytes_written
 
+    def insert_prologue_stream(self, rom_bytes: bytearray, script_file: Path, dry_run: bool = False) -> tuple[int, int, int]:
+        """
+        Inserts opening prologue dialogue stream into relocated Bank $DB free space
+        and repoints the dialogue runner hook at $C0:EF83.
+        """
+        entries = parse_script_file(script_file)
+        if not entries:
+            return 0, 0, 0
+
+        translated_count = sum(1 for e in entries if e["is_translated"])
+        if translated_count == 0:
+            return len(entries), 0, 0
+
+        dest_start = self.pool_db_start
+        dest_cur = dest_start
+
+        clean_rom_path = ROOT_DIR / "rom" / "Traverse - Starlight & Prairie (Japan).sfc"
+        clean_rom = clean_rom_path.read_bytes()
+
+        for entry in entries:
+            meta = entry["meta"]
+            orig_pc = int(meta["str_pos"], 16)
+            orig_len = meta["length"]
+
+            if entry["is_translated"]:
+                wrapped = word_wrap_text(entry["en_text"], max_px=216)
+                encoded = encode_dialogue_string(wrapped, self.rev_tbl)
+                if not dry_run:
+                    rom_bytes[dest_cur : dest_cur + len(encoded)] = encoded
+                dest_cur += len(encoded)
+            else:
+                orig_bytes = clean_rom[orig_pc : orig_pc + orig_len] + b"\xFF"
+                if not dry_run:
+                    rom_bytes[dest_cur : dest_cur + len(orig_bytes)] = orig_bytes
+                dest_cur += len(orig_bytes)
+
+        # Terminating opcode 0x00 for prologue dialogue engine
+        if not dry_run:
+            rom_bytes[dest_cur] = 0x00
+        dest_cur += 1
+
+        # Patch starting pointer in Bank $C0 at PC 0x00EF83
+        if not dry_run:
+            snes_offset = dest_start & 0xFFFF
+            rom_bytes[0x00EF83 : 0x00EF85] = struct.pack("<H", snes_offset)
+
+        bytes_written = dest_cur - dest_start
+        self.pool_db_cur = dest_cur
+        return len(entries), translated_count, bytes_written
+
     def run(self, dry_run: bool = False, verbose: bool = False) -> dict:
         if not self.rom_path.exists():
             raise FileNotFoundError(f"Target ROM not found: {self.rom_path}")
@@ -310,6 +368,7 @@ class ScriptInserter:
 
         pool_ca_used = self.pool_cur - self.pool_start
         pool_c1_used = self.pool_c1_cur - self.pool_c1_start
+        pool_db_used = self.pool_db_cur - self.pool_db_start
 
         return {
             "total_files": len(script_files),
@@ -318,6 +377,7 @@ class ScriptInserter:
             "total_bytes": total_bytes,
             "pool_ca_used": pool_ca_used,
             "pool_c1_used": pool_c1_used,
+            "pool_db_used": pool_db_used,
             "file_details": results,
         }
 
