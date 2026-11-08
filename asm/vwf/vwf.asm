@@ -5,11 +5,32 @@
 
 hirom
 
-; Hook directly into the dialogue character line renderer in Bank $C0
+; Universal Hook into Dialogue Character Line Renderer at $DC:CAA1
 ; In clean ROM:
-;   $C0:F511: JSL $DC:CA99 (22 99 CA DC)
-org $C0F511
-    JSL RenderEnglishVWF
+;   $DC:CA8F: PHP : PHB : SEP #$20 : STZ $A6 : STA $A5 : BRA $DCCAA1
+;   $DC:CA99: PHP : PHB : SEP #$20 : LDA #$DB : STA $A5 : BRA $DCCAA1 (falls through)
+;   $DC:CAA1: LDA #$D3 : PHA : PLB (4 bytes: A9 D3 48 AB)
+; Every dialogue renderer in the entire game (cutscene macro 0x06, regular NPC
+; interactions, map events, dialogue boxes) calls $DC:CA99 or $DC:CA8F and
+; converges at $DC:CAA1.
+; By placing a JML here, ALL dialogue automatically routes to RenderEnglishVWF!
+org $DCCAA1
+    JML RenderEnglishVWF
+
+; ----------------------------------------------------------------------------
+; Dynamic String Redirection Table in Bank $CA
+; Allows any dialogue string in any bank to be transparently repointed to
+; unmapped free space in Bank $CA without modifying original bytecode.
+; Format per entry (6 bytes):
+;   +0: orig_addr (16-bit LE)
+;   +2: orig_bank (8-bit)
+;   +3: new_addr  (16-bit LE)
+;   +5: new_bank  (8-bit)
+; Table ends with $0000 (16-bit orig_addr == 0).
+; ----------------------------------------------------------------------------
+org $CA7800
+StringRedirectTable:
+    fillbyte $00 : fill 2048
 
 ; ----------------------------------------------------------------------------
 ; Engine Code & Font Data in Bank $CA Free Space ($CA8000+)
@@ -35,10 +56,10 @@ org $CA8000
 ; Inputs:
 ;   [$A3] = 24-bit pointer to dialogue string
 ;   $A8   = Tile attribute byte ($2B)
-;   Stack layout at entry (relative to S after PHP:PHB):
-;     $01,S: caller DB
-;     $02,S: caller P
-;     $03,S..$05,S: JSL return address ($C0:F515)
+;   Stack layout at entry (relative to S from caller $DC:CA8F / $DC:CA99):
+;     $01,S: caller DB (pushed by PHB)
+;     $02,S: caller P  (pushed by PHP)
+;     $03,S..$05,S: JSL return address
 ;     $06,S: caller Base Tile ID (starts at 0)
 ;     $07,S: caller Col parameter (starts at 2)
 ;     $08,S: caller Row parameter (starts at 2, 4, 6...)
@@ -49,19 +70,56 @@ org $CA8000
 ;   $06,S (caller Base Tile ID) incremented by consumed tiles (2 per column)
 ; ----------------------------------------------------------------------------
 RenderEnglishVWF:
-    PHP
-    PHB
+    ; Note: Caller ($DC:CA8F or $DC:CA99) already executed PHP : PHB : SEP #$20.
+    ; Do NOT push PHP : PHB again!
+
+    ; ------------------------------------------------------------------------
+    ; Dynamic String Redirection Check:
+    ; Checks if [$A3] matches an entry in StringRedirectTable.
+    ; If matched, repoints [$A3] to the allocated free space pool in Bank $CA.
+    ; ------------------------------------------------------------------------
+    REP #$30            ; 16-bit A, X, Y
+    PHX
+    LDX #$0000
+.redirect_loop:
+    LDA.l StringRedirectTable,X     ; 16-bit orig_addr
+    BEQ .redirect_done              ; $0000 marks end of table
+    CMP $A3                         ; Compare 16-bit address
+    BNE +
+    SEP #$20                        ; 8-bit A
+    LDA.l StringRedirectTable+2,X   ; 8-bit orig_bank
+    CMP $A5                         ; Compare bank byte
+    REP #$20                        ; 16-bit A
+    BNE +
+    ; Match found! Repoint [$A3] to new 24-bit pointer in Bank $CA pool:
+    LDA.l StringRedirectTable+3,X   ; 16-bit new_addr
+    STA $A3
+    SEP #$20                        ; 8-bit A
+    LDA.l StringRedirectTable+5,X   ; 8-bit new_bank
+    STA $A5
+    REP #$20                        ; 16-bit A
+    BRA .redirect_done
++   TXA
+    CLC
+    ADC #$0006                      ; Next entry (6 bytes)
+    TAX
+    BRA .redirect_loop
+
+.redirect_done:
+    PLX
 
     ; Intelligent Language Detection:
     ; Check if string at [$A3] contains Japanese characters or control codes.
-    ; Untranslated dialogue strings will fall back directly to the native Japanese
-    ; renderer at $DC:CA99, completely preventing jumbled English letters!
+    ; Untranslated dialogue strings fall back directly to the native Japanese
+    ; renderer at $DC:CAA5, completely preventing jumbled English letters!
     SEP #$20            ; 8-bit A
     REP #$10            ; 16-bit X, Y
     LDY #$0000
 .detect_loop:
     LDA [$A3],Y
     CMP #$FF            ; End of line
+    BEQ .detect_done
+    CMP #$FE            ; End of dialogue box
     BEQ .detect_done
     ; Check Kanji prefix ($FB, $FC, $FD):
     CMP #$FB
@@ -79,9 +137,11 @@ RenderEnglishVWF:
     BRA .detect_done
 
 .passthrough_jp:
+    SEP #$20
+    LDA #$D3            ; Re-execute the 4 bytes replaced by JML RenderEnglishVWF
+    PHA
     PLB
-    PLP
-    JML $DCCA99         ; Jump directly to native Japanese character renderer!
+    JML $DCCAA5         ; Continue in native Japanese character renderer!
 
 .detect_done:
     PHK

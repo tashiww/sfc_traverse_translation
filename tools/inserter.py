@@ -147,7 +147,8 @@ def word_wrap_text(text: str, max_px: int = 216, char_widths: dict = None) -> st
     wrapped_paragraphs = []
 
     for para in paragraphs:
-        lines = para.split("<br>")
+        delim = "<wait_auto>" if "<wait_auto>" in para else "<br>"
+        lines = para.split(delim)
         wrapped_lines = []
 
         for line in lines:
@@ -197,7 +198,7 @@ def word_wrap_text(text: str, max_px: int = 216, char_widths: dict = None) -> st
             if cur_line:
                 wrapped_lines.append("".join(cur_line).strip())
 
-        wrapped_paragraphs.append("<br>".join(wrapped_lines))
+        wrapped_paragraphs.append(delim.join(wrapped_lines))
 
     return "<page>".join(wrapped_paragraphs)
 
@@ -224,7 +225,13 @@ def encode_dialogue_string(text: str, rev_tbl: dict = None) -> bytes:
                     res.extend(full_tag.encode("ascii", "replace"))
         elif tag_bracket is not None:
             full_tag = f"[{tag_bracket}]"
-            if rev_tbl and full_tag in rev_tbl:
+            if full_tag == "[protag]":
+                res.append(0xF0)
+            elif full_tag == "[sub]":
+                res.append(0xF1)
+            elif full_tag == "[pet]":
+                res.append(0xF2)
+            elif rev_tbl and full_tag in rev_tbl:
                 val = rev_tbl[full_tag]
                 if isinstance(val, int):
                     res.append(val)
@@ -255,10 +262,14 @@ class ScriptInserter:
         self.translations_dir = translations_dir
         self.tbl_path = tbl_path
 
-        # Free space pool in Bank $CA (0x0A0000 - 0x0AFFFF = 65,536 bytes)
+        # Free space pool in Bank $CA (0x0A0000 - 0x0A7700 = ~30KB)
         self.pool_start = 0x0A0000
         self.pool_cur = self.pool_start
-        self.pool_max = 0x0AFFFF
+        self.pool_max = 0x0A7700
+
+        # String Redirection Table at 0x0A7800 (Bank $CA, $CA:7800 - $CA:7FFF = 2048 bytes)
+        self.redirect_table_pc = 0x0A7800
+        self.redirect_entries = []
 
         # Free space pool in Bank $C1 (0x015D00 - 0x017FFF = 8,960 bytes)
         self.pool_c1_start = 0x015D00
@@ -299,8 +310,6 @@ class ScriptInserter:
             return self.insert_prologue_stream(rom_bytes, script_file, dry_run=dry_run)
         if "location_names" in script_file.name:
             return self.insert_location_names(rom_bytes, script_file, dry_run=dry_run)
-        if script_file.name == "dialogue_bank_F3.txt":
-            return self.insert_f3_stream(rom_bytes, script_file, dry_run=dry_run)
 
         entries = parse_script_file(script_file)
         if not entries:
@@ -339,8 +348,12 @@ class ScriptInserter:
                 # 3. Check if fits in original location or needs pool
                 if len(encoded) <= orig_len:
                     dest_pc = orig_pc
+                    if not dry_run:
+                        rom_bytes[dest_pc : dest_pc + len(encoded)] = encoded
+                        if len(encoded) < orig_len:
+                            rom_bytes[dest_pc + len(encoded) : dest_pc + orig_len] = b"\xFF" * (orig_len - len(encoded))
                 else:
-                    dest_pc = self.allocate_pool(len(encoded), bank=bank)
+                    dest_pc = self.allocate_pool(len(encoded), bank="0xCA")
                     # Update pointer if ptr_pos is known
                     if "ptr_pos" in meta and not dry_run:
                         ptr_pc = int(meta["ptr_pos"], 16) if isinstance(meta["ptr_pos"], str) else int(meta["ptr_pos"])
@@ -352,6 +365,15 @@ class ScriptInserter:
                         else:
                             snes_offset = dest_pc & 0xFFFF
                             rom_bytes[ptr_pc : ptr_pc + 2] = struct.pack("<H", snes_offset)
+                    elif not dry_run:
+                        # Relocate without static pointer -> Register in StringRedirectTable!
+                        orig_addr = orig_pc & 0xFFFF
+                        orig_bank_str = meta.get("bank", "0xF3")
+                        orig_bank = int(orig_bank_str, 16) if isinstance(orig_bank_str, str) else int(orig_bank_str)
+                        new_addr = dest_pc & 0xFFFF
+                        new_bank = (dest_pc >> 16) + 0xC0
+                        self.redirect_entries.append((orig_addr, orig_bank, new_addr, new_bank))
+                        print(f"      [Redirect] Relocated 0x{orig_pc:06X} ($ {orig_bank:02X}:{orig_addr:04X}) -> 0x{dest_pc:06X} ($ {new_bank:02X}:{new_addr:04X}) in Bank $CA pool")
 
                 if not dry_run:
                     rom_bytes[dest_pc : dest_pc + len(encoded)] = encoded
@@ -469,59 +491,6 @@ class ScriptInserter:
         print(f"      [Locations Inserter] Injected {translated_count} location names ({bytes_written} bytes).")
         return len(entries), translated_count, bytes_written
 
-    def insert_f3_stream(self, rom_bytes: bytearray, script_file: Path, dry_run: bool = False) -> tuple[int, int, int]:
-        """
-        VWF English Dialogue Stream Injection for Bank $F3 strings 192-197:
-        Injects the Galahad & Gant drinking scene dialogue stream directly
-        in-place at PC 0x334244 (budget = 193 bytes, up to 0x334305).
-        """
-        entries = parse_script_file(script_file)
-        if not entries:
-            return 0, 0, 0
-
-        # Construct dialogue stream in English ASCII with native control codes:
-        stream = bytearray()
-
-        # Box 1 (Galahad):
-        # Speaker: "Galahad\xFF"
-        # Line 1: "[protag]! Where are you?!\xFF\xFF"
-        stream.extend(b"Galahad\xFF\xF0! Where are you?!\xFF\xFF")
-
-        # Box 2 (Gant):
-        # Speaker: "[protag]\xFF"
-        # Line 1: "I'm right here, Dad.\xFF\xFF"
-        stream.extend(b"\xF0\xFFI'm right here, Dad.\xFF\xFF")
-
-        # Box 3 (Galahad):
-        # Speaker: "Galahad\xFF"
-        # Line 1: "Booze! Go get booze!\xFF\xFF"
-        stream.extend(b"Galahad\xFFBooze! Go get booze!\xFF\xFF")
-
-        # Box 4 (Gant):
-        # Speaker: "[protag]\xFF"
-        # Line 1: "No one will sell to us.\xFF"
-        # Line 2: "We have no money left...\xFF\xFF"
-        stream.extend(b"\xF0\xFFNo one will sell to us.\xFFWe have no money left...\xFF\xFF")
-
-        # Box 5 (Galahad):
-        # Speaker: "Galahad\xFF"
-        # Line 1: "Shut up! Just go get it!\xFF\xFF"
-        stream.extend(b"Galahad\xFFShut up! Just go get it!\xFF\xFF")
-
-        # Box 6 (Gant):
-        # Speaker: "[protag]\xFF"
-        # Line 1: "*sigh* Fine, I'll go.\xFF\xFF"
-        stream.extend(b"\xF0\xFF*sigh* Fine, I'll go.\xFF\xFF")
-
-        assert len(stream) == 193, f"Expected 193 bytes, got {len(stream)}"
-
-        dest_pc = 0x334244
-        if not dry_run:
-            rom_bytes[dest_pc : dest_pc + len(stream)] = stream
-
-        print(f"      [VWF Inserter] Injected {len(stream)} bytes of Bank $F3 dialogue at 0x{dest_pc:06X}.")
-        return len(entries), 6, len(stream)
-
     def run(self, dry_run: bool = False, verbose: bool = False) -> dict:
         if not self.rom_path.exists():
             raise FileNotFoundError(f"Target ROM not found: {self.rom_path}")
@@ -545,6 +514,14 @@ class ScriptInserter:
             total_bytes += b_written
             if verbose and tot > 0:
                 print(f"  [{s_file.name}] {trans}/{tot} translated ({b_written} bytes injected)")
+
+        if not dry_run and len(self.redirect_entries) > 0:
+            for idx, (orig_addr, orig_bank, new_addr, new_bank) in enumerate(self.redirect_entries):
+                pos = self.redirect_table_pc + idx * 6
+                struct.pack_into("<HBHB", rom_data, pos, orig_addr, orig_bank, new_addr, new_bank)
+            term_pos = self.redirect_table_pc + len(self.redirect_entries) * 6
+            rom_data[term_pos : term_pos + 2] = b"\x00\x00"
+            print(f"      [Redirect Table] Wrote {len(self.redirect_entries)} redirection entries to 0x{self.redirect_table_pc:06X}.")
 
         if not dry_run and total_translated > 0:
             self.rom_path.write_bytes(rom_data)
