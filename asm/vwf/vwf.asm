@@ -63,8 +63,6 @@ RenderEnglishVWF:
     LDA [$A3],Y
     CMP #$FF            ; End of line
     BEQ .detect_done
-    CMP #$FE            ; End of box or wait
-    BEQ .check_fe_wait
     ; Check Kanji prefix ($FB, $FC, $FD):
     CMP #$FB
     BCC +
@@ -78,13 +76,6 @@ RenderEnglishVWF:
 +   INY
     CPY #$0018          ; Scan up to 24 bytes
     BNE .detect_loop
-    BRA .detect_done
-
-.check_fe_wait:
-    ; Check if followed by $00 (<wait_auto> in Japanese dialogue):
-    INY
-    LDA [$A3],Y
-    BEQ .passthrough_jp
     BRA .detect_done
 
 .passthrough_jp:
@@ -453,16 +444,15 @@ DrawSingleChar:
     BRA .do_tick
 +   LDA #$01            ; Normal letter -> standard typewriter audio tick
 .do_tick:
-    PHA                 ; Save typewriter code on stack (1 byte)
-
-    PHB                 ; Save DB ($CA)
-    PEA $0000 : PLB : PLB ; DB = $00
-
-    LDA $02,S           ; Reload typewriter code from stack
-    JSL $C0F395         ; Step typewriter, audio bleep, DMA!
-
-    PLB                 ; Restore DB ($CA)
-    PLA                 ; Clean up pushed code
+    ; Typewriter synchronization via direct VBlank DMA:
+    ; Transfers $7E:CE80 glyph buffer to VRAM $5800 at 60fps without touching
+    ; or overrunning the cutscene macro script [$D1]!
+    SEP #$20            ; 8-bit A
+    STZ $B8
+    STZ $B6             ; Mode 0: glyph buffer DMA
+    LDA.l $004210
+-   LDA.l $004210
+    BPL -
 
 .skip_tw:
     PLX                 ; Restore caller X

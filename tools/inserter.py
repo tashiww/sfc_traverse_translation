@@ -484,34 +484,34 @@ class ScriptInserter:
 
         # Box 1 (Galahad):
         # Speaker: "Galahad\xFF"
-        # Line 1: "[protag]! Where are you?!\xFF\xFE"
-        stream.extend(b"Galahad\xFF\xF0! Where are you?!\xFF\xFE")
+        # Line 1: "[protag]! Where are you?!\xFF\xFF"
+        stream.extend(b"Galahad\xFF\xF0! Where are you?!\xFF\xFF")
 
         # Box 2 (Gant):
         # Speaker: "[protag]\xFF"
-        # Line 1: "I'm right here, Dad.\xFF\xFE"
-        stream.extend(b"\xF0\xFFI'm right here, Dad.\xFF\xFE")
+        # Line 1: "I'm right here, Dad.\xFF\xFF"
+        stream.extend(b"\xF0\xFFI'm right here, Dad.\xFF\xFF")
 
         # Box 3 (Galahad):
         # Speaker: "Galahad\xFF"
-        # Line 1: "Booze! Go get booze!\xFF\xFE"
-        stream.extend(b"Galahad\xFFBooze! Go get booze!\xFF\xFE")
+        # Line 1: "Booze! Go get booze!\xFF\xFF"
+        stream.extend(b"Galahad\xFFBooze! Go get booze!\xFF\xFF")
 
         # Box 4 (Gant):
         # Speaker: "[protag]\xFF"
         # Line 1: "No one will sell to us.\xFF"
-        # Line 2: "We have no money left...\xFF\xFE"
-        stream.extend(b"\xF0\xFFNo one will sell to us.\xFFWe have no money left...\xFF\xFE")
+        # Line 2: "We have no money left...\xFF\xFF"
+        stream.extend(b"\xF0\xFFNo one will sell to us.\xFFWe have no money left...\xFF\xFF")
 
         # Box 5 (Galahad):
         # Speaker: "Galahad\xFF"
-        # Line 1: "Shut up! Just go get it!\xFF\xFE"
-        stream.extend(b"Galahad\xFFShut up! Just go get it!\xFF\xFE")
+        # Line 1: "Shut up! Just go get it!\xFF\xFF"
+        stream.extend(b"Galahad\xFFShut up! Just go get it!\xFF\xFF")
 
         # Box 6 (Gant):
         # Speaker: "[protag]\xFF"
-        # Line 1: "*sigh* Fine, I'll go.\xFF\xFE"
-        stream.extend(b"\xF0\xFF*sigh* Fine, I'll go.\xFF\xFE")
+        # Line 1: "*sigh* Fine, I'll go.\xFF\xFF"
+        stream.extend(b"\xF0\xFF*sigh* Fine, I'll go.\xFF\xFF")
 
         assert len(stream) == 193, f"Expected 193 bytes, got {len(stream)}"
 
