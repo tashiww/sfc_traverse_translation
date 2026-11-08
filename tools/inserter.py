@@ -297,7 +297,7 @@ class ScriptInserter:
     def insert_file(self, rom_bytes: bytearray, script_file: Path, dry_run: bool = False) -> tuple[int, int, int]:
         if script_file.name == "dialogue_prologue.txt":
             return self.insert_prologue_stream(rom_bytes, script_file, dry_run=dry_run)
-        if script_file.name == "location_names.txt":
+        if "location_names" in script_file.name:
             return self.insert_location_names(rom_bytes, script_file, dry_run=dry_run)
         if script_file.name == "dialogue_bank_F3.txt":
             return self.insert_f3_stream(rom_bytes, script_file, dry_run=dry_run)
@@ -318,14 +318,23 @@ class ScriptInserter:
             orig_pos_str = meta.get("str_pos") or meta.get("pc_hex")
             orig_pc = int(orig_pos_str, 16) if isinstance(orig_pos_str, str) else int(orig_pos_str)
             orig_len = meta.get("length", 0)
+            if not orig_len:
+                m = re.search(r"length:\s*(\d+)", entry.get("jp_text", ""))
+                if m:
+                    orig_len = int(m.group(1))
+
             bank = meta.get("bank", "0xCA")
+            table_mode = meta.get("table", "normal")
 
             if entry["is_translated"]:
-                # 1. Word wrap English text
-                wrapped = word_wrap_text(entry["en_text"], max_px=216)
-
-                # 2. Encode to binary
-                encoded = encode_dialogue_string(wrapped, self.rev_tbl)
+                if table_mode == "menu":
+                    clean_text = entry["en_text"].strip()
+                    encoded = clean_text.encode("ascii", "replace") + b"\xFF"
+                else:
+                    # 1. Word wrap English text for dialogue VWF
+                    wrapped = word_wrap_text(entry["en_text"], max_px=216)
+                    # 2. Encode to binary
+                    encoded = encode_dialogue_string(wrapped, self.rev_tbl)
 
                 # 3. Check if fits in original location or needs pool
                 if len(encoded) <= orig_len:
@@ -428,10 +437,16 @@ class ScriptInserter:
             encoded = text.encode("ascii", "replace") + b"\xFF"
             orig_pc = int(meta["str_pos"]) if isinstance(meta["str_pos"], int) else int(meta["str_pos"], 16)
             orig_len = meta.get("length", 0)
+            if not orig_len:
+                m = re.search(r"length:\s*(\d+)", entry.get("jp_text", ""))
+                if m:
+                    orig_len = int(m.group(1))
+
+            ptr_pos_val = int(meta["ptr_pos"]) if isinstance(meta["ptr_pos"], int) else int(meta["ptr_pos"], 16) if "ptr_pos" in meta else 0
 
             # Fix ROM bug for Index 22 (Tomria):
             # ROM has 45 00 at 0x01432C, real string is at 0x014600 (0x4600)
-            if str_num == 22 and not dry_run:
+            if (str_num == 22 or ptr_pos_val == 0x01432C) and not dry_run:
                 ptr_pc = 0x01432C
                 rom_bytes[ptr_pc : ptr_pc + 2] = bytes([0x46, 0x00])
 
@@ -439,8 +454,8 @@ class ScriptInserter:
                 dest_pc = orig_pc
             else:
                 dest_pc = self.allocate_pool(len(encoded), bank="0xC1")
-                if not dry_run and "ptr_pos" in meta:
-                    ptr_pc = int(meta["ptr_pos"]) if isinstance(meta["ptr_pos"], int) else int(meta["ptr_pos"], 16)
+                if not dry_run and ptr_pos_val:
+                    ptr_pc = ptr_pos_val
                     offset_be = (dest_pc - 0x010000) & 0xFFFF
                     rom_bytes[ptr_pc] = (offset_be >> 8) & 0xFF
                     rom_bytes[ptr_pc + 1] = offset_be & 0xFF
@@ -518,6 +533,10 @@ class ScriptInserter:
         total_bytes = 0
 
         script_files = sorted(self.translations_dir.glob("*.txt"))
+        # If any translated_<name>.txt exists, suppress the corresponding <name>.txt:
+        translated_prefixes = {f.name[len("translated_"):]: f for f in script_files if f.name.startswith("translated_")}
+        script_files = [f for f in script_files if f.name not in translated_prefixes]
+
         for s_file in script_files:
             tot, trans, b_written = self.insert_file(rom_data, s_file, dry_run=dry_run)
             results[s_file.name] = (tot, trans, b_written)
