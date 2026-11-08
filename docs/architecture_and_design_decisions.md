@@ -41,18 +41,18 @@ Clean Japanese *Traverse* uses a native character table (`tables/ja_tbl.tbl` / `
   * Both `$DC:CA8F` (variable bank caller) and `$DC:CA99` (Bank $DB caller) converge at `$DC:CAA1`.
   * Intercepts **all 7 dialogue call sites** across the entire game: cutscene macro 0x06 (`$C0:F511`), regular NPC dialogue interactions (`$C0:D45D`), map events (`$C0:B352`), and window rendering.
 * **Dynamic String Redirection Table (`StringRedirectTable`):**
-  * **Location in ROM:** Bank `$CA` at `$CA:7800` (PC `0x0A7800`, up to 2,048 bytes / 340 entries).
+  * **Location in ROM:** Bank `$CA` at `$CA:7000` (PC `0x0A7000`, up to 4,096 bytes / 682 entries).
   * **Structure per entry (6 bytes):** `orig_addr` (16-bit LE), `orig_bank` (8-bit), `new_addr` (16-bit LE), `new_bank` (8-bit).
-  * **Purpose:** Allows any scenario dialogue string (Bank $F1–$F9) to expand into the unmapped 64KB free space pool in Bank `$CA` (`0x0A0000`–`0x0A7700`) without being constrained by original Japanese byte lengths or artificial in-place budgets.
+  * **Greenfield Safe Allocation Policy:** All translated scenario dialogue entries unconditionally allocate into the greenfield pool in Bank `$CA` (`0x0A0000`–`0x0A6FFF`) and register in `StringRedirectTable`. Original clean Japanese scenario bytecode is never overwritten, eliminating risk of corrupting bytecode or overflowing boundaries.
 * **Encoding Format in Script Files:** Clean UTF-8 text in `.txt` files.
 * **Internal Font Mapping:**
   * Uses a dedicated 96-glyph proportional font in Bank `$CA` (`asm/vwf/vwf_font.bin` and `vwf_widths.bin`).
   * Index 0 corresponds to ASCII space (`0x20`), Index 1 to `!`, up to Index 94 (`~`).
 * **Dual-Space Compatibility:**
   * Both native space (`0x00`) and ASCII space (`0x20`) invoke `AdvanceSpace` (`cursor_x += 4px`), completely eliminating the null-terminator collision bug.
-* **Intelligent Dual-Language Detection & Passthrough:**
-  * Scans the string at `[$A3]`. If Kanji prefixes (`$FB`–`$FD`) or untranslated Japanese character codes are detected, it executes `SEP #$20 : LDA #$D3 : PHA : PLB : JML $DCCAA5` to re-execute the replaced instructions and fall back cleanly to the native Japanese fixed-width renderer.
-  * English text is rendered through the VWF sub-pixel rasterizer. Untranslated Japanese scenes never display jumbled English characters.
+* **Deterministic Dual-Language Discrimination:**
+  * Checked by ROM Bank: If `$A5 == $CA` (redirected to Bank `$CA` pool) or `$A5 == $DB` and `$A3` is within the prologue stream (`$AA0F`..`$AC00`), the engine executes English VWF rasterization.
+  * All untranslated dialogue (original Japanese in Banks `$F1`–`$F9`, `$D3`, `$C0`, etc.) falls through immediately to `.passthrough_jp` (`SEP #$20 : LDA #$D3 : PHA : PLB : JML $DCCAA5`), running the native Japanese fixed-width renderer with zero heuristics and zero chance of garbled English letters!
 * **Dynamic Player Name Expansion:**
   * `$F0` = Protagonist name (`[protag]`, read from `$7E:EEC9`).
   * `$F1` = Sub-protagonist name (`[sub]`, read from `$7E:EED2`).

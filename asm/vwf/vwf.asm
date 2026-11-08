@@ -28,9 +28,9 @@ org $DCCAA1
 ;   +5: new_bank  (8-bit)
 ; Table ends with $0000 (16-bit orig_addr == 0).
 ; ----------------------------------------------------------------------------
-org $CA7800
+org $CA7000
 StringRedirectTable:
-    fillbyte $00 : fill 2048
+    fillbyte $00 : fill 4096
 
 ; ----------------------------------------------------------------------------
 ; Engine Code & Font Data in Bank $CA Free Space ($CA8000+)
@@ -108,32 +108,25 @@ RenderEnglishVWF:
 .redirect_done:
     PLX
 
-    ; Intelligent Language Detection:
-    ; Check if string at [$A3] contains Japanese characters or control codes.
+    ; ------------------------------------------------------------------------
+    ; Language Discrimination:
+    ; Dialogue strings allocated in Bank $CA pool ($A5 == $CA) or prologue
+    ; cutscene ($A5 == $DB, $A3 in $AA0F..$ABFF) are rendered with English VWF.
     ; Untranslated dialogue strings fall back directly to the native Japanese
     ; renderer at $DC:CAA5, completely preventing jumbled English letters!
+    ; ------------------------------------------------------------------------
     SEP #$20            ; 8-bit A
-    REP #$10            ; 16-bit X, Y
-    LDY #$0000
-.detect_loop:
-    LDA [$A3],Y
-    CMP #$FF            ; End of line
+    LDA $A5
+    CMP #$CA            ; Bank $CA = English VWF pool
     BEQ .detect_done
-    CMP #$FE            ; End of dialogue box
-    BEQ .detect_done
-    ; Check Kanji prefix ($FB, $FC, $FD):
-    CMP #$FB
-    BCC +
-    CMP #$FE
+    CMP #$DB            ; Bank $DB = Prologue cutscene stream
+    BNE .passthrough_jp
+    REP #$20            ; 16-bit A
+    LDA $A3
+    CMP #$AA0F
     BCC .passthrough_jp
-+   ; Check Katakana / Japanese punctuation ($80..$EF):
-    CMP #$80
-    BCC +
-    CMP #$F0
-    BCC .passthrough_jp
-+   INY
-    CPY #$0018          ; Scan up to 24 bytes
-    BNE .detect_loop
+    CMP #$AC00
+    BCS .passthrough_jp
     BRA .detect_done
 
 .passthrough_jp:

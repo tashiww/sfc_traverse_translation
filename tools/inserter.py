@@ -262,13 +262,13 @@ class ScriptInserter:
         self.translations_dir = translations_dir
         self.tbl_path = tbl_path
 
-        # Free space pool in Bank $CA (0x0A0000 - 0x0A7700 = ~30KB)
+        # Free space pool in Bank $CA (0x0A0000 - 0x0A6FFF = 28,672 bytes)
         self.pool_start = 0x0A0000
         self.pool_cur = self.pool_start
-        self.pool_max = 0x0A7700
+        self.pool_max = 0x0A6F00
 
-        # String Redirection Table at 0x0A7800 (Bank $CA, $CA:7800 - $CA:7FFF = 2048 bytes)
-        self.redirect_table_pc = 0x0A7800
+        # String Redirection Table at 0x0A7000 (Bank $CA, $CA:7000 - $CA:7FFF = 4096 bytes)
+        self.redirect_table_pc = 0x0A7000
         self.redirect_entries = []
 
         # Free space pool in Bank $C1 (0x015D00 - 0x017FFF = 8,960 bytes)
@@ -345,35 +345,30 @@ class ScriptInserter:
                     # 2. Encode to binary
                     encoded = encode_dialogue_string(wrapped, self.rev_tbl)
 
-                # 3. Check if fits in original location or needs pool
-                if len(encoded) <= orig_len:
-                    dest_pc = orig_pc
-                    if not dry_run:
-                        rom_bytes[dest_pc : dest_pc + len(encoded)] = encoded
-                        if len(encoded) < orig_len:
-                            rom_bytes[dest_pc + len(encoded) : dest_pc + orig_len] = b"\xFF" * (orig_len - len(encoded))
-                else:
-                    dest_pc = self.allocate_pool(len(encoded), bank="0xCA")
-                    # Update pointer if ptr_pos is known
-                    if "ptr_pos" in meta and not dry_run:
-                        ptr_pc = int(meta["ptr_pos"], 16) if isinstance(meta["ptr_pos"], str) else int(meta["ptr_pos"])
-                        ptr_type = meta.get("ptr_type", "16bit_le")
-                        if ptr_type == "16bit_be":
-                            offset_be = (dest_pc - 0x010000) & 0xFFFF
-                            rom_bytes[ptr_pc] = (offset_be >> 8) & 0xFF
-                            rom_bytes[ptr_pc + 1] = offset_be & 0xFF
-                        else:
-                            snes_offset = dest_pc & 0xFFFF
-                            rom_bytes[ptr_pc : ptr_pc + 2] = struct.pack("<H", snes_offset)
-                    elif not dry_run:
-                        # Relocate without static pointer -> Register in StringRedirectTable!
-                        orig_addr = orig_pc & 0xFFFF
-                        orig_bank_str = meta.get("bank", "0xF3")
-                        orig_bank = int(orig_bank_str, 16) if isinstance(orig_bank_str, str) else int(orig_bank_str)
-                        new_addr = dest_pc & 0xFFFF
-                        new_bank = (dest_pc >> 16) + 0xC0
-                        self.redirect_entries.append((orig_addr, orig_bank, new_addr, new_bank))
-                        print(f"      [Redirect] Relocated 0x{orig_pc:06X} ($ {orig_bank:02X}:{orig_addr:04X}) -> 0x{dest_pc:06X} ($ {new_bank:02X}:{new_addr:04X}) in Bank $CA pool")
+                # Greenfield Safe Strategy:
+                # Default directly to the unmapped free space in Bank $CA!
+                # Zero risk of stepping on neighboring bytecode or original data.
+                dest_pc = self.allocate_pool(len(encoded), bank="0xCA")
+                # Update pointer if ptr_pos is known
+                if "ptr_pos" in meta and not dry_run:
+                    ptr_pc = int(meta["ptr_pos"], 16) if isinstance(meta["ptr_pos"], str) else int(meta["ptr_pos"])
+                    ptr_type = meta.get("ptr_type", "16bit_le")
+                    if ptr_type == "16bit_be":
+                        offset_be = (dest_pc - 0x010000) & 0xFFFF
+                        rom_bytes[ptr_pc] = (offset_be >> 8) & 0xFF
+                        rom_bytes[ptr_pc + 1] = offset_be & 0xFF
+                    else:
+                        snes_offset = dest_pc & 0xFFFF
+                        rom_bytes[ptr_pc : ptr_pc + 2] = struct.pack("<H", snes_offset)
+                elif not dry_run:
+                    # Relocate without static pointer -> Register in StringRedirectTable!
+                    orig_addr = orig_pc & 0xFFFF
+                    orig_bank_str = meta.get("bank", "0xF3")
+                    orig_bank = int(orig_bank_str, 16) if isinstance(orig_bank_str, str) else int(orig_bank_str)
+                    new_addr = dest_pc & 0xFFFF
+                    new_bank = (dest_pc >> 16) + 0xC0
+                    self.redirect_entries.append((orig_addr, orig_bank, new_addr, new_bank))
+                    print(f"      [Redirect] Relocated 0x{orig_pc:06X} ($ {orig_bank:02X}:{orig_addr:04X}) -> 0x{dest_pc:06X} ($ {new_bank:02X}:{new_addr:04X}) in Bank $CA pool")
 
                 if not dry_run:
                     rom_bytes[dest_pc : dest_pc + len(encoded)] = encoded

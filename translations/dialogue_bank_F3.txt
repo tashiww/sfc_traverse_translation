@@ -4,50 +4,62 @@
 
 {"str_num": 1, "bank": "0xF3", "str_pos": "0x3303CC", "length": 72}
 #女<wait_auto>毎年4月21日から27日は、カーニバルなのよ。<wait_auto>カーニバル・クイーンを選ぶコンテストなんて、すっごくもり上がるんだから。
+Woman<wait_auto>Every year from April 21 to 27,<wait_auto>it's the Carnival!<wait_auto>The Carnival Queen contest gets<wait_auto>so crazy and exciting!
 
 
 {"str_num": 2, "bank": "0xF3", "str_pos": "0x330415", "length": 28}
 #女<wait_auto>今日はカーニバルよ。<wait_auto>見物してったら？
+Woman<wait_auto>Today's the Carnival!<wait_auto>Why don't you stick around and watch?
 
 
 {"str_num": 3, "bank": "0xF3", "str_pos": "0x330432", "length": 34}
 #女<wait_auto>ああ……ひまだわ……。<wait_auto>なんか、面白いことないかしら？
+Woman<wait_auto>Ahhh... I'm so bored...<wait_auto>Isn't there anything fun to do?
 
 
 {"str_num": 4, "bank": "0xF3", "str_pos": "0x330455", "length": 98}
 #女<wait_auto>ここはブックセンターよ。<wait_auto>寄付された本が集められているの。<wait_auto>図書館のようなものかしら。<wait_auto>私はかんり人のバイトをしてるのよ。<wait_auto>本は読んだら、ほんだなに戻してね。
+Woman<wait_auto>This is the Book Center.<wait_auto>We collect all the donated books here.<wait_auto>It's kind of like a public library.<wait_auto>I work here part-time as the caretaker.<wait_auto>Please return books to the shelf when done!
 
 
 {"str_num": 5, "bank": "0xF3", "str_pos": "0x3304B8", "length": 59}
 #男<wait_auto>私は遊んでいるのではありません。<wait_auto>仕事の調べものをしているのです。<wait_auto>う、うそじゃありませんよっ！
+Man<wait_auto>I'm not slacking off!<wait_auto>I'm doing research for my job.<wait_auto>R-Really, I'm not lying!
 
 
 {"str_num": 6, "bank": "0xF3", "str_pos": "0x3304F4", "length": 33}
 #男<wait_auto>うう……。<wait_auto>本の読みすぎで、目がしばしばする……。
+Man<wait_auto>Ugh... I've been reading so much,<wait_auto>my eyes are completely dry...
 
 
 {"str_num": 7, "bank": "0xF3", "str_pos": "0x330516", "length": 114}
 #お婆さん<wait_auto>ここにはめずらしい本がそろっててねえ。 あたしは、となり街から来てるんだよ。<wait_auto>そろそろ帰らなきゃいけないんだけど…。 あともう少しって思うと、なかなかやめられなくてねえ。<wait_auto>ついつい、ながいしちまうよ。
+Old Woman<wait_auto>They have such rare books here.<wait_auto>I came all the way from the next town.<wait_auto>I really should head home soon...<wait_auto>but I just can't bring myself to stop.<wait_auto>I always end up staying too long!
 
 
 {"str_num": 8, "bank": "0xF3", "str_pos": "0x330589", "length": 83}
 #男の子<wait_auto>お父さんも、お母さんもお仕事なの。<wait_auto>だから、お仕事が終わるまで、ここで待ってるんだよ。<wait_auto>早くこないかなー。<wait_auto>つかれちゃった……。
+Boy<wait_auto>Both my mom and dad are working.<wait_auto>So I'm waiting here until they finish.<wait_auto>I wish they'd hurry up...<wait_auto>I'm so tired...
 
 
 {"str_num": 9, "bank": "0xF3", "str_pos": "0x3305DD", "length": 51}
 #男<wait_auto>先生のお使いで、資料を取りに来たんだ。 何のって？<wait_auto>たんていの資料だよ。
+Man<wait_auto>The professor sent me on an errand<wait_auto>to fetch some files.<wait_auto>What kind, you ask? Detective files!
 
 
 {"str_num": 10, "bank": "0xF3", "str_pos": "0x330611", "length": 52}
 #男<wait_auto>ここはたんていじむしょだよ。<wait_auto>何でも屋になりつつあるけど……。<wait_auto>平和なしょうこだよね。
+Man<wait_auto>This is the detective agency.<wait_auto>We've kind of become jack-of-all-trades...<wait_auto>but hey, that's proof of peace, right?
 
 
 {"str_num": 11, "bank": "0xF3", "str_pos": "0x330646", "length": 57}
 #女<wait_auto>これが何かって？<wait_auto>これで、そうさに必要なじょうほうをあつめるの。<wait_auto>たんていも、ハイテクでしょう？
+Woman<wait_auto>Wondering what this machine is?<wait_auto>It gathers info needed for investigations.<wait_auto>Detectives are high-tech nowadays, huh?
 
 
 {"str_num": 12, "bank": "0xF3", "str_pos": "0x330680", "length": 34}
 #おじさん<wait_auto>おやっ？<wait_auto>おきゃくさんかね。<wait_auto>わしがしゃちょうじゃ！
+Old Man<wait_auto>Oh? A client?<wait_auto>I am the director here!
 
 
 {"str_num": 13, "bank": "0xF3", "str_pos": "0x3306A3", "length": 38}
@@ -818,174 +830,217 @@ Galahad<wait_auto>Hey, [protag]!<wait_auto>Where is the booze?! Stop wasting<wai
 
 {"str_num": 202, "bank": "0xF3", "str_pos": "0x3343AD", "length": 26}
 #乱暴者<wait_auto>薄汚い小僧って俺のことか？
+Ruffian<wait_auto>Filthy brat? You talking about me?!
 
 
 {"str_num": 203, "bank": "0xF3", "str_pos": "0x3343C8", "length": 48}
 #ガラハド<wait_auto>まったく、礼儀をしらねえガキだ。<wait_auto>[protag]、早いとこ、お前のダチを追い出せ！
+Galahad<wait_auto>Damn brat has no manners at all.<wait_auto>[protag], kick your little pal out!
 
 
 {"str_num": 204, "bank": "0xF3", "str_pos": "0x3343F9", "length": 31}
 #[protag]<wait_auto>父さん、こいつは友達じゃないよ。<wait_auto>泥棒だよ。
+[protag]<wait_auto>Dad, he's not my friend!<wait_auto>He's a thief!
 
 
 {"str_num": 205, "bank": "0xF3", "str_pos": "0x334419", "length": 52}
 #ガラハド<wait_auto>泥棒？<wait_auto>はっ、悪魔のお前にはぴったりのダチじゃねえか。<wait_auto>とっとと追い出せ！
+Galahad<wait_auto>A thief? Hah! A demon like you<wait_auto>deserves a friend like that!<wait_auto>Get him out of here!
 
 
 {"str_num": 206, "bank": "0xF3", "str_pos": "0x33444E", "length": 19}
 #乱暴者<wait_auto>うるせえぞ、おっさん！
+Ruffian<wait_auto>Shut your mouth, old man!
 
 
 {"str_num": 207, "bank": "0xF3", "str_pos": "0x334462", "length": 8}
 #[protag]<wait_auto>父さん！
+[protag]<wait_auto>Dad!
 
 
 {"str_num": 208, "bank": "0xF3", "str_pos": "0x33446B", "length": 39}
 #乱暴者<wait_auto>おっと、人のことを泥棒呼ばわりして、謝りはナシかい？
+Ruffian<wait_auto>Hold on. You called me a thief<wait_auto>and you ain't even gonna apologize?
 
 
 {"str_num": 209, "bank": "0xF3", "str_pos": "0x334493", "length": 38}
 # ………………。<wait_auto> だって、泥棒じゃないか！<wait_auto> ごめん、悪かったよ
+ ......<wait_auto> But you ARE a thief!<wait_auto> I'm sorry, my bad.
 
 
 {"str_num": 210, "bank": "0xF3", "str_pos": "0x3344BB", "length": 36}
 #乱暴者<wait_auto>あやまったからって許さねえぞ！<wait_auto>俺は怒ってんだ！
+Ruffian<wait_auto>Saying sorry won't cut it!<wait_auto>I'm pissed off now!
 
 
 {"str_num": 211, "bank": "0xF3", "str_pos": "0x3344E0", "length": 53}
 #乱暴者<wait_auto>何だと、この野郎！<wait_auto>俺はまだ、何も盗んでねえぞ。<wait_auto>お前もブチのめしてやる！
+Ruffian<wait_auto>What did you say, you punk?!<wait_auto>I haven't stolen anything yet!<wait_auto>I'm gonna beat you black and blue!
 
 
 {"str_num": 212, "bank": "0xF3", "str_pos": "0x334516", "length": 17}
 #乱暴者が襲いかかってきた！
+The Ruffian attacks!
 
 
 {"str_num": 213, "bank": "0xF3", "str_pos": "0x334528", "length": 14}
 #[protag]<wait_auto>うーん、負けた……。
+[protag]<wait_auto>Ugh... I lost...
 
 
 {"str_num": 214, "bank": "0xF3", "str_pos": "0x334537", "length": 80}
 #乱暴者<wait_auto>うわっはっはっはっ！<wait_auto>俺に勝とうなんて百億年早えぜ！<wait_auto>……それじゃあ、さっそく例のオタカラを捜すとするか、うっひょっひょっ。
+Ruffian<wait_auto>Gwahaha! You're ten billion years<wait_auto>too early to take me on!<wait_auto>Now, time to hunt for that treasure!
 
 
 {"str_num": 215, "bank": "0xF3", "str_pos": "0x334588", "length": 40}
 #乱暴者<wait_auto>畜生……ここにあるって話だったのに、どこにもありゃしねえ。
+Ruffian<wait_auto>Damn it... they said it was here,<wait_auto>but it's nowhere to be found.
 
 
 {"str_num": 216, "bank": "0xF3", "str_pos": "0x3345B1", "length": 13}
 #乱暴者<wait_auto>うおっ！？
+Ruffian<wait_auto>Whoa!?
 
 
 {"str_num": 217, "bank": "0xF3", "str_pos": "0x3345BF", "length": 29}
 #乱暴者<wait_auto>も、もしや、こいつが抱えている剣は！？
+Ruffian<wait_auto>C-Could this sword he's holding be...?!
 
 
 {"str_num": 218, "bank": "0xF3", "str_pos": "0x3345DD", "length": 89}
 #乱暴者<wait_auto>う、うーーーーーん、と、取れねえ。<wait_auto>……こいつ、気を失ってるくせに、しっかりと剣を抱いてやがる。<wait_auto>仕方ねえ、こうなったら、こいつごと連れてくか。
+Ruffian<wait_auto>U-Urrgh... I-I can't pry it loose!<wait_auto>He's out cold, but he's clutching<wait_auto>this blade like his life depends on it.<wait_auto>Guess I'll have to drag him along too!
 
 
 {"str_num": 219, "bank": "0xF3", "str_pos": "0x334637", "length": 65}
 #ガラハド<wait_auto>この野郎、遅かったじゃねえか。<wait_auto>酒1本持ってくるのに、いつまでかかってやがんだ。<wait_auto>さっさと持ってこい！
+Galahad<wait_auto>You took your damn time, brat!<wait_auto>How long does it take to fetch one bottle?<wait_auto>Hand it over!
 
 
 {"str_num": 220, "bank": "0xF3", "str_pos": "0x334679", "length": 10}
 #ガラハド<wait_auto>かせっ！
+Galahad<wait_auto>Give it here!
 
 
 {"str_num": 221, "bank": "0xF3", "str_pos": "0x334684", "length": 29}
 #ガラハド<wait_auto>ぷはーーーーーっ、うめえ。<wait_auto>生き返るぜ。
+Galahad<wait_auto>Phaaah! That hits the spot.<wait_auto>I feel alive again!
 
 
 {"str_num": 222, "bank": "0xF3", "str_pos": "0x3346A2", "length": 18}
 #乱暴者<wait_auto>よっこらせっと……。
+Ruffian<wait_auto>Alright, heave-ho...
 
 
 {"str_num": 223, "bank": "0xF3", "str_pos": "0x3346B5", "length": 40}
 #乱暴者<wait_auto>うわっ！<wait_auto>何だ、お前ら。<wait_auto>突然脅かすんじゃねえぞ！
+Ruffian<wait_auto>Whoa! Who are you guys?<wait_auto>Don't go sneaking up on me!
 
 
 {"str_num": 224, "bank": "0xF3", "str_pos": "0x3346DE", "length": 49}
 #[protag]<wait_auto>脅かすなって、お前こそなんだ。<wait_auto>人[Armor]に勝手に入り込んで、どういうつもりだ。
+[protag]<wait_auto>Don't sneak up? Who are you?!<wait_auto>Barging into someone's house like that!
 
 
 {"str_num": 225, "bank": "0xF3", "str_pos": "0x334710", "length": 16}
 #乱暴者<wait_auto>お前はだれだ？
+Ruffian<wait_auto>Who are you?
 
 
 {"str_num": 226, "bank": "0xF3", "str_pos": "0x334721", "length": 15}
 #[protag]<wait_auto>それはこっちのセリフだ！
+[protag]<wait_auto>That's my line!
 
 
 {"str_num": 227, "bank": "0xF3", "str_pos": "0x334731", "length": 53}
 #ガラハド<wait_auto>[protag]。<wait_auto>あんな野郎を勝手に家に入れるんじゃねえぞ。<wait_auto>遊ぶんだったら、外で遊べ。
+Galahad<wait_auto>[protag]!<wait_auto>Don't let trash like that into my house!<wait_auto>If you're playing, play outside!
 
 
 {"str_num": 228, "bank": "0xF3", "str_pos": "0x334767", "length": 22}
 #[protag]<wait_auto>父さん、こいつは友達じゃないよ。
+[protag]<wait_auto>Dad, he's not my friend!
 
 
 {"str_num": 229, "bank": "0xF3", "str_pos": "0x33477E", "length": 40}
 #ガラハド<wait_auto>いちいち、親にたてつくな。<wait_auto>だったら、俺が追い出してやる。
+Galahad<wait_auto>Don't talk back to your father!<wait_auto>Fine, I'll kick him out myself!
 
 
 {"str_num": 230, "bank": "0xF3", "str_pos": "0x3347A7", "length": 52}
 #ガラハド<wait_auto>おう、さっさと出てけ。<wait_auto>ここは俺様[Armor]だ。<wait_auto>[protag]に用があるんなら、外で話しな。
+Galahad<wait_auto>Hey, get the hell out!<wait_auto>This is my house!<wait_auto>If you want [protag], take it outside!
 
 
 {"str_num": 231, "bank": "0xF3", "str_pos": "0x3347DC", "length": 45}
 #乱暴者<wait_auto>おっさんにもそのガキにも用はねえぜ。<wait_auto>俺は、こ[Armor]に用があるんだ。
+Ruffian<wait_auto>I don't care about you or the kid.<wait_auto>I've got business with this house!
 
 
 {"str_num": 232, "bank": "0xF3", "str_pos": "0x33480A", "length": 19}
 #乱暴者<wait_auto>何すんだ、おっさん！
+Ruffian<wait_auto>What are you doing, old man?!
 
 
 {"str_num": 233, "bank": "0xF3", "str_pos": "0x33481E", "length": 55}
 #ガラハド<wait_auto>[protag]！<wait_auto>酒はどうした、酒は！<wait_auto>酒1本持ってくるのに、いったいいつまでかかってやがんだ！
+Galahad<wait_auto>[protag]! Where's the booze?!<wait_auto>How long does it take you to fetch<wait_auto>one single bottle?!
 
 
 {"str_num": 234, "bank": "0xF3", "str_pos": "0x334856", "length": 28}
 #[protag]<wait_auto>ごめんよ、父さん。<wait_auto>もう少し、待っててね。
+[protag]<wait_auto>I'm sorry, Dad.<wait_auto>Just wait a little longer.
 
 
 {"str_num": 235, "bank": "0xF3", "str_pos": "0x334873", "length": 30}
 #ガラハド<wait_auto>酒を持ってくるまで帰ってくるんじゃねえぞ！
+Galahad<wait_auto>Don't you dare come back until<wait_auto>you've got my booze!
 
 
 {"str_num": 236, "bank": "0xF3", "str_pos": "0x334892", "length": 10}
 #ガラハド<wait_auto>酒は？
+Galahad<wait_auto>Where's my drink?
 
 
 {"str_num": 237, "bank": "0xF3", "str_pos": "0x33489D", "length": 8}
 #[protag]<wait_auto>まだだよ。
+[protag]<wait_auto>Not yet.
 
 
 {"str_num": 238, "bank": "0xF3", "str_pos": "0x3348A6", "length": 46}
 #ガラハド<wait_auto>酒を持ってくるまで帰ってくるんじゃねえっていっただろうが！<wait_auto>出てけっ！
+Galahad<wait_auto>I told you not to come back<wait_auto>empty handed! Get out!
 
 
 {"str_num": 239, "bank": "0xF3", "str_pos": "0x3348D5", "length": 8}
 #[protag]<wait_auto>…………。
+[protag]<wait_auto>......
 
 
 {"str_num": 240, "bank": "0xF3", "str_pos": "0x3348DE", "length": 15}
 #[protag]<wait_auto>……父さん、ごめんよ。
+[protag]<wait_auto>...I'm sorry, Dad.
 
 
 {"str_num": 241, "bank": "0xF3", "str_pos": "0x3348EE", "length": 23}
 #ガラハド<wait_auto>酒だ！<wait_auto>[protag]、酒持ってこい！
+Galahad<wait_auto>Booze! [protag], bring me booze!
 
 
 {"str_num": 242, "bank": "0xF3", "str_pos": "0x334906", "length": 16}
 #[protag]<wait_auto>もう、やめなよ、父さん。
+[protag]<wait_auto>Please stop this, Dad.
 
 
 {"str_num": 243, "bank": "0xF3", "str_pos": "0x334917", "length": 33}
 #ガラハド<wait_auto>うるせえ、酒だ！<wait_auto>酒、持ってこい、悪魔め！
+Galahad<wait_auto>Shut up, booze! Bring me booze,<wait_auto>you filthy demon!
 
 
 {"str_num": 244, "bank": "0xF3", "str_pos": "0x334939", "length": 10}
 #[protag]<wait_auto>……父さん。
+[protag]<wait_auto>...Dad.
 
 
 {"str_num": 245, "bank": "0xF3", "str_pos": "0x334944", "length": 16}
