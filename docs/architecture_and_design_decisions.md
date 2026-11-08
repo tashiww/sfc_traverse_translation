@@ -50,9 +50,16 @@ Clean Japanese *Traverse* uses a native character table (`tables/ja_tbl.tbl` / `
   * Index 0 corresponds to ASCII space (`0x20`), Index 1 to `!`, up to Index 94 (`~`).
 * **Dual-Space Compatibility:**
   * Both native space (`0x00`) and ASCII space (`0x20`) invoke `AdvanceSpace` (`cursor_x += 4px`), completely eliminating the null-terminator collision bug.
-* **Deterministic Dual-Language Discrimination:**
-  * Checked by ROM Bank: If `$A5 == $CA` (redirected to Bank `$CA` pool) or `$A5 == $DB` and `$A3` is within the prologue stream (`$AA0F`..`$AC00`), the engine executes English VWF rasterization.
-  * All untranslated dialogue (original Japanese in Banks `$F1`–`$F9`, `$D3`, `$C0`, etc.) falls through immediately to `.passthrough_jp` (`SEP #$20 : LDA #$D3 : PHA : PLB : JML $DCCAA5`), running the native Japanese fixed-width renderer with zero heuristics and zero chance of garbled English letters!
+* **Intelligent Dual-Language Discrimination:**
+  * Checks character codes at `[$A3]`: ASCII (`0x20`–`0x7E`) or player tags (`0xF0`–`0xF2` followed by ASCII/punctuation) trigger proportional English VWF rendering across any ROM bank (Bank `$F3`, `$DB`, `$CA`, etc.).
+  * Untranslated Japanese dialogue lines containing Katakana (`0x80`–`0xEF`) or Kanji page prefixes (`0xFB`–`0xFD`) fall through immediately to `.passthrough_jp` (`SEP #$20 : LDA #$D3 : PHA : PLB : JML $DCCAA5`), executing the native Japanese fixed-width renderer.
+* **Speaker Name Architecture:**
+  * Speaker names in Bank `$F3` dialogue boxes are rendered by the native tile placer (`JSL $DC:E7A3`), which reads the name before `<wait_auto>` and directly indexes the native 8x16 font.
+  * Speaker names are encoded in uppercase native font (`0x0B`–`0x24` = `A`–`Z`, `[protag]` = `0xF0`), ensuring speaker tags like `GALAHAD` render crisp English letters on the nameplate.
+
+---
+
+### 1.3 Subsystem B: Character Naming Screen & Input Grid
 * **Dynamic Player Name Expansion:**
   * `$F0` = Protagonist name (`[protag]`, read from `$7E:EEC9`).
   * `$F1` = Sub-protagonist name (`[sub]`, read from `$7E:EED2`).
@@ -93,7 +100,8 @@ Clean Japanese *Traverse* uses a native character table (`tables/ja_tbl.tbl` / `
 * **Location in ROM:** Bank `$C1` (`$C1:4300`, PC `0x014300`).
 * **Table Structure:** 60 16-bit big-endian pointers (`ptr_type: "16bit_be"`).
 * **String Allocation:** Relocated to Bank `$C1` free space pool at PC `0x015D00` (8,960 bytes available; 60 locations consume 715 bytes).
-* **Tomria Town Bugfix:** The clean Japanese ROM contained a typo at `0x01432C` (`45 00` instead of `46 00`). Our inserter rewrites the pointer to point to `"Tomria Town"` in Bank `$C1` free space.
+* **Native Uppercase Encoding:** The World Map HUD renders location names via the native 8x16 font tilemap. Strings are encoded using Traverse native uppercase codes (`0x0B`–`0x24` = `A`–`Z`, `0x00` = space), preventing ASCII byte collisions (e.g. ASCII `Tomria Town` decoding as `ゆびどぼだぐVゆびぽば`).
+* **Tomria Town Bugfix:** The clean Japanese ROM contained a typo at `0x01432C` (`45 00` instead of `46 00`). Our inserter rewrites the pointer to point to `"TOMRIA TOWN"` in Bank `$C1` free space.
 
 ---
 

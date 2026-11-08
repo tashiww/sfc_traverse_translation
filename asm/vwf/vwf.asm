@@ -109,25 +109,34 @@ RenderEnglishVWF:
     PLX
 
     ; ------------------------------------------------------------------------
-    ; Language Discrimination:
-    ; Dialogue strings allocated in Bank $CA pool ($A5 == $CA) or prologue
-    ; cutscene ($A5 == $DB, $A3 in $AA0F..$ABFF) are rendered with English VWF.
-    ; Untranslated dialogue strings fall back directly to the native Japanese
-    ; renderer at $DC:CAA5, completely preventing jumbled English letters!
+    ; Intelligent Language Discrimination:
+    ; Checks whether line at [$A3] contains English ASCII or Japanese Kanji/Kana.
+    ; English lines are rendered with proportional English VWF.
+    ; Untranslated Japanese dialogue falls back directly to $DC:CAA5!
     ; ------------------------------------------------------------------------
     SEP #$20            ; 8-bit A
-    LDA $A5
-    CMP #$CA            ; Bank $CA = English VWF pool
-    BEQ .detect_done
-    CMP #$DB            ; Bank $DB = Prologue cutscene stream
-    BNE .passthrough_jp
-    REP #$20            ; 16-bit A
-    LDA $A3
-    CMP #$AA0F
-    BCC .passthrough_jp
-    CMP #$AC00
-    BCS .passthrough_jp
-    BRA .detect_done
+    REP #$10            ; 16-bit X, Y
+    LDY #$0000
+    LDA [$A3],Y
+    CMP #$FB
+    BCC +
+    CMP #$FE
+    BCC .passthrough_jp ; Kanji prefix $FB, $FC, $FD -> Japanese!
++   CMP #$80
+    BCC .detect_done    ; ASCII ($00..$7F) -> English VWF!
+    CMP #$F0
+    BCC .passthrough_jp ; Katakana / punctuation ($80..$EF) -> Japanese!
+    ; Byte is $F0..$FF:
+    ; $F0, $F1, $F2 = [protag], [sub], [pet] tag
+    INY
+    LDA [$A3],Y
+    CMP #$FB
+    BCC +
+    CMP #$FE
+    BCC .passthrough_jp ; Kanji after tag -> Japanese!
++   CMP #$80
+    BCC .detect_done    ; ASCII after tag -> English VWF!
+    BRA .passthrough_jp ; Non-ASCII after tag -> Japanese!
 
 .passthrough_jp:
     SEP #$20

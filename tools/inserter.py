@@ -203,54 +203,94 @@ def word_wrap_text(text: str, max_px: int = 216, char_widths: dict = None) -> st
     return "<page>".join(wrapped_paragraphs)
 
 
-def encode_dialogue_string(text: str, rev_tbl: dict = None) -> bytes:
-    """Encodes translated dialogue string with control codes, tags, and ASCII/Japanese characters."""
+NATIVE_UPPERCASE = {
+    "A": 0x0B, "B": 0x0C, "C": 0x0D, "D": 0x0E, "E": 0x0F, "F": 0x10, "G": 0x11,
+    "H": 0x12, "I": 0x13, "J": 0x14, "K": 0x15, "L": 0x16, "M": 0x17, "N": 0x18,
+    "O": 0x19, "P": 0x1A, "Q": 0x1B, "R": 0x1C, "S": 0x1D, "T": 0x1E, "U": 0x1F,
+    "V": 0x20, "W": 0x21, "X": 0x22, "Y": 0x23, "Z": 0x24, " ": 0x00, "-": 0x8A,
+    ".": 0x8C, "!": 0x86, "?": 0x87, "'": 0x00,
+}
+
+KNOWN_SPEAKERS = {
+    "GALAHAD", "RUFFIAN", "WOMAN", "MAN", "BOY", "OLD WOMAN", "OLD MAN",
+    "GANT", "SONIA", "BOANCHO", "REMY", "[PROTAG]", "[SUB]", "[PET]"
+}
+
+
+def encode_speaker_part(speaker: str) -> bytes:
+    """Encodes speaker name using Traverse native 8x16 font tile codes for JSL $DC:E7A3."""
+    if speaker == "[protag]":
+        return b"\xF0"
+    if speaker == "[sub]":
+        return b"\xF1"
+    if speaker == "[pet]":
+        return b"\xF2"
     res = bytearray()
-    token_re = re.compile(r"<([^>]+)>|\[([^\]]+)\]|.")
+    for ch in speaker.upper():
+        res.append(NATIVE_UPPERCASE.get(ch, 0x00))
+    return bytes(res)
 
-    for m in token_re.finditer(text):
-        tag_angle = m.group(1)
-        tag_bracket = m.group(2)
-        ch = m.group(0)
 
-        if tag_angle is not None:
-            full_tag = f"<{tag_angle}>"
-            if full_tag in CONTROL_CODES:
-                res.extend(CONTROL_CODES[full_tag])
-            else:
-                # Try hex tag <FCAD>, <00>, etc.
-                try:
-                    res.extend(bytes.fromhex(tag_angle))
-                except ValueError:
-                    res.extend(full_tag.encode("ascii", "replace"))
-        elif tag_bracket is not None:
-            full_tag = f"[{tag_bracket}]"
-            if full_tag == "[protag]":
-                res.append(0xF0)
-            elif full_tag == "[sub]":
-                res.append(0xF1)
-            elif full_tag == "[pet]":
-                res.append(0xF2)
-            elif rev_tbl and full_tag in rev_tbl:
-                val = rev_tbl[full_tag]
-                if isinstance(val, int):
-                    res.append(val)
-                elif isinstance(val, str):
-                    res.extend(bytes.fromhex(val))
+def encode_dialogue_string(text: str, rev_tbl: dict = None) -> bytes:
+    """Encodes translated dialogue string with speaker name (native font) and dialogue body (ASCII VWF)."""
+    parts = text.split("<wait_auto>")
+    res = bytearray()
+
+    # Check if first part before <wait_auto> is a speaker name:
+    if len(parts) > 1 and (parts[0].strip().upper() in KNOWN_SPEAKERS or len(parts[0].strip()) <= 10):
+        speaker = parts[0].strip()
+        res.extend(encode_speaker_part(speaker))
+        res.extend(b"\xFE\x00")
+        body_parts = parts[1:]
+    else:
+        body_parts = parts
+
+    for p_idx, part in enumerate(body_parts):
+        if p_idx > 0:
+            res.extend(b"\xFE\x00")
+        token_re = re.compile(r"<([^>]+)>|\[([^\]]+)\]|.")
+        for m in token_re.finditer(part):
+            tag_angle = m.group(1)
+            tag_bracket = m.group(2)
+            ch = m.group(0)
+
+            if tag_angle is not None:
+                full_tag = f"<{tag_angle}>"
+                if full_tag in CONTROL_CODES:
+                    res.extend(CONTROL_CODES[full_tag])
                 else:
-                    res.extend(val)
+                    try:
+                        res.extend(bytes.fromhex(tag_angle))
+                    except ValueError:
+                        res.extend(full_tag.encode("ascii", "replace"))
+            elif tag_bracket is not None:
+                full_tag = f"[{tag_bracket}]"
+                if full_tag == "[protag]":
+                    res.append(0xF0)
+                elif full_tag == "[sub]":
+                    res.append(0xF1)
+                elif full_tag == "[pet]":
+                    res.append(0xF2)
+                elif rev_tbl and full_tag in rev_tbl:
+                    val = rev_tbl[full_tag]
+                    if isinstance(val, int):
+                        res.append(val)
+                    elif isinstance(val, str):
+                        res.extend(bytes.fromhex(val))
+                    else:
+                        res.extend(val)
+                else:
+                    res.extend(full_tag.encode("ascii", "replace"))
             else:
-                res.extend(full_tag.encode("ascii", "replace"))
-        else:
-            if ch == "\n":
-                res.append(0xFF) # Line break in Traverse
-            elif 0x20 <= ord(ch) <= 0x7E:
-                # Standard ASCII for English VWF
-                res.append(ord(ch))
-            elif rev_tbl and ch in rev_tbl:
-                res.extend(rev_tbl[ch])
-            else:
-                res.append(ord("?"))
+                if ch == "\n":
+                    res.append(0xFF) # Line break in Traverse
+                elif 0x20 <= ord(ch) <= 0x7E:
+                    # Standard ASCII for English VWF
+                    res.append(ord(ch))
+                elif rev_tbl and ch in rev_tbl:
+                    res.extend(rev_tbl[ch])
+                else:
+                    res.append(ord("?"))
 
     res.append(0xFF) # String terminator
     return bytes(res)
@@ -345,33 +385,38 @@ class ScriptInserter:
                     # 2. Encode to binary
                     encoded = encode_dialogue_string(wrapped, self.rev_tbl)
 
-                # Greenfield Safe Strategy:
-                # Default directly to the unmapped free space in Bank $CA!
-                # Zero risk of stepping on neighboring bytecode or original data.
-                dest_pc = self.allocate_pool(len(encoded), bank="0xCA")
-                # Update pointer if ptr_pos is known
-                if "ptr_pos" in meta and not dry_run:
-                    ptr_pc = int(meta["ptr_pos"], 16) if isinstance(meta["ptr_pos"], str) else int(meta["ptr_pos"])
-                    ptr_type = meta.get("ptr_type", "16bit_le")
-                    if ptr_type == "16bit_be":
-                        offset_be = (dest_pc - 0x010000) & 0xFFFF
-                        rom_bytes[ptr_pc] = (offset_be >> 8) & 0xFF
-                        rom_bytes[ptr_pc + 1] = offset_be & 0xFF
-                    else:
-                        snes_offset = dest_pc & 0xFFFF
-                        rom_bytes[ptr_pc : ptr_pc + 2] = struct.pack("<H", snes_offset)
-                elif not dry_run:
-                    # Relocate without static pointer -> Register in StringRedirectTable!
-                    orig_addr = orig_pc & 0xFFFF
-                    orig_bank_str = meta.get("bank", "0xF3")
-                    orig_bank = int(orig_bank_str, 16) if isinstance(orig_bank_str, str) else int(orig_bank_str)
-                    new_addr = dest_pc & 0xFFFF
-                    new_bank = (dest_pc >> 16) + 0xC0
-                    self.redirect_entries.append((orig_addr, orig_bank, new_addr, new_bank))
-                    print(f"      [Redirect] Relocated 0x{orig_pc:06X} ($ {orig_bank:02X}:{orig_addr:04X}) -> 0x{dest_pc:06X} ($ {new_bank:02X}:{new_addr:04X}) in Bank $CA pool")
+                if len(encoded) <= orig_len + 1:
+                    dest_pc = orig_pc
+                    if not dry_run:
+                        rom_bytes[dest_pc : dest_pc + len(encoded)] = encoded
+                        if len(encoded) < orig_len + 1:
+                            rom_bytes[dest_pc + len(encoded) : dest_pc + orig_len + 1] = b"\xFF" * (orig_len + 1 - len(encoded))
+                        print(f"      [In-Place] Injected {len(encoded)}B at 0x{orig_pc:06X} (budget {orig_len+1}B)")
+                else:
+                    dest_pc = self.allocate_pool(len(encoded), bank="0xCA")
+                    # Update pointer if ptr_pos is known
+                    if "ptr_pos" in meta and not dry_run:
+                        ptr_pc = int(meta["ptr_pos"], 16) if isinstance(meta["ptr_pos"], str) else int(meta["ptr_pos"])
+                        ptr_type = meta.get("ptr_type", "16bit_le")
+                        if ptr_type == "16bit_be":
+                            offset_be = (dest_pc - 0x010000) & 0xFFFF
+                            rom_bytes[ptr_pc] = (offset_be >> 8) & 0xFF
+                            rom_bytes[ptr_pc + 1] = offset_be & 0xFF
+                        else:
+                            snes_offset = dest_pc & 0xFFFF
+                            rom_bytes[ptr_pc : ptr_pc + 2] = struct.pack("<H", snes_offset)
+                    elif not dry_run:
+                        # Relocate without static pointer -> Register in StringRedirectTable!
+                        orig_addr = orig_pc & 0xFFFF
+                        orig_bank_str = meta.get("bank", "0xF3")
+                        orig_bank = int(orig_bank_str, 16) if isinstance(orig_bank_str, str) else int(orig_bank_str)
+                        new_addr = dest_pc & 0xFFFF
+                        new_bank = (dest_pc >> 16) + 0xC0
+                        self.redirect_entries.append((orig_addr, orig_bank, new_addr, new_bank))
+                        print(f"      [Redirect] Relocated 0x{orig_pc:06X} ($ {orig_bank:02X}:{orig_addr:04X}) -> 0x{dest_pc:06X} ($ {new_bank:02X}:{new_addr:04X}) in Bank $CA pool")
 
-                if not dry_run:
-                    rom_bytes[dest_pc : dest_pc + len(encoded)] = encoded
+                    if not dry_run:
+                        rom_bytes[dest_pc : dest_pc + len(encoded)] = encoded
 
                 translated_count += 1
                 bytes_written += len(encoded)
@@ -451,7 +496,10 @@ class ScriptInserter:
             if not text:
                 continue
 
-            encoded = text.encode("ascii", "replace") + b"\xFF"
+            # Encode location names in Traverse native uppercase font:
+            enc_list = [NATIVE_UPPERCASE.get(c, 0x00) for c in text.upper()]
+            enc_list.append(0xFF)
+            encoded = bytes(enc_list)
             orig_pc = int(meta["str_pos"]) if isinstance(meta["str_pos"], int) else int(meta["str_pos"], 16)
             orig_len = meta.get("length", 0)
             if not orig_len:
