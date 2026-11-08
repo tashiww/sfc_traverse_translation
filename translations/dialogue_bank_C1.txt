@@ -1,0 +1,1029 @@
+{"str_num": 0, "bank": "0xC1", "ptr_pos": "0x012F4A", "str_pos": "0x01314A", "length": 4}
+#<FD44>剣
+Testing VWF English font engine!
+
+
+{"str_num": 1, "bank": "0xC1", "ptr_pos": "0x012F4C", "str_pos": "0x01314F", "length": 21}
+#一<FD79>的に<FC6E>用される<FD82><FC83>の剣
+
+
+{"str_num": 2, "bank": "0xC1", "ptr_pos": "0x012F4E", "str_pos": "0x013165", "length": 20}
+#<FDD3>士が<FCD2>用する<FCC2><FD72>用の剣
+
+
+{"str_num": 3, "bank": "0xC1", "ptr_pos": "0x012F50", "str_pos": "0x01317A", "length": 20}
+#<FCEF><FDD2>の<FD74>を持つ<FD45><FC97>用の剣
+
+
+{"str_num": 4, "bank": "0xC1", "ptr_pos": "0x012F52", "str_pos": "0x01318F", "length": 13}
+#<FD74>が<FD75>で<FD9F>まれた剣
+
+
+{"str_num": 5, "bank": "0xC1", "ptr_pos": "0x012F54", "str_pos": "0x01319D", "length": 17}
+#<FD88>の<FC5B><FDBC>を<FD74>に宿した剣
+
+
+{"str_num": 6, "bank": "0xC1", "ptr_pos": "0x012F56", "str_pos": "0x0131AF", "length": 21}
+#<FD74>にうねりを持ち<88>敵を<FD99><FCF8>させる
+
+
+{"str_num": 7, "bank": "0xC1", "ptr_pos": "0x012F58", "str_pos": "0x0131C5", "length": 19}
+#<FD7C><FDCC><FDCB>に<FD6C>くから<FC6E>われる剣
+
+
+{"str_num": 8, "bank": "0xC1", "ptr_pos": "0x012F5A", "str_pos": "0x0131D9", "length": 27}
+#<FD74>の<FD81>が<FDC7>く<88>数人を一<FC3F>に<FD1B><FC97>できる
+
+
+{"str_num": 9, "bank": "0xC1", "ptr_pos": "0x012F5C", "str_pos": "0x0131F5", "length": 19}
+#<FD74>に<FD78>の<FD45>さと<FD97>きを宿す剣
+
+
+{"str_num": 10, "bank": "0xC1", "ptr_pos": "0x012F5E", "str_pos": "0x013209", "length": 16}
+#<FD6C><FD25>の<FD93><FD91>が用いた剣
+
+
+{"str_num": 11, "bank": "0xC1", "ptr_pos": "0x012F60", "str_pos": "0x01321A", "length": 16}
+#黄金<FC43>に<FD97>く<FC5C><FD8F>剣
+
+
+{"str_num": 12, "bank": "0xC1", "ptr_pos": "0x012F62", "str_pos": "0x01322B", "length": 7}
+#<FD09><FD8E>の<FD71>
+
+
+{"str_num": 13, "bank": "0xC1", "ptr_pos": "0x012F64", "str_pos": "0x013233", "length": 14}
+#<FCC2><FD72>用に<FCD3>られた<FD71>
+
+
+{"str_num": 14, "bank": "0xC1", "ptr_pos": "0x012F66", "str_pos": "0x013242", "length": 7}
+#<FCA4><FD74>の<FD71>
+
+
+{"str_num": 15, "bank": "0xC1", "ptr_pos": "0x012F68", "str_pos": "0x01324A", "length": 17}
+#<FD7D>力の高い<FCC2><FD72>用の<FD71>
+
+
+{"str_num": 16, "bank": "0xC1", "ptr_pos": "0x012F6A", "str_pos": "0x01325C", "length": 17}
+#<FCB8><FC5C>の力を<FD76>じ<FD16>めた<FD71>
+
+
+{"str_num": 17, "bank": "0xC1", "ptr_pos": "0x012F6C", "str_pos": "0x01326E", "length": 24}
+#<FCAD><FDC5>の<FDBF><FC32>を<FD76>じ<FD16>めた<FD45>黒の<FD71>
+
+
+{"str_num": 18, "bank": "0xC1", "ptr_pos": "0x012F6E", "str_pos": "0x013287", "length": 26}
+#<FCE9>名<88><FC5C>々の<FC4D>りと<FCF5>ばれる<FC5C><FD6A>の<FD71>
+
+
+{"str_num": 19, "bank": "0xC1", "ptr_pos": "0x012F70", "str_pos": "0x0132A2", "length": 20}
+#<FCAD><FD3C>を<FCF1>こすといわれる<FC8B>大な<FD71>
+
+
+{"str_num": 20, "bank": "0xC1", "ptr_pos": "0x012F72", "str_pos": "0x0132B7", "length": 9}
+#一<FD79>的な<FD6F>
+
+
+{"str_num": 21, "bank": "0xC1", "ptr_pos": "0x012F74", "str_pos": "0x0132C1", "length": 19}
+#<FD8B>の部<FC21>まで<FD77><FDBD>でできた<FD6F>
+
+
+{"str_num": 22, "bank": "0xC1", "ptr_pos": "0x012F76", "str_pos": "0x0132D5", "length": 22}
+#<FD75>の<FC5B><FDBC><95><8A>ョ<91>スの力を宿した<FD6F>
+
+
+{"str_num": 23, "bank": "0xC1", "ptr_pos": "0x012F78", "str_pos": "0x0132EC", "length": 14}
+#<FD7B>の<FDA0><FC4B>を持った<FD6F>
+
+
+{"str_num": 24, "bank": "0xC1", "ptr_pos": "0x012F7A", "str_pos": "0x0132FB", "length": 12}
+#<FCB9>の力を<FD6A>めた<FD6F>
+
+
+{"str_num": 25, "bank": "0xC1", "ptr_pos": "0x012F7C", "str_pos": "0x013308", "length": 23}
+#<FD6C>の<FC5C><FDB7>の<FC5D><FDB6><FC5C>が<FC6E>用した<FD6F>
+
+
+{"str_num": 26, "bank": "0xC1", "ptr_pos": "0x012F7E", "str_pos": "0x013320", "length": 21}
+#<FD62><FC5C>がもたらしたとされる<FC5C><FD6A>の<FD6F>
+
+
+{"str_num": 27, "bank": "0xC1", "ptr_pos": "0x012F80", "str_pos": "0x013336", "length": 22}
+#<FD4D><FDB5>などが<FD78>に<FD9F>まれた<FD45>黒の<FD6F>
+
+
+{"str_num": 28, "bank": "0xC1", "ptr_pos": "0x012F82", "str_pos": "0x01334D", "length": 21}
+#<FDB3>りなどに<FC6E>用する一<FD79>的な<FD6E>
+
+
+{"str_num": 29, "bank": "0xC1", "ptr_pos": "0x012F84", "str_pos": "0x013363", "length": 16}
+#<FCC2><FD72>用に<FD94><FD95>された<FD6E>
+
+
+{"str_num": 30, "bank": "0xC1", "ptr_pos": "0x012F86", "str_pos": "0x013374", "length": 17}
+#コスチメ<92>の<FD7D>力を<FD85>した<FD6E>
+
+
+{"str_num": 31, "bank": "0xC1", "ptr_pos": "0x012F88", "str_pos": "0x013386", "length": 15}
+#<FCB9>の力を<FD76>じ<FD16>めた<FD6E>
+
+
+{"str_num": 32, "bank": "0xC1", "ptr_pos": "0x012F8A", "str_pos": "0x013396", "length": 20}
+#<FD43><FDAC>の<FD7D>力を誇る強力な<FD6E>
+
+
+{"str_num": 33, "bank": "0xC1", "ptr_pos": "0x012F8C", "str_pos": "0x0133AB", "length": 27}
+#<FD75>の象徴<88>不死<FDAA>の力を<FD76>じ<FD16>めた<FD6E>
+
+
+{"str_num": 34, "bank": "0xC1", "ptr_pos": "0x012F8E", "str_pos": "0x0133C7", "length": 23}
+#<FD9B><FC9E><FC6E>がもたらしたとされる<FC9E>界の<FD6E>
+
+
+{"str_num": 35, "bank": "0xC1", "ptr_pos": "0x012F90", "str_pos": "0x0133DF", "length": 22}
+#<9B>ﾞ･ク西国に伝わる<FD45><FC97>者用の<FD6E>
+
+
+{"str_num": 36, "bank": "0xC1", "ptr_pos": "0x012F92", "str_pos": "0x0133F6", "length": 8}
+#<FD9C>でできた<FD70>
+
+
+{"str_num": 37, "bank": "0xC1", "ptr_pos": "0x012F94", "str_pos": "0x0133FF", "length": 18}
+#装飾を<FDA7>し<FDA6><FDA5>になった<FD70>
+
+
+{"str_num": 38, "bank": "0xC1", "ptr_pos": "0x012F96", "str_pos": "0x013412", "length": 20}
+#<FCF3><FD96>士が<FD6C>くから<FCD2>用する<FD70>
+
+
+{"str_num": 39, "bank": "0xC1", "ptr_pos": "0x012F98", "str_pos": "0x013427", "length": 20}
+#疲れをとる<FC5C><FD6A>の力を<FD6A>めた<FD70>
+
+
+{"str_num": 40, "bank": "0xC1", "ptr_pos": "0x012F9A", "str_pos": "0x01343C", "length": 21}
+#<FCC6>の<97>キ<9C><9F>クを装飾にあしらった<FD70>
+
+
+{"str_num": 41, "bank": "0xC1", "ptr_pos": "0x012F9C", "str_pos": "0x013452", "length": 12}
+#<FDA4>の<FDA2>を象った<FD70>
+
+
+{"str_num": 42, "bank": "0xC1", "ptr_pos": "0x012F9E", "str_pos": "0x01345F", "length": 19}
+#<FC9F>字<FDA3>を装飾にあしらった<FD70>
+
+
+{"str_num": 43, "bank": "0xC1", "ptr_pos": "0x012FA0", "str_pos": "0x013473", "length": 22}
+#偉大なる<FD8A>者が<FC6E>用したとされる<FD70>
+
+
+{"str_num": 44, "bank": "0xC1", "ptr_pos": "0x012FA2", "str_pos": "0x01348A", "length": 19}
+#<FD9C>でできた<FDA1><FD73><FD83>用の武器
+
+
+{"str_num": 45, "bank": "0xC1", "ptr_pos": "0x012FA4", "str_pos": "0x01349E", "length": 19}
+#<FD77>でできた<FDA1><FD73><FD83>用の武器
+
+
+{"str_num": 46, "bank": "0xC1", "ptr_pos": "0x012FA6", "str_pos": "0x0134B2", "length": 14}
+#<FC8B>大な<FC97>人用ゥスョ<8A>
+
+
+{"str_num": 47, "bank": "0xC1", "ptr_pos": "0x012FA8", "str_pos": "0x0134C1", "length": 20}
+#<FD9E>でつながれた<FD77><FDA8>がついた武器
+
+
+{"str_num": 48, "bank": "0xC1", "ptr_pos": "0x012FAA", "str_pos": "0x0134D6", "length": 16}
+#<FD75>の力を<FD76>じ<FD16>めたア<91><9C>
+
+
+{"str_num": 49, "bank": "0xC1", "ptr_pos": "0x012FAC", "str_pos": "0x0134E7", "length": 18}
+#死を<FCF5>ぶといわれる<FC8B>大なア<91><9C>
+
+
+{"str_num": 50, "bank": "0xC1", "ptr_pos": "0x012FAE", "str_pos": "0x0134FA", "length": 21}
+#<FD6C>の<FC8B>人｣<8A>クが<FC6E>用したゥスョ<8A>
+
+
+{"str_num": 51, "bank": "0xC1", "ptr_pos": "0x012FB0", "str_pos": "0x013510", "length": 18}
+#<FCAD><FDA9>れを<FCF1>こす<FC8B>大なゥスョ<8A>
+
+
+{"str_num": 52, "bank": "0xC1", "ptr_pos": "0x012FB2", "str_pos": "0x013523", "length": 7}
+#<FD82><FC83>のー<A0>
+
+
+{"str_num": 53, "bank": "0xC1", "ptr_pos": "0x012FB4", "str_pos": "0x01352B", "length": 11}
+#ホカの<FDAB>をつけたー<A0>
+
+
+{"str_num": 54, "bank": "0xC1", "ptr_pos": "0x012FB6", "str_pos": "0x013537", "length": 18}
+#｡クが4<FC40>ついている変わったー<A0>
+
+
+{"str_num": 55, "bank": "0xC1", "ptr_pos": "0x012FB8", "str_pos": "0x01354A", "length": 18}
+#<FD78>の力に<FC47>まった<FD45>黒のー<A0>
+
+
+{"str_num": 56, "bank": "0xC1", "ptr_pos": "0x012FBA", "str_pos": "0x01355D", "length": 8}
+#<FD77>でできた<FD6D>
+
+
+{"str_num": 57, "bank": "0xC1", "ptr_pos": "0x012FBC", "str_pos": "0x013566", "length": 15}
+#<FD45><FC97>者が<FC6E>用する<FD6D>
+
+
+{"str_num": 58, "bank": "0xC1", "ptr_pos": "0x012FBE", "str_pos": "0x013576", "length": 11}
+#<FD7B>を仕<FD16>んだ<FD6D>
+
+
+{"str_num": 59, "bank": "0xC1", "ptr_pos": "0x012FC0", "str_pos": "0x013582", "length": 25}
+#黒<FDAE>の<FD4A>いを<FD16>めて<FCD3><FCDA>された<FD78>の<FD6D>
+
+
+{"str_num": 60, "bank": "0xC1", "ptr_pos": "0x012FC2", "str_pos": "0x01359C", "length": 19}
+#<FDAF>の<FD6D>を用いて<FCD3><FCDA>された<FD6D>
+
+
+{"str_num": 61, "bank": "0xC1", "ptr_pos": "0x012FC4", "str_pos": "0x0135B0", "length": 17}
+#<FCB8><FC5C>の力を<FD76>じ<FD16>めた<FD6D>
+
+
+{"str_num": 62, "bank": "0xC1", "ptr_pos": "0x012FC6", "str_pos": "0x0135C2", "length": 15}
+#<FD7C>の<FDB0>で<FCD3><FCDA>された<FD6D>
+
+
+{"str_num": 63, "bank": "0xC1", "ptr_pos": "0x012FC8", "str_pos": "0x0135D2", "length": 20}
+#<94>キゥク<99>スを<FC6E>用した強力な<FD6D>
+
+
+{"str_num": 64, "bank": "0xC1", "ptr_pos": "0x012FCA", "str_pos": "0x0135E7", "length": 22}
+#ほとんどの人間が<FD3A>ている<FC83><FD98>の<FC3E>
+
+
+{"str_num": 65, "bank": "0xC1", "ptr_pos": "0x012FCC", "str_pos": "0x0135FE", "length": 17}
+#<FCF3><FD96>士などが<FCD2>用する<FC3E>
+
+
+{"str_num": 66, "bank": "0xC1", "ptr_pos": "0x012FCE", "str_pos": "0x013610", "length": 20}
+#女性が<FCD2>用する<FD5B><FCD2>らしい<FC3E>
+
+
+{"str_num": 67, "bank": "0xC1", "ptr_pos": "0x012FD0", "str_pos": "0x013625", "length": 18}
+#高<FDB2>な女性が<FCD2>用する<FC3E>
+
+
+{"str_num": 68, "bank": "0xC1", "ptr_pos": "0x012FD2", "str_pos": "0x013638", "length": 26}
+#一<FD79><FD92>が<FD3A>用する<88><FDB4>で<FCD3><FCDA>された<FD69>
+
+
+{"str_num": 69, "bank": "0xC1", "ptr_pos": "0x012FD4", "str_pos": "0x013653", "length": 14}
+#<FD90>い<92>コ<99>で<FCD3>られた<FD69>
+
+
+{"str_num": 70, "bank": "0xC1", "ptr_pos": "0x012FD6", "str_pos": "0x013662", "length": 10}
+#<FD9E>で<FCD3>られた<FD69>
+
+
+{"str_num": 71, "bank": "0xC1", "ptr_pos": "0x012FD8", "str_pos": "0x01366D", "length": 21}
+#<FD77>より<FD7A>い<FDB8><FCA1>で<FCD3><FCDA>された<FD69>
+
+
+{"str_num": 72, "bank": "0xC1", "ptr_pos": "0x012FDA", "str_pos": "0x013683", "length": 15}
+#<FCAA>身を覆う強<FD90>な<FD69>
+
+
+{"str_num": 73, "bank": "0xC1", "ptr_pos": "0x012FDC", "str_pos": "0x013693", "length": 19}
+#<FC89><FDB9><FCF3><FD96>士が<FCD2>用する<FC3E>
+
+
+{"str_num": 74, "bank": "0xC1", "ptr_pos": "0x012FDE", "str_pos": "0x0136A7", "length": 22}
+#<FD6C>の<FD8A>者が<FC6E>用していた<FD8F>なる<FC3E>
+
+
+{"str_num": 75, "bank": "0xC1", "ptr_pos": "0x012FE0", "str_pos": "0x0136BE", "length": 20}
+#<FD78>の力を<FDBA>り<FD16>んだ<FDBB>悪な<FC3E>
+
+
+{"str_num": 76, "bank": "0xC1", "ptr_pos": "0x012FE2", "str_pos": "0x0136D3", "length": 22}
+#<FC9E>からもたらされたといわれる<FC5C><FD6A>の<FC3E>
+
+
+{"str_num": 77, "bank": "0xC1", "ptr_pos": "0x012FE4", "str_pos": "0x0136EA", "length": 13}
+#かわいらしいきぐるみの<FC3E>
+
+
+{"str_num": 78, "bank": "0xC1", "ptr_pos": "0x012FE6", "str_pos": "0x0136F8", "length": 17}
+#<FD75>の力を<FD6A>めた<FC5C><FD6A>の<FD69>
+
+
+{"str_num": 79, "bank": "0xC1", "ptr_pos": "0x012FE8", "str_pos": "0x01370A", "length": 17}
+#<FD88>の力を<FD6A>めた<FC5C><FD6A>の<FD69>
+
+
+{"str_num": 80, "bank": "0xC1", "ptr_pos": "0x012FEA", "str_pos": "0x01371C", "length": 17}
+#<FCB9>の力を<FD6A>めた<FC5C><FD6A>の<FD69>
+
+
+{"str_num": 81, "bank": "0xC1", "ptr_pos": "0x012FEC", "str_pos": "0x01372E", "length": 18}
+#大<FCAD>の力を<FD6A>めた<FC5C><FD6A>の<FD69>
+
+
+{"str_num": 82, "bank": "0xC1", "ptr_pos": "0x012FEE", "str_pos": "0x013741", "length": 23}
+#<FD7C>の<92>コ<99>を<FD69>の<FD4B><FD33>に<FC6E>用した<FD69>
+
+
+{"str_num": 83, "bank": "0xC1", "ptr_pos": "0x012FF0", "str_pos": "0x013759", "length": 14}
+#ユカ<A0>､で<FCD3><FCDA>された<FD69>
+
+
+{"str_num": 84, "bank": "0xC1", "ptr_pos": "0x012FF2", "str_pos": "0x013768", "length": 25}
+#伝説の<FCC2>士が<FCD2>用した<FD8C><FD8D>られた<FD69>
+
+
+{"str_num": 85, "bank": "0xC1", "ptr_pos": "0x012FF4", "str_pos": "0x013782", "length": 22}
+#黄<FDC0>の悪<FCF3>が<FCD3><FCDA>したとされる<FD69>
+
+
+{"str_num": 86, "bank": "0xC1", "ptr_pos": "0x012FF6", "str_pos": "0x013799", "length": 21}
+#装備した者の力を<FD85><FD81>させる<FD69>
+
+
+{"str_num": 87, "bank": "0xC1", "ptr_pos": "0x012FF8", "str_pos": "0x0137AF", "length": 15}
+#<FCAA>て金で<FCD3><FCDA>された<FD69>
+
+
+{"str_num": 88, "bank": "0xC1", "ptr_pos": "0x012FFA", "str_pos": "0x0137BF", "length": 25}
+#装備した者の<FDC1><FDC2>力を<FD85><FD81>させる<FD69>
+
+
+{"str_num": 89, "bank": "0xC1", "ptr_pos": "0x012FFC", "str_pos": "0x0137D9", "length": 27}
+#幸運の<FD69>と<FCF5>ばれ<FC2D><FC97>の一<FD73>が<FC8A>やすい
+
+
+{"str_num": 90, "bank": "0xC1", "ptr_pos": "0x012FFE", "str_pos": "0x0137F5", "length": 14}
+#<FCC2><FD72>用に<FCD3>られた<FD69>
+
+
+{"str_num": 91, "bank": "0xC1", "ptr_pos": "0x013000", "str_pos": "0x013804", "length": 14}
+#ホ｣ク<90><8A>ョ<8A>の<FDC6><FD84><FDA2>
+
+
+{"str_num": 92, "bank": "0xC1", "ptr_pos": "0x013002", "str_pos": "0x013813", "length": 24}
+#<FD6C><FD25>の<FD93><FD91><88>テ<8A>フル<9C>が<FCD2>用した<FD69>
+
+
+{"str_num": 93, "bank": "0xC1", "ptr_pos": "0x013004", "str_pos": "0x01382C", "length": 27}
+#<FC53>けた<FD7E><FD73>の<FDC9><FC21>を相手に<FC4F>す<FCF3>の<FD69>
+
+
+{"str_num": 94, "bank": "0xC1", "ptr_pos": "0x013006", "str_pos": "0x013848", "length": 19}
+#<FC5C><FD7C>が<FDCA>を変えた伝説の<FD69>
+
+
+{"str_num": 95, "bank": "0xC1", "ptr_pos": "0x013008", "str_pos": "0x01385C", "length": 25}
+#<FCC6>の<FD69>と<FCF5>ばれ<88><FD78>をはらう<FDA0>力を持つ
+
+
+{"str_num": 96, "bank": "0xC1", "ptr_pos": "0x01300A", "str_pos": "0x013876", "length": 7}
+#<FD09><FD8E>の<FD6B>
+
+
+{"str_num": 97, "bank": "0xC1", "ptr_pos": "0x01300C", "str_pos": "0x01387E", "length": 17}
+#一<FD79><FD92>士が<FC6E>用する<FD6B>
+
+
+{"str_num": 98, "bank": "0xC1", "ptr_pos": "0x01300E", "str_pos": "0x013890", "length": 20}
+#<FCAA>身を覆い<FC25>せるほどの<FC52>い<FD6B>
+
+
+{"str_num": 99, "bank": "0xC1", "ptr_pos": "0x013010", "str_pos": "0x0138A5", "length": 20}
+#<FD7C>の<92>コ<99>を<FC6E>用して<FCD3>られた<FD6B>
+
+
+{"str_num": 100, "bank": "0xC1", "ptr_pos": "0x013012", "str_pos": "0x0138BA", "length": 17}
+#<FD75>の力を<FD6A>めた<FC5C><FD6A>の<FD6B>
+
+
+{"str_num": 101, "bank": "0xC1", "ptr_pos": "0x013014", "str_pos": "0x0138CC", "length": 17}
+#<FD88>の力を<FD6A>めた<FC5C><FD6A>の<FD6B>
+
+
+{"str_num": 102, "bank": "0xC1", "ptr_pos": "0x013016", "str_pos": "0x0138DE", "length": 17}
+#<FCB9>の力を<FD6A>めた<FC5C><FD6A>の<FD6B>
+
+
+{"str_num": 103, "bank": "0xC1", "ptr_pos": "0x013018", "str_pos": "0x0138F0", "length": 18}
+#大<FCAD>の力を<FD6A>めた<FC5C><FD6A>の<FD6B>
+
+
+{"str_num": 104, "bank": "0xC1", "ptr_pos": "0x01301A", "str_pos": "0x013903", "length": 21}
+#<FDCD>近<FCC2>用に<FD7A><FD87>に<FCD3>られた<FD6B>
+
+
+{"str_num": 105, "bank": "0xC1", "ptr_pos": "0x01301C", "str_pos": "0x013919", "length": 13}
+#<FCAA>て金で<FCD3>られた<FD6B>
+
+
+{"str_num": 106, "bank": "0xC1", "ptr_pos": "0x01301E", "str_pos": "0x013927", "length": 12}
+#ユカ<A0>､で<FCD3>られた<FD6B>
+
+
+{"str_num": 107, "bank": "0xC1", "ptr_pos": "0x013020", "str_pos": "0x013934", "length": 25}
+#<FCF3>界の<FCC2>士が<FCD2>用した<FD8C><FD8D>られた<FD6B>
+
+
+{"str_num": 108, "bank": "0xC1", "ptr_pos": "0x013022", "str_pos": "0x01394E", "length": 23}
+#<FD9B><FC9E><FC6E>ノキ<93>クが<FC6E>用したとされる<FD6B>
+
+
+{"str_num": 109, "bank": "0xC1", "ptr_pos": "0x013024", "str_pos": "0x013966", "length": 20}
+#<FCF3>界に眠るといわれる<FD45>黒の<FD6B>
+
+
+{"str_num": 110, "bank": "0xC1", "ptr_pos": "0x013026", "str_pos": "0x01397B", "length": 22}
+#勇者<97>カスニが<FC6E>用した伝説の<FD6B>
+
+
+{"str_num": 111, "bank": "0xC1", "ptr_pos": "0x013028", "str_pos": "0x013992", "length": 18}
+#<FCF3>の力をはらう<FCC6>を宿した<FD6B>
+
+
+{"str_num": 112, "bank": "0xC1", "ptr_pos": "0x01302A", "str_pos": "0x0139A5", "length": 11}
+#FPを26回<FC4A>する
+
+
+{"str_num": 113, "bank": "0xC1", "ptr_pos": "0x01302C", "str_pos": "0x0139B1", "length": 11}
+#FPを51回<FC4A>する
+
+
+{"str_num": 114, "bank": "0xC1", "ptr_pos": "0x01302E", "str_pos": "0x0139BD", "length": 13}
+#FPを<FD89><FCAA>回<FC4A>する
+
+
+{"str_num": 115, "bank": "0xC1", "ptr_pos": "0x013030", "str_pos": "0x0139CB", "length": 8}
+#<FDCF><FDD0>をなおす
+
+
+{"str_num": 116, "bank": "0xC1", "ptr_pos": "0x013032", "str_pos": "0x0139D4", "length": 6}
+#<FD7B>をなおす
+
+
+{"str_num": 117, "bank": "0xC1", "ptr_pos": "0x013034", "str_pos": "0x0139DB", "length": 8}
+#<FDD1><FD40>をなおす
+
+
+{"str_num": 118, "bank": "0xC1", "ptr_pos": "0x013036", "str_pos": "0x0139E4", "length": 8}
+#石<FD86>をなおす
+
+
+{"str_num": 119, "bank": "0xC1", "ptr_pos": "0x013038", "str_pos": "0x0139ED", "length": 8}
+#<FD99><FCF8>回<FC4A>
+
+
+{"str_num": 120, "bank": "0xC1", "ptr_pos": "0x01303A", "str_pos": "0x0139F6", "length": 22}
+#石<FD86><FCDC><FC30>の<FD9A><FD9D>を<FD89><FCAA>になおす
+
+
+{"str_num": 121, "bank": "0xC1", "ptr_pos": "0x01303C", "str_pos": "0x013A0D", "length": 19}
+#<FCC2><FD72>不<FD7F>を回<FC4A><8D>FPは2<8E>
+
+
+{"str_num": 122, "bank": "0xC1", "ptr_pos": "0x01303E", "str_pos": "0x013A21", "length": 25}
+#<FCC2><FD72>不<FD7F>を回<FC4A><8D>FP<FD89><FCAA>回<FC4A><8E>
+
+
+{"str_num": 123, "bank": "0xC1", "ptr_pos": "0x013040", "str_pos": "0x013A3B", "length": 17}
+#メ<9C><FCDC><FC30>の<FCC2><FD72>から<FC50>げる
+
+
+{"str_num": 124, "bank": "0xC1", "ptr_pos": "0x013042", "str_pos": "0x013A4D", "length": 12}
+#<FD75>の<FD7E><FD73>を<FD80>える
+
+
+{"str_num": 125, "bank": "0xC1", "ptr_pos": "0x013044", "str_pos": "0x013A5A", "length": 12}
+#<FD88>の<FD7E><FD73>を<FD80>える
+
+
+{"str_num": 126, "bank": "0xC1", "ptr_pos": "0x013046", "str_pos": "0x013A67", "length": 12}
+#<FCB9>の<FD7E><FD73>を<FD80>える
+
+
+{"str_num": 127, "bank": "0xC1", "ptr_pos": "0x013048", "str_pos": "0x013A74", "length": 13}
+#大<FCAD>の<FD7E><FD73>を<FD80>える
+
+
+{"str_num": 128, "bank": "0xC1", "ptr_pos": "0x01304A", "str_pos": "0x013A82", "length": 14}
+#味方の索<FC68>さをあげる
+
+
+{"str_num": 129, "bank": "0xC1", "ptr_pos": "0x01304C", "str_pos": "0x013A91", "length": 14}
+#敵の防御力を<FC42>げる
+
+
+{"str_num": 130, "bank": "0xC1", "ptr_pos": "0x01304E", "str_pos": "0x013AA0", "length": 11}
+#敵の目をくらませる
+
+
+{"str_num": 131, "bank": "0xC1", "ptr_pos": "0x013050", "str_pos": "0x013AAC", "length": 5}
+#生の<FC3D>
+
+
+{"str_num": 132, "bank": "0xC1", "ptr_pos": "0x013052", "str_pos": "0x013AB2", "length": 6}
+#焼いた<FC3D>
+
+
+{"str_num": 133, "bank": "0xC1", "ptr_pos": "0x013054", "str_pos": "0x013AB9", "length": 15}
+#<FD0D>の<FC75>に<FC32>をつけてなげる
+
+
+{"str_num": 134, "bank": "0xC1", "ptr_pos": "0x013056", "str_pos": "0x013AC9", "length": 7}
+#<FD82><FC83>の酒
+
+
+{"str_num": 135, "bank": "0xC1", "ptr_pos": "0x013058", "str_pos": "0x013AD1", "length": 14}
+#<90>スフン｣を一<FD73>で倒す
+
+
+{"str_num": 136, "bank": "0xC1", "ptr_pos": "0x01305A", "str_pos": "0x013AE0", "length": 7}
+#飛び<FC22>具
+
+
+{"str_num": 137, "bank": "0xC1", "ptr_pos": "0x01305C", "str_pos": "0x013AE8", "length": 12}
+#なげてノア<8A>ナを<FD80>える
+
+
+{"str_num": 138, "bank": "0xC1", "ptr_pos": "0x01305E", "str_pos": "0x013AF5", "length": 10}
+#敵に<FD7B>を<FD80>える
+
+
+{"str_num": 139, "bank": "0xC1", "ptr_pos": "0x013060", "str_pos": "0x013B00", "length": 8}
+#敵をョェさせる
+
+
+{"str_num": 140, "bank": "0xC1", "ptr_pos": "0x013062", "str_pos": "0x013B09", "length": 15}
+#<FCF3><FCE4>防御力を<FC89>げる
+
+
+{"str_num": 141, "bank": "0xC1", "ptr_pos": "0x013064", "str_pos": "0x013B19", "length": 19}
+#<90><91>｢ー252の<FC95>けて<8A><8A><8A><8A><8A><8A><8A>
+
+
+{"str_num": 142, "bank": "0xC1", "ptr_pos": "0x013066", "str_pos": "0x013B2D", "length": 19}
+#<90><91>｢ー253の<FC95>けて<8A><8A><8A><8A><8A><8A><8A>
+
+
+{"str_num": 143, "bank": "0xC1", "ptr_pos": "0x013068", "str_pos": "0x013B41", "length": 19}
+#<90><91>｢ー254の<FC95>けて<8A><8A><8A><8A><8A><8A><8A>
+
+
+{"str_num": 144, "bank": "0xC1", "ptr_pos": "0x01306A", "str_pos": "0x013B55", "length": 19}
+#<90><91>｢ー255の<FC95>けて<8A><8A><8A><8A><8A><8A><8A>
+
+
+{"str_num": 145, "bank": "0xC1", "ptr_pos": "0x01306C", "str_pos": "0x013B69", "length": 19}
+#<90><91>｢ー256の<FC95>けて<8A><8A><8A><8A><8A><8A><8A>
+
+
+{"str_num": 146, "bank": "0xC1", "ptr_pos": "0x01306E", "str_pos": "0x013B7D", "length": 19}
+#<90><91>｢ー257の<FC95>けて<8A><8A><8A><8A><8A><8A><8A>
+
+
+{"str_num": 147, "bank": "0xC1", "ptr_pos": "0x013070", "str_pos": "0x013B91", "length": 19}
+#<90><91>｢ー258の<FC95>けて<8A><8A><8A><8A><8A><8A><8A>
+
+
+{"str_num": 148, "bank": "0xC1", "ptr_pos": "0x013072", "str_pos": "0x013BA5", "length": 19}
+#<90><91>｢ー259の<FC95>けて<8A><8A><8A><8A><8A><8A><8A>
+
+
+{"str_num": 149, "bank": "0xC1", "ptr_pos": "0x013074", "str_pos": "0x013BB9", "length": 19}
+#<90><91>｢ー250の<FC95>けて<8A><8A><8A><8A><8A><8A><8A>
+
+
+{"str_num": 150, "bank": "0xC1", "ptr_pos": "0x013076", "str_pos": "0x013BCD", "length": 19}
+#<90><91>｢ー261の<FC95>けて<8A><8A><8A><8A><8A><8A><8A>
+
+
+{"str_num": 151, "bank": "0xC1", "ptr_pos": "0x013078", "str_pos": "0x013BE1", "length": 19}
+#<90><91>｢ー262の<FC95>けて<8A><8A><8A><8A><8A><8A><8A>
+
+
+{"str_num": 152, "bank": "0xC1", "ptr_pos": "0x01307A", "str_pos": "0x013BF5", "length": 19}
+#<90><91>｢ー263の<FC95>けて<8A><8A><8A><8A><8A><8A><8A>
+
+
+{"str_num": 153, "bank": "0xC1", "ptr_pos": "0x01307C", "str_pos": "0x013C09", "length": 19}
+#<90><91>｢ー264の<FC95>けて<8A><8A><8A><8A><8A><8A><8A>
+
+
+{"str_num": 154, "bank": "0xC1", "ptr_pos": "0x01307E", "str_pos": "0x013C1D", "length": 19}
+#<90><91>｢ー265の<FC95>けて<8A><8A><8A><8A><8A><8A><8A>
+
+
+{"str_num": 155, "bank": "0xC1", "ptr_pos": "0x013080", "str_pos": "0x013C31", "length": 19}
+#<90><91>｢ー266の<FC95>けて<8A><8A><8A><8A><8A><8A><8A>
+
+
+{"str_num": 156, "bank": "0xC1", "ptr_pos": "0x013082", "str_pos": "0x013C45", "length": 19}
+#<90><91>｢ー267の<FC95>けて<8A><8A><8A><8A><8A><8A><8A>
+
+
+{"str_num": 157, "bank": "0xC1", "ptr_pos": "0x013084", "str_pos": "0x013C59", "length": 19}
+#<90><91>｢ー268の<FC95>けて<8A><8A><8A><8A><8A><8A><8A>
+
+
+{"str_num": 158, "bank": "0xC1", "ptr_pos": "0x013086", "str_pos": "0x013C6D", "length": 19}
+#<90><91>｢ー269の<FC95>けて<8A><8A><8A><8A><8A><8A><8A>
+
+
+{"str_num": 159, "bank": "0xC1", "ptr_pos": "0x013088", "str_pos": "0x013C81", "length": 19}
+#<90><91>｢ー260の<FC95>けて<8A><8A><8A><8A><8A><8A><8A>
+
+
+{"str_num": 160, "bank": "0xC1", "ptr_pos": "0x01308A", "str_pos": "0x013C95", "length": 15}
+#<F8>に<FD25>々伝わる<FD6C>い剣
+
+
+{"str_num": 161, "bank": "0xC1", "ptr_pos": "0x01308C", "str_pos": "0x013CA5", "length": 21}
+#モォリ<94><EA>の<FCDE><FC89>に<FCDF>く<FC5C><FD6A>の<FCC8>
+
+
+{"str_num": 162, "bank": "0xC1", "ptr_pos": "0x01308E", "str_pos": "0x013CBB", "length": 20}
+#世界に一つしかない<FC2C>しい水晶
+
+
+{"str_num": 163, "bank": "0xC1", "ptr_pos": "0x013090", "str_pos": "0x013CD0", "length": 21}
+#ヘキテス都国の人間がつける装飾品
+
+
+{"str_num": 164, "bank": "0xC1", "ptr_pos": "0x013092", "str_pos": "0x013CE6", "length": 20}
+#モスユ<96>スさんにもらったお宝のキﾟン<97>
+
+
+{"str_num": 165, "bank": "0xC1", "ptr_pos": "0x013094", "str_pos": "0x013CFB", "length": 19}
+#高価そうな宝石がついている骨
+
+
+{"str_num": 166, "bank": "0xC1", "ptr_pos": "0x013096", "str_pos": "0x013D0F", "length": 17}
+#<FC76>い[Shield]で見つけた<FDEB><FC88><FDE1>
+
+
+{"str_num": 167, "bank": "0xC1", "ptr_pos": "0x013098", "str_pos": "0x013D21", "length": 22}
+#料理に<FC2D><FC93>な食<FDB8>が記されている
+
+
+{"str_num": 168, "bank": "0xC1", "ptr_pos": "0x01309A", "str_pos": "0x013D38", "length": 8}
+#水<FD7C>の<92>コ<99>
+
+
+{"str_num": 169, "bank": "0xC1", "ptr_pos": "0x01309C", "str_pos": "0x013D41", "length": 16}
+#いろんなものをひやすことができる
+
+
+{"str_num": 170, "bank": "0xC1", "ptr_pos": "0x01309E", "str_pos": "0x013D52", "length": 12}
+#<9E>･<90>からもらったお酒
+
+
+{"str_num": 171, "bank": "0xC1", "ptr_pos": "0x0130A0", "str_pos": "0x013D5F", "length": 14}
+#ララコス[Armor]にあった名<FDD7>
+
+
+{"str_num": 172, "bank": "0xC1", "ptr_pos": "0x0130A2", "str_pos": "0x013D6E", "length": 17}
+#<9E>･<90>にもらったきれいな首飾り
+
+
+{"str_num": 173, "bank": "0xC1", "ptr_pos": "0x0130A4", "str_pos": "0x013D80", "length": 14}
+#宝のありかが記されている
+
+
+{"str_num": 174, "bank": "0xC1", "ptr_pos": "0x0130A6", "str_pos": "0x013D8F", "length": 16}
+#モスユ<96>スさんにもらった水晶
+
+
+{"str_num": 175, "bank": "0xC1", "ptr_pos": "0x0130A8", "str_pos": "0x013DA0", "length": 7}
+#空を飛べる
+
+
+{"str_num": 176, "bank": "0xC1", "ptr_pos": "0x0130AA", "str_pos": "0x013DA8", "length": 8}
+#食<FDB8>の一つ
+
+
+{"str_num": 177, "bank": "0xC1", "ptr_pos": "0x0130AC", "str_pos": "0x013DA8", "length": 8}
+#食<FDB8>の一つ
+
+
+{"str_num": 178, "bank": "0xC1", "ptr_pos": "0x0130AE", "str_pos": "0x013DA8", "length": 8}
+#食<FDB8>の一つ
+
+
+{"str_num": 179, "bank": "0xC1", "ptr_pos": "0x0130B0", "str_pos": "0x013DA8", "length": 8}
+#食<FDB8>の一つ
+
+
+{"str_num": 180, "bank": "0xC1", "ptr_pos": "0x0130B2", "str_pos": "0x013DA8", "length": 8}
+#食<FDB8>の一つ
+
+
+{"str_num": 181, "bank": "0xC1", "ptr_pos": "0x0130B4", "str_pos": "0x013DA8", "length": 8}
+#食<FDB8>の一つ
+
+
+{"str_num": 182, "bank": "0xC1", "ptr_pos": "0x0130B6", "str_pos": "0x013DA8", "length": 8}
+#食<FDB8>の一つ
+
+
+{"str_num": 183, "bank": "0xC1", "ptr_pos": "0x0130B8", "str_pos": "0x013DA8", "length": 8}
+#食<FDB8>の一つ
+
+
+{"str_num": 184, "bank": "0xC1", "ptr_pos": "0x0130BA", "str_pos": "0x013DA8", "length": 8}
+#食<FDB8>の一つ
+
+
+{"str_num": 185, "bank": "0xC1", "ptr_pos": "0x0130BC", "str_pos": "0x013DA8", "length": 8}
+#食<FDB8>の一つ
+
+
+{"str_num": 186, "bank": "0xC1", "ptr_pos": "0x0130BE", "str_pos": "0x013DB1", "length": 17}
+#ヤヤ<8C>モモが見つけたきかいモ<8A>｡
+
+
+{"str_num": 187, "bank": "0xC1", "ptr_pos": "0x0130C0", "str_pos": "0x013DB1", "length": 17}
+#ヤヤ<8C>モモが見つけたきかいモ<8A>｡
+
+
+{"str_num": 188, "bank": "0xC1", "ptr_pos": "0x0130C2", "str_pos": "0x013DB1", "length": 17}
+#ヤヤ<8C>モモが見つけたきかいモ<8A>｡
+
+
+{"str_num": 189, "bank": "0xC1", "ptr_pos": "0x0130C4", "str_pos": "0x013DB1", "length": 17}
+#ヤヤ<8C>モモが見つけたきかいモ<8A>｡
+
+
+{"str_num": 190, "bank": "0xC1", "ptr_pos": "0x0130C6", "str_pos": "0x013DB1", "length": 17}
+#ヤヤ<8C>モモが見つけたきかいモ<8A>｡
+
+
+{"str_num": 191, "bank": "0xC1", "ptr_pos": "0x0130C8", "str_pos": "0x013DB1", "length": 17}
+#ヤヤ<8C>モモが見つけたきかいモ<8A>｡
+
+
+{"str_num": 192, "bank": "0xC1", "ptr_pos": "0x0130CA", "str_pos": "0x013DB1", "length": 17}
+#ヤヤ<8C>モモが見つけたきかいモ<8A>｡
+
+
+{"str_num": 193, "bank": "0xC1", "ptr_pos": "0x0130CC", "str_pos": "0x013DB1", "length": 17}
+#ヤヤ<8C>モモが見つけたきかいモ<8A>｡
+
+
+{"str_num": 194, "bank": "0xC1", "ptr_pos": "0x0130CE", "str_pos": "0x013DB1", "length": 17}
+#ヤヤ<8C>モモが見つけたきかいモ<8A>｡
+
+
+{"str_num": 195, "bank": "0xC1", "ptr_pos": "0x0130D0", "str_pos": "0x013DB1", "length": 17}
+#ヤヤ<8C>モモが見つけたきかいモ<8A>｡
+
+
+{"str_num": 196, "bank": "0xC1", "ptr_pos": "0x0130D2", "str_pos": "0x013DB1", "length": 17}
+#ヤヤ<8C>モモが見つけたきかいモ<8A>｡
+
+
+{"str_num": 197, "bank": "0xC1", "ptr_pos": "0x0130D4", "str_pos": "0x013DB1", "length": 17}
+#ヤヤ<8C>モモが見つけたきかいモ<8A>｡
+
+
+{"str_num": 198, "bank": "0xC1", "ptr_pos": "0x0130D6", "str_pos": "0x013DB1", "length": 17}
+#ヤヤ<8C>モモが見つけたきかいモ<8A>｡
+
+
+{"str_num": 199, "bank": "0xC1", "ptr_pos": "0x0130D8", "str_pos": "0x013DC3", "length": 16}
+#どんな<FD45><FD78>でも<FD05>らす｣<8A><A0>
+
+
+{"str_num": 200, "bank": "0xC1", "ptr_pos": "0x0130DA", "str_pos": "0x013DD4", "length": 11}
+#何かの部品らしい
+
+
+{"str_num": 201, "bank": "0xC1", "ptr_pos": "0x0130DC", "str_pos": "0x013DD4", "length": 11}
+#何かの部品らしい
+
+
+{"str_num": 202, "bank": "0xC1", "ptr_pos": "0x0130DE", "str_pos": "0x013DD4", "length": 11}
+#何かの部品らしい
+
+
+{"str_num": 203, "bank": "0xC1", "ptr_pos": "0x0130E0", "str_pos": "0x013DE0", "length": 15}
+#どんな言葉でもやくすきかい
+
+
+{"str_num": 204, "bank": "0xC1", "ptr_pos": "0x0130E2", "str_pos": "0x013DF0", "length": 11}
+#<FC9D>を大きくするきかい
+
+
+{"str_num": 205, "bank": "0xC1", "ptr_pos": "0x0130E4", "str_pos": "0x013DFC", "length": 14}
+#空を自<FC54>に飛べる船
+
+
+{"str_num": 206, "bank": "0xC1", "ptr_pos": "0x0130E6", "str_pos": "0x013E0B", "length": 17}
+#<93>クヘカヘの<90>ョクがしていたくびわ
+
+
+{"str_num": 207, "bank": "0xC1", "ptr_pos": "0x0130E8", "str_pos": "0x013E1D", "length": 17}
+#<FCCE><FC7A><F8>ッ｡ネ<8A>の宝物の2つ
+
+
+{"str_num": 208, "bank": "0xC1", "ptr_pos": "0x0130EA", "str_pos": "0x013E1D", "length": 17}
+#<FCCE><FC7A><F8>ッ｡ネ<8A>の宝物の2つ
+
+
+{"str_num": 209, "bank": "0xC1", "ptr_pos": "0x0130EC", "str_pos": "0x013E1D", "length": 17}
+#<FCCE><FC7A><F8>ッ｡ネ<8A>の宝物の2つ
+
+
+{"str_num": 210, "bank": "0xC1", "ptr_pos": "0x0130EE", "str_pos": "0x013E2F", "length": 12}
+#高そくで移動できる
+
+
+{"str_num": 211, "bank": "0xC1", "ptr_pos": "0x0130F0", "str_pos": "0x013E3C", "length": 14}
+#<FD8A>者を<FCF5>び<FC8A>せるムク
+
+
+{"str_num": 212, "bank": "0xC1", "ptr_pos": "0x0130F2", "str_pos": "0x013E4B", "length": 18}
+#水<FD7C>の力を<FC4A>活させるくすり
+
+
+{"str_num": 213, "bank": "0xC1", "ptr_pos": "0x0130F4", "str_pos": "0x013E5E", "length": 14}
+#<FC23>く<9C>ヤ<8A>ヘが<FC26>し<90>ンユ
+
+
+{"str_num": 214, "bank": "0xC1", "ptr_pos": "0x0130F6", "str_pos": "0x013E6D", "length": 22}
+#自<FC21>が勇者であることが<FDE1>明される
+
+
+{"str_num": 215, "bank": "0xC1", "ptr_pos": "0x0130F8", "str_pos": "0x013E84", "length": 19}
+#<90><91>｢ー326の<FC95>けて<8A><8A><8A><8A><8A><8A><8A>
+
+
+{"str_num": 216, "bank": "0xC1", "ptr_pos": "0x0130FA", "str_pos": "0x013E98", "length": 19}
+#<90><91>｢ー327の<FC95>けて<8A><8A><8A><8A><8A><8A><8A>
+
+
+{"str_num": 217, "bank": "0xC1", "ptr_pos": "0x0130FC", "str_pos": "0x013EAC", "length": 19}
+#<90><91>｢ー328の<FC95>けて<8A><8A><8A><8A><8A><8A><8A>
+
+
+{"str_num": 218, "bank": "0xC1", "ptr_pos": "0x0130FE", "str_pos": "0x013EC0", "length": 19}
+#<90><91>｢ー329の<FC95>けて<8A><8A><8A><8A><8A><8A><8A>
+
+
+{"str_num": 219, "bank": "0xC1", "ptr_pos": "0x013100", "str_pos": "0x013ED4", "length": 19}
+#<90><91>｢ー320の<FC95>けて<8A><8A><8A><8A><8A><8A><8A>
+
+
+{"str_num": 220, "bank": "0xC1", "ptr_pos": "0x013102", "str_pos": "0x013EE8", "length": 19}
+#<90><91>｢ー331の<FC95>けて<8A><8A><8A><8A><8A><8A><8A>
+
+
+{"str_num": 221, "bank": "0xC1", "ptr_pos": "0x013104", "str_pos": "0x013EFC", "length": 19}
+#<90><91>｢ー332の<FC95>けて<8A><8A><8A><8A><8A><8A><8A>
+
+
+{"str_num": 222, "bank": "0xC1", "ptr_pos": "0x013106", "str_pos": "0x013F10", "length": 19}
+#<90><91>｢ー333の<FC95>けて<8A><8A><8A><8A><8A><8A><8A>
+
+
+{"str_num": 223, "bank": "0xC1", "ptr_pos": "0x013108", "str_pos": "0x013F24", "length": 19}
+#<90><91>｢ー334の<FC95>けて<8A><8A><8A><8A><8A><8A><8A>
+
+
+{"str_num": 224, "bank": "0xC1", "ptr_pos": "0x01310A", "str_pos": "0x013F38", "length": 19}
+#<90><91>｢ー335の<FC95>けて<8A><8A><8A><8A><8A><8A><8A>
+
+
+{"str_num": 225, "bank": "0xC1", "ptr_pos": "0x01310C", "str_pos": "0x013F4C", "length": 19}
+#<90><91>｢ー336の<FC95>けて<8A><8A><8A><8A><8A><8A><8A>
+
+
+{"str_num": 226, "bank": "0xC1", "ptr_pos": "0x01310E", "str_pos": "0x013F60", "length": 19}
+#<90><91>｢ー337の<FC95>けて<8A><8A><8A><8A><8A><8A><8A>
+
+
+{"str_num": 227, "bank": "0xC1", "ptr_pos": "0x013110", "str_pos": "0x013F74", "length": 19}
+#<90><91>｢ー338の<FC95>けて<8A><8A><8A><8A><8A><8A><8A>
+
+
+{"str_num": 228, "bank": "0xC1", "ptr_pos": "0x013112", "str_pos": "0x013F88", "length": 19}
+#<90><91>｢ー339の<FC95>けて<8A><8A><8A><8A><8A><8A><8A>
+
+
+{"str_num": 229, "bank": "0xC1", "ptr_pos": "0x013114", "str_pos": "0x013F9C", "length": 19}
+#<90><91>｢ー330の<FC95>けて<8A><8A><8A><8A><8A><8A><8A>
+
+
+{"str_num": 230, "bank": "0xC1", "ptr_pos": "0x013116", "str_pos": "0x013FB0", "length": 19}
+#<90><91>｢ー341の<FC95>けて<8A><8A><8A><8A><8A><8A><8A>
+
+
+{"str_num": 231, "bank": "0xC1", "ptr_pos": "0x013118", "str_pos": "0x013FC4", "length": 19}
+#<90><91>｢ー342の<FC95>けて<8A><8A><8A><8A><8A><8A><8A>
+
+
+{"str_num": 232, "bank": "0xC1", "ptr_pos": "0x01311A", "str_pos": "0x013FD8", "length": 19}
+#<90><91>｢ー343の<FC95>けて<8A><8A><8A><8A><8A><8A><8A>
+
+
+{"str_num": 233, "bank": "0xC1", "ptr_pos": "0x01311C", "str_pos": "0x013FEC", "length": 19}
+#<90><91>｢ー344の<FC95>けて<8A><8A><8A><8A><8A><8A><8A>
+
+
+{"str_num": 234, "bank": "0xC1", "ptr_pos": "0x01311E", "str_pos": "0x014000", "length": 19}
+#<90><91>｢ー345の<FC95>けて<8A><8A><8A><8A><8A><8A><8A>
+
+
+{"str_num": 235, "bank": "0xC1", "ptr_pos": "0x013120", "str_pos": "0x014014", "length": 19}
+#<90><91>｢ー346の<FC95>けて<8A><8A><8A><8A><8A><8A><8A>
+
+
+{"str_num": 236, "bank": "0xC1", "ptr_pos": "0x013122", "str_pos": "0x014028", "length": 19}
+#<90><91>｢ー347の<FC95>けて<8A><8A><8A><8A><8A><8A><8A>
+
+
+{"str_num": 237, "bank": "0xC1", "ptr_pos": "0x013124", "str_pos": "0x01403C", "length": 19}
+#<90><91>｢ー348の<FC95>けて<8A><8A><8A><8A><8A><8A><8A>
+
+
+{"str_num": 238, "bank": "0xC1", "ptr_pos": "0x013126", "str_pos": "0x014050", "length": 19}
+#<90><91>｢ー349の<FC95>けて<8A><8A><8A><8A><8A><8A><8A>
+
+
+{"str_num": 239, "bank": "0xC1", "ptr_pos": "0x013128", "str_pos": "0x014064", "length": 19}
+#<90><91>｢ー340の<FC95>けて<8A><8A><8A><8A><8A><8A><8A>
+
+
+{"str_num": 240, "bank": "0xC1", "ptr_pos": "0x01312A", "str_pos": "0x014078", "length": 19}
+#<90><91>｢ー351の<FC95>けて<8A><8A><8A><8A><8A><8A><8A>
+
+
+{"str_num": 241, "bank": "0xC1", "ptr_pos": "0x01312C", "str_pos": "0x01408C", "length": 19}
+#<90><91>｢ー352の<FC95>けて<8A><8A><8A><8A><8A><8A><8A>
+
+
+{"str_num": 242, "bank": "0xC1", "ptr_pos": "0x01312E", "str_pos": "0x0140A0", "length": 19}
+#<90><91>｢ー353の<FC95>けて<8A><8A><8A><8A><8A><8A><8A>
+
+
+{"str_num": 243, "bank": "0xC1", "ptr_pos": "0x013130", "str_pos": "0x0140B4", "length": 19}
+#<90><91>｢ー354の<FC95>けて<8A><8A><8A><8A><8A><8A><8A>
+
+
+{"str_num": 244, "bank": "0xC1", "ptr_pos": "0x013132", "str_pos": "0x0140C8", "length": 19}
+#<90><91>｢ー355の<FC95>けて<8A><8A><8A><8A><8A><8A><8A>
+
+
+{"str_num": 245, "bank": "0xC1", "ptr_pos": "0x013134", "str_pos": "0x0140DC", "length": 19}
+#<90><91>｢ー356の<FC95>けて<8A><8A><8A><8A><8A><8A><8A>
+
+
+{"str_num": 246, "bank": "0xC1", "ptr_pos": "0x013136", "str_pos": "0x0140F0", "length": 19}
+#<90><91>｢ー357の<FC95>けて<8A><8A><8A><8A><8A><8A><8A>
+
+
+{"str_num": 247, "bank": "0xC1", "ptr_pos": "0x013138", "str_pos": "0x014104", "length": 19}
+#<90><91>｢ー358の<FC95>けて<8A><8A><8A><8A><8A><8A><8A>
+
+
+{"str_num": 248, "bank": "0xC1", "ptr_pos": "0x01313A", "str_pos": "0x014118", "length": 19}
+#<90><91>｢ー359の<FC95>けて<8A><8A><8A><8A><8A><8A><8A>
+
+
+{"str_num": 249, "bank": "0xC1", "ptr_pos": "0x01313C", "str_pos": "0x01412C", "length": 19}
+#<90><91>｢ー350の<FC95>けて<8A><8A><8A><8A><8A><8A><8A>
+
+
+{"str_num": 250, "bank": "0xC1", "ptr_pos": "0x01313E", "str_pos": "0x014140", "length": 19}
+#<90><91>｢ー361の<FC95>けて<8A><8A><8A><8A><8A><8A><8A>
+
+
+{"str_num": 251, "bank": "0xC1", "ptr_pos": "0x013140", "str_pos": "0x014154", "length": 19}
+#<90><91>｢ー362の<FC95>けて<8A><8A><8A><8A><8A><8A><8A>
+
+
+{"str_num": 252, "bank": "0xC1", "ptr_pos": "0x013142", "str_pos": "0x014168", "length": 19}
+#<90><91>｢ー363の<FC95>けて<8A><8A><8A><8A><8A><8A><8A>
+
+
+{"str_num": 253, "bank": "0xC1", "ptr_pos": "0x013144", "str_pos": "0x01417C", "length": 19}
+#<90><91>｢ー364の<FC95>けて<8A><8A><8A><8A><8A><8A><8A>
+
+
+{"str_num": 254, "bank": "0xC1", "ptr_pos": "0x013146", "str_pos": "0x014190", "length": 19}
+#<90><91>｢ー365の<FC95>けて<8A><8A><8A><8A><8A><8A><8A>
+
+
+{"str_num": 255, "bank": "0xC1", "ptr_pos": "0x013148", "str_pos": "0x0141A4", "length": 0}
+#
+
+
+{"str_num": 256, "bank": "0xC1", "ptr_pos": "0x01314A", "str_pos": "0x0144FD", "length": 4}
+#ン｣[Sword]
+
+
