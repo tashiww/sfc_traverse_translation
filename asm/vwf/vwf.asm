@@ -294,6 +294,8 @@ RenderEnglishVWF:
 .cols_cleaned:
     ; Update caller Base Tile ID:
     ; Base Tile ID += total_cols * 2
+    REP #$20            ; 16-bit A
+    LDA $EE             ; Explicitly reload total_cols!
     ASL                 ; total_cols * 2
     SEP #$20            ; 8-bit A
     CLC
