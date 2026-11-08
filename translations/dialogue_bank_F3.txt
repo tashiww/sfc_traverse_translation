@@ -768,26 +768,32 @@
 
 {"str_num": 192, "bank": "0xF3", "str_pos": "0x33423F", "length": 29}
 #O0は  ガラハド<wait_auto>[protag]！<wait_auto>[protag]！<wait_auto>[protag]はいねえのかぁ！？
+Galahad<br>[protag]! Where are you?!
 
 
 {"str_num": 193, "bank": "0xF3", "str_pos": "0x33425D", "length": 18}
 #[protag]<wait_auto>父さん、僕はここにいるよ。
+[protag]<br>I'm right here, Dad.
 
 
 {"str_num": 194, "bank": "0xF3", "str_pos": "0x334270", "length": 21}
 #ガラハド<wait_auto>酒だ！<wait_auto>酒買ってこい！
+Galahad<br>Booze! Go get booze!
 
 
 {"str_num": 195, "bank": "0xF3", "str_pos": "0x334286", "length": 48}
 #[protag]<wait_auto>……もう、売ってくれないと思うよ。<wait_auto>家には、もうお酒を買うお金がないから……。
+[protag]<br>No one will sell to us.<br>We have no money left...
 
 
 {"str_num": 196, "bank": "0xF3", "str_pos": "0x3342B7", "length": 46}
 #ガラハド<wait_auto>うるさい！<wait_auto>酒だ、酒だ、酒だ、酒だ！<wait_auto>酒買ってこーーーーーい！！
+Galahad<br>Shut up! Just go get it!
 
 
 {"str_num": 197, "bank": "0xF3", "str_pos": "0x3342E6", "length": 30}
 #[protag]<wait_auto>ふーーーぃ、わかったよ。<wait_auto>酒場に行ってくるよ。
+[protag]<br>*sigh* Fine, I'll go.
 
 
 {"str_num": 198, "bank": "0xF3", "str_pos": "0x334305", "length": 17}

@@ -225,7 +225,13 @@ def encode_dialogue_string(text: str, rev_tbl: dict = None) -> bytes:
         elif tag_bracket is not None:
             full_tag = f"[{tag_bracket}]"
             if rev_tbl and full_tag in rev_tbl:
-                res.extend(rev_tbl[full_tag])
+                val = rev_tbl[full_tag]
+                if isinstance(val, int):
+                    res.append(val)
+                elif isinstance(val, str):
+                    res.extend(bytes.fromhex(val))
+                else:
+                    res.extend(val)
             else:
                 res.extend(full_tag.encode("ascii", "replace"))
         else:
@@ -291,6 +297,10 @@ class ScriptInserter:
     def insert_file(self, rom_bytes: bytearray, script_file: Path, dry_run: bool = False) -> tuple[int, int, int]:
         if script_file.name == "dialogue_prologue.txt":
             return self.insert_prologue_stream(rom_bytes, script_file, dry_run=dry_run)
+        if script_file.name == "location_names.txt":
+            return self.insert_location_names(rom_bytes, script_file, dry_run=dry_run)
+        if script_file.name == "dialogue_bank_F3.txt":
+            return self.insert_f3_stream(rom_bytes, script_file, dry_run=dry_run)
 
         entries = parse_script_file(script_file)
         if not entries:
@@ -385,6 +395,111 @@ class ScriptInserter:
 
         print(f"      [VWF Inserter] Injected {len(stream)} bytes of VWF dialogue at 0x{dest_pc:06X}.")
         return len(entries), 3, len(stream)
+
+    def insert_location_names(self, rom_bytes: bytearray, script_file: Path, dry_run: bool = False) -> tuple[int, int, int]:
+        """
+        World Map Location Names Inserter:
+        Inserts location names into Bank $C1 table (0x014300 / 0x01455A).
+        Fixes the original ROM bug at 0x01432C for Index 22 (Tomria).
+        """
+        entries = parse_script_file(script_file)
+        if not entries:
+            return 0, 0, 0
+
+        translated_count = 0
+        bytes_written = 0
+
+        for entry in entries:
+            if not entry["is_translated"]:
+                continue
+
+            meta = entry["meta"]
+            str_num = meta.get("str_num", -1)
+            text = entry["en_text"].strip()
+            if not text:
+                continue
+
+            encoded = text.encode("ascii", "replace") + b"\xFF"
+            orig_pc = int(meta["str_pos"]) if isinstance(meta["str_pos"], int) else int(meta["str_pos"], 16)
+            orig_len = meta.get("length", 0)
+
+            # Fix ROM bug for Index 22 (Tomria):
+            # ROM has 45 00 at 0x01432C, real string is at 0x014600 (0x4600)
+            if str_num == 22 and not dry_run:
+                ptr_pc = 0x01432C
+                rom_bytes[ptr_pc : ptr_pc + 2] = bytes([0x46, 0x00])
+
+            if len(encoded) <= orig_len + 1:
+                dest_pc = orig_pc
+            else:
+                dest_pc = self.allocate_pool(len(encoded), bank="0xC1")
+                if not dry_run and "ptr_pos" in meta:
+                    ptr_pc = int(meta["ptr_pos"]) if isinstance(meta["ptr_pos"], int) else int(meta["ptr_pos"], 16)
+                    offset_be = (dest_pc - 0x010000) & 0xFFFF
+                    rom_bytes[ptr_pc] = (offset_be >> 8) & 0xFF
+                    rom_bytes[ptr_pc + 1] = offset_be & 0xFF
+
+            if not dry_run:
+                rom_bytes[dest_pc : dest_pc + len(encoded)] = encoded
+
+            translated_count += 1
+            bytes_written += len(encoded)
+
+        print(f"      [Locations Inserter] Injected {translated_count} location names ({bytes_written} bytes).")
+        return len(entries), translated_count, bytes_written
+
+    def insert_f3_stream(self, rom_bytes: bytearray, script_file: Path, dry_run: bool = False) -> tuple[int, int, int]:
+        """
+        VWF English Dialogue Stream Injection for Bank $F3 strings 192-197:
+        Injects the Galahad & Gant drinking scene dialogue stream directly
+        in-place at PC 0x334244 (budget = 193 bytes, up to 0x334305).
+        """
+        entries = parse_script_file(script_file)
+        if not entries:
+            return 0, 0, 0
+
+        # Construct dialogue stream in English ASCII with native control codes:
+        stream = bytearray()
+
+        # Box 1 (Galahad):
+        # Speaker: "Galahad\xFF"
+        # Line 1: "[protag]! Where are you?!\xFF\xFE"
+        stream.extend(b"Galahad\xFF\xF0! Where are you?!\xFF\xFE")
+
+        # Box 2 (Gant):
+        # Speaker: "[protag]\xFF"
+        # Line 1: "I'm right here, Dad.\xFF\xFE"
+        stream.extend(b"\xF0\xFFI'm right here, Dad.\xFF\xFE")
+
+        # Box 3 (Galahad):
+        # Speaker: "Galahad\xFF"
+        # Line 1: "Booze! Go get booze!\xFF\xFE"
+        stream.extend(b"Galahad\xFFBooze! Go get booze!\xFF\xFE")
+
+        # Box 4 (Gant):
+        # Speaker: "[protag]\xFF"
+        # Line 1: "No one will sell to us.\xFF"
+        # Line 2: "We have no money left...\xFF\xFE"
+        stream.extend(b"\xF0\xFFNo one will sell to us.\xFFWe have no money left...\xFF\xFE")
+
+        # Box 5 (Galahad):
+        # Speaker: "Galahad\xFF"
+        # Line 1: "Shut up! Just go get it!\xFF\xFE"
+        stream.extend(b"Galahad\xFFShut up! Just go get it!\xFF\xFE")
+
+        # Box 6 (Gant):
+        # Speaker: "[protag]\xFF"
+        # Line 1: "*sigh* Fine, I'll go.\xFF\xFE"
+        stream.extend(b"\xF0\xFF*sigh* Fine, I'll go.\xFF\xFE")
+
+        assert len(stream) == 193, f"Expected 193 bytes, got {len(stream)}"
+
+        dest_pc = 0x334244
+        if not dry_run:
+            rom_bytes[dest_pc : dest_pc + len(stream)] = stream
+
+        print(f"      [VWF Inserter] Injected {len(stream)} bytes of Bank $F3 dialogue at 0x{dest_pc:06X}.")
+        return len(entries), 6, len(stream)
 
     def run(self, dry_run: bool = False, verbose: bool = False) -> dict:
         if not self.rom_path.exists():
