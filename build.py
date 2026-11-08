@@ -49,10 +49,14 @@ def step_copy_rom():
 
 def step_apply_asm():
     print("[3/5] Assembling 65816 assembly patches with Asar...")
-    # Ensure 8x8 menu font binary is up to date:
+    # Ensure 8x8 menu font and Bank $D3 16x16 font binaries are up to date:
     font8x8_script = ROOT_DIR / "tools" / "build_font8x8.py"
     if font8x8_script.exists():
         subprocess.run([sys.executable, str(font8x8_script)], check=True, capture_output=True)
+
+    font_d3_script = ROOT_DIR / "tools" / "build_font_bank_d3.py"
+    if font_d3_script.exists():
+        subprocess.run([sys.executable, str(font_d3_script)], check=True, capture_output=True)
 
     main_asm = ROOT_DIR / "asm" / "main.asm"
     if not main_asm.exists():

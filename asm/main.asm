@@ -9,6 +9,13 @@ hirom
 incsrc "vwf/vwf.asm"
 
 ; ----------------------------------------------------------------------------
+; Universal 16x16 English Font in Bank $D3 (PC 0x130000, 16,384 bytes, 256 glyphs):
+; Replaces raw Japanese Kana with full English ASCII and native glyph sets.
+; ----------------------------------------------------------------------------
+org $D30000
+    incbin "vwf/font_bank_d3.bin"
+
+; ----------------------------------------------------------------------------
 ; Upgrade 8x8 Menu Font at $C0:A39A (PC 0x00A39A, 1104 bytes, 69 tiles):
 ; ----------------------------------------------------------------------------
 org $C0A39A
@@ -16,9 +23,10 @@ org $C0A39A
 
 ; ----------------------------------------------------------------------------
 ; Character Naming Screen Grid Table in Bank $DB (PC 0x1BA782):
-; Rewire Page 0 (9 rows of 10 cols = 90 bytes) from Hiragana to English Alphabet:
+; Rewire Page 0 (Hiragana -> Uppercase English) and Page 1 (Katakana -> Lowercase English):
 ; ----------------------------------------------------------------------------
 org $DBA782
+    ; Page 0 (Uppercase English):
     ; Row 0: A B C D E F G H I J
     db $0B, $0C, $0D, $0E, $0F, $10, $11, $12, $13, $14
     ; Row 1: K L M N O P Q R S T
@@ -27,6 +35,23 @@ org $DBA782
     db $1F, $20, $21, $22, $23, $24, $8A, $8C, $86, $87
     ; Row 3: 0 1 2 3 4 5 6 7 8 9
     db $01, $02, $03, $04, $05, $06, $07, $08, $09, $0A
+    ; Rows 4..8: Blank cells (50 bytes)
+    db $00, $00, $00, $00, $00, $00, $00, $00, $00, $00
+    db $00, $00, $00, $00, $00, $00, $00, $00, $00, $00
+    db $00, $00, $00, $00, $00, $00, $00, $00, $00, $00
+    db $00, $00, $00, $00, $00, $00, $00, $00, $00, $00
+    db $00, $00, $00, $00, $00, $00, $00, $00, $00, $00
+
+org $DBA7DC
+    ; Page 1 (Lowercase English):
+    ; Row 0: a b c d e f g h i j
+    db $61, $62, $63, $64, $65, $66, $67, $68, $69, $6A
+    ; Row 1: k l m n o p q r s t
+    db $6B, $6C, $6D, $6E, $6F, $70, $71, $72, $73, $74
+    ; Row 2: u v w x y z - . ! ?
+    db $75, $76, $77, $78, $79, $7A, $8A, $8C, $86, $87
+    ; Row 3: 0 1 2 3 4 5 6 7 8 9
+    db $30, $31, $32, $33, $34, $35, $36, $37, $38, $39
     ; Rows 4..8: Blank cells (50 bytes)
     db $00, $00, $00, $00, $00, $00, $00, $00, $00, $00
     db $00, $00, $00, $00, $00, $00, $00, $00, $00, $00

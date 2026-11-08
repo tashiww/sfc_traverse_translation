@@ -108,44 +108,6 @@ RenderEnglishVWF:
 .redirect_done:
     PLX
 
-    ; ------------------------------------------------------------------------
-    ; Intelligent Language Discrimination:
-    ; Checks whether line at [$A3] contains English ASCII or Japanese Kanji/Kana.
-    ; English lines are rendered with proportional English VWF.
-    ; Untranslated Japanese dialogue falls back directly to $DC:CAA5!
-    ; ------------------------------------------------------------------------
-    SEP #$20            ; 8-bit A
-    REP #$10            ; 16-bit X, Y
-    LDY #$0000
-    LDA [$A3],Y
-    CMP #$FB
-    BCC +
-    CMP #$FE
-    BCC .passthrough_jp ; Kanji prefix $FB, $FC, $FD -> Japanese!
-+   CMP #$80
-    BCC .detect_done    ; ASCII ($00..$7F) -> English VWF!
-    CMP #$F0
-    BCC .passthrough_jp ; Katakana / punctuation ($80..$EF) -> Japanese!
-    ; Byte is $F0..$FF:
-    ; $F0, $F1, $F2 = [protag], [sub], [pet] tag
-    INY
-    LDA [$A3],Y
-    CMP #$FB
-    BCC +
-    CMP #$FE
-    BCC .passthrough_jp ; Kanji after tag -> Japanese!
-+   CMP #$80
-    BCC .detect_done    ; ASCII after tag -> English VWF!
-    BRA .passthrough_jp ; Non-ASCII after tag -> Japanese!
-
-.passthrough_jp:
-    SEP #$20
-    LDA #$D3            ; Re-execute the 4 bytes replaced by JML RenderEnglishVWF
-    PHA
-    PLB
-    JML $DCCAA5         ; Continue in native Japanese character renderer!
-
-.detect_done:
     PHK
     PLB                 ; DB = Current Bank ($CA)
 
@@ -205,14 +167,57 @@ RenderEnglishVWF:
     BNE +
     JSR AdvanceSpace
     BRA .char_loop
-+   CMP #$21
-    BCC .char_loop      ; Skip unprintable
++   ; Check Native uppercase ($0B..$24 -> 'A'..'Z'):
+    CMP #$0B
+    BCC +
+    CMP #$25
+    BCS +
+    CLC
+    ADC #$36            ; $0B + $36 = $41 ('A')
+    JSR DrawSingleChar
+    JMP .char_loop
++
+    ; Check Native digits ($01..$0A -> '0'..'9'):
+    CMP #$01
+    BCC +
+    CMP #$0B
+    BCS +
+    CLC
+    ADC #$2F            ; $01 + $2F = $30 ('0')
+    JSR DrawSingleChar
+    JMP .char_loop
++
+    ; Check Native punctuation ($86='!', $87='?', $8A='-', $8C='.'):
+    CMP #$86
+    BNE +
+    LDA #$21
+    JSR DrawSingleChar
+    JMP .char_loop
++   CMP #$87
+    BNE +
+    LDA #$3F
+    JSR DrawSingleChar
+    JMP .char_loop
++   CMP #$8A
+    BNE +
+    LDA #$2D
+    JSR DrawSingleChar
+    JMP .char_loop
++   CMP #$8C
+    BNE +
+    LDA #$2E
+    JSR DrawSingleChar
+    JMP .char_loop
++
+    CMP #$21
+    BCC .skip_char      ; Skip unprintable
     CMP #$7F
-    BCS .char_loop      ; Skip non-ASCII
+    BCS .skip_char      ; Skip non-ASCII
 
     ; Printable ASCII character (0x21 - 0x7E)
     JSR DrawSingleChar
-    BRA .char_loop
+.skip_char:
+    JMP .char_loop
 
 ; ----------------------------------------------------------------------------
 ; Dynamic Variable Name Expansion ($F0=[protag], $F1=[sub], $F2=[pet])

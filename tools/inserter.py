@@ -385,38 +385,37 @@ class ScriptInserter:
                     # 2. Encode to binary
                     encoded = encode_dialogue_string(wrapped, self.rev_tbl)
 
-                if len(encoded) <= orig_len + 1:
-                    dest_pc = orig_pc
-                    if not dry_run:
-                        rom_bytes[dest_pc : dest_pc + len(encoded)] = encoded
-                        if len(encoded) < orig_len + 1:
-                            rom_bytes[dest_pc + len(encoded) : dest_pc + orig_len + 1] = b"\xFF" * (orig_len + 1 - len(encoded))
-                        print(f"      [In-Place] Injected {len(encoded)}B at 0x{orig_pc:06X} (budget {orig_len+1}B)")
-                else:
-                    dest_pc = self.allocate_pool(len(encoded), bank="0xCA")
-                    # Update pointer if ptr_pos is known
-                    if "ptr_pos" in meta and not dry_run:
-                        ptr_pc = int(meta["ptr_pos"], 16) if isinstance(meta["ptr_pos"], str) else int(meta["ptr_pos"])
-                        ptr_type = meta.get("ptr_type", "16bit_le")
-                        if ptr_type == "16bit_be":
-                            offset_be = (dest_pc - 0x010000) & 0xFFFF
-                            rom_bytes[ptr_pc] = (offset_be >> 8) & 0xFF
-                            rom_bytes[ptr_pc + 1] = offset_be & 0xFF
-                        else:
-                            snes_offset = dest_pc & 0xFFFF
-                            rom_bytes[ptr_pc : ptr_pc + 2] = struct.pack("<H", snes_offset)
-                    elif not dry_run:
-                        # Relocate without static pointer -> Register in StringRedirectTable!
-                        orig_addr = orig_pc & 0xFFFF
-                        orig_bank_str = meta.get("bank", "0xF3")
-                        orig_bank = int(orig_bank_str, 16) if isinstance(orig_bank_str, str) else int(orig_bank_str)
-                        new_addr = dest_pc & 0xFFFF
-                        new_bank = (dest_pc >> 16) + 0xC0
-                        self.redirect_entries.append((orig_addr, orig_bank, new_addr, new_bank))
-                        print(f"      [Redirect] Relocated 0x{orig_pc:06X} ($ {orig_bank:02X}:{orig_addr:04X}) -> 0x{dest_pc:06X} ($ {new_bank:02X}:{new_addr:04X}) in Bank $CA pool")
+                # Greenfield Allocation Strategy:
+                # Always allocate full dialogue strings in unmapped Bank $CA free space pool!
+                dest_pc = self.allocate_pool(len(encoded), bank="0xCA")
+                if "ptr_pos" in meta and not dry_run:
+                    ptr_pc = int(meta["ptr_pos"], 16) if isinstance(meta["ptr_pos"], str) else int(meta["ptr_pos"])
+                    ptr_type = meta.get("ptr_type", "16bit_le")
+                    if ptr_type == "16bit_be":
+                        offset_be = (dest_pc - 0x010000) & 0xFFFF
+                        rom_bytes[ptr_pc] = (offset_be >> 8) & 0xFF
+                        rom_bytes[ptr_pc + 1] = offset_be & 0xFF
+                    else:
+                        snes_offset = dest_pc & 0xFFFF
+                        rom_bytes[ptr_pc : ptr_pc + 2] = struct.pack("<H", snes_offset)
+                elif not dry_run:
+                    # Relocate without static pointer -> Register in StringRedirectTable!
+                    orig_addr = orig_pc & 0xFFFF
+                    orig_bank_str = meta.get("bank", "0xF3")
+                    orig_bank = int(orig_bank_str, 16) if isinstance(orig_bank_str, str) else int(orig_bank_str)
+                    new_addr = dest_pc & 0xFFFF
+                    new_bank = (dest_pc >> 16) + 0xC0
+                    self.redirect_entries.append((orig_addr, orig_bank, new_addr, new_bank))
+                    print(f"      [Redirect] Relocated 0x{orig_pc:06X} ($ {orig_bank:02X}:{orig_addr:04X}) -> 0x{dest_pc:06X} ($ {new_bank:02X}:{new_addr:04X}) in Bank $CA pool")
 
-                    if not dry_run:
-                        rom_bytes[dest_pc : dest_pc + len(encoded)] = encoded
+                if not dry_run:
+                    rom_bytes[dest_pc : dest_pc + len(encoded)] = encoded
+                    # Dual-write in-place: also write into original space so inline peeking sees valid English
+                    fit_len = min(len(encoded), orig_len + 1)
+                    if fit_len > 0:
+                        rom_bytes[orig_pc : orig_pc + fit_len] = encoded[:fit_len]
+                        if len(encoded) < orig_len + 1:
+                            rom_bytes[orig_pc + len(encoded) : orig_pc + orig_len + 1] = b"\xFF" * (orig_len + 1 - len(encoded))
 
                 translated_count += 1
                 bytes_written += len(encoded)
@@ -496,10 +495,8 @@ class ScriptInserter:
             if not text:
                 continue
 
-            # Encode location names in Traverse native uppercase font:
-            enc_list = [NATIVE_UPPERCASE.get(c, 0x00) for c in text.upper()]
-            enc_list.append(0xFF)
-            encoded = bytes(enc_list)
+            # Encode location names in standard ASCII (matches updated Bank $D3 font):
+            encoded = text.encode("ascii", "replace") + b"\xFF"
             orig_pc = int(meta["str_pos"]) if isinstance(meta["str_pos"], int) else int(meta["str_pos"], 16)
             orig_len = meta.get("length", 0)
             if not orig_len:

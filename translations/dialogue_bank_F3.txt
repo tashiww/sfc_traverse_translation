@@ -780,32 +780,32 @@ Old Man<wait_auto>Oh? A client?<wait_auto>I am the director here!
 
 {"str_num": 192, "bank": "0xF3", "str_pos": "0x334244", "length": 24}
 #ガラハド<wait_auto>[protag]！<wait_auto>[protag]！<wait_auto>[protag]はいねえのかぁ！？
-Galahad<wait_auto>[protag]! You there?!
+Galahad<wait_auto>[protag]! [protag]! Aren't you here, [protag]?!
 
 
 {"str_num": 193, "bank": "0xF3", "str_pos": "0x33425D", "length": 18}
 #[protag]<wait_auto>父さん、僕はここにいるよ。
-[protag]<wait_auto>I'm here, Dad.
+[protag]<wait_auto>Dad, I'm right here.
 
 
 {"str_num": 194, "bank": "0xF3", "str_pos": "0x334270", "length": 21}
 #ガラハド<wait_auto>酒だ！<wait_auto>酒買ってこい！
-Galahad<wait_auto>Bring booze!
+Galahad<wait_auto>Booze! Go buy me some booze!
 
 
 {"str_num": 195, "bank": "0xF3", "str_pos": "0x334286", "length": 48}
 #[protag]<wait_auto>……もう、売ってくれないと思うよ。<wait_auto>家には、もうお酒を買うお金がないから……。
-[protag]<wait_auto>No one will sell to us.<wait_auto>We have no money...
+[protag]<wait_auto>...I don't think they'll sell to us.<wait_auto>We don't have any money left for alcohol...
 
 
 {"str_num": 196, "bank": "0xF3", "str_pos": "0x3342B7", "length": 46}
 #ガラハド<wait_auto>うるさい！<wait_auto>酒だ、酒だ、酒だ、酒だ！<wait_auto>酒買ってこーーーーーい！！
-Galahad<wait_auto>Shut up! Just go get it!
+Galahad<wait_auto>Shut up! Booze, booze, booze!<wait_auto>Go buy me some booooze!!
 
 
 {"str_num": 197, "bank": "0xF3", "str_pos": "0x3342E6", "length": 30}
 #[protag]<wait_auto>ふーーーぃ、わかったよ。<wait_auto>酒場に行ってくるよ。
-[protag]<wait_auto>*sigh* Fine, I'll go.
+[protag]<wait_auto>*sigh*... Alright, alright.<wait_auto>I'll go to the tavern.
 
 
 {"str_num": 198, "bank": "0xF3", "str_pos": "0x334305", "length": 17}
