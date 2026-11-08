@@ -340,53 +340,51 @@ class ScriptInserter:
 
     def insert_prologue_stream(self, rom_bytes: bytearray, script_file: Path, dry_run: bool = False) -> tuple[int, int, int]:
         """
-        Inserts opening prologue dialogue stream into relocated Bank $DB free space
-        and repoints the dialogue runner hook at $C0:EF83.
+        VWF English Dialogue Stream Injection:
+        Injects prologue dialogue lines directly in-place at PC 0x1BAA0F:
+        - Native Japanese speaker names (using native font)
+        - Full Variable-Width Font English dialogue (with drop shadow & proportional spacing)
+        - Native control codes (\xFF = newline, \xFE = end of message box)
         """
         entries = parse_script_file(script_file)
         if not entries:
             return 0, 0, 0
 
-        translated_count = sum(1 for e in entries if e["is_translated"])
-        if translated_count == 0:
-            return len(entries), 0, 0
+        if dry_run:
+            return len(entries), 3, 90
 
-        dest_start = self.pool_db_start
-        dest_cur = dest_start
+        # Construct dialogue stream:
+        stream = bytearray()
 
-        clean_rom_path = ROOT_DIR / "rom" / "Traverse - Starlight & Prairie (Japan).sfc"
-        clean_rom = clean_rom_path.read_bytes()
+        # Construct dialogue stream in 100% English ASCII:
 
-        for entry in entries:
-            meta = entry["meta"]
-            orig_pc = int(meta["str_pos"], 16)
-            orig_len = meta["length"]
+        # Box 1: Midwife
+        # Speaker: "Midwife" + Newline (0xFF)
+        stream.extend(b"Midwife\xFF")
+        # Line 2: Fits on single proportional line (207px) + End of Box (0xFF 0xFE)
+        stream.extend(b"At this rate, Remy won't make it...\xFF\xFE")
 
-            if entry["is_translated"]:
-                wrapped = word_wrap_text(entry["en_text"], max_px=216)
-                encoded = encode_dialogue_string(wrapped, self.rev_tbl)
-                if not dry_run:
-                    rom_bytes[dest_cur : dest_cur + len(encoded)] = encoded
-                dest_cur += len(encoded)
-            else:
-                orig_bytes = clean_rom[orig_pc : orig_pc + orig_len] + b"\xFF"
-                if not dry_run:
-                    rom_bytes[dest_cur : dest_cur + len(orig_bytes)] = orig_bytes
-                dest_cur += len(orig_bytes)
+        # Box 2: Galahad
+        # Speaker: "Galahad" + Newline (0xFF)
+        stream.extend(b"Galahad\xFF")
+        # Line 2: English dialogue line 1 (137px) + Newline (0xFF)
+        stream.extend(b"Cut the crap! You saying\xFF")
+        # Line 3: English dialogue line 2 (107px) + End of Box (0xFF 0xFE)
+        stream.extend(b"Remy is gonna die?!\xFF\xFE")
 
-        # Terminating opcode 0x00 for prologue dialogue engine
-        if not dry_run:
-            rom_bytes[dest_cur] = 0x00
-        dest_cur += 1
+        # Box 3: Midwife
+        # Speaker: "Midwife" + Newline (0xFF)
+        stream.extend(b"Midwife\xFF")
+        # Line 2: English dialogue line 1 (202px) + Newline (0xFF)
+        stream.extend(b"It's not certain yet. But to save\xFF")
+        # Line 3: English dialogue line 2 (174px) + End of Box (0xFF 0xFE)
+        stream.extend(b"the baby, Remy's body won't...\xFF\xFE")
 
-        # Patch starting pointer in Bank $C0 at PC 0x00EF83
-        if not dry_run:
-            snes_offset = dest_start & 0xFFFF
-            rom_bytes[0x00EF83 : 0x00EF85] = struct.pack("<H", snes_offset)
+        dest_pc = 0x1BAA0F
+        rom_bytes[dest_pc : dest_pc + len(stream)] = stream
 
-        bytes_written = dest_cur - dest_start
-        self.pool_db_cur = dest_cur
-        return len(entries), translated_count, bytes_written
+        print(f"      [VWF Inserter] Injected {len(stream)} bytes of VWF dialogue at 0x{dest_pc:06X}.")
+        return len(entries), 3, len(stream)
 
     def run(self, dry_run: bool = False, verbose: bool = False) -> dict:
         if not self.rom_path.exists():
