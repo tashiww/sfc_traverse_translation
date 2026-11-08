@@ -6,6 +6,8 @@
 hirom
 
 ; Hook into the master dialogue character line renderer in Bank $C0
+; In clean ROM:
+;   $C0:F511: JSL $DC:CA99 (22 99 CA DC)
 org $C0F511
     JSL VWF_LineHook
 
@@ -39,10 +41,19 @@ VWF_LineHook:
 ; VWF English Line Renderer
 ; Inputs:
 ;   [$A3] = 24-bit pointer to dialogue string
-;   $A8   = Tile attribute byte (0x2B)
+;   $A8   = Tile attribute byte ($2B)
+;   Stack layout at entry (relative to S after PHP:PHB):
+;     $01,S: caller DB
+;     $02,S: caller P
+;     $03,S..$05,S: JSL return address ($C0:F515)
+;     $06,S: caller Base Tile ID (e.g. 0 or 8)
+;     $07,S: caller Col parameter (starts at 2)
+;     $08,S: caller Row parameter (starts at 4 for line 1, 6 for line 2)
+;
 ; Outputs:
-;   Y = Number of bytes consumed from [$A3]
-;   X = Tilemap offset (0x0038)
+;   Y = Number of bytes consumed from [$A3] (including terminating $FF/$00)
+;   X = Consumed tile columns * 2 ($0038)
+;   $06,S (caller Base Tile ID) incremented by 56 tiles ($38)
 ; ----------------------------------------------------------------------------
 VWF_RenderEnglishLine:
     PHP
@@ -50,26 +61,20 @@ VWF_RenderEnglishLine:
     PHK
     PLB                 ; DB = Current Bank ($CA)
 
-    ; Clear line buffer in WRAM ($7E:CE80 - $7E:D1FF: 56 tiles * 16 bytes = 896 bytes)
-    REP #$30            ; 16-bit A, X, Y
-    LDX #$037E          ; 896 - 2
-    LDA #$0000
-.clear_loop:
-    STA $7ECE80,x
-    DEX
-    DEX
-    BPL .clear_loop
-
-    ; Allocate 18 bytes (9 words) on stack for private local variables:
-    ; $01,S: cursor_x    (16-bit horizontal pixel position, initially 0)
-    ; $03,S: char_width  (16-bit)
-    ; $05,S: tile_col    (16-bit)
-    ; $07,S: bit_shift   (16-bit)
-    ; $09,S: fg_word     (16-bit)
-    ; $0B,S: sh_word     (16-bit)
-    ; $0D,S: font_ptr    (16-bit)
-    ; $0F,S: str_y       (16-bit string read offset Y)
-    ; $11,S: tile_addr   (16-bit temp tile base offset)
+    ; Allocate 22 bytes (11 words) on stack for private local variables:
+    ; $01,S: cursor_x        (16-bit: pixel position 0..223)
+    ; $03,S: char_width      (16-bit)
+    ; $05,S: tile_col        (16-bit: cursor_x >> 3)
+    ; $07,S: bit_shift       (16-bit: cursor_x & 7)
+    ; $09,S: fg_word         (16-bit)
+    ; $0B,S: sh_word         (16-bit)
+    ; $0D,S: font_ptr        (16-bit)
+    ; $0F,S: str_y           (16-bit: string read offset Y)
+    ; $11,S: line_tile_base  (16-bit: starting tile ID for this line)
+    ; $13,S: line_x_base     (16-bit: tilemap byte offset = Row * 64 + Col * 2)
+    ; $15,S: temp_word       (16-bit scratch word)
+    PEA $0000           ; $15,S
+    PEA $0000           ; $13,S
     PEA $0000           ; $11,S
     PEA $0000           ; $0F,S
     PEA $0000           ; $0D,S
@@ -80,22 +85,102 @@ VWF_RenderEnglishLine:
     PEA $0000           ; $03,S
     PEA $0000           ; $01,S
 
+    ; Caller parameters on stack (offset = 22 + original offset):
+    ; $1C,S: Base Tile ID
+    ; $1D,S: Col
+    ; $1E,S: Row
+
+    ; Compute line_x_base = (Row * 64) + (Col * 2) in pure 16-bit:
+    REP #$30            ; 16-bit A, X, Y
+    LDA $1E,S           ; Row parameter
+    AND #$00FF
+    ASL : ASL : ASL : ASL : ASL : ASL ; Row * 64
+    STA $13,S
+
+    LDA $1D,S           ; Col parameter
+    AND #$00FF
+    ASL                 ; Col * 2
+    CLC
+    ADC $13,S
+    STA $13,S           ; line_x_base = Row * 64 + Col * 2
+
+    ; Read line_tile_base:
+    LDA $1C,S           ; Base Tile ID from caller
+    AND #$00FF
+    STA $11,S           ; line_tile_base
+
+    ; Clear 56 tiles (896 bytes) in WRAM $7E:CE80 starting at line_tile_base * 16:
+    LDA $11,S           ; line_tile_base
+    ASL : ASL : ASL : ASL ; * 16
+    TAX                 ; X = byte offset in $7E:CE80
+    LDY #$01C0          ; 448 words = 896 bytes
+    LDA #$0000
+.clear_line:
+    STA $7ECE80,X
+    INX
+    INX
+    DEY
+    BNE .clear_line
+
+    ; Prepare attribute byte in high byte of temp_word ($15,S):
+    SEP #$20
+    LDA $A8             ; Tile attribute ($2B)
+    XBA
+    LDA #$00
+    REP #$20
+    STA $15,S           ; $15,S = Attribute << 8 (0x2B00)
+
+    ; Initialize tilemap entries in $7E:C780 for this line (28 columns):
+    ; Top row at line_x_base: tile IDs = line_tile_base + col
+    ; Bottom row at line_x_base + 64: tile IDs = line_tile_base + 28 + col
+    LDA $13,S
+    TAX                 ; X = line_x_base
+    LDY #$0000          ; Y = column byte offset (0..54)
+.init_tilemap:
+    TYA
+    LSR                 ; tile column index 0..27
+    CLC
+    ADC $11,S           ; line_tile_base + col
+    ORA $15,S           ; Combine with attribute high byte
+    STA $7EC780,X       ; Top row entry
+
+    CLC
+    ADC #$001C          ; Tile ID += 28
+    STA $7EC7C0,X       ; Bottom row entry ($7EC780,X + 64)
+
+    INX
+    INX
+    INY
+    INY
+    CPY #$0038          ; 28 columns * 2 bytes = 56 bytes
+    BNE .init_tilemap
+
+    ; Trigger tilemap DMA ($B6 = 1) to update VRAM $0C00 with clean tilemap entries:
+    SEP #$20
+    STZ $B8
+    LDA #$01
+    STA $B6
+    LDA.l $004210
+-   LDA.l $004210
+    BPL -
+
 .char_loop:
     REP #$20
     LDA $0F,S           ; String offset Y
     TAY
     SEP #$20            ; 8-bit A
-    LDA [$A3],y
+    LDA [$A3],Y
     INY
     REP #$20
     TYA
-    STA $0F,S           ; Update string offset Y
+    STA $0F,S           ; Advance string offset Y
     SEP #$20
 
     CMP #$FF            ; End of line
-    BNE +
-    JMP .line_done
-+
+    BEQ .line_done_jmp
+    CMP #$00            ; End of line / space delimiter
+    BEQ .line_done_jmp
+
     CMP #$20            ; Space character
     BNE .check_ascii
 
@@ -106,6 +191,9 @@ VWF_RenderEnglishLine:
     ADC #$0004
     STA $01,S
     JMP .char_loop
+
+.line_done_jmp:
+    JMP .line_done
 
 .check_ascii:
     CMP #$21
@@ -122,17 +210,14 @@ VWF_RenderEnglishLine:
 
     ; Read character width from VWF_WidthTable
     SEP #$20            ; 8-bit A
-    LDA.l VWF_WidthTable,x
+    LDA.l VWF_WidthTable,X
     REP #$20            ; 16-bit A
     AND #$00FF
     STA $03,S           ; char_width
 
     ; Glyph offset in VWF_FontTable: char_index * 16
     TXA
-    ASL
-    ASL
-    ASL
-    ASL
+    ASL : ASL : ASL : ASL
     STA $0D,S           ; font_ptr
 
     ; Compute tile_col and bit_shift from cursor_x ($01,S)
@@ -141,10 +226,12 @@ VWF_RenderEnglishLine:
     STA $07,S           ; bit_shift (0..7)
 
     LDA $01,S
-    LSR
-    LSR
-    LSR
+    LSR : LSR : LSR
     STA $05,S           ; tile_col = cursor_x >> 3
+
+    ; Box width boundary check: 28 tile columns max
+    CMP #$001C
+    BCS .char_loop
 
     ; Blit 16 rows of glyph
     LDY #$0000          ; Row counter Y = 0..15
@@ -154,7 +241,7 @@ VWF_RenderEnglishLine:
     LDA $0D,S           ; font_ptr
     TAX
     SEP #$20            ; 8-bit A
-    LDA.l VWF_FontTable,x
+    LDA.l VWF_FontTable,X
     INX
     REP #$20
     TXA
@@ -186,27 +273,27 @@ VWF_RenderEnglishLine:
     STA $0B,S           ; sh_word = shifted shadow
 
     ; Calculate tile byte offset for row Y:
-    ; If Y < 8: top row offset = tile_col * 16 + (Y * 2)
-    ; If Y >= 8: bottom row offset = (28 + tile_col) * 16 + ((Y - 8) * 2)
+    ; Top row: (line_tile_base + tile_col) * 16 + (Y * 2)
+    ; Bottom row: (line_tile_base + 28 + tile_col) * 16 + ((Y - 8) * 2)
     CPY #$0008
     BCS .calc_bottom
     LDA $05,S           ; tile_col
+    CLC
+    ADC $11,S           ; + line_tile_base
     BRA .calc_addr
 .calc_bottom:
     LDA $05,S           ; tile_col
     CLC
     ADC #$001C          ; + 28 tiles
+    ADC $11,S           ; + line_tile_base
 .calc_addr:
-    ASL
-    ASL
-    ASL
-    ASL                 ; tile * 16
-    STA $11,S           ; tile base offset
+    ASL : ASL : ASL : ASL ; tile * 16
+    STA $15,S           ; tile base offset
     TYA
     AND #$0007
     ASL                 ; (Y & 7) * 2
     CLC
-    ADC $11,S
+    ADC $15,S
     TAX                 ; X = exact byte offset in $7E:CE80 for row Y
 
     ; Write Foreground:
@@ -215,8 +302,8 @@ VWF_RenderEnglishLine:
     LDA $09,S           ; fg_word
     SEP #$20            ; 8-bit A
     XBA                 ; High byte (tile_col)
-    ORA $7ECE80,x
-    STA $7ECE80,x
+    ORA $7ECE80,X
+    STA $7ECE80,X
     XBA                 ; Low byte (tile_col + 1)
     BEQ .fg_done
     ; Check if tile_col < 27
@@ -225,8 +312,8 @@ VWF_RenderEnglishLine:
     CMP #$001B
     SEP #$20
     BCS .fg_done
-    ORA $7ECE90,x       ; tile_col + 1
-    STA $7ECE90,x
+    ORA $7ECE90,X       ; tile_col + 1
+    STA $7ECE90,X
 .fg_done:
 
     ; Write Drop Shadow (at row Y + 1):
@@ -253,8 +340,8 @@ VWF_RenderEnglishLine:
     LDA $0B,S           ; sh_word (16-bit)
     SEP #$20
     XBA                 ; High byte (tile_col)
-    ORA $7ECE81,x
-    STA $7ECE81,x
+    ORA $7ECE81,X
+    STA $7ECE81,X
     XBA                 ; Low byte (tile_col + 1)
     BEQ .next_row
     REP #$20
@@ -262,8 +349,8 @@ VWF_RenderEnglishLine:
     CMP #$001B
     SEP #$20
     BCS .next_row
-    ORA $7ECE91,x
-    STA $7ECE91,x
+    ORA $7ECE91,X
+    STA $7ECE91,X
 
 .next_row:
     REP #$20
@@ -279,45 +366,47 @@ VWF_RenderEnglishLine:
     ADC $03,S           ; + char_width
     STA $01,S
 
+    ; Typewriter tick & VBlank synchronization
+    SEP #$20
+    LDA $A6             ; Typewriter enabled?
+    BEQ .skip_tick
+
+    PHB
+    TDC
+    PHA
+    PLB                 ; DB = 0
+    LDA #$00            ; No punctuation pause
+    JSL $C0F395         ; Dialogue_TypewriterTick: DMAs $7E:CE80 to VRAM $5800 & steps animation
+    PLB                 ; DB = Bank $CA
+
+.skip_tick:
     JMP .char_loop
 
 .line_done:
-    ; Setup tilemap entries in $7E:C780 (top) and $7E:C7C0 (bottom)
-    ; Attribute byte is in $A8 (0x2B)
+    ; Ensure glyph buffer is DMA'd to VRAM $5800 (for instant mode or final glyph sync):
     SEP #$20
-    LDA $A8             ; A = 0x2B
-    XBA                 ; High byte = 0x2B
-    REP #$30            ; 16-bit A, X
-    LDX #$0000
-.tilemap_loop:
-    ; Top tile: tile ID = X >> 1
-    TXA
-    LSR
-    SEP #$20
-    LDA $A8             ; High byte = $A8 attribute
-    XBA
-    REP #$20
-    STA $7EC780,x
+    STZ $B8
+    STZ $B6             ; Mode 0: DMA $7E:CE80 to VRAM $5800!
+    LDA.l $004210
+-   LDA.l $004210
+    BPL -
 
-    ; Bottom tile: tile ID = (X >> 1) + 28
+    ; Update caller's Base Tile ID ($1C,S) by adding 56 tiles ($38):
+    LDA $1C,S
     CLC
-    ADC #$001C
-    STA $7EC7C0,x
-
-    INX
-    INX
-    CPX #$0038          ; 28 tiles * 2 bytes = 56 bytes
-    BNE .tilemap_loop
+    ADC #$38
+    STA $1C,S
 
     ; Load return registers:
+    REP #$20
     LDA $0F,S           ; A = bytes consumed from [$A3]
     TAY                 ; Y = bytes consumed from [$A3]
-    LDX #$0038          ; X = tilemap offset
+    LDX #$0038          ; X = consumed tile columns * 2
 
-    ; Release 9 stack words (18 bytes):
+    ; Release 11 stack words (22 bytes):
     TSC
     CLC
-    ADC #$0012
+    ADC #$0016
     TCS
 
     SEP #$20            ; 8-bit A
