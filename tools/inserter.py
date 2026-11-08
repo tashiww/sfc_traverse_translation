@@ -325,8 +325,6 @@ class ScriptInserter:
         return addr
 
     def insert_file(self, rom_bytes: bytearray, script_file: Path, dry_run: bool = False) -> tuple[int, int, int]:
-        if script_file.name == "dialogue_prologue.txt":
-            return self.insert_prologue_stream(rom_bytes, script_file, dry_run=dry_run)
         if "location_names" in script_file.name:
             return self.insert_location_names(rom_bytes, script_file, dry_run=dry_run)
 
@@ -345,11 +343,25 @@ class ScriptInserter:
 
             orig_pos_str = meta.get("str_pos") or meta.get("pc_hex")
             orig_pc = int(orig_pos_str, 16) if isinstance(orig_pos_str, str) else int(orig_pos_str)
+
+            # If orig_pc points to a leading 0xFE delimiter, advance past it:
+            if orig_pc < len(rom_bytes) and rom_bytes[orig_pc] == 0xFE:
+                orig_pc += 1
+
             orig_len = meta.get("length", 0)
             if not orig_len:
                 m = re.search(r"length:\s*(\d+)", entry.get("jp_text", ""))
                 if m:
                     orig_len = int(m.group(1))
+
+            # Determine precise clean ROM byte budget (distance to and including terminating 0xFF):
+            ff_pos = rom_bytes.find(b"\xff", orig_pc)
+            if ff_pos != -1 and orig_len > 0 and (ff_pos - orig_pc) <= orig_len + 5:
+                real_orig_len = (ff_pos - orig_pc) + 1
+            elif ff_pos != -1 and orig_len == 0 and (ff_pos - orig_pc) < 10:
+                real_orig_len = (ff_pos - orig_pc) + 1
+            else:
+                real_orig_len = orig_len + 1
 
             bank = meta.get("bank", "0xCA")
             table_mode = meta.get("table", "normal")
@@ -381,8 +393,8 @@ class ScriptInserter:
                     orig_bank = int(orig_bank_str, 16) if isinstance(orig_bank_str, str) else int(orig_bank_str)
                     new_addr = dest_pc & 0xFFFF
                     new_bank = (dest_pc >> 16) + 0xC0
-                    self.redirect_entries.append((orig_addr, orig_bank, new_addr, new_bank, orig_len))
-                    print(f"      [Redirect] Relocated 0x{orig_pc:06X} ($ {orig_bank:02X}:{orig_addr:04X}) -> 0x{dest_pc:06X} ($ {new_bank:02X}:{new_addr:04X}) in Bank $CA pool (orig_len={orig_len})")
+                    self.redirect_entries.append((orig_addr, orig_bank, new_addr, new_bank, real_orig_len))
+                    print(f"      [Redirect] Relocated 0x{orig_pc:06X} ($ {orig_bank:02X}:{orig_addr:04X}) -> 0x{dest_pc:06X} ($ {new_bank:02X}:{new_addr:04X}) in Bank $CA pool (orig_len={real_orig_len})")
 
                 if not dry_run:
                     rom_bytes[dest_pc : dest_pc + len(encoded)] = encoded

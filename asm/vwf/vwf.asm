@@ -129,6 +129,19 @@ RenderEnglishVWF:
 .redirect_done:
     PLX
 
+    ; Check if string was redirected in StringRedirectTable:
+    SEP #$20            ; 8-bit A
+    REP #$10            ; 16-bit X, Y
+    LDA $DB             ; is_redirect flag
+    BNE .is_english     ; Redirected -> execute English VWF engine!
+
+    ; Untranslated string: resume pristine native Japanese renderer at $DC:CAA5:
+    LDA #$D3
+    PHA
+    PLB                 ; DB = $D3
+    JML $DCCAA5
+
+.is_english:
     PHK
     PLB                 ; DB = Current Bank ($CA)
 
