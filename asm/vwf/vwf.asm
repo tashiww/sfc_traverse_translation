@@ -240,7 +240,7 @@ VWF_RenderEnglishLine:
     TXA
     REP #$20
     CLC
-    ADC #434
+    ADC #$01B2
     TAX
     SEP #$20
     BRA .sh_write
@@ -301,7 +301,7 @@ VWF_RenderEnglishLine:
 
     ; Bottom tile: tile ID = (X >> 1) + 28
     CLC
-    ADC #28
+    ADC #$001C
     STA $7EC7C0,x
 
     INX
@@ -317,7 +317,7 @@ VWF_RenderEnglishLine:
     ; Release 9 stack words (18 bytes):
     TSC
     CLC
-    ADC #18
+    ADC #$0012
     TCS
 
     SEP #$20            ; 8-bit A
