@@ -122,15 +122,22 @@ VWF_RenderEnglishLine:
     DEY
     BNE .clear_line
 
-    ; Prepare attribute byte in high byte of temp_word ($15,S):
+    ; 1. Transfer blank glyph tiles to VRAM $5800 first (clears old tiles in VRAM):
     SEP #$20
+    STZ $B8
+    STZ $B6             ; Mode 0: glyph buffer DMA!
+    LDA.l $004210
+-   LDA.l $004210
+    BPL -
+
+    ; 2. Prepare attribute byte in high byte of temp_word ($15,S):
     LDA $A8             ; Tile attribute ($2B)
     XBA
     LDA #$00
     REP #$20
     STA $15,S           ; $15,S = Attribute << 8 (0x2B00)
 
-    ; Initialize tilemap entries in $7E:C780 for this line (28 columns):
+    ; 3. Initialize tilemap entries in $7E:C780 for this line (28 columns):
     ; Top row at line_x_base: tile IDs = line_tile_base + col
     ; Bottom row at line_x_base + 64: tile IDs = line_tile_base + 28 + col
     LDA $13,S
@@ -155,7 +162,7 @@ VWF_RenderEnglishLine:
     CPY #$0038          ; 28 columns * 2 bytes = 56 bytes
     BNE .init_tilemap
 
-    ; Trigger tilemap DMA ($B6 = 1) to update VRAM $0C00 with clean tilemap entries:
+    ; 4. Trigger tilemap DMA ($B6 = 1) to update VRAM $0C00 with clean tilemap:
     SEP #$20
     STZ $B8
     LDA #$01
@@ -229,8 +236,8 @@ VWF_RenderEnglishLine:
     LSR : LSR : LSR
     STA $05,S           ; tile_col = cursor_x >> 3
 
-    ; Box width boundary check: 28 tile columns max
-    CMP #$001C
+    ; Box width boundary check: 27 tile columns max (so col + 1 <= 27)
+    CMP #$001B
     BCS .char_loop
 
     ; Blit 16 rows of glyph
@@ -306,13 +313,7 @@ VWF_RenderEnglishLine:
     STA $7ECE80,X
     XBA                 ; Low byte (tile_col + 1)
     BEQ .fg_done
-    ; Check if tile_col < 27
-    REP #$20
-    LDA $05,S           ; tile_col
-    CMP #$001B
-    SEP #$20
-    BCS .fg_done
-    ORA $7ECE90,X       ; tile_col + 1
+    ORA $7ECE90,X
     STA $7ECE90,X
 .fg_done:
 
@@ -344,11 +345,6 @@ VWF_RenderEnglishLine:
     STA $7ECE81,X
     XBA                 ; Low byte (tile_col + 1)
     BEQ .next_row
-    REP #$20
-    LDA $05,S           ; tile_col
-    CMP #$001B
-    SEP #$20
-    BCS .next_row
     ORA $7ECE91,X
     STA $7ECE91,X
 
@@ -367,17 +363,18 @@ VWF_RenderEnglishLine:
     STA $01,S
 
     ; Typewriter tick & VBlank synchronization
+    ; (Wait 1 frame for VBlank to transfer newly drawn glyph without advancing macro script)
     SEP #$20
     LDA $A6             ; Typewriter enabled?
     BEQ .skip_tick
+    LDA $0C88           ; Fast-forward button held?
+    BNE .skip_tick
 
-    PHB
-    TDC
-    PHA
-    PLB                 ; DB = 0
-    LDA #$00            ; No punctuation pause
-    JSL $C0F395         ; Dialogue_TypewriterTick: DMAs $7E:CE80 to VRAM $5800 & steps animation
-    PLB                 ; DB = Bank $CA
+    STZ $B8
+    STZ $B6             ; Mode 0: DMA $7E:CE80 to VRAM $5800!
+    LDA.l $004210
+-   LDA.l $004210
+    BPL -
 
 .skip_tick:
     JMP .char_loop

@@ -153,9 +153,17 @@ In the user's Mesen test of commit `9853615`, the screen showed:
    `$A8` (`0x2B`) selects Tile Base `0x0300` (Tile 768), which corresponds to VRAM `$5800`.
    Because `$7E:CE80` was not transferred, the PPU faithfully rendered the old tiles at VRAM `$5800`!
 
----
+### Root Cause: Why Debug Words Appeared
+The routine `$C0:F395` is not merely a typewriter pause; it is the **Cutscene Macro Dispatcher**. Every invocation steps through commands from the macro script pointer `[$D1]`.
+Because an English dialogue string has ~35 characters (compared to ~15 in Japanese), calling `JSL $C0:F395` for every English character executed 175 macro commands, running completely past the end of the 28-command prologue script into unmapped ROM!
+This caused the macro dispatcher to execute random ROM bytes as commands, eventually jumping to `$C0:B31F` (the Country Selection screen handler), which overwrote BG3 with country descriptions ("Country", "Auto", "Remove", "Specialist").
 
-## 5. VWF Implementation & Stack Layout Resolution
+### Solution: Direct VBlank Synchronization
+In `VWF_RenderEnglishLine`:
+- We do **not** call `JSL $C0:F395`.
+- Instead, typewriter delay and VRAM synchronization are performed directly via `STZ $B6 : LDA.l $004210 : BPL -` (1-frame VBlank wait).
+- This triggers NMI to DMA `$7E:CE80` to VRAM `$5800` smoothly without touching `[$D1]` or advancing macro script execution.
+- Tile corruption on character boundaries was resolved by removing `$05,S` reloads that clobbered the low byte in A during horizontal glyph splits.
 
 ### Stack Parameter Layout (Entering VWF from `$C0:F511`)
 When `$C0:F511` calls `JSL VWF_LineHook`:
