@@ -1,0 +1,300 @@
+{"prefix":"","ptr_pos":82688,"str_pos":83290,"ptr_hex":"14300","str_hex":"1455A","table":"menu","repoint":false,"ptr_type":"16bit_be"}
+# ドトキアの街 (length: 6, max_len: 16)
+Dotkia Town
+
+
+{"prefix":"","ptr_pos":82690,"str_pos":83297,"ptr_hex":"14302","str_hex":"14561","table":"locations","repoint":false,"ptr_type":"16bit_be"}
+# レセラの街 (length: 5, max_len: 16)
+Resela Town
+
+
+{"prefix":"","ptr_pos":82692,"str_pos":83303,"ptr_hex":"14304","str_hex":"14567","table":"locations","repoint":false,"ptr_type":"16bit_be"}
+# レンメルの街 (length: 6, max_len: 16)
+Remmel Town
+
+
+{"prefix":"","ptr_pos":82694,"str_pos":83310,"ptr_hex":"14306","str_hex":"1456E","table":"locations","repoint":false,"ptr_type":"16bit_be"}
+# サンデラの街 (length: 6, max_len: 16)
+Sandera Town
+
+
+{"prefix":"","ptr_pos":82696,"str_pos":83317,"ptr_hex":"14308","str_hex":"14575","table":"locations","repoint":false,"ptr_type":"16bit_be"}
+# レッセンヴィラの街 (length: 9, max_len: 16)
+Ressenvilla
+
+
+{"prefix":"","ptr_pos":82698,"str_pos":83327,"ptr_hex":"1430A","str_hex":"1457F","table":"locations","repoint":false,"ptr_type":"16bit_be"}
+# ラステムの街 (length: 6, max_len: 16)
+Rastem Town
+
+
+{"prefix":"","ptr_pos":82700,"str_pos":83334,"ptr_hex":"1430C","str_hex":"14586","table":"locations","repoint":false,"ptr_type":"16bit_be"}
+# ホムラの街 (length: 5, max_len: 16)
+Homula Town
+
+
+{"prefix":"","ptr_pos":82702,"str_pos":83340,"ptr_hex":"1430E","str_hex":"1458C","table":"locations","repoint":false,"ptr_type":"16bit_be"}
+# ネルメンドの街 (length: 7, max_len: 16)
+Nelmend Town
+
+
+{"prefix":"","ptr_pos":82704,"str_pos":83348,"ptr_hex":"14310","str_hex":"14594","table":"locations","repoint":false,"ptr_type":"16bit_be"}
+# ワステルの街 (length: 6, max_len: 16)
+Wastel Town
+
+
+{"prefix":"","ptr_pos":82706,"str_pos":83355,"ptr_hex":"14312","str_hex":"1459B","table":"locations","repoint":false,"ptr_type":"16bit_be"}
+# オルフォマダの街 (length: 8, max_len: 16)
+Olfomda Town
+
+
+{"prefix":"","ptr_pos":82708,"str_pos":83364,"ptr_hex":"14314","str_hex":"145A4","table":"locations","repoint":false,"ptr_type":"16bit_be"}
+# レヴィラの街 (length: 6, max_len: 16)
+Revila Town
+
+
+{"prefix":"","ptr_pos":82710,"str_pos":83371,"ptr_hex":"14316","str_hex":"145AB","table":"locations","repoint":false,"ptr_type":"16bit_be"}
+# フォーテの街 (length: 6, max_len: 16)
+Forte Town
+
+
+{"prefix":"","ptr_pos":82712,"str_pos":83378,"ptr_hex":"14318","str_hex":"145B2","table":"locations","repoint":false,"ptr_type":"16bit_be"}
+# ビテージの街 (length: 6, max_len: 16)
+Vitage Town
+
+
+{"prefix":"","ptr_pos":82714,"str_pos":83385,"ptr_hex":"1431A","str_hex":"145B9","table":"locations","repoint":false,"ptr_type":"16bit_be"}
+# クレーヴァの街 (length: 7, max_len: 16)
+Crava Town
+
+
+{"prefix":"","ptr_pos":82716,"str_pos":83393,"ptr_hex":"1431C","str_hex":"145C1","table":"locations","repoint":false,"ptr_type":"16bit_be"}
+# シトスの街 (length: 5, max_len: 16)
+Stoss Town
+
+
+{"prefix":"","ptr_pos":82718,"str_pos":83399,"ptr_hex":"1431E","str_hex":"145C7","table":"locations","repoint":false,"ptr_type":"16bit_be"}
+# ワーストレティアの街 (length: 10, max_len: 16)
+Wastratia Town
+
+
+{"prefix":"","ptr_pos":82720,"str_pos":83410,"ptr_hex":"14320","str_hex":"145D2","table":"locations","repoint":false,"ptr_type":"16bit_be"}
+# ロベルの街 (length: 5, max_len: 16)
+Robel Town
+
+
+{"prefix":"","ptr_pos":82722,"str_pos":83416,"ptr_hex":"14322","str_hex":"145D8","table":"locations","repoint":false,"ptr_type":"16bit_be"}
+# レッセンメルの街 (length: 8, max_len: 16)
+Lessenmel Town
+
+
+{"prefix":"","ptr_pos":82724,"str_pos":83425,"ptr_hex":"14324","str_hex":"145E1","table":"locations","repoint":false,"ptr_type":"16bit_be"}
+# セレントの街 (length: 6, max_len: 16)
+Selent Town
+
+
+{"prefix":"","ptr_pos":82726,"str_pos":83432,"ptr_hex":"14326","str_hex":"145E8","table":"locations","repoint":false,"ptr_type":"16bit_be"}
+# テレジアの街 (length: 6, max_len: 16)
+Terezia Town
+
+
+{"prefix":"","ptr_pos":82728,"str_pos":83439,"ptr_hex":"14328","str_hex":"145EF","table":"locations","repoint":false,"ptr_type":"16bit_be"}
+# ムーンレイクの街 (length: 8, max_len: 16)
+Moonlake Town
+
+
+{"prefix":"","ptr_pos":82730,"str_pos":83448,"ptr_hex":"1432A","str_hex":"145F8","table":"locations","repoint":false,"ptr_type":"16bit_be"}
+# ティレンゼの街 (length: 7, max_len: 16)
+Tirenze Town
+
+
+{"prefix":"","ptr_pos":82732,"str_pos":83456,"ptr_hex":"1432C","str_hex":"14600","table":"locations","repoint":false,"ptr_type":"16bit_be"}
+# トムリアの街 (length: 6, max_len: 16)
+Tomria Town
+
+
+{"prefix":"","ptr_pos":82734,"str_pos":83463,"ptr_hex":"1432E","str_hex":"14607","table":"locations","repoint":false,"ptr_type":"16bit_be"}
+# グリンジアの街 (length: 7, max_len: 16)
+Grenzia Town
+
+
+{"prefix":"","ptr_pos":82736,"str_pos":83471,"ptr_hex":"14330","str_hex":"1460F","table":"locations","repoint":false,"ptr_type":"16bit_be"}
+# クレンツァの街 (length: 7, max_len: 16)
+Crenza Town
+
+
+{"prefix":"","ptr_pos":82738,"str_pos":83479,"ptr_hex":"14332","str_hex":"14617","table":"locations","repoint":false,"ptr_type":"16bit_be"}
+# レンフォールの街 (length: 8, max_len: 16)
+Lenfall Town
+
+
+{"prefix":"","ptr_pos":82740,"str_pos":83488,"ptr_hex":"14334","str_hex":"14620","table":"locations","repoint":false,"ptr_type":"16bit_be"}
+# ローティアの街 (length: 7, max_len: 16)
+Rotia Town
+
+
+{"prefix":"","ptr_pos":82742,"str_pos":83496,"ptr_hex":"14336","str_hex":"14628","table":"locations","repoint":false,"ptr_type":"16bit_be"}
+# ソリエの街 (length: 5, max_len: 16)
+Sorie Town
+
+
+{"prefix":"","ptr_pos":82744,"str_pos":83502,"ptr_hex":"14338","str_hex":"1462E","table":"locations","repoint":false,"ptr_type":"16bit_be"}
+# ミアの街 (length: 4, max_len: 16)
+Mia Town
+
+
+{"prefix":"","ptr_pos":82746,"str_pos":83507,"ptr_hex":"1433A","str_hex":"14633","table":"locations","repoint":false,"ptr_type":"16bit_be"}
+# ボーンランド (length: 6, max_len: 16)
+Boneland
+
+
+{"prefix":"","ptr_pos":82748,"str_pos":83514,"ptr_hex":"1433C","str_hex":"1463A","table":"locations","repoint":false,"ptr_type":"16bit_be"}
+# ここはどこ？ (length: 6, max_len: 16)
+Where am I?
+
+
+{"prefix":"","ptr_pos":82750,"str_pos":83514,"ptr_hex":"1433E","str_hex":"1463A","table":"locations","repoint":false,"ptr_type":"16bit_be"}
+# ここはどこ？ (length: 6, max_len: 16)
+Where am I?
+
+
+{"prefix":"","ptr_pos":82752,"str_pos":83514,"ptr_hex":"14340","str_hex":"1463A","table":"locations","repoint":false,"ptr_type":"16bit_be"}
+# ここはどこ？ (length: 6, max_len: 16)
+Where am I?
+
+
+{"prefix":"","ptr_pos":82754,"str_pos":83514,"ptr_hex":"14342","str_hex":"1463A","table":"locations","repoint":false,"ptr_type":"16bit_be"}
+# ここはどこ？ (length: 6, max_len: 16)
+Where am I?
+
+
+{"prefix":"","ptr_pos":82756,"str_pos":83514,"ptr_hex":"14344","str_hex":"1463A","table":"locations","repoint":false,"ptr_type":"16bit_be"}
+# ここはどこ？ (length: 6, max_len: 16)
+Where am I?
+
+
+{"prefix":"","ptr_pos":82758,"str_pos":83514,"ptr_hex":"14346","str_hex":"1463A","table":"locations","repoint":false,"ptr_type":"16bit_be"}
+# ここはどこ？ (length: 6, max_len: 16)
+Where am I?
+
+
+{"prefix":"","ptr_pos":82760,"str_pos":83514,"ptr_hex":"14348","str_hex":"1463A","table":"locations","repoint":false,"ptr_type":"16bit_be"}
+# ここはどこ？ (length: 6, max_len: 16)
+Where am I?
+
+
+{"prefix":"","ptr_pos":82762,"str_pos":83514,"ptr_hex":"1434A","str_hex":"1463A","table":"locations","repoint":false,"ptr_type":"16bit_be"}
+# ここはどこ？ (length: 6, max_len: 16)
+Where am I?
+
+
+{"prefix":"","ptr_pos":82764,"str_pos":83514,"ptr_hex":"1434C","str_hex":"1463A","table":"locations","repoint":false,"ptr_type":"16bit_be"}
+# ここはどこ？ (length: 6, max_len: 16)
+Where am I?
+
+
+{"prefix":"","ptr_pos":82766,"str_pos":83514,"ptr_hex":"1434E","str_hex":"1463A","table":"locations","repoint":false,"ptr_type":"16bit_be"}
+# ここはどこ？ (length: 6, max_len: 16)
+Where am I?
+
+
+{"prefix":"","ptr_pos":82768,"str_pos":83514,"ptr_hex":"14350","str_hex":"1463A","table":"locations","repoint":false,"ptr_type":"16bit_be"}
+# ここはどこ？ (length: 6, max_len: 16)
+Where am I?
+
+
+{"prefix":"","ptr_pos":82770,"str_pos":83514,"ptr_hex":"14352","str_hex":"1463A","table":"locations","repoint":false,"ptr_type":"16bit_be"}
+# ここはどこ？ (length: 6, max_len: 16)
+Where am I?
+
+
+{"prefix":"","ptr_pos":82772,"str_pos":83514,"ptr_hex":"14354","str_hex":"1463A","table":"locations","repoint":false,"ptr_type":"16bit_be"}
+# ここはどこ？ (length: 6, max_len: 16)
+Where am I?
+
+
+{"prefix":"","ptr_pos":82774,"str_pos":83514,"ptr_hex":"14356","str_hex":"1463A","table":"locations","repoint":false,"ptr_type":"16bit_be"}
+# ここはどこ？ (length: 6, max_len: 16)
+Where am I?
+
+
+{"prefix":"","ptr_pos":82776,"str_pos":83514,"ptr_hex":"14358","str_hex":"1463A","table":"locations","repoint":false,"ptr_type":"16bit_be"}
+# ここはどこ？ (length: 6, max_len: 16)
+Where am I?
+
+
+{"prefix":"","ptr_pos":82778,"str_pos":83514,"ptr_hex":"1435A","str_hex":"1463A","table":"locations","repoint":false,"ptr_type":"16bit_be"}
+# ここはどこ？ (length: 6, max_len: 16)
+Where am I?
+
+
+{"prefix":"","ptr_pos":82780,"str_pos":83514,"ptr_hex":"1435C","str_hex":"1463A","table":"locations","repoint":false,"ptr_type":"16bit_be"}
+# ここはどこ？ (length: 6, max_len: 16)
+Where am I?
+
+
+{"prefix":"","ptr_pos":82782,"str_pos":83514,"ptr_hex":"1435E","str_hex":"1463A","table":"locations","repoint":false,"ptr_type":"16bit_be"}
+# ここはどこ？ (length: 6, max_len: 16)
+Where am I?
+
+
+{"prefix":"","ptr_pos":82784,"str_pos":83514,"ptr_hex":"14360","str_hex":"1463A","table":"locations","repoint":false,"ptr_type":"16bit_be"}
+# ここはどこ？ (length: 6, max_len: 16)
+Where am I?
+
+
+{"prefix":"","ptr_pos":82786,"str_pos":83514,"ptr_hex":"14362","str_hex":"1463A","table":"locations","repoint":false,"ptr_type":"16bit_be"}
+# ここはどこ？ (length: 6, max_len: 16)
+Where am I?
+
+
+{"prefix":"","ptr_pos":82788,"str_pos":83521,"ptr_hex":"14364","str_hex":"14641","table":"locations","repoint":false,"ptr_type":"16bit_be"}
+# ジブル洞窟 (length: 5, max_len: 16)
+Geeble Cave
+
+
+{"prefix":"","ptr_pos":82790,"str_pos":83527,"ptr_hex":"14366","str_hex":"14647","table":"locations","repoint":false,"ptr_type":"16bit_be"}
+# パファオ山 (length: 5, max_len: 16)
+Pafao Mountain
+
+
+{"prefix":"","ptr_pos":82792,"str_pos":83527,"ptr_hex":"14368","str_hex":"14647","table":"locations","repoint":false,"ptr_type":"16bit_be"}
+# パファオ山 (length: 5, max_len: 16)
+Pafao Mountain
+
+
+{"prefix":"","ptr_pos":82794,"str_pos":83514,"ptr_hex":"1436A","str_hex":"1463A","table":"locations","repoint":false,"ptr_type":"16bit_be"}
+# ここはどこ？ (length: 6, max_len: 16)
+Where am I?
+
+
+{"prefix":"","ptr_pos":82796,"str_pos":83533,"ptr_hex":"1436C","str_hex":"1464D","table":"locations","repoint":false,"ptr_type":"16bit_be"}
+# ヴァイン洞 (length: 5, max_len: 16)
+Vine Cave
+
+
+{"prefix":"","ptr_pos":82798,"str_pos":83533,"ptr_hex":"1436E","str_hex":"1464D","table":"locations","repoint":false,"ptr_type":"16bit_be"}
+# ヴァイン洞 (length: 5, max_len: 16)
+Vine Cave
+
+
+{"prefix":"","ptr_pos":82800,"str_pos":83533,"ptr_hex":"14370","str_hex":"1464D","table":"locations","repoint":false,"ptr_type":"16bit_be"}
+# ヴァイン洞 (length: 5, max_len: 16)
+Vine Cave
+
+
+{"prefix":"","ptr_pos":82802,"str_pos":83514,"ptr_hex":"14372","str_hex":"1463A","table":"locations","repoint":false,"ptr_type":"16bit_be"}
+# ここはどこ？ (length: 6, max_len: 16)
+Where am I?
+
+
+{"prefix":"","ptr_pos":82804,"str_pos":83539,"ptr_hex":"14374","str_hex":"14653","table":"locations","repoint":false,"ptr_type":"16bit_be"}
+# みなと (length: 3, max_len: 16)
+Port
+
+
+{"prefix":"","ptr_pos":82806,"str_pos":83585,"ptr_hex":"14376","str_hex":"14681","table":"locations","repoint":false,"ptr_type":"16bit_be"}
+# フの村 (length: 3, max_len: 16)
+Fu Village
+
+

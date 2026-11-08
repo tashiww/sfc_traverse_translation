@@ -316,7 +316,7 @@ class ScriptInserter:
                 continue
 
             orig_pos_str = meta.get("str_pos") or meta.get("pc_hex")
-            orig_pc = int(orig_pos_str, 16)
+            orig_pc = int(orig_pos_str, 16) if isinstance(orig_pos_str, str) else int(orig_pos_str)
             orig_len = meta.get("length", 0)
             bank = meta.get("bank", "0xCA")
 
@@ -334,9 +334,15 @@ class ScriptInserter:
                     dest_pc = self.allocate_pool(len(encoded), bank=bank)
                     # Update pointer if ptr_pos is known
                     if "ptr_pos" in meta and not dry_run:
-                        ptr_pc = int(meta["ptr_pos"], 16)
-                        snes_offset = dest_pc & 0xFFFF
-                        rom_bytes[ptr_pc : ptr_pc + 2] = struct.pack("<H", snes_offset)
+                        ptr_pc = int(meta["ptr_pos"], 16) if isinstance(meta["ptr_pos"], str) else int(meta["ptr_pos"])
+                        ptr_type = meta.get("ptr_type", "16bit_le")
+                        if ptr_type == "16bit_be":
+                            offset_be = (dest_pc - 0x010000) & 0xFFFF
+                            rom_bytes[ptr_pc] = (offset_be >> 8) & 0xFF
+                            rom_bytes[ptr_pc + 1] = offset_be & 0xFF
+                        else:
+                            snes_offset = dest_pc & 0xFFFF
+                            rom_bytes[ptr_pc : ptr_pc + 2] = struct.pack("<H", snes_offset)
 
                 if not dry_run:
                     rom_bytes[dest_pc : dest_pc + len(encoded)] = encoded

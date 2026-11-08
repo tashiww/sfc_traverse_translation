@@ -51,6 +51,48 @@ org $CA8000
 RenderEnglishVWF:
     PHP
     PHB
+
+    ; Intelligent Language Detection:
+    ; Check if string at [$A3] contains Japanese characters or control codes.
+    ; Untranslated dialogue strings will fall back directly to the native Japanese
+    ; renderer at $DC:CA99, completely preventing jumbled English letters!
+    SEP #$20            ; 8-bit A
+    REP #$10            ; 16-bit X, Y
+    LDY #$0000
+.detect_loop:
+    LDA [$A3],Y
+    CMP #$FF            ; End of line
+    BEQ .detect_done
+    CMP #$FE            ; End of box or wait
+    BEQ .check_fe_wait
+    ; Check Kanji prefix ($FB, $FC, $FD):
+    CMP #$FB
+    BCC +
+    CMP #$FE
+    BCC .passthrough_jp
++   ; Check Katakana / Japanese punctuation ($80..$EF):
+    CMP #$80
+    BCC +
+    CMP #$F0
+    BCC .passthrough_jp
++   INY
+    CPY #$0018          ; Scan up to 24 bytes
+    BNE .detect_loop
+    BRA .detect_done
+
+.check_fe_wait:
+    ; Check if followed by $00 (<wait_auto> in Japanese dialogue):
+    INY
+    LDA [$A3],Y
+    BEQ .passthrough_jp
+    BRA .detect_done
+
+.passthrough_jp:
+    PLB
+    PLP
+    JML $DCCA99         ; Jump directly to native Japanese character renderer!
+
+.detect_done:
     PHK
     PLB                 ; DB = Current Bank ($CA)
 
@@ -145,6 +187,55 @@ RenderEnglishVWF:
     BEQ .var_done
     CMP #$8B            ; Japanese blank filler
     BEQ .var_done
+
+    ; Check Traverse native uppercase encoding ($0B..$24 -> 'A'..'Z'):
+    CMP #$0B
+    BCC +
+    CMP #$25
+    BCS +
+    CLC
+    ADC #$36            ; $0B + $36 = $41 ('A')
+    JSR DrawSingleChar
+    BRA .var_char_loop
++
+    ; Check Traverse native digit encoding ($01..$0A -> '0'..'9'):
+    CMP #$01
+    BCC +
+    CMP #$0B
+    BCS +
+    CLC
+    ADC #$2F            ; $01 + $2F = $30 ('0')
+    JSR DrawSingleChar
+    BRA .var_char_loop
++
+    ; Check native dash symbol ($8A -> '-'):
+    CMP #$8A
+    BNE +
+    LDA #$2D            ; ASCII '-'
+    JSR DrawSingleChar
+    BRA .var_char_loop
++
+    ; Check native dot symbol ($8C -> '.'):
+    CMP #$8C
+    BNE +
+    LDA #$2E            ; ASCII '.'
+    JSR DrawSingleChar
+    BRA .var_char_loop
++
+    ; Check native exclamation symbol ($86 -> '!'):
+    CMP #$86
+    BNE +
+    LDA #$21            ; ASCII '!'
+    JSR DrawSingleChar
+    BRA .var_char_loop
++
+    ; Check native question symbol ($87 -> '?'):
+    CMP #$87
+    BNE +
+    LDA #$3F            ; ASCII '?'
+    JSR DrawSingleChar
+    BRA .var_char_loop
++
     CMP #$20            ; ASCII space
     BNE +
     JSR AdvanceSpace
