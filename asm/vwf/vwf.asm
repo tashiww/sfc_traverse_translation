@@ -17,6 +17,14 @@ hirom
 org $DCCAA1
     JML RenderEnglishVWF
 
+; Universal Hook into Overworld / Continent Cutscene Dialogue Setup at $C0:1B63
+; In clean ROM:
+;   $C0:1B63: STA $040B : SEP #$20 : LDA $3D : STA $040A (10 bytes: 8D 0B 04 E2 20 A5 3D 8D 0A 04)
+; Replaces with JSL Engine2_Redirect to transparently repoint cutscene dialogue to Bank $CA!
+org $C01B63
+    JSL Engine2_Redirect
+    NOP : NOP : NOP : NOP : NOP : NOP
+
 ; ----------------------------------------------------------------------------
 ; Dynamic String Redirection Table in Bank $CA
 ; Allows any dialogue string in any bank to be transparently repointed to
@@ -511,19 +519,19 @@ DrawSingleChar:
 
     ; Map punctuation to native Japanese pause codes:
     LDA $F0             ; Character just printed
-    CMP #$21            ; '!'
+    CMP #$86            ; '!'
     BNE +
     LDA #$86            ; Japanese '！' -> pause
     BRA .do_tick
-+   CMP #$3F            ; '?'
++   CMP #$87            ; '?'
     BNE +
     LDA #$87            ; Japanese '？' -> pause
     BRA .do_tick
-+   CMP #$2C            ; ','
++   CMP #$88            ; ','
     BNE +
     LDA #$88            ; Japanese '、' -> pause
     BRA .do_tick
-+   CMP #$2E            ; '.'
++   CMP #$89            ; '.'
     BNE +
     LDA #$89            ; Japanese '。' -> pause
     BRA .do_tick
@@ -792,6 +800,71 @@ CleanShadowMask:
     %MaskRow(48, 49) : %MaskRow(50, 51) : %MaskRow(52, 53) : %MaskRow(54, 55)
     %MaskRow(56, 57) : %MaskRow(58, 59) : %MaskRow(60, 61) : %MaskRow(62, 63)
     RTS
+
+; ----------------------------------------------------------------------------
+; Engine2_Redirect:
+; Intercepts Overworld / Continent Cutscene Dialogue setup at $C0:1B64.
+; If (orig_addr, orig_bank) matches an entry in StringRedirectTable,
+; redirects $040B and $040A to the relocated string in Bank $CA.
+; Inputs:
+;   16-bit A = orig_addr (from ADC $3B)
+;   Direct Page $3D = orig_bank
+; Outputs:
+;   $040B = new_addr (or orig_addr if not redirected)
+;   $040A = new_bank (or orig_bank if not redirected)
+;   SEP #$20 (8-bit A) upon return
+; ----------------------------------------------------------------------------
+Engine2_Redirect:
+    PHP
+    PHB
+    PHX
+    PHY
+
+    REP #$30            ; 16-bit A, X, Y
+    PHA                 ; Save 16-bit orig_addr on stack ($01,S)
+
+    ; Store default (orig_addr and orig_bank) into $040B and $040A:
+    STA $040B
+    SEP #$20            ; 8-bit A
+    LDA $3D             ; orig_bank
+    STA $040A
+    REP #$20            ; 16-bit A
+
+    ; Search StringRedirectTable in Bank $CA:
+    LDX #$0000
+.loop:
+    LDA.l StringRedirectTable,X     ; 16-bit orig_addr
+    BEQ .done                       ; End of table ($0000)
+    CMP $01,S                       ; Compare orig_addr
+    BNE +
+    SEP #$20                        ; 8-bit A
+    LDA.l StringRedirectTable+2,X   ; 8-bit orig_bank
+    CMP $3D
+    REP #$20                        ; 16-bit A
+    BNE +
+    ; Match found in StringRedirectTable!
+    LDA.l StringRedirectTable+3,X   ; 16-bit new_addr
+    STA $040B
+    SEP #$20                        ; 8-bit A
+    LDA.l StringRedirectTable+5,X   ; 8-bit new_bank
+    STA $040A
+    REP #$20                        ; 16-bit A
+    BRA .done
+
++   TXA
+    CLC
+    ADC #$0008                      ; Next entry (8 bytes)
+    TAX
+    BRA .loop
+
+.done:
+    PLA                 ; Drop orig_addr from stack
+    PLY
+    PLX
+    PLB
+    PLP
+    SEP #$20            ; Ensure 8-bit A for caller
+    RTL
 
 ; ----------------------------------------------------------------------------
 ; Embedded VWF Font Data (3,040 bytes: 95 glyphs x 32 bytes)

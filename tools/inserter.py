@@ -255,29 +255,17 @@ def encode_text_with_tbl(text: str, tbl: dict) -> bytes:
 
 
 def encode_dialogue_string(text: str, tbl: dict) -> bytes:
-    """Encodes translated dialogue string with speaker name and dialogue body in native table VWF."""
+    """Encodes translated dialogue string preserving native <wait_auto> (\\xFE\\x00) control codes."""
     parts = text.split("<wait_auto>")
     res = bytearray()
 
-    # Check if first part before <wait_auto> is a speaker name:
-    first_part = parts[0].strip()
-    speaker_part = None
-    if len(parts) > 1 and (first_part.upper() in KNOWN_SPEAKERS or first_part.startswith("[") or len(first_part) <= 12):
-        speaker_part = first_part
-        body_text = " ".join(p.strip() for p in parts[1:] if p.strip())
-    else:
-        body_text = " ".join(p.strip() for p in parts if p.strip())
-
-    if speaker_part:
-        res.extend(encode_text_with_tbl(speaker_part, tbl))
-        res.append(0x80)  # In-box newline after speaker name!
-
-    # Word wrap dialogue body into lines <= 216px:
-    wrapped_lines = word_wrap_to_lines(body_text, max_px=216)
-    for idx, line in enumerate(wrapped_lines):
+    for idx, part in enumerate(parts):
+        clean = part.strip()
+        if not clean:
+            continue
         if idx > 0:
-            res.append(0x80)  # In-box newline between dialogue lines
-        res.extend(encode_text_with_tbl(line, tbl))
+            res.extend(b"\xFE\x00")
+        res.extend(encode_text_with_tbl(clean, tbl))
 
     res.append(0xFF)  # Dialogue box terminator!
     return bytes(res)

@@ -152,6 +152,21 @@ class HeadlessSNES:
             return bytes(ctypes.string_at(ptr, size))
         return None
 
+    def save_state(self):
+        size = self.core.retro_serialize_size()
+        buf = ctypes.create_string_buffer(size)
+        ok = self.core.retro_serialize(buf, size)
+        if not ok:
+            raise RuntimeError("Failed to serialize emulator state")
+        return bytes(buf.raw)
+
+    def load_state(self, state_bytes):
+        size = len(state_bytes)
+        buf = ctypes.create_string_buffer(state_bytes, size)
+        ok = self.core.retro_unserialize(buf, size)
+        if not ok:
+            raise RuntimeError("Failed to unserialize emulator state")
+
     def close(self):
         self.core.retro_unload_game()
         self.core.retro_deinit()
