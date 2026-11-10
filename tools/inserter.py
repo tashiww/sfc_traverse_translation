@@ -277,8 +277,9 @@ class ScriptInserter:
         self.translations_dir = translations_dir
         self.tbl_path = tbl_path
 
-        # Free space pool in Bank $CA ($CA:B000 - $CA:FF00 = 20,224 bytes in safe upper half)
-        self.pool_start = 0x0AB000
+        # Free space pool in Bank $CA ($CA:C000 - $CA:FF00 = 16,128 bytes in safe upper half)
+        # Note: $CA:8000 - $CA:B300 is reserved for VWF routines, FontVWF, and WidthTableVWF.
+        self.pool_start = 0x0AC000
         self.pool_cur = self.pool_start
         self.pool_max = 0x0AFF00
 

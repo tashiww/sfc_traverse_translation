@@ -25,6 +25,13 @@ org $C01B63
     JSL Engine2_Redirect
     NOP : NOP : NOP : NOP : NOP : NOP
 
+; Universal Hook into Engine 2 Character Blitter at $C0:34A4
+; In clean ROM:
+;   $C0:34A4: REP #$20 : ASL : ASL (4 bytes: C2 20 0A 0A)
+; Replaces with JML Engine2_CharBlit to provide proportional Variable-Width Font blitting!
+org $C034A4
+    JML Engine2_CharBlit
+
 ; ----------------------------------------------------------------------------
 ; Dynamic String Redirection Table in Bank $CA
 ; Allows any dialogue string in any bank to be transparently repointed to
@@ -865,6 +872,256 @@ Engine2_Redirect:
     PLP
     SEP #$20            ; Ensure 8-bit A for caller
     RTL
+
+; ----------------------------------------------------------------------------
+; Engine2_CharBlit:
+; Proportional Variable-Width Font (VWF) Character Blitter for Engine 2.
+; Intercepts character blitter calls at $C0:34A4.
+; Inputs:
+;   16-bit A = char_code (caller set A in 8-bit mode, B cleared to 0)
+;   $040A    = string bank byte ($CA for English)
+;   $0411    = native line start toggle (0 = new line start, reset by $C0:332F)
+;   $0412    = horizontal cursor offset in $7E:8000
+;   $0414    = horizontal pixel cursor cursor_x (8..240)
+; Outputs:
+;   RTL with SEP #$20 (8-bit A)
+; ----------------------------------------------------------------------------
+Engine2_CharBlit:
+    ; Clean ROM at $C0:34A4 executed REP #$20 first!
+    ; Caller ($C0:33CC) is in 8-bit mode (M=1). We MUST execute REP #$20 first
+    ; so that 16-bit char_code is restored and stack operations are 16-bit!
+    REP #$20            ; 16-bit Accumulator
+    PHA                 ; Save 16-bit char_code on stack (2 bytes)
+    SEP #$20            ; 8-bit Accumulator
+    LDA.l $7E040A       ; Read string bank byte from WRAM $7E:040A
+    CMP #$CA
+    BEQ .check_char
+
+.native_jp:
+    REP #$20            ; 16-bit A
+    PLA                 ; Restore original 16-bit char_code
+    ASL A               ; Execute the 2 ASLs replaced by hook at $C0:34A4
+    ASL A
+    JML $C034A8         ; Jump to remaining 4 ASLs and native blitter in Bank $C0
+
+.check_char:
+    REP #$20            ; 16-bit A
+    PLA                 ; Restore original 16-bit char_code
+    CMP #$0100          ; Check if 2-byte Japanese character code (>= $0100)
+    BCC .is_vwf
+    ASL A
+    ASL A
+    JML $C034A8
+
+.is_vwf:
+    PHP                 ; Save caller status flags (1 byte)
+    REP #$30            ; 16-BIT ACCUMULATOR AND 16-BIT INDEX (X, Y) FOR ENTIRE VWF BLITTER!
+    PHB                 ; Save caller Data Bank (1 byte)
+    PHX                 ; Save caller 16-bit X (2 bytes)
+    PHY                 ; Save caller 16-bit Y (2 bytes)
+    PHA                 ; Stack $01,S = 16-bit char_code (2 bytes)
+
+    ; Set DB = Current Bank ($CA) to read FontVWF and WidthTableVWF:
+    PHK
+    PLB
+
+    ; Check if new line was initialized ($7E:0411 == 0):
+    SEP #$20            ; 8-bit A
+    LDA.l $7E0411
+    BNE +
+    ; New line started! Initialize cursor_x to 8 pixels margin:
+    LDA #$01
+    STA.l $7E0411       ; Mark line initialized
+    REP #$20
+    LDA #$0008          ; cursor_x = 8 pixels
+    STA.l $7E0414
+    BRA ++
++   REP #$20
+++
+
+    ; Check if char_code is Space ($0000):
+    LDA $01,S
+    BNE .not_space
+
+    ; Space character:
+    ; If cursor_x == 8 (very start of line), absorb leading delimiter space without advancing:
+    LDA.l $7E0414
+    CMP #$0008
+    BEQ .update_cursor
+    ; Normal in-line space: advance cursor_x by 4 pixels:
+    CLC
+    ADC #$0004
+    STA.l $7E0414
+    BRA .update_cursor
+
+.not_space:
+    ; Character in en_tbl.tbl: look up proportional width:
+    TAX                 ; X = 16-bit char_code
+    SEP #$20            ; 8-bit A
+    LDA.l WidthTableVWF,X
+    REP #$20            ; 16-bit A
+    AND #$00FF
+    BNE +
+    LDA #$0006          ; Default width = 6 px
++   PHA                 ; Stack $01,S = 16-bit char_width, $03,S = 16-bit char_code
+
+    ; Compute font_ptr = char_code * 32:
+    LDA $03,S
+    ASL : ASL : ASL : ASL : ASL
+    TAY                 ; Y = font_ptr in Bank $CA
+
+    ; Compute bit_shift = cursor_x & 7:
+    LDA.l $7E0414
+    AND #$0007
+    STA $EA             ; $EA = bit_shift (0..7, high byte $EB is 0)
+
+    ; Compute col_start = cursor_x >> 3, col_offset = col_start * 16:
+    LDA.l $7E0414
+    LSR : LSR : LSR
+    ASL : ASL : ASL : ASL
+    TAX                 ; X = col_offset in $7E:8000
+
+    ; Safety bounds check: don't write past line buffer (col_offset < 496):
+    CPX #$01F0
+    BCS .skip_blit
+
+    ; Blit 8 rows of Top Tile (rows 0..7) into $7E:8000:
+    JSR Engine2_BlitTopRows
+
+    ; Blit 8 rows of Bottom Tile (rows 8..15) into $7E:8200:
+    JSR Engine2_BlitBottomRows
+
+    ; Clean Drop Shadow Mask (Plane 1 &= ~Plane 0):
+    JSR Engine2_CleanShadowMask
+
+.skip_blit:
+    REP #$20            ; CRUCIAL: Restore 16-bit A after blitting subroutines!
+    ; Advance cursor_x += char_width:
+    PLA                 ; Pull 16-bit char_width from stack
+    CLC
+    ADC.l $7E0414
+    STA.l $7E0414
+
+.update_cursor:
+    REP #$20            ; Ensure 16-bit A
+    ; Synchronize $0412 with native state machine:
+    ; If cursor_x >= 240, trigger automatic newline ($0412 = $01F0):
+    LDA.l $7E0414
+    CMP #$00F0
+    BCC +
+    LDA #$01F0
+    STA.l $7E0412
+    BRA .exit_blit
++   ; Else set $0412 = max($0010, (cursor_x >> 3) << 4):
+    LSR : LSR : LSR
+    ASL : ASL : ASL : ASL
+    BNE +
+    LDA #$0010
++   STA.l $7E0412
+
+.exit_blit:
+    REP #$30            ; Ensure 16-bit A, X, Y for clean pops
+    PLA                 ; Drop 16-bit char_code from stack
+    PLY                 ; Restore caller 16-bit Y
+    PLX                 ; Restore caller 16-bit X
+    PLB                 ; Restore caller DB
+    PLP                 ; Restore caller P (original M and X restored!)
+    SEP #$20            ; Guarantee 8-bit Accumulator for caller at $C0:33CC
+    RTL
+
+; ----------------------------------------------------------------------------
+; Engine2 Blitting Subroutines
+; ----------------------------------------------------------------------------
+macro E2_BlitRow(fg_offset, sh_offset, base_addr, p0_off, p1_off)
+    LDA.w FontVWF+<fg_offset>,Y
+    BEQ ?no_fg
+    XBA
+    LDA #$00
+    REP #$20
+    JSR ShiftWord
+    SEP #$20
+    XBA
+    ORA.l <base_addr>+<p0_off>,X
+    STA.l <base_addr>+<p0_off>,X
+    XBA
+    BEQ ?no_fg
+    ORA.l <base_addr>+16+<p0_off>,X
+    STA.l <base_addr>+16+<p0_off>,X
+?no_fg:
+    LDA.w FontVWF+<sh_offset>,Y
+    BEQ ?no_sh
+    XBA
+    LDA #$00
+    REP #$20
+    JSR ShiftWord
+    SEP #$20
+    XBA
+    ORA.l <base_addr>+<p1_off>,X
+    STA.l <base_addr>+<p1_off>,X
+    XBA
+    BEQ ?no_sh
+    ORA.l <base_addr>+16+<p1_off>,X
+    STA.l <base_addr>+16+<p1_off>,X
+?no_sh:
+endmacro
+
+Engine2_BlitTopRows:
+    SEP #$20
+    %E2_BlitRow(0, 8,  $7E8000, 0,  1)
+    %E2_BlitRow(1, 9,  $7E8000, 2,  3)
+    %E2_BlitRow(2, 10, $7E8000, 4,  5)
+    %E2_BlitRow(3, 11, $7E8000, 6,  7)
+    %E2_BlitRow(4, 12, $7E8000, 8,  9)
+    %E2_BlitRow(5, 13, $7E8000, 10, 11)
+    %E2_BlitRow(6, 14, $7E8000, 12, 13)
+    %E2_BlitRow(7, 15, $7E8000, 14, 15)
+    RTS
+
+Engine2_BlitBottomRows:
+    SEP #$20
+    %E2_BlitRow(16, 24, $7E8200, 0,  1)
+    %E2_BlitRow(17, 25, $7E8200, 2,  3)
+    %E2_BlitRow(18, 26, $7E8200, 4,  5)
+    %E2_BlitRow(19, 27, $7E8200, 6,  7)
+    %E2_BlitRow(20, 28, $7E8200, 8,  9)
+    %E2_BlitRow(21, 29, $7E8200, 10, 11)
+    %E2_BlitRow(22, 30, $7E8200, 12, 13)
+    %E2_BlitRow(23, 31, $7E8200, 14, 15)
+    RTS
+
+macro E2_MaskRow(addr)
+    LDA.l <addr>,X
+    EOR #$FF
+    AND.l <addr>+1,X
+    STA.l <addr>+1,X
+endmacro
+
+Engine2_CleanShadowMask:
+    SEP #$20
+    ; Top tile col_start
+    %E2_MaskRow($7E8000+0)  : %E2_MaskRow($7E8000+2)
+    %E2_MaskRow($7E8000+4)  : %E2_MaskRow($7E8000+6)
+    %E2_MaskRow($7E8000+8)  : %E2_MaskRow($7E8000+10)
+    %E2_MaskRow($7E8000+12) : %E2_MaskRow($7E8000+14)
+
+    ; Top tile col_start + 1
+    %E2_MaskRow($7E8010+0)  : %E2_MaskRow($7E8010+2)
+    %E2_MaskRow($7E8010+4)  : %E2_MaskRow($7E8010+6)
+    %E2_MaskRow($7E8010+8)  : %E2_MaskRow($7E8010+10)
+    %E2_MaskRow($7E8010+12) : %E2_MaskRow($7E8010+14)
+
+    ; Bottom tile col_start
+    %E2_MaskRow($7E8200+0)  : %E2_MaskRow($7E8200+2)
+    %E2_MaskRow($7E8200+4)  : %E2_MaskRow($7E8200+6)
+    %E2_MaskRow($7E8200+8)  : %E2_MaskRow($7E8200+10)
+    %E2_MaskRow($7E8200+12) : %E2_MaskRow($7E8200+14)
+
+    ; Bottom tile col_start + 1
+    %E2_MaskRow($7E8210+0)  : %E2_MaskRow($7E8210+2)
+    %E2_MaskRow($7E8210+4)  : %E2_MaskRow($7E8210+6)
+    %E2_MaskRow($7E8210+8)  : %E2_MaskRow($7E8210+10)
+    %E2_MaskRow($7E8210+12) : %E2_MaskRow($7E8210+14)
+    RTS
 
 ; ----------------------------------------------------------------------------
 ; Embedded VWF Font Data (3,040 bytes: 95 glyphs x 32 bytes)

@@ -48,14 +48,38 @@ A tilemap entry is a 16-bit word (`vhopppcc cccccccc`):
 | `$EC` | 1B | `dialogue_row` | Current rendering row / line offset counter |
 | `$ED` | 1B | `dialogue_cols` | Columns counter |
 
+### Engine 2 (Overworld & Cutscene Dialogue) Global Variables
+| Address | Size | Name | Purpose |
+|---|---|---|---|
+| `$0406` | 1B | `e2_dialogue_active` | Cutscene dialogue overall active flag |
+| `$0407` | 1B | `e2_substate` | State machine: `0`=idle, `1`=init box, `2`=render glyphs, `3`=advance line, `4`=wait prompt |
+| `$0408` | 1B | `e2_dma_mode` | VBlank DMA mode: `0`=idle, `1`=bitmap only (`$7E:8000`), `2`=bitmap + tilemap (`$7F:F440`) |
+| `$0409` | 1B | `e2_typewriter_mask` | Typewriter delay mask (checked against `$03B9`) |
+| `$040A` | 1B | `e2_str_bank` | 24-bit pointer bank byte for cutscene dialogue text stream |
+| `$040B` | 2B | `e2_str_addr` | 16-bit address for cutscene dialogue text stream in `$040A` |
+| `$040D` | 1B | `e2_line_idx` | Visible line index within dialogue window (`0`, `1`, `2`) |
+| `$040E` | 1B | `e2_slot_idx` | Ring-buffer line slot (`0`..`3`), determines VRAM destination page |
+| `$040F` | 2B | `e2_base_tile` | Base tile index for active line slot (`$0080 + slot * 64`) |
+| `$0411` | 1B | `e2_toggle_flag` | Native Japanese 12px font toggle flag (`0` or `1`) |
+| `$0412` | 2B | `e2_cursor_offset` | Horizontal byte offset in line buffer `$7E:8000` (`$0010` to `$01F0`) |
+| `$0414` | 2B | `e2_scratch_cnt` | Scratch loop counter used by character blitter |
+| `$0416` | 1B | `e2_str_done` | Set to 1 when end-of-string byte `$FF` is encountered |
+| `$0417` | 1B | `e2_prompt_mode` | Prompt / wait mode for user input |
+| `$0418` | 2B | `e2_cursor_anim` | Prompt arrow animation counter / blink flag |
+
 ### WRAM Data Buffers
 | Address Range | Size | Name | Description |
 |---|---|---|---|
 | `$7E:0D80` - `$7E:1A7F` | 3,328 B | `ui_font_buffer` | 8x8 bitmap font buffer. DMA'd to VRAM `$5000` by `$DC:C0C3` |
+| `$7E:8000` - `$7E:83FF` | 1,024 B | `e2_line_buffer` | Engine 2 Direct 2bpp Line Bitmap Buffer (64 8×8 tiles × 16 bytes). DMA'd to VRAM by `$C0:35C0` |
+| `$7E:8000` - `$7E:81FF` | 512 B | `e2_line_top` | Engine 2 Line Top Half (32 8×8 tiles = 256×8 px) |
+| `$7E:8200` - `$7E:83FF` | 512 B | `e2_line_btm` | Engine 2 Line Bottom Half (32 8×8 tiles = 256×8 px) |
 | `$7E:C780` - `$7E:CE7F` | 1,792 B | `bg3_tilemap` | BG3 Tilemap buffer (32×28 words). DMA'd to VRAM `$0C00` by `$DC:C0E0` |
 | `$7E:C780` + X | 64 B | `tilemap_top_row` | Top tile row for current line: `X = (Row * 64) + (Col * 2)` |
 | `$7E:C7C0` + X | 64 B | `tilemap_btm_row` | Bottom tile row for current line: `X + 0x40` |
 | `$7E:CE80` - `$7E:D1FF` | 896 B | `dialogue_glyph_buffer` | 16x16 Dialogue line character buffer (56 8×8 tiles × 16 bytes). DMA'd to VRAM `$5800` by `$DC:C14A` |
+| `$7F:F480` - `$7F:F4BF` | 64 B | `e2_tilemap_top` | Engine 2 Tilemap top row (32 words indexing tiles 0..31 of slot) |
+| `$7F:F4C0` - `$7F:F4FF` | 64 B | `e2_tilemap_btm` | Engine 2 Tilemap bottom row (32 words indexing tiles 32..63 of slot) |
 
 ### Engine Global Variables in Bank `$00` / Direct Page Storage
 | Address | Size | Description |
