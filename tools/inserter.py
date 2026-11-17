@@ -467,12 +467,12 @@ class ScriptInserter:
         translated_count = 0
         bytes_written = 0
 
-        for entry in entries:
+        for idx, entry in enumerate(entries):
             if not entry["is_translated"]:
                 continue
 
             meta = entry["meta"]
-            str_num = meta.get("str_num", -1)
+            str_num = meta.get("str_num", idx)
             text = entry["en_text"].strip()
             if not text:
                 continue
@@ -486,32 +486,28 @@ class ScriptInserter:
                 if m:
                     orig_len = int(m.group(1))
 
-            ptr_pos_val = int(meta["ptr_pos"]) if isinstance(meta["ptr_pos"], int) else int(meta["ptr_pos"], 16) if "ptr_pos" in meta else 0
-
-            # Fix ROM bug for Index 22 (Tomria):
-            # ROM has 45 00 at 0x01432C, real string is at 0x014600 (0x4600)
-            if (str_num == 22 or ptr_pos_val == 0x01432C) and not dry_run:
-                ptr_pc = 0x01432C
-                rom_bytes[ptr_pc : ptr_pc + 2] = bytes([0x46, 0x00])
+            # The clean ROM location pointer table begins at 0x0142AD in Bank $C1.
+            # Town entries in location_names.txt start at Table Index 42 (0x014301).
+            # Each entry is a standard 16-bit Little-Endian pointer.
+            ptr_pc = 0x014301 + idx * 2
 
             if len(encoded) <= orig_len + 1:
                 dest_pc = orig_pc
             else:
                 dest_pc = self.allocate_pool(len(encoded), bank="0xC1")
-                if not dry_run and ptr_pos_val:
-                    ptr_pc = ptr_pos_val
-                    offset_be = (dest_pc - 0x010000) & 0xFFFF
-                    rom_bytes[ptr_pc] = (offset_be >> 8) & 0xFF
-                    rom_bytes[ptr_pc + 1] = offset_be & 0xFF
+                if not dry_run:
+                    offset_le = (dest_pc - 0x010000) & 0xFFFF
+                    rom_bytes[ptr_pc] = offset_le & 0xFF
+                    rom_bytes[ptr_pc + 1] = (offset_le >> 8) & 0xFF
 
             if not dry_run:
                 rom_bytes[dest_pc : dest_pc + len(encoded)] = encoded
 
-                # Update centering offset table in Bank $C1 (0x0141F7, 60 bytes):
-                # Dynamically centers location strings within the 12-tile status bar HUD banner
-                if 0 <= str_num < 60:
+                # Update centering offset table in Bank $C1 (0x0141F7):
+                table_idx = 42 + idx
+                if 0 <= table_idx < 60:
                     center_offset = max(0, min(6, (12 - len(text)) // 2))
-                    rom_bytes[0x0141F7 + str_num] = center_offset
+                    rom_bytes[0x0141F7 + table_idx] = center_offset
 
             translated_count += 1
             bytes_written += len(encoded)
