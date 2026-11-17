@@ -9,6 +9,13 @@ hirom
 incsrc "vwf/vwf.asm"
 
 ; ----------------------------------------------------------------------------
+; Universal 8x16 English Font in Bank $D2 (PC 0x12E000, 8,192 bytes, 256 glyphs):
+; Replaces raw Japanese Kana in location and status banner font with English ASCII.
+; ----------------------------------------------------------------------------
+org $D2E000
+    incbin "vwf/font_bank_d2.bin"
+
+; ----------------------------------------------------------------------------
 ; Universal 16x16 English Font in Bank $D3 (PC 0x130000, 16,384 bytes, 256 glyphs):
 ; Replaces raw Japanese Kana with full English ASCII and native glyph sets.
 ; ----------------------------------------------------------------------------

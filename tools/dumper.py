@@ -190,7 +190,7 @@ def dump_location_names(data: bytes, out_file: Path, tbl: dict = None):
                 "str_hex": f"0x{str_pos:06X}",
                 "length": len(raw),
                 "max_len": max_len,
-                "table": "locations",
+                "table": "menu",
                 "repoint": False,
                 "ptr_type": "16bit_be",
             }

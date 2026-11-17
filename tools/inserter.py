@@ -298,6 +298,22 @@ class ScriptInserter:
         self.pool_db_max = 0x1BFFFF
 
         self.en_tbl = load_tbl(tbl_path, reverse=True)
+        self.tables = {"en": self.en_tbl, "normal": self.en_tbl}
+
+    def get_table(self, table_name: str | None) -> dict:
+        """Returns reverse tbl mapping for specified table name (from tables/<name>.tbl)."""
+        if not table_name or table_name in ("normal", "dialogue", "en"):
+            return self.en_tbl
+        if table_name in self.tables:
+            return self.tables[table_name]
+
+        candidate = ROOT_DIR / "tables" / f"{table_name}.tbl"
+        if candidate.exists():
+            loaded = load_tbl(candidate, reverse=True)
+            self.tables[table_name] = loaded
+            return loaded
+
+        return self.en_tbl
 
     def allocate_pool(self, size: int, bank: str = "CA") -> int:
         if bank == "0xC1":
@@ -354,13 +370,14 @@ class ScriptInserter:
 
             bank = meta.get("bank", "0xCA")
             table_mode = meta.get("table", "normal")
+            tbl = self.en_tbl if table_mode in ("normal", "menu") else self.get_table(table_mode)
 
             if entry["is_translated"]:
                 if table_mode == "menu":
                     clean_text = entry["en_text"].strip()
-                    encoded = encode_text_with_tbl(clean_text, self.en_tbl) + b"\xFF"
+                    encoded = encode_text_with_tbl(clean_text, tbl) + b"\xFF"
                 else:
-                    encoded = encode_dialogue_string(entry["en_text"], self.en_tbl)
+                    encoded = encode_dialogue_string(entry["en_text"], tbl)
 
                 # Greenfield Allocation Strategy:
                 # Always allocate full dialogue strings in unmapped Bank $CA free space pool!
@@ -460,7 +477,7 @@ class ScriptInserter:
             if not text:
                 continue
 
-            # Encode location names using native table en_tbl:
+            # Encode location names using master English table:
             encoded = encode_text_with_tbl(text, self.en_tbl) + b"\xFF"
             orig_pc = int(meta["str_pos"]) if isinstance(meta["str_pos"], int) else int(meta["str_pos"], 16)
             orig_len = meta.get("length", 0)
@@ -489,6 +506,12 @@ class ScriptInserter:
 
             if not dry_run:
                 rom_bytes[dest_pc : dest_pc + len(encoded)] = encoded
+
+                # Update centering offset table in Bank $C1 (0x0141F7, 60 bytes):
+                # Dynamically centers location strings within the 12-tile status bar HUD banner
+                if 0 <= str_num < 60:
+                    center_offset = max(0, min(6, (12 - len(text)) // 2))
+                    rom_bytes[0x0141F7 + str_num] = center_offset
 
             translated_count += 1
             bytes_written += len(encoded)

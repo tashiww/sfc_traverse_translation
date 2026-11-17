@@ -54,6 +54,10 @@ def step_apply_asm():
     if font8x8_script.exists():
         subprocess.run([sys.executable, str(font8x8_script)], check=True, capture_output=True)
 
+    font_d2_script = ROOT_DIR / "tools" / "build_font_bank_d2.py"
+    if font_d2_script.exists():
+        subprocess.run([sys.executable, str(font_d2_script)], check=True, capture_output=True)
+
     font_d3_script = ROOT_DIR / "tools" / "build_font_bank_d3.py"
     if font_d3_script.exists():
         subprocess.run([sys.executable, str(font_d3_script)], check=True, capture_output=True)
