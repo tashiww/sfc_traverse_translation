@@ -100,7 +100,7 @@ Clean Japanese *Traverse* uses a native character table (`tables/ja_tbl.tbl` / `
   * Digits: `0`–`9`.
   * Uppercase: `A`–`Z`.
   * Lowercase: `a`–`z`.
-* **Generator:** [`tools/build_font8x8.py`](tools/build_font8x8.py).
+* **Generator:** [`tools/build_font8x8.py`](../tools/build_font8x8.py).
 * **Used by:** Save/load screen, date/time HUD, equipment menus, world map banner, shop listings.
 
 ---
@@ -142,7 +142,7 @@ The Python build system is 100% compatible with the user's 10-year-old C# transl
   Dotkia Town
   ```
 * **Handling Omitted Fields:**
-  The C# editor serializes `ptr_pos` as a decimal integer and omits `length` / `max_len`. [`tools/inserter.py`](tools/inserter.py) extracts `length` and `max_len` directly from the `# (length: X, max_len: Y)` comment line whenever they are absent in the JSON header.
+  The C# editor serializes `ptr_pos` as a decimal integer and omits `length` / `max_len`. [`tools/inserter.py`](../tools/inserter.py) extracts `length` and `max_len` directly from the `# (length: X, max_len: Y)` comment line whenever they are absent in the JSON header.
 * **File Precedence:**
   Whenever a file named `translated_<name>.txt` exists in `translations/`, the inserter automatically loads it and suppresses the untranslated `<name>.txt` template.
 * **"Normal" vs "Menu" Toggle Support:**

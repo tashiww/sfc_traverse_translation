@@ -1,6 +1,6 @@
 # Traverse: Starlight & Prairie - Question Kanji Inspection Report
 
-This document analyzes the two deformed/unconfirmed kanji marked with `？` in [`tables/manual_kanji.txt`](tables/manual_kanji.txt):
+This document analyzes the two deformed/unconfirmed kanji marked with `？` in [`tables/manual_kanji.txt`](manual_kanji.txt):
 1. **`$FBD0`** (Line 15, character 0: `？々訪待好済違婦忙料理洗濯掃除所`)
 2. **`$FC13`** (Line 21, character 3: `陸移死？説偉乗腹丸時秋紅葉趣隣軟`)
 
@@ -125,6 +125,6 @@ Both unconfirmed characters match the script with 100% certainty:
 - **`$FBD0` = 敵**
 - **`$FC13` = 婆**
 
-You can update [`tables/manual_kanji.txt`](tables/manual_kanji.txt):
+You can update [`tables/manual_kanji.txt`](manual_kanji.txt):
 - Line 15: replace `？` with `敵`
 - Line 21: replace `？` with `婆`

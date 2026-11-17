@@ -10,3 +10,22 @@ rom/*
 # Ignore generated patch files, keep directory tracked
 patches/*
 !patches/.gitkeep
+
+# Ignore downloaded emulator binaries and dependencies
+bin/emu/
+
+# Ignore scratch scripts and test artifacts
+scratch/
+problems/headless_captures/
+problems/*.png
+!problems/2026-11-08 0924 intro_printing_data_as_text.png
+!problems/2026-11-08 0929 printing_jacked_up_tiles_for_font.png
+!problems/font8x8_aligned_comparison.png
+!problems/strip_y104.png
+!problems/strip_y120.png
+!problems/strip_y136.png
+!problems/strip_y152.png
+!problems/strip_y72.png
+!problems/strip_y88.png
+!problems/test_16x16_preview.png
+!problems/test_d3_tomria.png
