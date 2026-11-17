@@ -33,9 +33,11 @@ org $C034A4
     JML Engine2_CharBlit
 
 ; Universal Hook into Status Bar Location Setup at $C0:36E1
-; Intercepts character-by-character tile loop and dynamically renders true VWF!
+; Intercepts character-by-character tile loop:
+; - If Japanese location string (first char >= $80), preserves native Japanese tile rendering
+; - If English location string, dynamically renders true proportional VWF!
 org $C036E1
-    JSL LocationVWF_Setup
+    JSL LocationVWF_Hook
     PLB
     RTS
     padbyte $EA : pad $C03703
@@ -1143,8 +1145,51 @@ Engine2_CleanShadowMask:
 ; ============================================================================
 
 ; ----------------------------------------------------------------------------
-; LocationVWF_Setup:
+; LocationVWF_Hook:
 ; Intercepts location setup at $C0:36E1.
+; If location string is native Japanese (first char >= $80), preserves native loop.
+; If English, dynamically renders true proportional VWF!
+; Inputs:
+;   X = 16-bit string pointer in Bank $C1
+;   Y = BG3 tilemap offset in $7F:F000
+; ----------------------------------------------------------------------------
+LocationVWF_Hook:
+    SEP #$20            ; 8-bit A
+    LDA.l $C10000,X     ; Peek first character
+    CMP #$80            ; If >= $80, it's native Japanese!
+    BCS .native_jp
+    CMP #$00            ; Leading space?
+    BNE .is_english
+    LDA.l $C10001,X     ; Peek second character
+    CMP #$80
+    BCS .native_jp
+
+.is_english:
+    JML LocationVWF_Setup
+
+.native_jp:
+    ; Native character-by-character tile loop from clean ROM (DB = $7F):
+.char_loop:
+    LDA.l $C10000,X
+    CMP #$FF
+    BEQ .done
+    ASL A
+    STA $F000,Y
+    INC A
+    STA $F040,Y
+    TDC
+    ADC #$22
+    STA $F001,Y
+    STA $F041,Y
+    INX
+    INY : INY
+    BRA .char_loop
+.done:
+    RTL
+
+; ----------------------------------------------------------------------------
+; LocationVWF_Setup:
+; Sets up dynamic tilemap entries, clears RAM buffer, and renders VWF string.
 ; Inputs:
 ;   X = 16-bit string pointer in Bank $C1
 ; ----------------------------------------------------------------------------
@@ -1227,20 +1272,25 @@ LocationVWF_Render:
     LDA $EA : PHA
     LDA $EC : PHA
     
-    STX $D8             ; $D8 = string start pointer
+    STX $D8             ; $D8 = string read pointer
+    STX $DA             ; $DA = string start pointer
     STZ $D4             ; $D4 = total_w = 0
     
     ; Pass 1: Measure total width
 .width_loop:
+    LDX $D8
     SEP #$20            ; 8-bit A
     LDA.l $C10000,X
     CMP #$FF
     BEQ .width_done
     INX
+    STX $D8             ; Save advanced pointer
     REP #$20            ; 16-bit A
     AND #$00FF
     BEQ .w_space
-    TAX                 ; X = char code
+    CMP #$0060          ; Safety check: glyph index < 96
+    BCS .width_loop
+    TAX                 ; X = char code (0..95)
     SEP #$20
     LDA.w WidthTableVWF,X
     REP #$20
@@ -1271,14 +1321,17 @@ LocationVWF_Render:
     STA $D6             ; $D6 = cursor_x
     
     ; Pass 2: Blit glyphs
-    LDX $D8             ; Restore string start pointer
+    LDA $DA
+    STA $D8             ; Reset string pointer to start
 
 .blit_loop:
+    LDX $D8
     SEP #$20            ; 8-bit A
     LDA.l $C10000,X
     CMP #$FF
     BEQ .blit_done
     INX
+    STX $D8             ; Save advanced pointer
     REP #$20            ; 16-bit A
     AND #$00FF
     BNE .not_space
@@ -1291,6 +1344,8 @@ LocationVWF_Render:
     BRA .blit_loop
 
 .not_space:
+    CMP #$0060          ; Safety check: glyph index < 96
+    BCS .blit_loop
     PHA                 ; Stack $01,S = char code
     TAX                 ; X = char code
     SEP #$20
@@ -1434,9 +1489,9 @@ Loc_ShiftWord:
 ; Masks Plane 1 &= ~Plane 0 for all 12 columns of 8x16 tiles in $7F:E400.
 ; ----------------------------------------------------------------------------
 LocationVWF_CleanShadow:
-    SEP #$20
     LDX #$0000
 .loop:
+    SEP #$20
     macro LocMaskRow(off)
         LDA.l $7FE400+<off>,X
         EOR #$FF
@@ -1448,6 +1503,7 @@ LocationVWF_CleanShadow:
     %LocMaskRow(16) : %LocMaskRow(18) : %LocMaskRow(20) : %LocMaskRow(22)
     %LocMaskRow(24) : %LocMaskRow(26) : %LocMaskRow(28) : %LocMaskRow(30)
     
+    REP #$20
     TXA
     CLC : ADC #$0020
     TAX
@@ -1455,7 +1511,6 @@ LocationVWF_CleanShadow:
     BCS .done
     JMP .loop
 .done:
-    REP #$20
     RTS
 
 ; ----------------------------------------------------------------------------
