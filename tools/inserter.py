@@ -505,7 +505,7 @@ class ScriptInserter:
 
                 # Update centering offset table in Bank $C1 (0x0141F7):
                 table_idx = 42 + idx
-                if 0 <= table_idx < 60:
+                if 0 <= table_idx < 180:
                     center_offset = max(0, min(6, (12 - len(text)) // 2))
                     rom_bytes[0x0141F7 + table_idx] = center_offset
 
