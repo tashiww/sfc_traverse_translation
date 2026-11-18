@@ -1,0 +1,32 @@
+{"str_num": 0, "bank": "0xDB", "str_pos": "0x1BA8B8", "length": 3, "table": "menu", "fixed": true}
+#イヌ
+Dog
+
+{"str_num": 1, "bank": "0xDB", "str_pos": "0x1BA8BC", "length": 3, "table": "menu", "fixed": true}
+#ネコ
+Cat
+
+{"str_num": 2, "bank": "0xDB", "str_pos": "0x1BA8C0", "length": 3, "table": "menu", "fixed": true}
+#ウサギ
+Bun
+
+{"str_num": 3, "bank": "0xDB", "str_pos": "0x1BA8C4", "length": 3, "table": "menu", "fixed": true}
+#サカナ
+Fsh
+
+{"str_num": 4, "bank": "0xDB", "str_pos": "0x1BA8C8", "length": 3, "table": "menu", "fixed": true}
+#カメ
+Tur
+
+{"str_num": 5, "bank": "0xDB", "str_pos": "0x1BA8CC", "length": 3, "table": "menu", "fixed": true}
+#トリ
+Brd
+
+{"str_num": 6, "bank": "0xDB", "str_pos": "0x1BA8D0", "length": 3, "table": "menu", "fixed": true}
+#サル
+Ape
+
+{"str_num": 7, "bank": "0xDB", "str_pos": "0x1BA8D4", "length": 3, "table": "menu", "fixed": true}
+#ブタ
+Pig
+

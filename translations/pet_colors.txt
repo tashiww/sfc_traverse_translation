@@ -1,0 +1,48 @@
+{"str_num": 0, "bank": "0xDB", "str_pos": "0x1BA8D8", "length": 4, "table": "menu", "fixed": true}
+#レッド
+ Red
+
+{"str_num": 1, "bank": "0xDB", "str_pos": "0x1BA8DD", "length": 4, "table": "menu", "fixed": true}
+#グリーン
+ Grn
+
+{"str_num": 2, "bank": "0xDB", "str_pos": "0x1BA8E2", "length": 4, "table": "menu", "fixed": true}
+#ブルー
+Blue
+
+{"str_num": 3, "bank": "0xDB", "str_pos": "0x1BA8E7", "length": 4, "table": "menu", "fixed": true}
+#イエロー
+Gold
+
+{"str_num": 4, "bank": "0xDB", "str_pos": "0x1BA8EC", "length": 4, "table": "menu", "fixed": true}
+#ホワイト
+Whte
+
+{"str_num": 5, "bank": "0xDB", "str_pos": "0x1BA8F1", "length": 4, "table": "menu", "fixed": true}
+#ブラック
+Blck
+
+{"str_num": 6, "bank": "0xDB", "str_pos": "0x1BA8F6", "length": 4, "table": "menu", "fixed": true}
+#パープル
+Prpl
+
+{"str_num": 7, "bank": "0xDB", "str_pos": "0x1BA8FB", "length": 4, "table": "menu", "fixed": true}
+#グレー
+Gray
+
+{"str_num": 8, "bank": "0xDB", "str_pos": "0x1BA900", "length": 4, "table": "menu", "fixed": true}
+#オレンジ
+Orng
+
+{"str_num": 9, "bank": "0xDB", "str_pos": "0x1BA905", "length": 4, "table": "menu", "fixed": true}
+#ブラウン
+Brwn
+
+{"str_num": 10, "bank": "0xDB", "str_pos": "0x1BA90A", "length": 4, "table": "menu", "fixed": true}
+#シアン
+Cyan
+
+{"str_num": 11, "bank": "0xDB", "str_pos": "0x1BA90F", "length": 4, "table": "menu", "fixed": true}
+#ピンク
+Pink
+

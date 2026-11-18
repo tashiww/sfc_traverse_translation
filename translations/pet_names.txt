@@ -1,0 +1,128 @@
+{"str_num": 0, "bank": "0xDB", "str_pos": "0x1BB7DC", "length": 8, "table": "menu", "fixed": true}
+#バルモア
+Balmore
+
+{"str_num": 1, "bank": "0xDB", "str_pos": "0x1BB7E5", "length": 8, "table": "menu", "fixed": true}
+#チャラン
+Charan
+
+{"str_num": 2, "bank": "0xDB", "str_pos": "0x1BB7EE", "length": 8, "table": "menu", "fixed": true}
+#ポラン
+Poran
+
+{"str_num": 3, "bank": "0xDB", "str_pos": "0x1BB7F7", "length": 8, "table": "menu", "fixed": true}
+#ポポロン
+Popolon
+
+{"str_num": 4, "bank": "0xDB", "str_pos": "0x1BB800", "length": 8, "table": "menu", "fixed": true}
+#バリバリ
+Baribari
+
+{"str_num": 5, "bank": "0xDB", "str_pos": "0x1BB809", "length": 8, "table": "menu", "fixed": true}
+#バットヤン
+Battyan
+
+{"str_num": 6, "bank": "0xDB", "str_pos": "0x1BB812", "length": 8, "table": "menu", "fixed": true}
+#ベベル
+Bevel
+
+{"str_num": 7, "bank": "0xDB", "str_pos": "0x1BB81B", "length": 8, "table": "menu", "fixed": true}
+#リンクル
+Wrinkle
+
+{"str_num": 8, "bank": "0xDB", "str_pos": "0x1BB824", "length": 8, "table": "menu", "fixed": true}
+#ジュヌビエーブ
+Geneveve
+
+{"str_num": 9, "bank": "0xDB", "str_pos": "0x1BB82D", "length": 8, "table": "menu", "fixed": true}
+#ベンホルム
+Benholm
+
+{"str_num": 10, "bank": "0xDB", "str_pos": "0x1BB836", "length": 8, "table": "menu", "fixed": true}
+#デンプシー
+Dempsey
+
+{"str_num": 11, "bank": "0xDB", "str_pos": "0x1BB83F", "length": 8, "table": "menu", "fixed": true}
+#ハート
+Heart
+
+{"str_num": 12, "bank": "0xDB", "str_pos": "0x1BB848", "length": 8, "table": "menu", "fixed": true}
+#クラブ
+Clover
+
+{"str_num": 13, "bank": "0xDB", "str_pos": "0x1BB851", "length": 8, "table": "menu", "fixed": true}
+#ダイヤ
+Diamond
+
+{"str_num": 14, "bank": "0xDB", "str_pos": "0x1BB85A", "length": 8, "table": "menu", "fixed": true}
+#スペード
+Spade
+
+{"str_num": 15, "bank": "0xDB", "str_pos": "0x1BB863", "length": 8, "table": "menu", "fixed": true}
+#ジョーカー
+Joker
+
+{"str_num": 16, "bank": "0xDB", "str_pos": "0x1BB86C", "length": 8, "table": "menu", "fixed": true}
+#ウキータ
+Ukita
+
+{"str_num": 17, "bank": "0xDB", "str_pos": "0x1BB875", "length": 8, "table": "menu", "fixed": true}
+#ホッカムール
+Hocamour
+
+{"str_num": 18, "bank": "0xDB", "str_pos": "0x1BB87E", "length": 8, "table": "menu", "fixed": true}
+#からくり凡太郎
+Bontaro
+
+{"str_num": 19, "bank": "0xDB", "str_pos": "0x1BB887", "length": 8, "table": "menu", "fixed": true}
+#ピピ・パパ
+PipiPapa
+
+{"str_num": 20, "bank": "0xDB", "str_pos": "0x1BB890", "length": 8, "table": "menu", "fixed": true}
+#ボーテル
+Baudel
+
+{"str_num": 21, "bank": "0xDB", "str_pos": "0x1BB899", "length": 8, "table": "menu", "fixed": true}
+#ジーメイ
+Zimei
+
+{"str_num": 22, "bank": "0xDB", "str_pos": "0x1BB8A2", "length": 8, "table": "menu", "fixed": true}
+#パブロス
+Pablos
+
+{"str_num": 23, "bank": "0xDB", "str_pos": "0x1BB8AB", "length": 8, "table": "menu", "fixed": true}
+#ショーレン
+Shoren
+
+{"str_num": 24, "bank": "0xDB", "str_pos": "0x1BB8B4", "length": 8, "table": "menu", "fixed": true}
+#リャン
+Liang
+
+{"str_num": 25, "bank": "0xDB", "str_pos": "0x1BB8BD", "length": 8, "table": "menu", "fixed": true}
+#ブロンキン
+Bronkin
+
+{"str_num": 26, "bank": "0xDB", "str_pos": "0x1BB8C6", "length": 8, "table": "menu", "fixed": true}
+#パンプキン
+Pumpkin
+
+{"str_num": 27, "bank": "0xDB", "str_pos": "0x1BB8CF", "length": 8, "table": "menu", "fixed": true}
+#ソナ
+Sona
+
+{"str_num": 28, "bank": "0xDB", "str_pos": "0x1BB8D8", "length": 8, "table": "menu", "fixed": true}
+#リル
+Ril
+
+{"str_num": 29, "bank": "0xDB", "str_pos": "0x1BB8E1", "length": 8, "table": "menu", "fixed": true}
+#ブンブ
+Bunbu
+
+{"str_num": 30, "bank": "0xDB", "str_pos": "0x1BB8EA", "length": 8, "table": "menu", "fixed": true}
+#ーーーーーーーー
+--------
+
+{"str_num": 31, "bank": "0xDB", "str_pos": "0x1BB8F3", "length": 8, "table": "menu", "fixed": true}
+#ボアンチョ
+Boancho
+

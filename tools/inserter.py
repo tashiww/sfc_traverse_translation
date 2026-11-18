@@ -422,6 +422,21 @@ class ScriptInserter:
                     real_orig_len = orig_len + 1
 
             if entry["is_translated"]:
+                # In-place fixed ROM table insertion (e.g. pet names, species, colors):
+                if meta.get("fixed") or "pet_" in script_file.name:
+                    raw_text = entry["en_text"].rstrip("\r\n")
+                    enc = encode_text_with_tbl(raw_text, tbl)
+                    if len(enc) < orig_len:
+                        enc = enc + b"\x00" * (orig_len - len(enc))
+                    elif len(enc) > orig_len:
+                        enc = enc[:orig_len]
+                    encoded = enc + b"\xFF"
+                    if not dry_run:
+                        rom_bytes[orig_pc : orig_pc + len(encoded)] = encoded
+                    translated_count += 1
+                    bytes_written += len(encoded)
+                    continue
+
                 if table_mode == "menu":
                     clean_text = entry["en_text"].strip()
                     encoded = encode_text_with_tbl(clean_text, tbl) + b"\xFF"

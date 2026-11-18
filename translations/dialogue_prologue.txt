@@ -133,7 +133,7 @@ You can save only one person.
 Now, who will you save?
   Family
   Lover
-  Best Friend
+  Best friend
 
 {"str_num": 15, "bank": "0xDB", "str_pos": "0x1BACE0", "length": 45, "term": "<end_box>", "table": "prologue"}
 #ロザンヌ
@@ -169,9 +169,9 @@ remains in your canteen.
 #  まだ我慢する
 #  とりあえず一口だけ飲む
 Now, what will you do?
-  Drink it all now
-  Endure a little longer
-  Take just a single sip
+  Drink it all
+  Endure longer
+  Just a sip
 
 {"str_num": 19, "bank": "0xDB", "str_pos": "0x1BADA9", "length": 46, "term": "<end_box>", "table": "prologue"}
 #マジョルカ
@@ -197,11 +197,11 @@ Answer my question.
 #  緑の自然
 #  鉱石など資源
 #  あらゆる食物
-Among all the blessings of the earth,
-which do you consider most wonderful?
+What is the greatest blessing
+the earth grants?
   Lush nature
-  Ores and mineral resources
-  Bountiful food of all kinds
+  Rich minerals
+  Abundant food
 
 {"str_num": 22, "bank": "0xDB", "str_pos": "0x1BAE4C", "length": 45, "term": "<end_box>", "table": "prologue"}
 #チャニィ
@@ -230,11 +230,10 @@ you look up at the sky.
 #  雲一つない青空
 #  今にも雨が降りそうな曇り空
 #  荒れ狂う雷雨
-At that moment, what kind of sky
-do you wish to behold?
-  A clear, cloudless blue sky
-  An overcast sky ready to rain
-  A raging thunderstorm
+What kind of sky do you wish to see?
+  Clear blue sky
+  Cloudy overcast
+  Thunderstorm
 
 {"str_num": 25, "bank": "0xDB", "str_pos": "0x1BAF0B", "length": 45, "term": "<end_box>", "table": "prologue"}
 #グロリア
@@ -261,11 +260,10 @@ The wind has carried happiness to you.
 #  お金
 #  名誉
 #  権力
-From which direction do you believe
-that wind blew?
-  From the east
-  From the west
-  From the south
+What is that happiness?
+  Wealth
+  Honor
+  Power
 
 {"str_num": 28, "bank": "0xDB", "str_pos": "0x1BAF9B", "length": 45, "term": "<end_box>", "table": "prologue"}
 #ジャンヌ
@@ -284,27 +282,30 @@ with great fortune, [protag].
 # その子供が盗みを働いた。何度注意して
 #も盗み癖が直らない。
 Isabella
-I am Isabella, Goddess of Forests.
+I am Isabella, Goddess of Mercy.
 Answer my question.
-You are lost deep within the forest.
+Your child has taken to stealing,
+and warnings fail to stop it.
 
 {"str_num": 30, "bank": "0xDB", "str_pos": "0x1BB02B", "length": 51, "term": "<choice_menu>", "table": "prologue"}
 # さあ、あなたはどうする？
 #  子供を殴る
 #  神に祈る
 #  仕方ないので放っておく
-Isabella
-Before your eyes lie three paths.
+What will you do?
+  Discipline child
+  Pray to God
+  Let it be
 
 {"str_num": 31, "bank": "0xDB", "str_pos": "0x1BB05F", "length": 45, "term": "<end_box>", "table": "prologue"}
 #イザベラ
 # うふふ……そうですか。
 # わかりました。では、幸の多い人生を、
 #[protag]。
-Which path will you take?
-  A bright, clear path
-  A steep, perilous shortcut
-  An untrodden beast trail
+Isabella
+Hehe... I see.
+I understand. May your life be blessed
+with great fortune, [protag].
 
 {"str_num": 32, "bank": "0xDB", "str_pos": "0x1BB08D", "length": 81, "term": "<end_scene>", "table": "prologue"}
 #クリスティーナ
@@ -312,29 +313,26 @@ Which path will you take?
 #質問に答えてください。
 # あなたは、とても強い男とどうしても
 #戦わなければならない。
-Isabella
-Hehe... I see.
-I understand. May your life be blessed
-with great fortune, [protag].
+Christina
+I am Christina, Goddess of War.
+Answer my question.
+You must face a formidable foe.
 
 {"str_num": 33, "bank": "0xDB", "str_pos": "0x1BB0DF", "length": 26, "term": "<end_scene>", "table": "prologue"}
 # まともに戦えば殺されることはわかって
 #いる。
 Christina
-I am Christina, Goddess of Light.
-Answer my question.
-Light and shadow--the world cannot
-exist without both.
+You know a fair fight will be fatal.
 
 {"str_num": 34, "bank": "0xDB", "str_pos": "0x1BB0FA", "length": 66, "term": "<choice_menu>", "table": "prologue"}
 # さあ、どうする？
 #  正々堂々と戦い殺される
 #  卑怯な手を使ってでも勝つ
 #  地の果てまでも逃げる
-Which of the two draws your heart?
-  Light
-  Shadow
-  Neither
+What will you do?
+  Fight with honor
+  Win at all costs
+  Flee far away
 
 {"str_num": 35, "bank": "0xDB", "str_pos": "0x1BB13D", "length": 48, "term": "<end_box>", "table": "prologue"}
 #クリスティーナ
@@ -352,10 +350,9 @@ with great fortune, [protag].
 #答えてください。あなたの目の前にまばゆ
 #い光が現れた。
 Natasia
-I am Natasia, Goddess of Darkness.
+I am Natasia, Goddess of Light.
 Answer my question.
-Alone in the pitch-black darkness,
-what crosses your mind?
+A dazzling light appears before you.
 
 {"str_num": 37, "bank": "0xDB", "str_pos": "0x1BB1B0", "length": 62, "term": "<choice_menu>", "table": "prologue"}
 # さあ、その光の向こうにはどんな世界が
@@ -363,10 +360,10 @@ what crosses your mind?
 #  花畑
 #  大都会
 #  何もない無の世界
-What do you think of?
-  The fear of solitude
-  The solace of tranquility
-  Nothing at all
+What world lies beyond the light?
+  Flower field
+  Grand city
+  Pure void
 
 {"str_num": 38, "bank": "0xDB", "str_pos": "0x1BB1EF", "length": 46, "term": "<end_box>", "table": "prologue"}
 #ナターシア
@@ -391,11 +388,10 @@ Answer my question.
 #  美は永遠である
 #  美は一瞬のものである
 #  美は、言葉では表せないものである
-What is the true essence of beauty
-to you?
-  Beauty is eternal
-  Beauty is fleeting
-  Beauty cannot be put into words
+What is the true essence of beauty?
+  Eternal beauty
+  Fleeting beauty
+  Beyond words
 
 {"str_num": 41, "bank": "0xDB", "str_pos": "0x1BB290", "length": 44, "term": "<end_box>", "table": "prologue"}
 #エレナ
@@ -421,11 +417,10 @@ Answer my question.
 #  建て前と本音を使い分ける人間
 #  平気で人を騙せる人間
 #  自分よりも他人を考えられる人間
-Among these three, who do you believe
-possesses the greatest wisdom?
-  One who hides true intent
-  One who deceives without guilt
-  One who puts others before self
+Who possesses the greatest wisdom?
+  The diplomat
+  The deceiver
+  The selfless
 
 {"str_num": 44, "bank": "0xDB", "str_pos": "0x1BB359", "length": 46, "term": "<end_box>", "table": "prologue"}
 #エリザベス
@@ -460,10 +455,10 @@ asks you to sacrifice one thing in life.
 #  仕事の時間
 #  趣味の時間
 #  友人との付き合い
-What would you sacrifice?
-  Time spent working
-  Time spent on hobbies
-  Time spent with friends
+What will you sacrifice?
+  Working hours
+  Hobby time
+  Time with friends
 
 {"str_num": 48, "bank": "0xDB", "str_pos": "0x1BB431", "length": 45, "term": "<end_box>", "table": "prologue"}
 #シンシア
@@ -489,8 +484,7 @@ Answer my question.
 #  努力
 #  奇跡
 #  希望
-Which of these words do you cherish
-most of all?
+Which word do you cherish most?
   Perseverance
   Miracle
   Hope
