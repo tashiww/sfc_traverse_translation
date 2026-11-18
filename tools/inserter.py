@@ -255,17 +255,14 @@ def encode_text_with_tbl(text: str, tbl: dict) -> bytes:
 
 
 def encode_dialogue_string(text: str, tbl: dict) -> bytes:
-    """Encodes translated dialogue string preserving native <wait_auto> (\\xFE\\x00) control codes."""
-    parts = text.split("<wait_auto>")
+    """Encodes translated dialogue string preserving native line breaks (\xFE\x00)."""
+    parts = [p.strip() for p in re.split(r"\n|<wait_auto>", text) if p.strip()]
     res = bytearray()
 
     for idx, part in enumerate(parts):
-        clean = part.strip()
-        if not clean:
-            continue
         if idx > 0:
             res.extend(b"\xFE\x00")
-        res.extend(encode_text_with_tbl(clean, tbl))
+        res.extend(encode_text_with_tbl(part, tbl))
 
     res.append(0xFF)  # Dialogue box terminator!
     return bytes(res)
@@ -359,23 +356,35 @@ class ScriptInserter:
                 if m:
                     orig_len = int(m.group(1))
 
-            # Determine precise clean ROM byte budget (distance to and including terminating 0xFF):
-            ff_pos = rom_bytes.find(b"\xff", orig_pc)
-            if ff_pos != -1 and orig_len > 0 and (ff_pos - orig_pc) <= orig_len + 5:
-                real_orig_len = (ff_pos - orig_pc) + 1
-            elif ff_pos != -1 and orig_len == 0 and (ff_pos - orig_pc) < 10:
-                real_orig_len = (ff_pos - orig_pc) + 1
-            else:
-                real_orig_len = orig_len + 1
-
             bank = meta.get("bank", "0xCA")
             table_mode = meta.get("table", "normal")
             tbl = self.en_tbl if table_mode in ("normal", "menu") else self.get_table(table_mode)
+
+            # Determine precise clean ROM byte budget:
+            if table_mode == "prologue":
+                real_orig_len = orig_len
+            else:
+                ff_pos = rom_bytes.find(b"\xff", orig_pc)
+                if ff_pos != -1 and orig_len > 0 and (ff_pos - orig_pc) <= orig_len + 5:
+                    real_orig_len = (ff_pos - orig_pc) + 1
+                elif ff_pos != -1 and orig_len == 0 and (ff_pos - orig_pc) < 10:
+                    real_orig_len = (ff_pos - orig_pc) + 1
+                else:
+                    real_orig_len = orig_len + 1
 
             if entry["is_translated"]:
                 if table_mode == "menu":
                     clean_text = entry["en_text"].strip()
                     encoded = encode_text_with_tbl(clean_text, tbl) + b"\xFF"
+                elif table_mode == "prologue":
+                    lines = [l.strip() for l in re.split(r"\n|<wait_auto>", entry["en_text"]) if l.strip()]
+                    encoded_b = bytearray()
+                    for l_idx, line in enumerate(lines):
+                        encoded_b.extend(encode_text_with_tbl(line, tbl))
+                        if l_idx < len(lines) - 1:
+                            encoded_b.append(0x80)
+                    encoded_b.append(0xFF)
+                    encoded = bytes(encoded_b)
                 else:
                     encoded = encode_dialogue_string(entry["en_text"], tbl)
 

@@ -1,632 +1,474 @@
-{"str_num": 0, "category": "consumables", "cat_idx": 0, "pc_hex": "0x014445", "length": 6}
+{"str_num": 0, "category": "consumables", "cat_idx": 0, "pc_hex": "0x014445", "length": 6, "table": "menu"}
 #シャニル皇国
 
-
-{"str_num": 1, "category": "consumables", "cat_idx": 1, "pc_hex": "0x01444C", "length": 6}
+{"str_num": 1, "category": "consumables", "cat_idx": 1, "pc_hex": "0x01444C", "length": 6, "table": "menu"}
 #メディル王国
 
-
-{"str_num": 2, "category": "consumables", "cat_idx": 2, "pc_hex": "0x014453", "length": 5}
+{"str_num": 2, "category": "consumables", "cat_idx": 2, "pc_hex": "0x014453", "length": 5, "table": "menu"}
 #バッツ王国
 
-
-{"str_num": 3, "category": "consumables", "cat_idx": 3, "pc_hex": "0x014459", "length": 7}
+{"str_num": 3, "category": "consumables", "cat_idx": 3, "pc_hex": "0x014459", "length": 7, "table": "menu"}
 #ドリゴン共和国
 
-
-{"str_num": 4, "category": "consumables", "cat_idx": 4, "pc_hex": "0x014461", "length": 7}
+{"str_num": 4, "category": "consumables", "cat_idx": 4, "pc_hex": "0x014461", "length": 7, "table": "menu"}
 #アリワナ合衆国
 
-
-{"str_num": 5, "category": "consumables", "cat_idx": 5, "pc_hex": "0x014469", "length": 7}
+{"str_num": 5, "category": "consumables", "cat_idx": 5, "pc_hex": "0x014469", "length": 7, "table": "menu"}
 #ディレント帝国
 
-
-{"str_num": 6, "category": "consumables", "cat_idx": 6, "pc_hex": "0x014471", "length": 6}
+{"str_num": 6, "category": "consumables", "cat_idx": 6, "pc_hex": "0x014471", "length": 6, "table": "menu"}
 #セレント王国
 
-
-{"str_num": 7, "category": "consumables", "cat_idx": 7, "pc_hex": "0x014478", "length": 8}
+{"str_num": 7, "category": "consumables", "cat_idx": 7, "pc_hex": "0x014478", "length": 8, "table": "menu"}
 #エンディメレ王国
 
-
-{"str_num": 8, "category": "consumables", "cat_idx": 8, "pc_hex": "0x014481", "length": 9}
+{"str_num": 8, "category": "consumables", "cat_idx": 8, "pc_hex": "0x014481", "length": 9, "table": "menu"}
 #フィッツランド王国
 
-
-{"str_num": 9, "category": "consumables", "cat_idx": 9, "pc_hex": "0x01448B", "length": 10}
+{"str_num": 9, "category": "consumables", "cat_idx": 9, "pc_hex": "0x01448B", "length": 10, "table": "menu"}
 #ディーゼレント共和国
 
-
-{"str_num": 10, "category": "consumables", "cat_idx": 10, "pc_hex": "0x014496", "length": 8}
+{"str_num": 10, "category": "consumables", "cat_idx": 10, "pc_hex": "0x014496", "length": 8, "table": "menu"}
 #チェレンヴァ連邦
 
-
-{"str_num": 11, "category": "consumables", "cat_idx": 11, "pc_hex": "0x01449F", "length": 6}
+{"str_num": 11, "category": "consumables", "cat_idx": 11, "pc_hex": "0x01449F", "length": 6, "table": "menu"}
 #テレンゼ連邦
 
-
-{"str_num": 12, "category": "consumables", "cat_idx": 12, "pc_hex": "0x0144A6", "length": 6}
+{"str_num": 12, "category": "consumables", "cat_idx": 12, "pc_hex": "0x0144A6", "length": 6, "table": "menu"}
 #スメンタ[Sword]
 
-
-{"str_num": 13, "category": "consumables", "cat_idx": 13, "pc_hex": "0x0144AD", "length": 5}
+{"str_num": 13, "category": "consumables", "cat_idx": 13, "pc_hex": "0x0144AD", "length": 5, "table": "menu"}
 #ダリル[Sword]
 
-
-{"str_num": 14, "category": "consumables", "cat_idx": 14, "pc_hex": "0x0144B3", "length": 6}
+{"str_num": 14, "category": "consumables", "cat_idx": 14, "pc_hex": "0x0144B3", "length": 6, "table": "menu"}
 #ゼライル[Sword]
 
-
-{"str_num": 15, "category": "consumables", "cat_idx": 15, "pc_hex": "0x0144BA", "length": 6}
+{"str_num": 15, "category": "consumables", "cat_idx": 15, "pc_hex": "0x0144BA", "length": 6, "table": "menu"}
 #ロゼーヌ[Sword]
 
-
-{"str_num": 16, "category": "consumables", "cat_idx": 16, "pc_hex": "0x0144C1", "length": 8}
+{"str_num": 16, "category": "consumables", "cat_idx": 16, "pc_hex": "0x0144C1", "length": 8, "table": "menu"}
 #イフォーヴァ[Sword]
 
-
-{"str_num": 17, "category": "consumables", "cat_idx": 17, "pc_hex": "0x0144CA", "length": 5}
+{"str_num": 17, "category": "consumables", "cat_idx": 17, "pc_hex": "0x0144CA", "length": 5, "table": "menu"}
 #リレル[Sword]
 
-
-{"str_num": 18, "category": "consumables", "cat_idx": 18, "pc_hex": "0x0144D0", "length": 6}
+{"str_num": 18, "category": "consumables", "cat_idx": 18, "pc_hex": "0x0144D0", "length": 6, "table": "menu"}
 #ホルフト[Sword]
 
-
-{"str_num": 19, "category": "consumables", "cat_idx": 19, "pc_hex": "0x0144D7", "length": 6}
+{"str_num": 19, "category": "consumables", "cat_idx": 19, "pc_hex": "0x0144D7", "length": 6, "table": "menu"}
 #サルタン[Sword]
 
-
-{"str_num": 20, "category": "consumables", "cat_idx": 20, "pc_hex": "0x0144DE", "length": 6}
+{"str_num": 20, "category": "consumables", "cat_idx": 20, "pc_hex": "0x0144DE", "length": 6, "table": "menu"}
 #イストラ[Sword]
 
-
-{"str_num": 21, "category": "consumables", "cat_idx": 21, "pc_hex": "0x0144E5", "length": 5}
+{"str_num": 21, "category": "consumables", "cat_idx": 21, "pc_hex": "0x0144E5", "length": 5, "table": "menu"}
 #バロル[Sword]
 
-
-{"str_num": 22, "category": "consumables", "cat_idx": 22, "pc_hex": "0x0144EB", "length": 5}
+{"str_num": 22, "category": "consumables", "cat_idx": 22, "pc_hex": "0x0144EB", "length": 5, "table": "menu"}
 #チザン[Sword]
 
-
-{"str_num": 23, "category": "consumables", "cat_idx": 23, "pc_hex": "0x0144F1", "length": 9}
+{"str_num": 23, "category": "consumables", "cat_idx": 23, "pc_hex": "0x0144F1", "length": 9, "table": "menu"}
 #ロッテルヘイム[Sword]
 
-
-{"str_num": 24, "category": "consumables", "cat_idx": 24, "pc_hex": "0x0144FB", "length": 6}
+{"str_num": 24, "category": "consumables", "cat_idx": 24, "pc_hex": "0x0144FB", "length": 6, "table": "menu"}
 #バメット[Sword]
 
-
-{"str_num": 25, "category": "consumables", "cat_idx": 25, "pc_hex": "0x014402", "length": 31}
+{"str_num": 25, "category": "consumables", "cat_idx": 25, "pc_hex": "0x014402", "length": 31, "table": "menu"}
 #ねアねケねツねツねヒねさぬさぬさぬさぬぴねヤねソートワリナ連邦
 
-
-{"str_num": 26, "category": "consumables", "cat_idx": 26, "pc_hex": "0x014509", "length": 8}
+{"str_num": 26, "category": "consumables", "cat_idx": 26, "pc_hex": "0x014509", "length": 8, "table": "menu"}
 #ファティソマ[Sword]
 
-
-{"str_num": 27, "category": "consumables", "cat_idx": 27, "pc_hex": "0x014512", "length": 7}
+{"str_num": 27, "category": "consumables", "cat_idx": 27, "pc_hex": "0x014512", "length": 7, "table": "menu"}
 #メンデルン[Sword]
 
-
-{"str_num": 28, "category": "consumables", "cat_idx": 28, "pc_hex": "0x01451A", "length": 10}
+{"str_num": 28, "category": "consumables", "cat_idx": 28, "pc_hex": "0x01451A", "length": 10, "table": "menu"}
 #レッテルフェイカ[Sword]
 
-
-{"str_num": 29, "category": "consumables", "cat_idx": 29, "pc_hex": "0x014525", "length": 7}
+{"str_num": 29, "category": "consumables", "cat_idx": 29, "pc_hex": "0x014525", "length": 7, "table": "menu"}
 #シュルント[Sword]
 
-
-{"str_num": 30, "category": "consumables", "cat_idx": 30, "pc_hex": "0x01452D", "length": 4}
+{"str_num": 30, "category": "consumables", "cat_idx": 30, "pc_hex": "0x01452D", "length": 4, "table": "menu"}
 #こと[Sword]
 
-
-{"str_num": 31, "category": "consumables", "cat_idx": 31, "pc_hex": "0x014532", "length": 4}
+{"str_num": 31, "category": "consumables", "cat_idx": 31, "pc_hex": "0x014532", "length": 4, "table": "menu"}
 #とき[Sword]
 
-
-{"str_num": 32, "category": "consumables", "cat_idx": 32, "pc_hex": "0x014537", "length": 5}
+{"str_num": 32, "category": "consumables", "cat_idx": 32, "pc_hex": "0x014537", "length": 5, "table": "menu"}
 #さいはて村
 
-
-{"str_num": 33, "category": "consumables", "cat_idx": 33, "pc_hex": "0x01453D", "length": 6}
+{"str_num": 33, "category": "consumables", "cat_idx": 33, "pc_hex": "0x01453D", "length": 6, "table": "menu"}
 #メルレン[Sword]
 
-
-{"str_num": 34, "category": "swords", "cat_idx": 0, "pc_hex": "0x014544", "length": 7}
+{"str_num": 34, "category": "swords", "cat_idx": 0, "pc_hex": "0x014544", "length": 7, "table": "menu"}
 #サッドキア[Sword]
 
-
-{"str_num": 35, "category": "swords", "cat_idx": 1, "pc_hex": "0x01454C", "length": 5}
+{"str_num": 35, "category": "swords", "cat_idx": 1, "pc_hex": "0x01454C", "length": 5, "table": "menu"}
 #デゼル[Sword]
 
-
-{"str_num": 36, "category": "swords", "cat_idx": 2, "pc_hex": "0x014552", "length": 7}
+{"str_num": 36, "category": "swords", "cat_idx": 2, "pc_hex": "0x014552", "length": 7, "table": "menu"}
 #ファーレル[Sword]
 
-
-{"str_num": 37, "category": "swords", "cat_idx": 3, "pc_hex": "0x01455A", "length": 6}
+{"str_num": 37, "category": "swords", "cat_idx": 3, "pc_hex": "0x01455A", "length": 6, "table": "menu"}
 #ドトキア[Sword]
 
-
-{"str_num": 38, "category": "swords", "cat_idx": 4, "pc_hex": "0x014561", "length": 5}
+{"str_num": 38, "category": "swords", "cat_idx": 4, "pc_hex": "0x014561", "length": 5, "table": "menu"}
 #レセラ[Sword]
 
-
-{"str_num": 39, "category": "swords", "cat_idx": 5, "pc_hex": "0x014567", "length": 6}
+{"str_num": 39, "category": "swords", "cat_idx": 5, "pc_hex": "0x014567", "length": 6, "table": "menu"}
 #レンメル[Sword]
 
-
-{"str_num": 40, "category": "swords", "cat_idx": 6, "pc_hex": "0x01456E", "length": 6}
+{"str_num": 40, "category": "swords", "cat_idx": 6, "pc_hex": "0x01456E", "length": 6, "table": "menu"}
 #サンデラ[Sword]
 
-
-{"str_num": 41, "category": "swords", "cat_idx": 7, "pc_hex": "0x014575", "length": 9}
+{"str_num": 41, "category": "swords", "cat_idx": 7, "pc_hex": "0x014575", "length": 9, "table": "menu"}
 #レッセンヴィラ[Sword]
 
-
-{"str_num": 42, "category": "swords", "cat_idx": 8, "pc_hex": "0x01457F", "length": 6}
+{"str_num": 42, "category": "swords", "cat_idx": 8, "pc_hex": "0x01457F", "length": 6, "table": "menu"}
 #ラステム[Sword]
 
-
-{"str_num": 43, "category": "swords", "cat_idx": 9, "pc_hex": "0x014586", "length": 5}
+{"str_num": 43, "category": "swords", "cat_idx": 9, "pc_hex": "0x014586", "length": 5, "table": "menu"}
 #ホムラ[Sword]
 
-
-{"str_num": 44, "category": "swords", "cat_idx": 10, "pc_hex": "0x01458C", "length": 7}
+{"str_num": 44, "category": "swords", "cat_idx": 10, "pc_hex": "0x01458C", "length": 7, "table": "menu"}
 #ネルメンド[Sword]
 
-
-{"str_num": 45, "category": "swords", "cat_idx": 11, "pc_hex": "0x014594", "length": 6}
+{"str_num": 45, "category": "swords", "cat_idx": 11, "pc_hex": "0x014594", "length": 6, "table": "menu"}
 #ワステル[Sword]
 
-
-{"str_num": 46, "category": "swords", "cat_idx": 12, "pc_hex": "0x01459B", "length": 8}
+{"str_num": 46, "category": "swords", "cat_idx": 12, "pc_hex": "0x01459B", "length": 8, "table": "menu"}
 #オルフォマダ[Sword]
 
-
-{"str_num": 47, "category": "swords", "cat_idx": 13, "pc_hex": "0x0145A4", "length": 6}
+{"str_num": 47, "category": "swords", "cat_idx": 13, "pc_hex": "0x0145A4", "length": 6, "table": "menu"}
 #レヴィラ[Sword]
 
-
-{"str_num": 48, "category": "swords", "cat_idx": 14, "pc_hex": "0x0145AB", "length": 6}
+{"str_num": 48, "category": "swords", "cat_idx": 14, "pc_hex": "0x0145AB", "length": 6, "table": "menu"}
 #フォーテ[Sword]
 
-
-{"str_num": 49, "category": "swords", "cat_idx": 15, "pc_hex": "0x0145B2", "length": 6}
+{"str_num": 49, "category": "swords", "cat_idx": 15, "pc_hex": "0x0145B2", "length": 6, "table": "menu"}
 #ビテージ[Sword]
 
-
-{"str_num": 50, "category": "swords", "cat_idx": 16, "pc_hex": "0x0145B9", "length": 7}
+{"str_num": 50, "category": "swords", "cat_idx": 16, "pc_hex": "0x0145B9", "length": 7, "table": "menu"}
 #クレーヴァ[Sword]
 
-
-{"str_num": 51, "category": "swords", "cat_idx": 17, "pc_hex": "0x0145C1", "length": 5}
+{"str_num": 51, "category": "swords", "cat_idx": 17, "pc_hex": "0x0145C1", "length": 5, "table": "menu"}
 #シトス[Sword]
 
-
-{"str_num": 52, "category": "swords", "cat_idx": 18, "pc_hex": "0x0145C7", "length": 10}
+{"str_num": 52, "category": "swords", "cat_idx": 18, "pc_hex": "0x0145C7", "length": 10, "table": "menu"}
 #ワーストレティア[Sword]
 
-
-{"str_num": 53, "category": "swords", "cat_idx": 19, "pc_hex": "0x0145D2", "length": 5}
+{"str_num": 53, "category": "swords", "cat_idx": 19, "pc_hex": "0x0145D2", "length": 5, "table": "menu"}
 #ロベル[Sword]
 
-
-{"str_num": 54, "category": "swords", "cat_idx": 20, "pc_hex": "0x0145D8", "length": 8}
+{"str_num": 54, "category": "swords", "cat_idx": 20, "pc_hex": "0x0145D8", "length": 8, "table": "menu"}
 #レッセンメル[Sword]
 
-
-{"str_num": 55, "category": "swords", "cat_idx": 21, "pc_hex": "0x0145E1", "length": 6}
+{"str_num": 55, "category": "swords", "cat_idx": 21, "pc_hex": "0x0145E1", "length": 6, "table": "menu"}
 #セレント[Sword]
 
-
-{"str_num": 56, "category": "swords", "cat_idx": 22, "pc_hex": "0x0145E8", "length": 6}
+{"str_num": 56, "category": "swords", "cat_idx": 22, "pc_hex": "0x0145E8", "length": 6, "table": "menu"}
 #テレジア[Sword]
 
-
-{"str_num": 57, "category": "swords", "cat_idx": 23, "pc_hex": "0x0145EF", "length": 8}
+{"str_num": 57, "category": "swords", "cat_idx": 23, "pc_hex": "0x0145EF", "length": 8, "table": "menu"}
 #ムーンレイク[Sword]
 
-
-{"str_num": 58, "category": "swords", "cat_idx": 24, "pc_hex": "0x0145F8", "length": 7}
+{"str_num": 58, "category": "swords", "cat_idx": 24, "pc_hex": "0x0145F8", "length": 7, "table": "menu"}
 #ティレンゼ[Sword]
 
-
-{"str_num": 59, "category": "swords", "cat_idx": 25, "pc_hex": "0x014500", "length": 1}
+{"str_num": 59, "category": "swords", "cat_idx": 25, "pc_hex": "0x014500", "length": 1, "table": "menu"}
 #街
 
-
-{"str_num": 60, "category": "swords", "cat_idx": 26, "pc_hex": "0x014607", "length": 7}
+{"str_num": 60, "category": "swords", "cat_idx": 26, "pc_hex": "0x014607", "length": 7, "table": "menu"}
 #グリンジア[Sword]
 
-
-{"str_num": 61, "category": "swords", "cat_idx": 27, "pc_hex": "0x01460F", "length": 7}
+{"str_num": 61, "category": "swords", "cat_idx": 27, "pc_hex": "0x01460F", "length": 7, "table": "menu"}
 #クレンツァ[Sword]
 
-
-{"str_num": 62, "category": "swords", "cat_idx": 28, "pc_hex": "0x014617", "length": 8}
+{"str_num": 62, "category": "swords", "cat_idx": 28, "pc_hex": "0x014617", "length": 8, "table": "menu"}
 #レンフォール[Sword]
 
-
-{"str_num": 63, "category": "swords", "cat_idx": 29, "pc_hex": "0x014620", "length": 7}
+{"str_num": 63, "category": "swords", "cat_idx": 29, "pc_hex": "0x014620", "length": 7, "table": "menu"}
 #ローティア[Sword]
 
-
-{"str_num": 64, "category": "swords", "cat_idx": 30, "pc_hex": "0x014628", "length": 5}
+{"str_num": 64, "category": "swords", "cat_idx": 30, "pc_hex": "0x014628", "length": 5, "table": "menu"}
 #ソリエ[Sword]
 
-
-{"str_num": 65, "category": "swords", "cat_idx": 31, "pc_hex": "0x01462E", "length": 4}
+{"str_num": 65, "category": "swords", "cat_idx": 31, "pc_hex": "0x01462E", "length": 4, "table": "menu"}
 #ミア[Sword]
 
-
-{"str_num": 66, "category": "swords", "cat_idx": 32, "pc_hex": "0x014633", "length": 6}
+{"str_num": 66, "category": "swords", "cat_idx": 32, "pc_hex": "0x014633", "length": 6, "table": "menu"}
 #ボーンランド
 
-
-{"str_num": 67, "category": "swords", "cat_idx": 33, "pc_hex": "0x01463A", "length": 6}
+{"str_num": 67, "category": "swords", "cat_idx": 33, "pc_hex": "0x01463A", "length": 6, "table": "menu"}
 #ここはどこ？
 
-
-{"str_num": 68, "category": "swords", "cat_idx": 34, "pc_hex": "0x01463A", "length": 6}
+{"str_num": 68, "category": "swords", "cat_idx": 34, "pc_hex": "0x01463A", "length": 6, "table": "menu"}
 #ここはどこ？
 
-
-{"str_num": 69, "category": "swords", "cat_idx": 35, "pc_hex": "0x01463A", "length": 6}
+{"str_num": 69, "category": "swords", "cat_idx": 35, "pc_hex": "0x01463A", "length": 6, "table": "menu"}
 #ここはどこ？
 
-
-{"str_num": 70, "category": "swords", "cat_idx": 36, "pc_hex": "0x01463A", "length": 6}
+{"str_num": 70, "category": "swords", "cat_idx": 36, "pc_hex": "0x01463A", "length": 6, "table": "menu"}
 #ここはどこ？
 
-
-{"str_num": 71, "category": "swords", "cat_idx": 37, "pc_hex": "0x01463A", "length": 6}
+{"str_num": 71, "category": "swords", "cat_idx": 37, "pc_hex": "0x01463A", "length": 6, "table": "menu"}
 #ここはどこ？
 
-
-{"str_num": 72, "category": "swords", "cat_idx": 38, "pc_hex": "0x01463A", "length": 6}
+{"str_num": 72, "category": "swords", "cat_idx": 38, "pc_hex": "0x01463A", "length": 6, "table": "menu"}
 #ここはどこ？
 
-
-{"str_num": 73, "category": "swords", "cat_idx": 39, "pc_hex": "0x01463A", "length": 6}
+{"str_num": 73, "category": "swords", "cat_idx": 39, "pc_hex": "0x01463A", "length": 6, "table": "menu"}
 #ここはどこ？
 
-
-{"str_num": 74, "category": "swords", "cat_idx": 40, "pc_hex": "0x01463A", "length": 6}
+{"str_num": 74, "category": "swords", "cat_idx": 40, "pc_hex": "0x01463A", "length": 6, "table": "menu"}
 #ここはどこ？
 
-
-{"str_num": 75, "category": "swords", "cat_idx": 41, "pc_hex": "0x01463A", "length": 6}
+{"str_num": 75, "category": "swords", "cat_idx": 41, "pc_hex": "0x01463A", "length": 6, "table": "menu"}
 #ここはどこ？
 
-
-{"str_num": 76, "category": "swords", "cat_idx": 42, "pc_hex": "0x01463A", "length": 6}
+{"str_num": 76, "category": "swords", "cat_idx": 42, "pc_hex": "0x01463A", "length": 6, "table": "menu"}
 #ここはどこ？
 
-
-{"str_num": 77, "category": "swords", "cat_idx": 43, "pc_hex": "0x01463A", "length": 6}
+{"str_num": 77, "category": "swords", "cat_idx": 43, "pc_hex": "0x01463A", "length": 6, "table": "menu"}
 #ここはどこ？
 
-
-{"str_num": 78, "category": "swords", "cat_idx": 44, "pc_hex": "0x01463A", "length": 6}
+{"str_num": 78, "category": "swords", "cat_idx": 44, "pc_hex": "0x01463A", "length": 6, "table": "menu"}
 #ここはどこ？
 
-
-{"str_num": 79, "category": "swords", "cat_idx": 45, "pc_hex": "0x01463A", "length": 6}
+{"str_num": 79, "category": "swords", "cat_idx": 45, "pc_hex": "0x01463A", "length": 6, "table": "menu"}
 #ここはどこ？
 
-
-{"str_num": 80, "category": "swords", "cat_idx": 46, "pc_hex": "0x01463A", "length": 6}
+{"str_num": 80, "category": "swords", "cat_idx": 46, "pc_hex": "0x01463A", "length": 6, "table": "menu"}
 #ここはどこ？
 
-
-{"str_num": 81, "category": "swords", "cat_idx": 47, "pc_hex": "0x01463A", "length": 6}
+{"str_num": 81, "category": "swords", "cat_idx": 47, "pc_hex": "0x01463A", "length": 6, "table": "menu"}
 #ここはどこ？
 
-
-{"str_num": 82, "category": "heavy_weapons", "cat_idx": 0, "pc_hex": "0x01466A", "length": 12}
+{"str_num": 82, "category": "heavy_weapons", "cat_idx": 0, "pc_hex": "0x01466A", "length": 12, "table": "menu"}
 #グランベル ミュージアム
 
-
-{"str_num": 83, "category": "heavy_weapons", "cat_idx": 1, "pc_hex": "0x01466A", "length": 12}
+{"str_num": 83, "category": "heavy_weapons", "cat_idx": 1, "pc_hex": "0x01466A", "length": 12, "table": "menu"}
 #グランベル ミュージアム
 
-
-{"str_num": 84, "category": "heavy_weapons", "cat_idx": 2, "pc_hex": "0x01466A", "length": 12}
+{"str_num": 84, "category": "heavy_weapons", "cat_idx": 2, "pc_hex": "0x01466A", "length": 12, "table": "menu"}
 #グランベル ミュージアム
 
-
-{"str_num": 85, "category": "heavy_weapons", "cat_idx": 3, "pc_hex": "0x01466A", "length": 12}
+{"str_num": 85, "category": "heavy_weapons", "cat_idx": 3, "pc_hex": "0x01466A", "length": 12, "table": "menu"}
 #グランベル ミュージアム
 
-
-{"str_num": 86, "category": "heavy_weapons", "cat_idx": 4, "pc_hex": "0x01466A", "length": 12}
+{"str_num": 86, "category": "heavy_weapons", "cat_idx": 4, "pc_hex": "0x01466A", "length": 12, "table": "menu"}
 #グランベル ミュージアム
 
-
-{"str_num": 87, "category": "heavy_weapons", "cat_idx": 5, "pc_hex": "0x014677", "length": 7}
+{"str_num": 87, "category": "heavy_weapons", "cat_idx": 5, "pc_hex": "0x014677", "length": 7, "table": "menu"}
 #ボボッサム砂漠
 
-
-{"str_num": 88, "category": "heavy_weapons", "cat_idx": 6, "pc_hex": "0x01467F", "length": 5}
+{"str_num": 88, "category": "heavy_weapons", "cat_idx": 6, "pc_hex": "0x01467F", "length": 5, "table": "menu"}
 #マーフ[Axe]
 
-
-{"str_num": 89, "category": "heavy_weapons", "cat_idx": 7, "pc_hex": "0x014685", "length": 3}
+{"str_num": 89, "category": "heavy_weapons", "cat_idx": 7, "pc_hex": "0x014685", "length": 3, "table": "menu"}
 #じごく
 
-
-{"str_num": 90, "category": "heavy_weapons", "cat_idx": 8, "pc_hex": "0x014689", "length": 11}
+{"str_num": 90, "category": "heavy_weapons", "cat_idx": 8, "pc_hex": "0x014689", "length": 11, "table": "menu"}
 #ティルマ ミュージアム
 
-
-{"str_num": 91, "category": "heavy_weapons", "cat_idx": 9, "pc_hex": "0x014689", "length": 11}
+{"str_num": 91, "category": "heavy_weapons", "cat_idx": 9, "pc_hex": "0x014689", "length": 11, "table": "menu"}
 #ティルマ ミュージアム
 
-
-{"str_num": 92, "category": "heavy_weapons", "cat_idx": 10, "pc_hex": "0x014689", "length": 11}
+{"str_num": 92, "category": "heavy_weapons", "cat_idx": 10, "pc_hex": "0x014689", "length": 11, "table": "menu"}
 #ティルマ ミュージアム
 
-
-{"str_num": 93, "category": "heavy_weapons", "cat_idx": 11, "pc_hex": "0x014695", "length": 5}
+{"str_num": 93, "category": "heavy_weapons", "cat_idx": 11, "pc_hex": "0x014695", "length": 5, "table": "menu"}
 #ボンヌ洞窟
 
-
-{"str_num": 94, "category": "heavy_weapons", "cat_idx": 12, "pc_hex": "0x014633", "length": 6}
+{"str_num": 94, "category": "heavy_weapons", "cat_idx": 12, "pc_hex": "0x014633", "length": 6, "table": "menu"}
 #ボーンランド
 
-
-{"str_num": 95, "category": "heavy_weapons", "cat_idx": 13, "pc_hex": "0x01469B", "length": 5}
+{"str_num": 95, "category": "heavy_weapons", "cat_idx": 13, "pc_hex": "0x01469B", "length": 5, "table": "menu"}
 #まよい[Shield]
 
-
-{"str_num": 96, "category": "heavy_weapons", "cat_idx": 14, "pc_hex": "0x0146A1", "length": 6}
+{"str_num": 96, "category": "heavy_weapons", "cat_idx": 14, "pc_hex": "0x0146A1", "length": 6, "table": "menu"}
 #オラシオン家
 
-
-{"str_num": 97, "category": "heavy_weapons", "cat_idx": 15, "pc_hex": "0x0146A1", "length": 6}
+{"str_num": 97, "category": "heavy_weapons", "cat_idx": 15, "pc_hex": "0x0146A1", "length": 6, "table": "menu"}
 #オラシオン家
 
-
-{"str_num": 98, "category": "heavy_weapons", "cat_idx": 16, "pc_hex": "0x0146A8", "length": 10}
+{"str_num": 98, "category": "heavy_weapons", "cat_idx": 16, "pc_hex": "0x0146A8", "length": 10, "table": "menu"}
 #キッチン スタジアム
 
-
-{"str_num": 99, "category": "heavy_weapons", "cat_idx": 17, "pc_hex": "0x0146B3", "length": 5}
+{"str_num": 99, "category": "heavy_weapons", "cat_idx": 17, "pc_hex": "0x0146B3", "length": 5, "table": "menu"}
 #レストラン
 
-
-{"str_num": 100, "category": "heavy_weapons", "cat_idx": 18, "pc_hex": "0x0146B9", "length": 7}
+{"str_num": 100, "category": "heavy_weapons", "cat_idx": 18, "pc_hex": "0x0146B9", "length": 7, "table": "menu"}
 #エクスバーン城
 
-
-{"str_num": 101, "category": "heavy_weapons", "cat_idx": 19, "pc_hex": "0x0146B9", "length": 7}
+{"str_num": 101, "category": "heavy_weapons", "cat_idx": 19, "pc_hex": "0x0146B9", "length": 7, "table": "menu"}
 #エクスバーン城
 
-
-{"str_num": 102, "category": "heavy_weapons", "cat_idx": 20, "pc_hex": "0x0146A8", "length": 10}
+{"str_num": 102, "category": "heavy_weapons", "cat_idx": 20, "pc_hex": "0x0146A8", "length": 10, "table": "menu"}
 #キッチン スタジアム
 
-
-{"str_num": 103, "category": "heavy_weapons", "cat_idx": 21, "pc_hex": "0x0146C1", "length": 5}
+{"str_num": 103, "category": "heavy_weapons", "cat_idx": 21, "pc_hex": "0x0146C1", "length": 5, "table": "menu"}
 #タマーレ山
 
-
-{"str_num": 104, "category": "heavy_weapons", "cat_idx": 22, "pc_hex": "0x0146C7", "length": 8}
+{"str_num": 104, "category": "heavy_weapons", "cat_idx": 22, "pc_hex": "0x0146C7", "length": 8, "table": "menu"}
 #すいりゅうの洞窟
 
-
-{"str_num": 105, "category": "heavy_weapons", "cat_idx": 23, "pc_hex": "0x0146C7", "length": 8}
+{"str_num": 105, "category": "heavy_weapons", "cat_idx": 23, "pc_hex": "0x0146C7", "length": 8, "table": "menu"}
 #すいりゅうの洞窟
 
-
-{"str_num": 106, "category": "heavy_weapons", "cat_idx": 24, "pc_hex": "0x0146D0", "length": 8}
+{"str_num": 106, "category": "heavy_weapons", "cat_idx": 24, "pc_hex": "0x0146D0", "length": 8, "table": "menu"}
 #タマーレ山の洞窟
 
-
-{"str_num": 107, "category": "heavy_weapons", "cat_idx": 25, "pc_hex": "0x0146D0", "length": 8}
+{"str_num": 107, "category": "heavy_weapons", "cat_idx": 25, "pc_hex": "0x0146D0", "length": 8, "table": "menu"}
 #タマーレ山の洞窟
 
-
-{"str_num": 108, "category": "heavy_weapons", "cat_idx": 26, "pc_hex": "0x014653", "length": 3}
+{"str_num": 108, "category": "heavy_weapons", "cat_idx": 26, "pc_hex": "0x014653", "length": 3, "table": "menu"}
 #みなと
 
-
-{"str_num": 109, "category": "heavy_weapons", "cat_idx": 27, "pc_hex": "0x0146D9", "length": 6}
+{"str_num": 109, "category": "heavy_weapons", "cat_idx": 27, "pc_hex": "0x0146D9", "length": 6, "table": "menu"}
 #バビルシア山
 
-
-{"str_num": 110, "category": "heavy_weapons", "cat_idx": 28, "pc_hex": "0x0146E0", "length": 8}
+{"str_num": 110, "category": "heavy_weapons", "cat_idx": 28, "pc_hex": "0x0146E0", "length": 8, "table": "menu"}
 #ひとくいトンネル
 
-
-{"str_num": 111, "category": "heavy_weapons", "cat_idx": 29, "pc_hex": "0x0146E0", "length": 8}
+{"str_num": 111, "category": "heavy_weapons", "cat_idx": 29, "pc_hex": "0x0146E0", "length": 8, "table": "menu"}
 #ひとくいトンネル
 
-
-{"str_num": 112, "category": "heavy_weapons", "cat_idx": 30, "pc_hex": "0x0146E9", "length": 5}
+{"str_num": 112, "category": "heavy_weapons", "cat_idx": 30, "pc_hex": "0x0146E9", "length": 5, "table": "menu"}
 #エルドラド
 
-
-{"str_num": 113, "category": "heavy_weapons", "cat_idx": 31, "pc_hex": "0x0146E9", "length": 5}
+{"str_num": 113, "category": "heavy_weapons", "cat_idx": 31, "pc_hex": "0x0146E9", "length": 5, "table": "menu"}
 #エルドラド
 
-
-{"str_num": 114, "category": "heavy_weapons", "cat_idx": 32, "pc_hex": "0x0146EF", "length": 5}
+{"str_num": 114, "category": "heavy_weapons", "cat_idx": 32, "pc_hex": "0x0146EF", "length": 5, "table": "menu"}
 #かみの洞窟
 
-
-{"str_num": 115, "category": "shields_armors", "cat_idx": 0, "pc_hex": "0x014746", "length": 10}
+{"str_num": 115, "category": "shields_armors", "cat_idx": 0, "pc_hex": "0x014746", "length": 10, "table": "menu"}
 #コンテストかいじょう
 
-
-{"str_num": 116, "category": "shields_armors", "cat_idx": 1, "pc_hex": "0x014751", "length": 9}
+{"str_num": 116, "category": "shields_armors", "cat_idx": 1, "pc_hex": "0x014751", "length": 9, "table": "menu"}
 #キングモンキー[Shield]
 
-
-{"str_num": 117, "category": "shields_armors", "cat_idx": 2, "pc_hex": "0x014751", "length": 9}
+{"str_num": 117, "category": "shields_armors", "cat_idx": 2, "pc_hex": "0x014751", "length": 9, "table": "menu"}
 #キングモンキー[Shield]
 
-
-{"str_num": 118, "category": "shields_armors", "cat_idx": 3, "pc_hex": "0x014734", "length": 9}
+{"str_num": 118, "category": "shields_armors", "cat_idx": 3, "pc_hex": "0x014734", "length": 9, "table": "menu"}
 #ホットブリーチ[Sword]
 
-
-{"str_num": 119, "category": "shields_armors", "cat_idx": 4, "pc_hex": "0x01473E", "length": 7}
+{"str_num": 119, "category": "shields_armors", "cat_idx": 4, "pc_hex": "0x01473E", "length": 7, "table": "menu"}
 #けんきゅうじょ
 
-
-{"str_num": 120, "category": "shields_armors", "cat_idx": 5, "pc_hex": "0x01475B", "length": 7}
+{"str_num": 120, "category": "shields_armors", "cat_idx": 5, "pc_hex": "0x01475B", "length": 7, "table": "menu"}
 #グレゴリオ[Armor]
 
-
-{"str_num": 121, "category": "shields_armors", "cat_idx": 6, "pc_hex": "0x014763", "length": 6}
+{"str_num": 121, "category": "shields_armors", "cat_idx": 6, "pc_hex": "0x014763", "length": 6, "table": "menu"}
 #せいれい王国
 
-
-{"str_num": 122, "category": "shields_armors", "cat_idx": 7, "pc_hex": "0x01476A", "length": 9}
+{"str_num": 122, "category": "shields_armors", "cat_idx": 7, "pc_hex": "0x01476A", "length": 9, "table": "menu"}
 #モンゴメリーやしき
 
-
-{"str_num": 123, "category": "shields_armors", "cat_idx": 8, "pc_hex": "0x014774", "length": 3}
+{"str_num": 123, "category": "shields_armors", "cat_idx": 8, "pc_hex": "0x014774", "length": 3, "table": "menu"}
 #へいち
 
-
-{"str_num": 124, "category": "shields_armors", "cat_idx": 9, "pc_hex": "0x014778", "length": 6}
+{"str_num": 124, "category": "shields_armors", "cat_idx": 9, "pc_hex": "0x014778", "length": 6, "table": "menu"}
 #せいれい[Sword]
 
-
-{"str_num": 125, "category": "shields_armors", "cat_idx": 10, "pc_hex": "0x01477F", "length": 6}
+{"str_num": 125, "category": "shields_armors", "cat_idx": 10, "pc_hex": "0x01477F", "length": 6, "table": "menu"}
 #せいれいの城
 
-
-{"str_num": 126, "category": "shields_armors", "cat_idx": 11, "pc_hex": "0x014786", "length": 9}
+{"str_num": 126, "category": "shields_armors", "cat_idx": 11, "pc_hex": "0x014786", "length": 9, "table": "menu"}
 #せいれいのしんでん
 
-
-{"str_num": 127, "category": "shields_armors", "cat_idx": 12, "pc_hex": "0x01476A", "length": 9}
+{"str_num": 127, "category": "shields_armors", "cat_idx": 12, "pc_hex": "0x01476A", "length": 9, "table": "menu"}
 #モンゴメリーやしき
 
-
-{"str_num": 128, "category": "shields_armors", "cat_idx": 13, "pc_hex": "0x014790", "length": 7}
+{"str_num": 128, "category": "shields_armors", "cat_idx": 13, "pc_hex": "0x014790", "length": 7, "table": "menu"}
 #しんまおうの塔
 
-
-{"str_num": 129, "category": "shields_armors", "cat_idx": 14, "pc_hex": "0x014798", "length": 8}
+{"str_num": 129, "category": "shields_armors", "cat_idx": 14, "pc_hex": "0x014798", "length": 8, "table": "menu"}
 #りゅうおうの洞窟
 
-
-{"str_num": 130, "category": "shields_armors", "cat_idx": 15, "pc_hex": "0x0147A1", "length": 8}
+{"str_num": 130, "category": "shields_armors", "cat_idx": 15, "pc_hex": "0x0147A1", "length": 8, "table": "menu"}
 #さんぞくのとりで
 
-
-{"str_num": 131, "category": "shields_armors", "cat_idx": 16, "pc_hex": "0x0147A1", "length": 8}
+{"str_num": 131, "category": "shields_armors", "cat_idx": 16, "pc_hex": "0x0147A1", "length": 8, "table": "menu"}
 #さんぞくのとりで
 
-
-{"str_num": 132, "category": "shields_armors", "cat_idx": 17, "pc_hex": "0x0147AA", "length": 8}
+{"str_num": 132, "category": "shields_armors", "cat_idx": 17, "pc_hex": "0x0147AA", "length": 8, "table": "menu"}
 #ジュールとしょ館
 
-
-{"str_num": 133, "category": "shields_armors", "cat_idx": 18, "pc_hex": "0x01473A", "length": 3}
+{"str_num": 133, "category": "shields_armors", "cat_idx": 18, "pc_hex": "0x01473A", "length": 3, "table": "menu"}
 #チ[Sword]
 
-
-{"str_num": 134, "category": "shields_armors", "cat_idx": 19, "pc_hex": "0x01463A", "length": 6}
+{"str_num": 134, "category": "shields_armors", "cat_idx": 19, "pc_hex": "0x01463A", "length": 6, "table": "menu"}
 #ここはどこ？
 
-
-{"str_num": 135, "category": "shields_armors", "cat_idx": 20, "pc_hex": "0x01463A", "length": 6}
+{"str_num": 135, "category": "shields_armors", "cat_idx": 20, "pc_hex": "0x01463A", "length": 6, "table": "menu"}
 #ここはどこ？
 
-
-{"str_num": 136, "category": "accessories", "cat_idx": 0, "pc_hex": "0x01479E", "length": 2}
+{"str_num": 136, "category": "accessories", "cat_idx": 0, "pc_hex": "0x01479E", "length": 2, "table": "menu"}
 #洞窟
 
-
-{"str_num": 137, "category": "accessories", "cat_idx": 1, "pc_hex": "0x018AA3", "length": 362}
+{"str_num": 137, "category": "accessories", "cat_idx": 1, "pc_hex": "0x018AA3", "length": 362, "table": "menu"}
 #ラけ郎ヨムA5ラ国リム7V洞…ょ25ラけ郎ヨムA5ラ国リム7V洞…ょ25ラけ館レのょ」ラ館郎ヨムA5ラ国リム7V洞…ょ25ラけ郎ヨムA5ラ国リム7V洞…ょ25ラけ郎ヨムA5ラ国リム7V洞…ょ25ラけ郎ヨムA5ラ国リム7V洞…ょ25ラけ郎ヨムA5ラ国リム7V洞…ょ25ラけ郎ヨムA5ラ国リム7V洞…ょ25ラけ郎ヨムA5ラ国リム7V洞…ょ25ラけ郎ヨニリム45ラ邦ア29ム包 のゅゾケ。0ブT。EブCザヲ[protag]皇ゲWケだ[protag]0ノ村Wニユ郎ヨ」ユア4ゾゾケょ村ヌル洞ー。E[protag]2へ連ーゲWーだ[protag]0ヒ村Wへ帝ーヌルゲW洞ー。E [protag]Gのぇタ のゅタVのゅぞだ1 ヒょ山ジギ[protag]5だ[protag]0ヒょ郎。F [protag]U郎ヴヒケ郎ロノニヲNだF 」ヲニギだF 」ギ村Wハょ」ユへ帝ー村Vぎ」ヤニリタ のゅゲWーだV ヒ村Wハ<FE>」リニヤぎハち（嫁ハ （<FE>2ハ3（
 
-
-{"str_num": 138, "category": "accessories", "cat_idx": 2, "pc_hex": "0x01BBB7", "length": 164}
+{"str_num": 138, "category": "accessories", "cat_idx": 2, "pc_hex": "0x01BBB7", "length": 164, "table": "menu"}
 #ハモ（13ハ3VチエハちVタクハ0（皇Wス衆WハェテいぜXヨ山ォハ1（ぢBハチVソゾテLメVロ[pet]ハつVソゾVソクV7カV連ニテぷワVロ[pet]ハ9（ぢBハつVソゾぎテズ村V合ミVば[pet]テんワVロ[pet]ハ （ぢBハUVソゾハおVタクハ3（皇Wハヒ（YW（ZWス大WテよぉVよセV村セVアセVレセハす（ぶBV☆ハハ合（ぢBハ・VソゾハつVタクハ
 
-
-{"str_num": 139, "category": "accessories", "cat_idx": 3, "pc_hex": "0x01A42B", "length": 101}
+{"str_num": 139, "category": "accessories", "cat_idx": 3, "pc_hex": "0x01A42B", "length": 101, "table": "menu"}
 #ヌBぇホテBダ4ムDヒンワD9ヒ乗○（ホBょ共テ、ぢV（カVVナハFVチエテマぢV（カVVナマナBンねC[protag]3ソねCぎハ9（ホBマテBチきぽVモエヘナBぇレシDゲVジ☆アT村VハほVタクゲVぇょてニュ和
 
-
-{"str_num": 140, "category": "accessories", "cat_idx": 4, "pc_hex": "0x012AFF", "length": 1173}
+{"str_num": 140, "category": "accessories", "cat_idx": 4, "pc_hex": "0x012AFF", "length": 1173, "table": "menu"}
 #ス  クルス     メディ     エリクサー   ハイエリクサー サイメダル   フレイムスケイルフリーズスケイルウィンドスケイルグランスケイル クイックナッツ ネイキイガス  ボム      ミート     ステーキ    たいまつ    さけ      せいすい    しゅりけん   いし      どくキノコ   サソリのしっぽ マジックシェル アイテム141 アイテム142 アイテム143 アイテム144 アイテム145 アイテム146 アイテム147 アイテム148 アイテム149 アイテム150 アイテム151 アイテム152 アイテム153 アイテム154 アイテム155 アイテム156 アイテム157 アイテム158 アイテム159 ホーリーソード マルカリのはな くろすいしょう はねかざり   おもいリュック ほね      にんていしょう しょくざいリストきれいなウロコ アイスクーラー おさけ     ゆうひみるおんなはなのくびかざりたからのちず  クリスタル   ききゅう    パジル     アッポリ    オースむぎ   マッチュルーム カーフ     ワイン     オレガモ    ネイフル    マモン     コメ      きばん     ケーブル    ボルト     ゴムベルト   アンテナ    はぐるま    バネ      プラグ     しんくうかん  ポンプ     モニター    フック     もじばん    マジックトーチ Aパーツ    Bパーツ    Cパーツ    ほんやくき   スピーカー   ひこうせん   きんのくびわ  きたないパンツ きたないシャツ きたないくつしたハイパーシューズアクアベル   M・ポーション ばしゃ     ゆうしゃのあかしアイテム215 アイテム216 アイテム217 アイテム218 アイテム219 アイテム220 アイテム221 アイテム222 アイテム223 アイテム224 アイテム225 アイテム226 アイテム227 アイテム228 アイテム229 アイテム230 アイテム231 アイテム232 アイテム233 アイテム234 アイテム235 アイテム236 アイテム237 アイテム238 アイテム239 アイテム240 アイテム241 アイテム242 アイテム243 アイテム244 アイテム245 アイテム246 アイテム247 アイテム248 アイテム249 アイテム250 アイテム251 アイテム252 アイテム253 アイテム254         ひいみいじいぅい：いセいミいジいィい砂い8うPう連うえうてうひうをうばう？うテうリうグうプう★う白7えVえきえほえごえぴえ！えキえフえゼえュえ漠え
 
-
-{"str_num": 141, "category": "accessories", "cat_idx": 5, "pc_hex": "0x01BED8", "length": 175}
+{"str_num": 141, "category": "accessories", "cat_idx": 5, "pc_hex": "0x01BED8", "length": 175, "table": "menu"}
 #テき塔ハ7（＋Bハ家ょTテ議ハ7（＋Bハ家ょHテて洞ス＋Bハ7ょ7もょぼょまざぅぉ（×B）ぉBテ合ぉVよセテデ村V合ミVウエVVナVオ[pet]Vば[pet]スぶBVウエVセヴスぱBホノBNだ原ダH[protag]5Xゼ凡ォょ3Xッ凡ォハ帝」ポテらモVロ[pet]Vデ[pet]☆50ハ3VチエハぢVタクハ0（皇W（衆Wハて（ぢBハすVソゾホノBNだやVタクぇホノBヒガ村ヴグ」街ガ森ヴグ」村ハ
 
-
-{"str_num": 142, "category": "accessories", "cat_idx": 6, "pc_hex": "0x01B8A1", "length": 208}
+{"str_num": 142, "category": "accessories", "cat_idx": 6, "pc_hex": "0x01B8A1", "length": 208, "table": "menu"}
 #[pet]ハ （ぢBハUVソゾハ9Xッ凡ォハ帝」ポテらモVロ[pet]Vデ[pet]☆50ハ3VチエハいVタクハ4（皇Wハ3（衆Wハ1（ぷB（ぺBテDメVロ[pet]ハD（ぢBハキVソゾテLメVロ[pet]ハつVソゾV7カV連ニVソクテ…ルVロ[pet]ハ9（ぢBハつVソゾぎテギ村V合ミVば[pet]テぬモVロ[pet]ハ （ぢBハUVソゾハ[protag]館ハぶテノ郎Vゴ★ハ衆VタクハP（ぢBハぺVソゾV（ィハL（帝W（合Wハ4（皇W（衆WハE（YWハ9（ZWス大Wハ0（邦WハうVタクハ
 
-
-{"str_num": 143, "category": "accessories", "cat_idx": 7, "pc_hex": "0x012829", "length": 1899}
+{"str_num": 143, "category": "accessories", "cat_idx": 7, "pc_hex": "0x012829", "length": 1899, "table": "menu"}
 # ショートボウ  ロングボウ   パワーボウ   ウィングボウ  グレイトボウ  フェニックス  エンジェルダストカゲヌイ    スタッフ    ロッド     マジックスタッフヒールスタッフ クリスタルロッドスネークロッド クロスロッド  アンジェラス  クラブ     メイス     ハンマー    モーニングスターフレイムメイス デスサイズ   トールハンマー ガストクラック ウィップ    ローズウィップ グレスウィップ ダークウィップ クロウ     マーダークロウ ポイズンクロウ ブラックキャットタイガークロウ サンダークロウ ドラゴンクロウ エアスラッシュ クロス     ローブ     ビスチェ    ドレス     レザーアーマー スケールメイル チェーンメイル フェザーメイル プレートメイル ウィザードローブコレンステス  ダークローブ  エアローブ   ぬいぐるみ   フレイムメイル フリーズメイル ウィンドメイル グランメイル  ドラゴンアーマープラチナメイル ブラッドメイル デビルメイル  キランディア  ゴールドメイル パウルアーマー シニングメイル バトルアーマー フォラムプレートゴーディスメイルリヒャルアーマーパレンティア  ベルディアス  スモールシールドミドルシールド タワーシールド ドラゴンシールドフレイムシールドフリーズシールドウインドシールドグランシールド バトルシールド ゴールドシールドプラチナシールドブラッドシールドダリエルシールドロディンフィレルクランズシールドディーズレア  ウェル     ウェルプラス  ウルウェル   パララレリス  ポイズレリス  サイレレリス  ストンレリス  クルス     メディ     エリクサー   ハイエリクサー サイメダル   フレイムスケイルフリーズスケイルウィンドスケイルグランスケイル クイックナッツ ネイキイガス  ボム      ミート     ステーキ    たいまつ    さけ      せいすい    しゅりけん   いし      どくキノコ   サソリのしっぽ マジックシェル アイテム141 アイテム142 アイテム143 アイテム144 アイテム145 アイテム146 アイテム147 アイテム148 アイテム149 アイテム150 アイテム151 アイテム152 アイテム153 アイテム154 アイテム155 アイテム156 アイテム157 アイテム158 アイテム159 ホーリーソード マルカリのはな くろすいしょう はねかざり   おもいリュック ほね      にんていしょう しょくざいリストきれいなウロコ アイスクーラー おさけ     ゆうひみるおんなはなのくびかざりたからのちず  クリスタル   ききゅう    パジル     アッポリ    オースむぎ   マッチュルーム カーフ     ワイン     オレガモ    ネイフル    マモン     コメ      きばん     ケーブル    ボルト     ゴムベルト   アンテナ    はぐるま    バネ      プラグ     しんくうかん  ポンプ     モニター    フック     もじばん    マジックトーチ Aパーツ    Bパーツ    Cパーツ    ほんやくき   スピーカー   ひこうせん   きんのくびわ  きたないパンツ きたないシャツ きたないくつしたハイパーシューズアクアベル   M・ポーション ばしゃ     ゆうしゃのあかしアイテム215 アイテム216 アイテム217 アイテム218 アイテム219 アイテム220 アイテム221 アイテム222 アイテム223 アイテム224 アイテム225 アイテム226 アイテム227 アイテム228 アイテム229 アイテム230 アイテム231 アイテム232 アイテム233 アイテム234 アイテム235 アイテム236 アイテム237 アイテム238 アイテム239 アイテム240 アイテム241 アイテム242 アイテム243 アイテム244 アイテム245 アイテム246 アイテム247 アイテム248 アイテム249 アイテム250 アイテム251 アイテム252 アイテム253 アイテム254         ひいみいじいぅい：いセいミいジいィい砂い8うPう連うえうてうひうをうばう？うテうリうグうプう★う白7えVえきえほえごえぴえ！えキえフえゼえュえ漠え
 
-
-{"str_num": 144, "category": "accessories", "cat_idx": 8, "pc_hex": "0x0126FF", "length": 2197}
+{"str_num": 144, "category": "accessories", "cat_idx": 8, "pc_hex": "0x0126FF", "length": 2197, "table": "menu"}
 #                            和和連連皇連連連連皇和和和連皇皇皇皇皇皇皇皇和和和和和和和和和和皇和和連皇皇連連和連連和和皇連ショートソード ミドルソード  ロングソード  ファングソード フレイムソード アイスブレード アルラウネソードドラゴンキラー テラーブレード ダークグリット フロギニンス  エクスカリバー アクス     バトルアクス  ダブルアクス  メガアクス   サンダーアクス ヘルアクス   アグリス    アースクエイク スピア     アイアンスピア カーマインスピアヴェノスピア  ウィンドスピア ガーディアン  トライデント  ウィスプレウネ ショートボウ  ロングボウ   パワーボウ   ウィングボウ  グレイトボウ  フェニックス  エンジェルダストカゲヌイ    スタッフ    ロッド     マジックスタッフヒールスタッフ クリスタルロッドスネークロッド クロスロッド  アンジェラス  クラブ     メイス     ハンマー    モーニングスターフレイムメイス デスサイズ   トールハンマー ガストクラック ウィップ    ローズウィップ グレスウィップ ダークウィップ クロウ     マーダークロウ ポイズンクロウ ブラックキャットタイガークロウ サンダークロウ ドラゴンクロウ エアスラッシュ クロス     ローブ     ビスチェ    ドレス     レザーアーマー スケールメイル チェーンメイル フェザーメイル プレートメイル ウィザードローブコレンステス  ダークローブ  エアローブ   ぬいぐるみ   フレイムメイル フリーズメイル ウィンドメイル グランメイル  ドラゴンアーマープラチナメイル ブラッドメイル デビルメイル  キランディア  ゴールドメイル パウルアーマー シニングメイル バトルアーマー フォラムプレートゴーディスメイルリヒャルアーマーパレンティア  ベルディアス  スモールシールドミドルシールド タワーシールド ドラゴンシールドフレイムシールドフリーズシールドウインドシールドグランシールド バトルシールド ゴールドシールドプラチナシールドブラッドシールドダリエルシールドロディンフィレルクランズシールドディーズレア  ウェル     ウェルプラス  ウルウェル   パララレリス  ポイズレリス  サイレレリス  ストンレリス  クルス     メディ     エリクサー   ハイエリクサー サイメダル   フレイムスケイルフリーズスケイルウィンドスケイルグランスケイル クイックナッツ ネイキイガス  ボム      ミート     ステーキ    たいまつ    さけ      せいすい    しゅりけん   いし      どくキノコ   サソリのしっぽ マジックシェル アイテム141 アイテム142 アイテム143 アイテム144 アイテム145 アイテム146 アイテム147 アイテム148 アイテム149 アイテム150 アイテム151 アイテム152 アイテム153 アイテム154 アイテム155 アイテム156 アイテム157 アイテム158 アイテム159 ホーリーソード マルカリのはな くろすいしょう はねかざり   おもいリュック ほね      にんていしょう しょくざいリストきれいなウロコ アイスクーラー おさけ     ゆうひみるおんなはなのくびかざりたからのちず  クリスタル   ききゅう    パジル     アッポリ    オースむぎ   マッチュルーム カーフ     ワイン     オレガモ    ネイフル    マモン     コメ      きばん     ケーブル    ボルト     ゴムベルト   アンテナ    はぐるま    バネ      プラグ     しんくうかん  ポンプ     モニター    フック     もじばん    マジックトーチ Aパーツ    Bパーツ    Cパーツ    ほんやくき   スピーカー   ひこうせん   きんのくびわ  きたないパンツ きたないシャツ きたないくつしたハイパーシューズアクアベル   M・ポーション ばしゃ     ゆうしゃのあかしアイテム215 アイテム216 アイテム217 アイテム218 アイテム219 アイテム220 アイテム221 アイテム222 アイテム223 アイテム224 アイテム225 アイテム226 アイテム227 アイテム228 アイテム229 アイテム230 アイテム231 アイテム232 アイテム233 アイテム234 アイテム235 アイテム236 アイテム237 アイテム238 アイテム239 アイテム240 アイテム241 アイテム242 アイテム243 アイテム244 アイテム245 アイテム246 アイテム247 アイテム248 アイテム249 アイテム250 アイテム251 アイテム252 アイテム253 アイテム254         ひいみいじいぅい：いセいミいジいィい砂い8うPう連うえうてうひうをうばう？うテうリうグうプう★う白7えVえきえほえごえぴえ！えキえフえゼえュえ漠え
 
-
-{"str_num": 145, "category": "accessories", "cat_idx": 9, "pc_hex": "0x01B1B8", "length": 141}
+{"str_num": 145, "category": "accessories", "cat_idx": 9, "pc_hex": "0x01B1B8", "length": 141, "table": "menu"}
 #（ぢBハつVソゾV7カテTメVロ[pet]ハ大Vソゾぎハ3（ノBょ5テス村V合ミマナBン浜BだH館ン窟BゲWだ7 のテ浜凡Vゴ★ハ9 」浜テ<FE>凡VWモぞ村VハくVタクテち0）ぅBテぶ？）ぁBハF（ぢBハりVソゾV連ニぎト2け窟 V×2ダ ブア4ダ [protag]ア9Vゴ★ーNじ浜ヒょ太ぎ   VVV0
 
-
-{"str_num": 146, "category": "accessories", "cat_idx": 10, "pc_hex": "0x01C5DD", "length": 420}
+{"str_num": 146, "category": "accessories", "cat_idx": 10, "pc_hex": "0x01C5DD", "length": 420, "table": "menu"}
 #グぎ）ナBVり漠へ皇原VユギハちVタクハRV漠ギハてVタクハZVチエハ8V合オヒンジB[protag]砂ンかCダ6ム☆）ナBハョ館ン窟Bだ7のテね山Vゴ★ぇぞテも山Vゴ★ハ合Vタクハろ（ぢBハぎVソゾハ邦VタクマナBン浜BだF館ン窟Bだ7テ王街Vゴ★ハP（ぢBハUVソゾマナBョ4 ア4Vれソょ7ハ6セかCソやDVぬグぎVユギハを（ぢBハSV漠ギハHのハ9Vソゾハ帝Vタクぞさブ[sub]VワズV連ニVぎグぎテ3 ハ0セ合DヂF<FA>スえDスおDスかDスきDハF（くDぎテ3 ソ合DヂF<FA>テ4 ハ0セ合D洞ョ8 ブ原ハ国（くDぎV森ノVほミぎVソズテぼ村V合ミVムミぎV森ノハル（ヒ2テゃ村V合ミV共ムぎV森ノVォメぎVソズVざモぎVソズハブ（ヒ2ハ[protag]（×Bス「BV太モぎV森ノVフユぎVソズテM郎XJょギVゴ★VVナテX郎VIヨぎV森ノVボラぎVソズハケ（ヒ2V国リぎVソズVコルぎVソズV…ワぎVソズテぁ村V合ミVBヲぎVソズVゾヲぎVソズV。ンぎUUU7 7 
 
-
-{"str_num": 147, "category": "accessories", "cat_idx": 11, "pc_hex": "0x019725", "length": 138}
+{"str_num": 147, "category": "accessories", "cat_idx": 11, "pc_hex": "0x019725", "length": 138, "table": "menu"}
 #99じ☆ヒ村Vガ漠ばェ」ドガそぶェょゾ」バ館」ドレ窟B」ヅレ浜B」デざビハ邦」ブざベざボテョ6！パテぎ ！プぎ9ヒヲGCひヒハ[protag]コ80コC0コG0コK0コO0コS0コW0コ大0コ和0ぎハ[protag]セ80洞洞洞洞、ブ漠ぎスゼ2（ゾ2ゥろXN ギぅ<FA>ぇぎぇ（ゾ2ハ0（ゼ2ょ館ゲVテブ ハ
 
-
-{"str_num": 148, "category": "accessories", "cat_idx": 12, "pc_hex": "0x0126FF", "length": 2197}
+{"str_num": 148, "category": "accessories", "cat_idx": 12, "pc_hex": "0x0126FF", "length": 2197, "table": "menu"}
 #                            和和連連皇連連連連皇和和和連皇皇皇皇皇皇皇皇和和和和和和和和和和皇和和連皇皇連連和連連和和皇連ショートソード ミドルソード  ロングソード  ファングソード フレイムソード アイスブレード アルラウネソードドラゴンキラー テラーブレード ダークグリット フロギニンス  エクスカリバー アクス     バトルアクス  ダブルアクス  メガアクス   サンダーアクス ヘルアクス   アグリス    アースクエイク スピア     アイアンスピア カーマインスピアヴェノスピア  ウィンドスピア ガーディアン  トライデント  ウィスプレウネ ショートボウ  ロングボウ   パワーボウ   ウィングボウ  グレイトボウ  フェニックス  エンジェルダストカゲヌイ    スタッフ    ロッド     マジックスタッフヒールスタッフ クリスタルロッドスネークロッド クロスロッド  アンジェラス  クラブ     メイス     ハンマー    モーニングスターフレイムメイス デスサイズ   トールハンマー ガストクラック ウィップ    ローズウィップ グレスウィップ ダークウィップ クロウ     マーダークロウ ポイズンクロウ ブラックキャットタイガークロウ サンダークロウ ドラゴンクロウ エアスラッシュ クロス     ローブ     ビスチェ    ドレス     レザーアーマー スケールメイル チェーンメイル フェザーメイル プレートメイル ウィザードローブコレンステス  ダークローブ  エアローブ   ぬいぐるみ   フレイムメイル フリーズメイル ウィンドメイル グランメイル  ドラゴンアーマープラチナメイル ブラッドメイル デビルメイル  キランディア  ゴールドメイル パウルアーマー シニングメイル バトルアーマー フォラムプレートゴーディスメイルリヒャルアーマーパレンティア  ベルディアス  スモールシールドミドルシールド タワーシールド ドラゴンシールドフレイムシールドフリーズシールドウインドシールドグランシールド バトルシールド ゴールドシールドプラチナシールドブラッドシールドダリエルシールドロディンフィレルクランズシールドディーズレア  ウェル     ウェルプラス  ウルウェル   パララレリス  ポイズレリス  サイレレリス  ストンレリス  クルス     メディ     エリクサー   ハイエリクサー サイメダル   フレイムスケイルフリーズスケイルウィンドスケイルグランスケイル クイックナッツ ネイキイガス  ボム      ミート     ステーキ    たいまつ    さけ      せいすい    しゅりけん   いし      どくキノコ   サソリのしっぽ マジックシェル アイテム141 アイテム142 アイテム143 アイテム144 アイテム145 アイテム146 アイテム147 アイテム148 アイテム149 アイテム150 アイテム151 アイテム152 アイテム153 アイテム154 アイテム155 アイテム156 アイテム157 アイテム158 アイテム159 ホーリーソード マルカリのはな くろすいしょう はねかざり   おもいリュック ほね      にんていしょう しょくざいリストきれいなウロコ アイスクーラー おさけ     ゆうひみるおんなはなのくびかざりたからのちず  クリスタル   ききゅう    パジル     アッポリ    オースむぎ   マッチュルーム カーフ     ワイン     オレガモ    ネイフル    マモン     コメ      きばん     ケーブル    ボルト     ゴムベルト   アンテナ    はぐるま    バネ      プラグ     しんくうかん  ポンプ     モニター    フック     もじばん    マジックトーチ Aパーツ    Bパーツ    Cパーツ    ほんやくき   スピーカー   ひこうせん   きんのくびわ  きたないパンツ きたないシャツ きたないくつしたハイパーシューズアクアベル   M・ポーション ばしゃ     ゆうしゃのあかしアイテム215 アイテム216 アイテム217 アイテム218 アイテム219 アイテム220 アイテム221 アイテム222 アイテム223 アイテム224 アイテム225 アイテム226 アイテム227 アイテム228 アイテム229 アイテム230 アイテム231 アイテム232 アイテム233 アイテム234 アイテム235 アイテム236 アイテム237 アイテム238 アイテム239 アイテム240 アイテム241 アイテム242 アイテム243 アイテム244 アイテム245 アイテム246 アイテム247 アイテム248 アイテム249 アイテム250 アイテム251 アイテム252 アイテム253 アイテム254         ひいみいじいぅい：いセいミいジいィい砂い8うPう連うえうてうひうをうばう？うテうリうグうプう★う白7えVえきえほえごえぴえ！えキえフえゼえュえ漠え
 
-
-{"str_num": 149, "category": "accessories", "cat_idx": 13, "pc_hex": "0x01CCD9", "length": 370}
+{"str_num": 149, "category": "accessories", "cat_idx": 13, "pc_hex": "0x01CCD9", "length": 370, "table": "menu"}
 #へぃビホずCNだ3（ずCゲWホぜCど×B（ぜC村VVじビズゴズゴVVナぎVじビハ3」ポニゴNだ2」ゴニゲけ窟2」ゲぎテ2 ンエBだ3セエBヂF砂ゲVXJょギ（ぷC村Vチ  レ：Bけ窟6ダNムKマ×BョF [protag]邦ガゾぉェコエB洞）×Bハ家コ：B」ゲレエB」ゴろざジざザギ1 ム4V皇セょ2Vつセぅゾギ3 ブヴへぃビV皇セニゲNだA」ゲへぃビホずCNだ3（ずCゲWホぜCだ6 （ぜC村VVVナぎV皇セニゲけ窟6」ゲへぃビチ  レ：B」ゲNだ6アM窟6マ×BョF [protag]CガゾぉェコエB洞）×BハJコ：B」ゲレエB」ゴろざジざザギ1 ム4V皇セょ2Vつセぅゾギ3 ブヲへぃビゲVXJょギ（ぷC村VVじビニゲけ窟9ダNム7ニゴだ3」ゴハN」ゲぎゲWホ」Bど×BあN（×Bひ（ヒ2☆ノ2バ」B村VVウエハM（帝Wぎ村Vホ＋Bひひひほ／B（ヒ2（マ2ホ／Bは
 
-
-{"str_num": 150, "category": "accessories", "cat_idx": 14, "pc_hex": "0x0194DD", "length": 7}
+{"str_num": 150, "category": "accessories", "cat_idx": 14, "pc_hex": "0x0194DD", "length": 7, "table": "menu"}
 #洞ョ3 ブ砂ホ
 
-
-{"str_num": 151, "category": "accessories", "cat_idx": 15, "pc_hex": "0x01CDB6", "length": 149}
+{"str_num": 151, "category": "accessories", "cat_idx": 15, "pc_hex": "0x01CDB6", "length": 149, "table": "menu"}
 #6マ×BョF [protag]CガゾぉェコエB洞）×BハJコ：B」ゲレエB」ゴろざジざザギ1 ム4V皇セょ2Vつセぅゾギ3 ブヲへぃビゲVXJょギ（ぷC村VVじビニゲけ窟9ダNム7ニゴだ3」ゴハN」ゲぎゲWホ」Bど×BあN（×Bひ（ヒ2☆ノ2バ」B村VVウエハM（帝Wぎ村Vホ＋Bひひひほ／B（ヒ2（マ2ホ／Bは
 
-
-{"str_num": 152, "category": "accessories", "cat_idx": 16, "pc_hex": "0x01BDCD", "length": 4}
+{"str_num": 152, "category": "accessories", "cat_idx": 16, "pc_hex": "0x01BDCD", "length": 4, "table": "menu"}
 #（13ハ
 
-
-{"str_num": 153, "category": "accessories", "cat_idx": 17, "pc_hex": "0x012726", "length": 2158}
+{"str_num": 153, "category": "accessories", "cat_idx": 17, "pc_hex": "0x012726", "length": 2158, "table": "menu"}
 #和和連皇皇皇皇皇皇皇皇和和和和和和和和和和皇和和連皇皇連連和連連和和皇連ショートソード ミドルソード  ロングソード  ファングソード フレイムソード アイスブレード アルラウネソードドラゴンキラー テラーブレード ダークグリット フロギニンス  エクスカリバー アクス     バトルアクス  ダブルアクス  メガアクス   サンダーアクス ヘルアクス   アグリス    アースクエイク スピア     アイアンスピア カーマインスピアヴェノスピア  ウィンドスピア ガーディアン  トライデント  ウィスプレウネ ショートボウ  ロングボウ   パワーボウ   ウィングボウ  グレイトボウ  フェニックス  エンジェルダストカゲヌイ    スタッフ    ロッド     マジックスタッフヒールスタッフ クリスタルロッドスネークロッド クロスロッド  アンジェラス  クラブ     メイス     ハンマー    モーニングスターフレイムメイス デスサイズ   トールハンマー ガストクラック ウィップ    ローズウィップ グレスウィップ ダークウィップ クロウ     マーダークロウ ポイズンクロウ ブラックキャットタイガークロウ サンダークロウ ドラゴンクロウ エアスラッシュ クロス     ローブ     ビスチェ    ドレス     レザーアーマー スケールメイル チェーンメイル フェザーメイル プレートメイル ウィザードローブコレンステス  ダークローブ  エアローブ   ぬいぐるみ   フレイムメイル フリーズメイル ウィンドメイル グランメイル  ドラゴンアーマープラチナメイル ブラッドメイル デビルメイル  キランディア  ゴールドメイル パウルアーマー シニングメイル バトルアーマー フォラムプレートゴーディスメイルリヒャルアーマーパレンティア  ベルディアス  スモールシールドミドルシールド タワーシールド ドラゴンシールドフレイムシールドフリーズシールドウインドシールドグランシールド バトルシールド ゴールドシールドプラチナシールドブラッドシールドダリエルシールドロディンフィレルクランズシールドディーズレア  ウェル     ウェルプラス  ウルウェル   パララレリス  ポイズレリス  サイレレリス  ストンレリス  クルス     メディ     エリクサー   ハイエリクサー サイメダル   フレイムスケイルフリーズスケイルウィンドスケイルグランスケイル クイックナッツ ネイキイガス  ボム      ミート     ステーキ    たいまつ    さけ      せいすい    しゅりけん   いし      どくキノコ   サソリのしっぽ マジックシェル アイテム141 アイテム142 アイテム143 アイテム144 アイテム145 アイテム146 アイテム147 アイテム148 アイテム149 アイテム150 アイテム151 アイテム152 アイテム153 アイテム154 アイテム155 アイテム156 アイテム157 アイテム158 アイテム159 ホーリーソード マルカリのはな くろすいしょう はねかざり   おもいリュック ほね      にんていしょう しょくざいリストきれいなウロコ アイスクーラー おさけ     ゆうひみるおんなはなのくびかざりたからのちず  クリスタル   ききゅう    パジル     アッポリ    オースむぎ   マッチュルーム カーフ     ワイン     オレガモ    ネイフル    マモン     コメ      きばん     ケーブル    ボルト     ゴムベルト   アンテナ    はぐるま    バネ      プラグ     しんくうかん  ポンプ     モニター    フック     もじばん    マジックトーチ Aパーツ    Bパーツ    Cパーツ    ほんやくき   スピーカー   ひこうせん   きんのくびわ  きたないパンツ きたないシャツ きたないくつしたハイパーシューズアクアベル   M・ポーション ばしゃ     ゆうしゃのあかしアイテム215 アイテム216 アイテム217 アイテム218 アイテム219 アイテム220 アイテム221 アイテム222 アイテム223 アイテム224 アイテム225 アイテム226 アイテム227 アイテム228 アイテム229 アイテム230 アイテム231 アイテム232 アイテム233 アイテム234 アイテム235 アイテム236 アイテム237 アイテム238 アイテム239 アイテム240 アイテム241 アイテム242 アイテム243 アイテム244 アイテム245 アイテム246 アイテム247 アイテム248 アイテム249 アイテム250 アイテム251 アイテム252 アイテム253 アイテム254         ひいみいじいぅい：いセいミいジいィい砂い8うPう連うえうてうひうをうばう？うテうリうグうプう★う白7えVえきえほえごえぴえ！えキえフえゼえュえ漠え
 
-
-{"str_num": 154, "category": "accessories", "cat_idx": 18, "pc_hex": "0x01FFB1", "length": 99}
+{"str_num": 154, "category": "accessories", "cat_idx": 18, "pc_hex": "0x01FFB1", "length": 99, "table": "menu"}
 #                                                                               ケ0  ーO  ゅう  6て  村ら  
 
-
-{"str_num": 155, "category": "accessories", "cat_idx": 19, "pc_hex": "0x01919C", "length": 548}
+{"str_num": 155, "category": "accessories", "cat_idx": 19, "pc_hex": "0x01919C", "length": 548, "table": "menu"}
 #」△ハょけぢズ△ブ<FA>チ6 洞洞タょバゃ、ブ原ゲWーだH ヒ村Vニ☆け窟7」☆[protag]1ムバぎテ  ンジB[protag]ぎンかCダ0ブ国V、ソ）ナBゲVー9ヒンやDPひ」☆X和村ォゲVニ☆テき Xぞ村ォマナBょあダ3ブIンナDひひだぁV合オダろアWソかCょOダ4ブIンナDひひだぁV合オダぶア9ソかCょ1ム2ソむC洞ョ8 ブカV館トVプオぎチ  レジB[protag]8ぇレかC9ヒ由ウゾギ4 ブ★ぎずウぶウ「ウ。ウソウモウズウずウずウケ99ヒハ[protag]セは0ぎテBしホげCP和U（げCダFアは洞洞ょにテデせょちテバせホごCP和U（ごCダFアあテ帝せょ連テへこホざCP和U（ざCダFアQ洞洞ょMテ・こホじCP和2（じCダ1ア6洞洞ょ2テ合し！ェケ99ヒレ窟BだFセの0レ浜BだLセは0ニェセひ0ニォセふ0ぎ」☆テ  ンジB[protag]帝ぇー9ノニ☆[protag]IレつDひNぃやDィつDア2レつDコやDンかCダ6ア4ハ0コやDゥVぅカ<FA>洞ョ4 ブダゲFぎテ  ンジB[protag]6ンかCダ4ア5洞ョ4 ブ☆ぎミダ塔ゃ：パ館ゃテU ガパ館ゃタ 太ゃヂF砂ハゃ」捷Vハ7ョ」放  チ  ガ 村ゃク統洞ゾゾギ7 ブ[sub]ニ高だF 」歌 0ブ街村Vづづテダ塔）ゼ2ハゃ（ダ2づざゥニゥ[protag]犯Vウエヂブ<FA>ぎのVウエぞさブ家ぎホFてホFてF特ろ）ネE…ハェのフV山エひダ
 
-
-{"str_num": 156, "category": "accessories", "cat_idx": 20, "pc_hex": "0x018ABD", "length": 336}
+{"str_num": 156, "category": "accessories", "cat_idx": 20, "pc_hex": "0x018ABD", "length": 336, "table": "menu"}
 #国リム7V洞…ょ25ラけ館レのょ」ラ館郎ヨムA5ラ国リム7V洞…ょ25ラけ郎ヨムA5ラ国リム7V洞…ょ25ラけ郎ヨムA5ラ国リム7V洞…ょ25ラけ郎ヨムA5ラ国リム7V洞…ょ25ラけ郎ヨムA5ラ国リム7V洞…ょ25ラけ郎ヨムA5ラ国リム7V洞…ょ25ラけ郎ヨムA5ラ国リム7V洞…ょ25ラけ郎ヨニリム45ラ邦ア29ム包 のゅゾケ。0ブT。EブCザヲ[protag]皇ゲWケだ[protag]0ノ村Wニユ郎ヨ」ユア4ゾゾケょ村ヌル洞ー。E[protag]2へ連ーゲWーだ[protag]0ヒ村Wへ帝ーヌルゲW洞ー。E [protag]Gのぇタ のゅタVのゅぞだ1 ヒょ山ジギ[protag]5だ[protag]0ヒょ郎。F [protag]U郎ヴヒケ郎ロノニヲNだF 」ヲニギだF 」ギ村Wハょ」ユへ帝ー村Vぎ」ヤニリタ のゅゲWーだV ヒ村Wハ<FE>」リニヤぎハち（嫁ハ （<FE>2ハ3（
 
-
-{"str_num": 157, "category": "accessories", "cat_idx": 21, "pc_hex": "0x012726", "length": 2158}
+{"str_num": 157, "category": "accessories", "cat_idx": 21, "pc_hex": "0x012726", "length": 2158, "table": "menu"}
 #和和連皇皇皇皇皇皇皇皇和和和和和和和和和和皇和和連皇皇連連和連連和和皇連ショートソード ミドルソード  ロングソード  ファングソード フレイムソード アイスブレード アルラウネソードドラゴンキラー テラーブレード ダークグリット フロギニンス  エクスカリバー アクス     バトルアクス  ダブルアクス  メガアクス   サンダーアクス ヘルアクス   アグリス    アースクエイク スピア     アイアンスピア カーマインスピアヴェノスピア  ウィンドスピア ガーディアン  トライデント  ウィスプレウネ ショートボウ  ロングボウ   パワーボウ   ウィングボウ  グレイトボウ  フェニックス  エンジェルダストカゲヌイ    スタッフ    ロッド     マジックスタッフヒールスタッフ クリスタルロッドスネークロッド クロスロッド  アンジェラス  クラブ     メイス     ハンマー    モーニングスターフレイムメイス デスサイズ   トールハンマー ガストクラック ウィップ    ローズウィップ グレスウィップ ダークウィップ クロウ     マーダークロウ ポイズンクロウ ブラックキャットタイガークロウ サンダークロウ ドラゴンクロウ エアスラッシュ クロス     ローブ     ビスチェ    ドレス     レザーアーマー スケールメイル チェーンメイル フェザーメイル プレートメイル ウィザードローブコレンステス  ダークローブ  エアローブ   ぬいぐるみ   フレイムメイル フリーズメイル ウィンドメイル グランメイル  ドラゴンアーマープラチナメイル ブラッドメイル デビルメイル  キランディア  ゴールドメイル パウルアーマー シニングメイル バトルアーマー フォラムプレートゴーディスメイルリヒャルアーマーパレンティア  ベルディアス  スモールシールドミドルシールド タワーシールド ドラゴンシールドフレイムシールドフリーズシールドウインドシールドグランシールド バトルシールド ゴールドシールドプラチナシールドブラッドシールドダリエルシールドロディンフィレルクランズシールドディーズレア  ウェル     ウェルプラス  ウルウェル   パララレリス  ポイズレリス  サイレレリス  ストンレリス  クルス     メディ     エリクサー   ハイエリクサー サイメダル   フレイムスケイルフリーズスケイルウィンドスケイルグランスケイル クイックナッツ ネイキイガス  ボム      ミート     ステーキ    たいまつ    さけ      せいすい    しゅりけん   いし      どくキノコ   サソリのしっぽ マジックシェル アイテム141 アイテム142 アイテム143 アイテム144 アイテム145 アイテム146 アイテム147 アイテム148 アイテム149 アイテム150 アイテム151 アイテム152 アイテム153 アイテム154 アイテム155 アイテム156 アイテム157 アイテム158 アイテム159 ホーリーソード マルカリのはな くろすいしょう はねかざり   おもいリュック ほね      にんていしょう しょくざいリストきれいなウロコ アイスクーラー おさけ     ゆうひみるおんなはなのくびかざりたからのちず  クリスタル   ききゅう    パジル     アッポリ    オースむぎ   マッチュルーム カーフ     ワイン     オレガモ    ネイフル    マモン     コメ      きばん     ケーブル    ボルト     ゴムベルト   アンテナ    はぐるま    バネ      プラグ     しんくうかん  ポンプ     モニター    フック     もじばん    マジックトーチ Aパーツ    Bパーツ    Cパーツ    ほんやくき   スピーカー   ひこうせん   きんのくびわ  きたないパンツ きたないシャツ きたないくつしたハイパーシューズアクアベル   M・ポーション ばしゃ     ゆうしゃのあかしアイテム215 アイテム216 アイテム217 アイテム218 アイテム219 アイテム220 アイテム221 アイテム222 アイテム223 アイテム224 アイテム225 アイテム226 アイテム227 アイテム228 アイテム229 アイテム230 アイテム231 アイテム232 アイテム233 アイテム234 アイテム235 アイテム236 アイテム237 アイテム238 アイテム239 アイテム240 アイテム241 アイテム242 アイテム243 アイテム244 アイテム245 アイテム246 アイテム247 アイテム248 アイテム249 アイテム250 アイテム251 アイテム252 アイテム253 アイテム254         ひいみいじいぅい：いセいミいジいィい砂い8うPう連うえうてうひうをうばう？うテうリうグうプう★う白7えVえきえほえごえぴえ！えキえフえゼえュえ漠え
-
 

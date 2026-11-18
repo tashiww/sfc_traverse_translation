@@ -2,10 +2,12 @@
 """
 Traverse: Starlight & Prairie - Script & Text Dumper
 Extracts dialogue scripts and tables using Thingy TBL into tashi_script_editor format.
+Supports multi-line dialogue boxes with '# ' per line and 3 table types (normal, menu, prologue).
 """
 
 import argparse
 import json
+import re
 import struct
 import sys
 from pathlib import Path
@@ -14,15 +16,17 @@ ROOT_DIR = Path(__file__).resolve().parent.parent
 if str(ROOT_DIR) not in sys.path:
     sys.path.insert(0, str(ROOT_DIR))
 
+from tools.inserter import parse_script_file
 from tools.rom_utils import load_tbl
 
 ROM_PATH = ROOT_DIR / "rom" / "Traverse - Starlight & Prairie (Japan).sfc"
 OUTPUT_DIR = ROOT_DIR / "translations"
 TABLES_DIR = ROOT_DIR / "tables"
 
-# Known Control Codes in Traverse Text Engine
+# Known Control Codes in Traverse Text Engine:
+# 0xFE 0x00 is in-box line break in the scenario dialogue engine
 CONTROL_CODES = {
-    bytes([0xFE, 0x00]): "<wait_auto>",
+    bytes([0xFE, 0x00]): "\n",
 }
 
 
@@ -61,11 +65,71 @@ def decode_string(raw_bytes: bytes, tbl: dict = None) -> str:
             i += 2
             continue
 
-        # 6. Fallback single byte token
+        # 5. Fallback single byte token
         res.append(f"<{b:02X}>")
         i += 1
 
     return "".join(res)
+
+
+def is_genuine_dialogue(chunk: bytes, decoded: str) -> bool:
+    """Filters out raw event script bytecode chunks from genuine scenario dialogue."""
+    if len(chunk) > 450:
+        return False
+
+    clean = re.sub(r"<[^>]+>|\[[^\]]+\]", "", decoded).strip()
+    jp_chars = len(re.findall(r"[\u3040-\u309F\u30A0-\u30FF\u4E00-\u9FFF\u3001\u3002\uFF01\uFF1F\u2026\u300C\u300D\u30FB\u30FC★☆○△]", clean))
+    if jp_chars < 3 and not any(tag in decoded for tag in ("[protag]", "[sub]", "[pet]")):
+        return False
+
+    lines = [l.strip() for l in decoded.split("\n") if l.strip()]
+    if not lines:
+        return False
+
+    has_genuine_line = False
+    for l in lines:
+        l_clean = re.sub(r"<[^>]+>|\[[^\]]+\]", "", l).strip()
+        l_jp = len(re.findall(r"[\u3040-\u309F\u30A0-\u30FF\u4E00-\u9FFF\u3001\u3002\uFF01\uFF1F\u2026\u300C\u300D\u30FB\u30FC★☆○△]", l_clean))
+        if l_jp >= 2 and (l_jp / max(1, len(l_clean))) >= 0.45:
+            has_genuine_line = True
+            break
+        if any(kw in l for kw in ("手に入れた！", "仲間になった！", "戻した！", "ダスな。", "[protag]", "[sub]", "[pet]")):
+            has_genuine_line = True
+            break
+
+    if not has_genuine_line:
+        return False
+
+    ascii_chars = len(re.findall(r"[A-Za-z0-9]", clean))
+    if ascii_chars > 25 and (ascii_chars / max(1, len(clean))) > 0.45:
+        return False
+
+    return True
+
+
+KNOWN_SPEAKERS_SET = {
+    "ガラハド", "乱暴者", "女", "男", "男の子", "女の子", "お婆さん", "おじさん",
+    "おじいさん", "おばさん", "ばあや", "じじょ", "じいさん", "村人", "町の人",
+    "旅人", "商人", "兵士", "隊長", "受付", "悪魔", "侍女", "神官", "王",
+    "王子", "王女", "女王", "しゃちょう", "店主", "マスター", "サム", "ナナ",
+    "ボナルド", "バルモア", "ベベル", "リンクル", "フェリアラ", "ゴンビエール",
+    "マルカリの花", "[protag]", "[sub]", "[pet]"
+}
+
+
+def trim_chunk_to_speaker(chunk: bytes, tbl: dict = None) -> tuple[bytes, int]:
+    """Trims leading event script opcode bytes so chunk starts cleanly at speaker name."""
+    fe = chunk.find(b"\xfe\x00")
+    if fe == -1 or fe <= 6:
+        return chunk, 0
+
+    start_p = max(0, fe - 14)
+    for p in range(start_p, fe):
+        dec = decode_string(chunk[p:fe], tbl)
+        if dec in KNOWN_SPEAKERS_SET:
+            return chunk[p:], p
+
+    return chunk, 0
 
 
 def dump_bank_c1_battle_strings(data: bytes, out_file: Path, tbl: dict = None):
@@ -92,6 +156,7 @@ def dump_bank_c1_battle_strings(data: bytes, out_file: Path, tbl: dict = None):
             "str_pos_hex": f"0x{pc:06X}",
             "length": len(raw),
             "text": decoded,
+            "table": "normal",
         })
 
     with open(out_file, "w", encoding="utf-8") as f:
@@ -102,10 +167,12 @@ def dump_bank_c1_battle_strings(data: bytes, out_file: Path, tbl: dict = None):
                 "ptr_pos": s["ptr_pos_hex"],
                 "str_pos": s["str_pos_hex"],
                 "length": s["length"],
+                "table": s["table"],
             }
             f.write(json.dumps(meta) + "\n")
-            f.write(f"#{s['text']}\n")
-            f.write("\n\n")
+            for jp_line in s["text"].split("\n"):
+                f.write(f"#{jp_line}\n")
+            f.write("\n")
 
     print(f"Dumped {len(strings)} strings from Bank $C1 table to {out_file.relative_to(ROOT_DIR)}")
 
@@ -136,10 +203,12 @@ def dump_item_tables(data: bytes, out_file: Path, tbl: dict = None):
                     "cat_idx": i,
                     "pc_hex": f"0x{pc:06X}",
                     "length": len(raw),
+                    "table": "menu",
                 }
                 f.write(json.dumps(meta) + "\n")
-                f.write(f"#{decoded}\n")
-                f.write("\n\n")
+                for jp_line in decoded.split("\n"):
+                    f.write(f"#{jp_line}\n")
+                f.write("\n")
                 str_idx += 1
                 total += 1
 
@@ -150,10 +219,20 @@ def dump_location_names(data: bytes, out_file: Path, tbl: dict = None):
     """
     Dumps the 60 world map location names from Bank $C1 (0x014300 / 0x01455A).
     Formatted for tashi_script_editor with JSON metadata, #JP comments, length & max_len.
-    Translates Index 22 ('トムリアの街' -> 'Tomria') as a working test.
+    Translates Index 22 ('トムリアの街' -> 'Tomria') as verified in-game working location.
     """
     ptr_table_base = 0x014300
     num_entries = 60
+
+    # Preserve existing translations if file exists
+    existing_tl = {}
+    if out_file.exists():
+        entries = parse_script_file(out_file)
+        for e in entries:
+            if e["is_translated"]:
+                str_num = e["meta"].get("str_num")
+                if str_num is not None:
+                    existing_tl[str_num] = e["en_text"]
 
     with open(out_file, "w", encoding="utf-8") as f:
         for i in range(num_entries):
@@ -178,7 +257,6 @@ def dump_location_names(data: bytes, out_file: Path, tbl: dict = None):
                 else:
                     jp_text += f"[{hex(b)}]"
 
-            # Estimate max_len in 8x16 VWF: ~16 characters fit easily on world map header
             max_len = 16
 
             meta = {
@@ -197,43 +275,178 @@ def dump_location_names(data: bytes, out_file: Path, tbl: dict = None):
 
             f.write(json.dumps(meta) + "\n")
             f.write(f"#{jp_text} (length: {len(raw)}, max_len: {max_len})\n")
-            if i == 22:
-                f.write("Tomria\n")
-            else:
-                f.write("\n")
+
+            tl = existing_tl.get(i, "Tomria" if i == 22 else "")
+            if tl:
+                f.write(f"{tl}\n")
             f.write("\n")
 
     print(f"Dumped {num_entries} location names to {out_file.relative_to(ROOT_DIR)} (Index 22 -> Tomria)")
 
 
+def dump_prologue(data: bytes, out_file: Path, tbl: dict = None):
+    """
+    Dumps the 11 prologue dialogue boxes from Bank $DB (0x1BAA0F - 0x1BAC07).
+    Boxes are cleanly delimited by \\xFF\\xFE and \\xFF\\xFF.
+    Speaker name appears on Line 1, dialogue lines on Line 2+.
+    Sets table to 'prologue'.
+    """
+    pos = 0x1BAA0F
+    end_limit = 0x1BAC07
+
+    # Load existing translations if present
+    existing_tl = {}
+    if out_file.exists():
+        old_entries = parse_script_file(out_file)
+        for e in old_entries:
+            if e["is_translated"]:
+                str_pos = e["meta"].get("str_pos")
+                if str_pos:
+                    existing_tl[str_pos.lower()] = e["en_text"]
+
+    boxes = []
+    cur = pos
+    box_idx = 0
+
+    while cur < end_limit:
+        m_end1 = data.find(b"\xff\xfe", cur)
+        m_end2 = data.find(b"\xff\xff", cur)
+        cand = []
+        if m_end1 != -1 and m_end1 < end_limit:
+            cand.append(m_end1)
+        if m_end2 != -1 and m_end2 < end_limit:
+            cand.append(m_end2)
+        if not cand:
+            break
+        box_end = min(cand)
+        box_bytes = data[cur : box_end + 1]
+        lines = [l for l in box_bytes.split(b"\xff") if l]
+        dec_lines = [decode_string(l, tbl).strip() for l in lines if l]
+
+        pc_hex = f"0x{cur:06X}".lower()
+        tl = existing_tl.get(pc_hex, "")
+
+        boxes.append({
+            "str_num": box_idx,
+            "bank": "0xDB",
+            "str_pos": f"0x{cur:06X}",
+            "length": len(box_bytes),
+            "table": "prologue",
+            "lines": dec_lines,
+            "translation": tl,
+        })
+        box_idx += 1
+        cur = box_end + 2
+
+    # Standard English translations for the 11 prologue cutscene boxes:
+    default_tl = [
+        "Midwife\nAt this rate, Remy won't make it...",
+        "Galahad\nCut the crap! You saying\nRemy is gonna die?!",
+        "Midwife\nNothing is certain yet.\nBut to save the baby,\nRemy's body won't hold out...",
+        "Galahad\nCut that out! Save Remy!\nDo whatever it takes to save Remy!",
+        "Midwife\n...So then, are you telling me\nto kill the unborn child?",
+        "Galahad\nN-No, I'm not saying that!\nB-But... if Remy dies...\nI couldn't bear it...",
+        "Midwife\nThe unborn child is blameless.\nGalahad, don't think foolish thoughts...",
+        "Midwife\nZzz... Zzz... Snoore...",
+        "Galahad\nHey! Old woman! Don't you dare\ndoze off at a time like this!\nHuh? What's going on? Even I'm feeling\nso sleepy...",
+        "Galahad\nZzz... *snort*... *wheeze*...\nzzz...",
+        "Gentle Voice\n[protag].\nChild of Remy, soon to be born.\nYour name is [protag].\nYou are the reincarnation of\nthe Archangel Borsark.",
+    ]
+
+    with open(out_file, "w", encoding="utf-8") as f:
+        for idx, b in enumerate(boxes):
+            meta = {
+                "str_num": b["str_num"],
+                "bank": b["bank"],
+                "str_pos": b["str_pos"],
+                "length": b["length"],
+                "table": b["table"],
+            }
+            f.write(json.dumps(meta) + "\n")
+            for jl in b["lines"]:
+                f.write(f"#{jl}\n")
+            tl = default_tl[idx] if idx < len(default_tl) else ""
+            if b["translation"] and "\n" in b["translation"]:
+                tl = b["translation"]
+            if tl:
+                for el in tl.split("\n"):
+                    f.write(f"{el}\n")
+            f.write("\n")
+
+    print(f"Dumped {len(boxes)} dialogue boxes to {out_file.relative_to(ROOT_DIR)} with table 'prologue'.")
+    return len(boxes)
+
+
 def dump_dialogue_bank(data: bytes, bank_num: int, out_file: Path, tbl: dict = None):
-    """Dumps dialogue strings from scenario Banks $F1-$F9."""
+    """
+    Dumps dialogue strings from scenario Banks $F1-$F9.
+    Filters bytecode chunks cleanly and formats multi-line dialogue boxes with '# ' per line.
+    Preserves existing translations, converting any <wait_auto> to newline.
+    """
     bank_off = bank_num * 0x10000
     bank_data = data[bank_off : bank_off + 65536]
-    strings = []
+    bank_snes = 0xC0 + bank_num
 
+    # Load existing translations if present to preserve translator work:
+    existing_translations = {}
+    import subprocess
+    import tempfile
+
+    # First check git HEAD:
+    try:
+        git_rel = out_file.relative_to(ROOT_DIR)
+        git_res = subprocess.run(["git", "show", f"HEAD:{git_rel}"], capture_output=True, text=True)
+        if git_res.returncode == 0 and git_res.stdout:
+            with tempfile.NamedTemporaryFile("w", delete=False) as tf:
+                tf.write(git_res.stdout)
+                tf_p = Path(tf.name)
+            for e in parse_script_file(tf_p):
+                if e["is_translated"]:
+                    pos = e["meta"].get("str_pos")
+                    if pos:
+                        existing_translations[pos.lower()] = e["en_text"]
+    except Exception:
+        pass
+
+    if out_file.exists():
+        old_entries = parse_script_file(out_file)
+        for e in old_entries:
+            if e["is_translated"]:
+                pos = e["meta"].get("str_pos")
+                if pos:
+                    existing_translations[pos.lower()] = e["en_text"]
+
+    strings = []
     i = 0
     str_idx = 0
     while i < len(bank_data) - 5:
         end = bank_data.find(b"\xFF", i)
         if end == -1:
             break
-        chunk = bank_data[i:end]
-        if len(chunk) >= 5:
+        raw_chunk = bank_data[i:end]
+        if len(raw_chunk) >= 5:
+            chunk, trim_off = trim_chunk_to_speaker(raw_chunk, tbl)
             prefixes = sum(chunk.count(x) for x in (b"\xFB", b"\xFC", b"\xFD"))
-            if prefixes >= 2 or any(c in chunk for c in CONTROL_CODES):
-                pc = bank_off + i
+            if prefixes >= 2 or b"\xFE\x00" in chunk:
                 decoded = decode_string(chunk, tbl)
-                strings.append({
-                    "str_num": str_idx,
-                    "bank": f"0x{0xC0 + bank_num:02X}",
-                    "str_pos": f"0x{pc:06X}",
-                    "length": len(chunk),
-                    "text": decoded,
-                })
-                str_idx += 1
-                i = end + 1
-                continue
+                if is_genuine_dialogue(chunk, decoded):
+                    pc = bank_off + i + trim_off
+                    pc_hex = f"0x{pc:06X}".lower()
+                    en_tl = existing_translations.get(pc_hex, "")
+                    if en_tl:
+                        en_tl = en_tl.replace("<wait_auto>", "\n")
+                    strings.append({
+                        "str_num": str_idx,
+                        "bank": f"0x{bank_snes:02X}",
+                        "str_pos": f"0x{pc:06X}",
+                        "length": len(chunk),
+                        "table": "normal",
+                        "text": decoded,
+                        "translation": en_tl,
+                    })
+                    str_idx += 1
+                    i = end + 1
+                    continue
         i += 1
 
     with open(out_file, "w", encoding="utf-8") as f:
@@ -243,18 +456,25 @@ def dump_dialogue_bank(data: bytes, bank_num: int, out_file: Path, tbl: dict = N
                 "bank": s["bank"],
                 "str_pos": s["str_pos"],
                 "length": s["length"],
+                "table": s["table"],
             }
             f.write(json.dumps(meta) + "\n")
-            f.write(f"#{s['text']}\n")
-            f.write("\n\n")
+            for jp_line in s["text"].split("\n"):
+                f.write(f"#{jp_line}\n")
+            if s["translation"]:
+                for en_line in s["translation"].split("\n"):
+                    f.write(f"{en_line}\n")
+            f.write("\n")
 
-    print(f"Dumped {len(strings)} strings from Bank ${0xC0 + bank_num:02X} to {out_file.relative_to(ROOT_DIR)}")
+    preserved_count = sum(1 for s in strings if s["translation"])
+    print(f"Dumped {len(strings)} strings from Bank ${bank_snes:02X} to {out_file.relative_to(ROOT_DIR)} (preserved {preserved_count} translations)")
     return len(strings)
 
 
 def main():
     parser = argparse.ArgumentParser(description="Traverse Script Dumper")
-    parser.add_argument("--all", action="store_true", help="Dump all scenario dialogue banks ($F1-$F9)")
+    parser.add_argument("--all", action="store_true", help="Dump all scenario dialogue banks ($F1-$F9) and prologue")
+    parser.add_argument("--prologue", action="store_true", help="Dump Bank $DB prologue cutscene")
     parser.add_argument("--locations", action="store_true", help="Dump location names table")
     parser.add_argument("--items", action="store_true", help="Dump item tables")
     parser.add_argument("--c1", action="store_true", help="Dump Bank $C1 battle/system strings")
@@ -270,19 +490,23 @@ def main():
     tbl_path = TABLES_DIR / "ja_tbl.tbl"
     tbl = load_tbl(tbl_path) if tbl_path.exists() else None
 
-    # 1. Dump Bank $C1 battle/system strings
+    # 1. Dump prologue cutscene
+    if args.prologue or args.all:
+        dump_prologue(data, OUTPUT_DIR / "dialogue_prologue.txt", tbl)
+
+    # 2. Dump Bank $C1 battle/system strings
     if args.c1:
         dump_bank_c1_battle_strings(data, OUTPUT_DIR / "dialogue_bank_C1.txt", tbl)
 
-    # 2. Dump item tables
+    # 3. Dump item tables
     if args.items:
         dump_item_tables(data, OUTPUT_DIR / "items.txt", tbl)
 
-    # 3. Dump location names table
-    if args.locations or not (OUTPUT_DIR / "location_names.txt").exists():
+    # 4. Dump location names table
+    if args.locations:
         dump_location_names(data, OUTPUT_DIR / "location_names.txt", tbl)
 
-    # 4. Dump scenario dialogue banks
+    # 5. Dump scenario dialogue banks
     if args.all:
         total = 0
         for b in range(0x31, 0x3A):

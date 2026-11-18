@@ -1,3100 +1,3281 @@
-{"str_num": 0, "bank": "0xF6", "str_pos": "0x3609BB", "length": 55}
-#O7A邦35湖44A共王Tへ6Gボ0 兵士<wait_auto>帰るときは、いつでもいってくれ。<wait_auto>ここで待ってるから。
-
-
-{"str_num": 1, "bank": "0xF6", "str_pos": "0x3609F3", "length": 13}
-#兵士<wait_auto>戻るのかい？
-
-
-{"str_num": 2, "bank": "0xF6", "str_pos": "0x360A01", "length": 19}
-# 戻りますか？<wait_auto> はい<wait_auto> いいえ
-
-
-{"str_num": 3, "bank": "0xF6", "str_pos": "0x360A16", "length": 15}
-#兵士<wait_auto>よし、出発だ！
-
-
-{"str_num": 4, "bank": "0xF6", "str_pos": "0x360A26", "length": 40}
-#男<wait_auto>…………海はいい。<wait_auto>見ていると、悩みを忘れさせてくれるからな。
-
-
-{"str_num": 5, "bank": "0xF6", "str_pos": "0x360A4F", "length": 64}
-#男<wait_auto>…………海はいい。<wait_auto>いつかふたたび、わしは大海原に乗り出してやる。<wait_auto>そして、ホットブリーチを見つけるのだ。
-
-
-{"str_num": 6, "bank": "0xF6", "str_pos": "0x360A90", "length": 34}
-#バルモア<wait_auto>ホットブリーチって、どこかで聞いたような名前だな？
-
-
-{"str_num": 7, "bank": "0xF6", "str_pos": "0x360AB3", "length": 29}
-#[sub]<wait_auto>街の人がいってた、まぼろしの巨大魚じゃないの。
-
-
-{"str_num": 8, "bank": "0xF6", "str_pos": "0x360AD1", "length": 29}
-#[protag]<wait_auto>あのう、ホットブリーチって、本当にいるんですか？
-
-
-{"str_num": 9, "bank": "0xF6", "str_pos": "0x360AEF", "length": 46}
-#男<wait_auto>いるに決まっとる！<wait_auto>わしは、ホットブリーチにもう一度、会わねばならんのだ！
-
-
-{"str_num": 10, "bank": "0xF6", "str_pos": "0x360B1E", "length": 60}
-#男<wait_auto>待っていろ、ホットブリーチ！！<wait_auto>このわし、バットヤン・ボフムス船長が、必ずキサマを捕らえてやるぞ！！
-
-
-{"str_num": 11, "bank": "0xF6", "str_pos": "0x360B5B", "length": 19}
-#[protag]<wait_auto>バットヤンさんっていうんだ……。
-
-
-{"str_num": 12, "bank": "0xF6", "str_pos": "0x360B6F", "length": 20}
-#[sub]<wait_auto>なんか、とってもアツイおじさんね。
-
-
-{"str_num": 13, "bank": "0xF6", "str_pos": "0x360B84", "length": 37}
-#バルモア<wait_auto>グズグズいってねえで、行きたきゃさっさと行けばいいのによ。
-
-
-{"str_num": 14, "bank": "0xF6", "str_pos": "0x360BAA", "length": 80}
-#バットヤン<wait_auto>行けるものなら行っておる！<wait_auto>しかし、乗員がいないのだ。<wait_auto>わしの船、マリー号は、10人の人間がいないと動かんのだ……ククッ。
-
-
-{"str_num": 15, "bank": "0xF6", "str_pos": "0x360BFB", "length": 36}
-#[sub]<wait_auto>行きましょう、[protag]。<wait_auto>私たちにできることは、何もないみたい。
-
-
-{"str_num": 16, "bank": "0xF6", "str_pos": "0x360C20", "length": 66}
-#ジーメイ<wait_auto>おお、わかる。<wait_auto>わかるぞう、その熱き思い。<wait_auto>海と山、愛するものは違っても、かける情熱のあつさはわかる！
-
-
-{"str_num": 17, "bank": "0xF6", "str_pos": "0x360C63", "length": 32}
-#バルモア<wait_auto>もう一人の熱血オヤジが、出てきやがったぞ。
-
-
-{"str_num": 18, "bank": "0xF6", "str_pos": "0x360C84", "length": 22}
-#[sub]<wait_auto>でも、私たちにできることはないわよ。
-
-
-{"str_num": 19, "bank": "0xF6", "str_pos": "0x360C9B", "length": 42}
-#[sub]<wait_auto>10人くらいの人手なら、私たちでなんとかできそうよ。<wait_auto>[protag]、どうする？
-
-
-{"str_num": 20, "bank": "0xF6", "str_pos": "0x360CC6", "length": 27}
-# バットヤンを手伝いますか？<wait_auto> はい<wait_auto> いいえ
-
-
-{"str_num": 21, "bank": "0xF6", "str_pos": "0x360CE3", "length": 9}
-#[sub]<wait_auto>わかったわ。
-
-
-{"str_num": 22, "bank": "0xF6", "str_pos": "0x360CED", "length": 10}
-#[sub]<wait_auto>さすがね、[protag]☆
-
-
-{"str_num": 23, "bank": "0xF6", "str_pos": "0x360CF8", "length": 20}
-#バルモア<wait_auto>なんか怪しいヤツだな……。
-
-
-{"str_num": 24, "bank": "0xF6", "str_pos": "0x360D0D", "length": 21}
-# 出航しますか？<wait_auto> はい<wait_auto> いいえ
-
-
-{"str_num": 25, "bank": "0xF6", "str_pos": "0x360D24", "length": 34}
-#バットヤン<wait_auto>いよいよ船出だ。<wait_auto>行くぞ妻よ、愛し子よ！
-
-
-{"str_num": 26, "bank": "0xF6", "str_pos": "0x360D47", "length": 62}
-#バットヤン<wait_auto>待っていろ、ホットブリーチ！<wait_auto>このわし、バットヤン・ボフムス船長が、必ずキサマを捕らえてやるそ！！
-
-
-{"str_num": 27, "bank": "0xF6", "str_pos": "0x360D86", "length": 36}
-#[sub]<wait_auto>行きましょう、[protag]。<wait_auto>私たちにできることは、何もないみたい。
-
-
-{"str_num": 28, "bank": "0xF6", "str_pos": "0x360DAB", "length": 66}
-#ジーメイ<wait_auto>おお、わかる。<wait_auto>わかるぞう、その熱き思い。<wait_auto>海と山、愛するものは違っても、かける情熱のあつさはわかる！
-
-
-{"str_num": 29, "bank": "0xF6", "str_pos": "0x360DEE", "length": 22}
-#[sub]<wait_auto>でも、私たちにできることはないわよ。
-
-
-{"str_num": 30, "bank": "0xF6", "str_pos": "0x360E05", "length": 40}
-#[sub]<wait_auto>私たち10人以上いるわよ。<wait_auto>バットヤンさんを助けてあげようか？
-
-
-{"str_num": 31, "bank": "0xF6", "str_pos": "0x360E2E", "length": 27}
-# バットヤンを手伝いますか？<wait_auto> はい<wait_auto> いいえ
-
-
-{"str_num": 32, "bank": "0xF6", "str_pos": "0x360E4B", "length": 9}
-#[sub]<wait_auto>わかったわ。
-
-
-{"str_num": 33, "bank": "0xF6", "str_pos": "0x360E55", "length": 10}
-#[sub]<wait_auto>さすがね、[protag]☆
-
-
-{"str_num": 34, "bank": "0xF6", "str_pos": "0x360E60", "length": 20}
-#バルモア<wait_auto>なんか怪しいヤツだな……。
-
-
-{"str_num": 35, "bank": "0xF6", "str_pos": "0x360E75", "length": 15}
-#[protag]<wait_auto>お世話になりました。
-
-
-{"str_num": 36, "bank": "0xF6", "str_pos": "0x360E85", "length": 17}
-#船員<wait_auto>ああ、気をつけてな。
-
-
-{"str_num": 37, "bank": "0xF6", "str_pos": "0x360E97", "length": 14}
-#バットヤン<wait_auto>………………。
-
-
-{"str_num": 38, "bank": "0xF6", "str_pos": "0x360EA6", "length": 15}
-#[protag]<wait_auto>バットヤン船長……。
-
-
-{"str_num": 39, "bank": "0xF6", "str_pos": "0x360EB6", "length": 65}
-#バットヤン<wait_auto>船をなくしたわしは、もう船長ではない。 これでもう、マリーたちのところへは、いけなくなってしまったのだな……。
-
-
-{"str_num": 40, "bank": "0xF6", "str_pos": "0x360EF8", "length": 17}
-#[protag]<wait_auto>バットヤン船長ーーーー！
-
-
-{"str_num": 41, "bank": "0xF6", "str_pos": "0x360F0A", "length": 18}
-#[sub]<wait_auto>……これでよかったの？<wait_auto>[protag]。
-
-
-{"str_num": 42, "bank": "0xF6", "str_pos": "0x360F1D", "length": 12}
-#[protag]<wait_auto>……………………。
-
-
-{"str_num": 43, "bank": "0xF6", "str_pos": "0x360F2A", "length": 15}
-#[sub]<wait_auto>これでよかったのかしら？
-
-
-{"str_num": 44, "bank": "0xF6", "str_pos": "0x360F3A", "length": 13}
-#[protag]<wait_auto>だと思うけど……。
-
-
-{"str_num": 45, "bank": "0xF6", "str_pos": "0x360F48", "length": 44}
-#バットヤン<wait_auto>本当か、ありがたい！<wait_auto>これで、妻や子供にももうし訳が立つ！
-
-
-{"str_num": 46, "bank": "0xF6", "str_pos": "0x360F75", "length": 23}
-#[protag]<wait_auto>妻や子供？<wait_auto>どういうことですか。
-
-
-{"str_num": 47, "bank": "0xF6", "str_pos": "0x360F8D", "length": 40}
-#バットヤン<wait_auto>あ、いや……いずれわかる。<wait_auto>それより、出航しようじゃないか。
-
-
-{"str_num": 48, "bank": "0xF6", "str_pos": "0x360FB6", "length": 20}
+{"str_num": 0, "bank": "0xF6", "str_pos": "0x3609CE", "length": 36, "table": "normal"}
+#兵士
+#帰るときは、いつでもいってくれ。
+#ここで待ってるから。
+
+{"str_num": 1, "bank": "0xF6", "str_pos": "0x3609F3", "length": 13, "table": "normal"}
+#兵士
+#戻るのかい？
+
+{"str_num": 2, "bank": "0xF6", "str_pos": "0x360A01", "length": 19, "table": "normal"}
+# 戻りますか？
+# はい
+# いいえ
+
+{"str_num": 3, "bank": "0xF6", "str_pos": "0x360A16", "length": 15, "table": "normal"}
+#兵士
+#よし、出発だ！
+
+{"str_num": 4, "bank": "0xF6", "str_pos": "0x360A26", "length": 40, "table": "normal"}
+#男
+#…………海はいい。
+#見ていると、悩みを忘れさせてくれるからな。
+
+{"str_num": 5, "bank": "0xF6", "str_pos": "0x360A4F", "length": 64, "table": "normal"}
+#男
+#…………海はいい。
+#いつかふたたび、わしは大海原に乗り出してやる。
+#そして、ホットブリーチを見つけるのだ。
+
+{"str_num": 6, "bank": "0xF6", "str_pos": "0x360A90", "length": 34, "table": "normal"}
+#バルモア
+#ホットブリーチって、どこかで聞いたような名前だな？
+
+{"str_num": 7, "bank": "0xF6", "str_pos": "0x360AB3", "length": 29, "table": "normal"}
+#[sub]
+#街の人がいってた、まぼろしの巨大魚じゃないの。
+
+{"str_num": 8, "bank": "0xF6", "str_pos": "0x360AD1", "length": 29, "table": "normal"}
+#[protag]
+#あのう、ホットブリーチって、本当にいるんですか？
+
+{"str_num": 9, "bank": "0xF6", "str_pos": "0x360AEF", "length": 46, "table": "normal"}
+#男
+#いるに決まっとる！
+#わしは、ホットブリーチにもう一度、会わねばならんのだ！
+
+{"str_num": 10, "bank": "0xF6", "str_pos": "0x360B1E", "length": 60, "table": "normal"}
+#男
+#待っていろ、ホットブリーチ！！
+#このわし、バットヤン・ボフムス船長が、必ずキサマを捕らえてやるぞ！！
+
+{"str_num": 11, "bank": "0xF6", "str_pos": "0x360B5B", "length": 19, "table": "normal"}
+#[protag]
+#バットヤンさんっていうんだ……。
+
+{"str_num": 12, "bank": "0xF6", "str_pos": "0x360B6F", "length": 20, "table": "normal"}
+#[sub]
+#なんか、とってもアツイおじさんね。
+
+{"str_num": 13, "bank": "0xF6", "str_pos": "0x360B84", "length": 37, "table": "normal"}
+#バルモア
+#グズグズいってねえで、行きたきゃさっさと行けばいいのによ。
+
+{"str_num": 14, "bank": "0xF6", "str_pos": "0x360BAA", "length": 80, "table": "normal"}
+#バットヤン
+#行けるものなら行っておる！
+#しかし、乗員がいないのだ。
+#わしの船、マリー号は、10人の人間がいないと動かんのだ……ククッ。
+
+{"str_num": 15, "bank": "0xF6", "str_pos": "0x360BFB", "length": 36, "table": "normal"}
+#[sub]
+#行きましょう、[protag]。
+#私たちにできることは、何もないみたい。
+
+{"str_num": 16, "bank": "0xF6", "str_pos": "0x360C20", "length": 66, "table": "normal"}
+#ジーメイ
+#おお、わかる。
+#わかるぞう、その熱き思い。
+#海と山、愛するものは違っても、かける情熱のあつさはわかる！
+
+{"str_num": 17, "bank": "0xF6", "str_pos": "0x360C63", "length": 32, "table": "normal"}
+#バルモア
+#もう一人の熱血オヤジが、出てきやがったぞ。
+
+{"str_num": 18, "bank": "0xF6", "str_pos": "0x360C84", "length": 22, "table": "normal"}
+#[sub]
+#でも、私たちにできることはないわよ。
+
+{"str_num": 19, "bank": "0xF6", "str_pos": "0x360C9B", "length": 42, "table": "normal"}
+#[sub]
+#10人くらいの人手なら、私たちでなんとかできそうよ。
+#[protag]、どうする？
+
+{"str_num": 20, "bank": "0xF6", "str_pos": "0x360CC6", "length": 27, "table": "normal"}
+# バットヤンを手伝いますか？
+# はい
+# いいえ
+
+{"str_num": 21, "bank": "0xF6", "str_pos": "0x360CE3", "length": 9, "table": "normal"}
+#[sub]
+#わかったわ。
+
+{"str_num": 22, "bank": "0xF6", "str_pos": "0x360CED", "length": 10, "table": "normal"}
+#[sub]
+#さすがね、[protag]☆
+
+{"str_num": 23, "bank": "0xF6", "str_pos": "0x360CF8", "length": 20, "table": "normal"}
+#バルモア
+#なんか怪しいヤツだな……。
+
+{"str_num": 24, "bank": "0xF6", "str_pos": "0x360D0D", "length": 21, "table": "normal"}
+# 出航しますか？
+# はい
+# いいえ
+
+{"str_num": 25, "bank": "0xF6", "str_pos": "0x360D24", "length": 34, "table": "normal"}
+#バットヤン
+#いよいよ船出だ。
+#行くぞ妻よ、愛し子よ！
+
+{"str_num": 26, "bank": "0xF6", "str_pos": "0x360D47", "length": 62, "table": "normal"}
+#バットヤン
+#待っていろ、ホットブリーチ！
+#このわし、バットヤン・ボフムス船長が、必ずキサマを捕らえてやるそ！！
+
+{"str_num": 27, "bank": "0xF6", "str_pos": "0x360D86", "length": 36, "table": "normal"}
+#[sub]
+#行きましょう、[protag]。
+#私たちにできることは、何もないみたい。
+
+{"str_num": 28, "bank": "0xF6", "str_pos": "0x360DAB", "length": 66, "table": "normal"}
+#ジーメイ
+#おお、わかる。
+#わかるぞう、その熱き思い。
+#海と山、愛するものは違っても、かける情熱のあつさはわかる！
+
+{"str_num": 29, "bank": "0xF6", "str_pos": "0x360DEE", "length": 22, "table": "normal"}
+#[sub]
+#でも、私たちにできることはないわよ。
+
+{"str_num": 30, "bank": "0xF6", "str_pos": "0x360E05", "length": 40, "table": "normal"}
+#[sub]
+#私たち10人以上いるわよ。
+#バットヤンさんを助けてあげようか？
+
+{"str_num": 31, "bank": "0xF6", "str_pos": "0x360E2E", "length": 27, "table": "normal"}
+# バットヤンを手伝いますか？
+# はい
+# いいえ
+
+{"str_num": 32, "bank": "0xF6", "str_pos": "0x360E4B", "length": 9, "table": "normal"}
+#[sub]
+#わかったわ。
+
+{"str_num": 33, "bank": "0xF6", "str_pos": "0x360E55", "length": 10, "table": "normal"}
+#[sub]
+#さすがね、[protag]☆
+
+{"str_num": 34, "bank": "0xF6", "str_pos": "0x360E60", "length": 20, "table": "normal"}
+#バルモア
+#なんか怪しいヤツだな……。
+
+{"str_num": 35, "bank": "0xF6", "str_pos": "0x360E75", "length": 15, "table": "normal"}
+#[protag]
+#お世話になりました。
+
+{"str_num": 36, "bank": "0xF6", "str_pos": "0x360E85", "length": 17, "table": "normal"}
+#船員
+#ああ、気をつけてな。
+
+{"str_num": 37, "bank": "0xF6", "str_pos": "0x360E97", "length": 14, "table": "normal"}
+#バットヤン
+#………………。
+
+{"str_num": 38, "bank": "0xF6", "str_pos": "0x360EA6", "length": 15, "table": "normal"}
+#[protag]
+#バットヤン船長……。
+
+{"str_num": 39, "bank": "0xF6", "str_pos": "0x360EB6", "length": 65, "table": "normal"}
+#バットヤン
+#船をなくしたわしは、もう船長ではない。 これでもう、マリーたちのところへは、いけなくなってしまったのだな……。
+
+{"str_num": 40, "bank": "0xF6", "str_pos": "0x360EF8", "length": 17, "table": "normal"}
+#[protag]
+#バットヤン船長ーーーー！
+
+{"str_num": 41, "bank": "0xF6", "str_pos": "0x360F0A", "length": 18, "table": "normal"}
+#[sub]
+#……これでよかったの？
+#[protag]。
+
+{"str_num": 42, "bank": "0xF6", "str_pos": "0x360F1D", "length": 12, "table": "normal"}
+#[protag]
+#……………………。
+
+{"str_num": 43, "bank": "0xF6", "str_pos": "0x360F2A", "length": 15, "table": "normal"}
+#[sub]
+#これでよかったのかしら？
+
+{"str_num": 44, "bank": "0xF6", "str_pos": "0x360F3A", "length": 13, "table": "normal"}
+#[protag]
+#だと思うけど……。
+
+{"str_num": 45, "bank": "0xF6", "str_pos": "0x360F48", "length": 44, "table": "normal"}
+#バットヤン
+#本当か、ありがたい！
+#これで、妻や子供にももうし訳が立つ！
+
+{"str_num": 46, "bank": "0xF6", "str_pos": "0x360F75", "length": 23, "table": "normal"}
+#[protag]
+#妻や子供？
+#どういうことですか。
+
+{"str_num": 47, "bank": "0xF6", "str_pos": "0x360F8D", "length": 40, "table": "normal"}
+#バットヤン
+#あ、いや……いずれわかる。
+#それより、出航しようじゃないか。
+
+{"str_num": 48, "bank": "0xF6", "str_pos": "0x360FB6", "length": 20, "table": "normal"}
 #バットヤン・ボフムスが仲間になった！
 
+{"str_num": 49, "bank": "0xF6", "str_pos": "0x36185A", "length": 14, "table": "normal"}
+#[protag]
+#このドア、なんだろう？
 
-{"str_num": 49, "bank": "0xF6", "str_pos": "0x3616BC", "length": 428}
-#O0やヴ0V3 K  5 K005 K1130王9K  2 K002 K111 王935ブ54K47G K58G 王9K58H K68H0み51J王す35ワ5 K  8 王9K    王935ャ55洞55364K  8 王9K  2 王9K47  K58  K68  むO6王TK473 K5830王すK47  K58  王T 5塔54K  8 王9K    王TK  8 王9K  2 王935ポ5 IスDN<FE>は9KF合D 王TAX35ベ54A8GスDやW0 IセD<FA>罰9KG合D 王TAX35ゴ54A8GセDや、2 IソDォ罰9KH合D 王TAX35ル54A8GソDやぽ4 IタDヴ罰9KI合D 王TAX35ヒ54A8GタDやず0 IチDチ罰9KJ合D 王TAX35ソ54A8GチDやら0 IツD／罰9KK合D 王TAX35ア54A8GツDやぃ4 970  AZ35（5はめ5ソ5×D15ニ5E03 4A8 4る [protag]<wait_auto>このドア、なんだろう？
+{"str_num": 50, "bank": "0xF6", "str_pos": "0x361869", "length": 42, "table": "normal"}
+#[protag]
+#あれっ？ 開かないな……。
+#マジックトーチがあるだけじゃダメなのかな……。
 
+{"str_num": 51, "bank": "0xF6", "str_pos": "0x361894", "length": 15, "table": "normal"}
+#[protag]
+#トビラよ、我を通せ！
 
-{"str_num": 50, "bank": "0xF6", "str_pos": "0x361869", "length": 42}
-#[protag]<wait_auto>あれっ？ 開かないな……。<wait_auto>マジックトーチがあるだけじゃダメなのかな……。
+{"str_num": 52, "bank": "0xF6", "str_pos": "0x3618A4", "length": 15, "table": "normal"}
+#[protag]
+#ダメか……、やっぱりな。
 
+{"str_num": 53, "bank": "0xF6", "str_pos": "0x3618B4", "length": 44, "table": "normal"}
+#ベンホルム
+#フムム、ここで古代語の合言葉をいえばいいのダスな。
+#では……。
 
-{"str_num": 51, "bank": "0xF6", "str_pos": "0x361894", "length": 15}
-#[protag]<wait_auto>トビラよ、我を通せ！
+{"str_num": 54, "bank": "0xF6", "str_pos": "0x3618E1", "length": 29, "table": "normal"}
+#ベンホルム
+#JCXMNA、MVSKPQNMLSJ＋A！！
 
+{"str_num": 55, "bank": "0xF6", "str_pos": "0x3618FF", "length": 55, "table": "normal"}
+#[protag]
+#えーと、ここで古代語の合言葉をいえばいいんだな。
+#言語ほんやく機のスイッチを入れて。
 
-{"str_num": 52, "bank": "0xF6", "str_pos": "0x3618A4", "length": 15}
-#[protag]<wait_auto>ダメか……、やっぱりな。
+{"str_num": 56, "bank": "0xF6", "str_pos": "0x361937", "length": 15, "table": "normal"}
+#[protag]
+#トビラよ、我を通せ！
 
+{"str_num": 57, "bank": "0xF6", "str_pos": "0x361947", "length": 11, "table": "normal"}
+#[protag]
+#こ、ここは……？
 
-{"str_num": 53, "bank": "0xF6", "str_pos": "0x3618B4", "length": 44}
-#ベンホルム<wait_auto>フムム、ここで古代語の合言葉をいえばいいのダスな。<wait_auto>では……。
+{"str_num": 58, "bank": "0xF6", "str_pos": "0x361953", "length": 30, "table": "normal"}
+#バルモア
+#バビルシア山じゃねえか！
+#戻ってこれたんだ！
 
+{"str_num": 59, "bank": "0xF6", "str_pos": "0x361976", "length": 29, "table": "normal"}
+#ベベル
+#NIOHOUQAHONB、NIUHOSBUOW。
 
-{"str_num": 54, "bank": "0xF6", "str_pos": "0x3618E1", "length": 29}
-#ベンホルム<wait_auto>JCXMNA、MVSKPQNMLSJ＋A！！
+{"str_num": 60, "bank": "0xF6", "str_pos": "0x3619E0", "length": 62, "table": "normal"}
+#ベンホルム
+#フムム。
+#女王のしたことを、謝っとるダス。
+#国を守ろうとしただけで、悪気はなかったんダスと……。
 
+{"str_num": 61, "bank": "0xF6", "str_pos": "0x361A1F", "length": 48, "table": "normal"}
+#[protag]
+#そんなこと、もういいんだ。
+#いっしょに行こう。
+#二人っきりになんか、できないよ。
 
-{"str_num": 55, "bank": "0xF6", "str_pos": "0x3618FF", "length": 55}
-#[protag]<wait_auto>えーと、ここで古代語の合言葉をいえばいいんだな。<wait_auto>言語ほんやく機のスイッチを入れて。
+{"str_num": 62, "bank": "0xF6", "str_pos": "0x361A54", "length": 31, "table": "normal"}
+#ベベル
+#HNNIPO、NNCOLSLNJQHODSBJOC。
 
+{"str_num": 63, "bank": "0xF6", "str_pos": "0x361A78", "length": 18, "table": "normal"}
+#リンクル
+#NKSPAHIPHPW。
 
-{"str_num": 56, "bank": "0xF6", "str_pos": "0x361937", "length": 15}
-#[protag]<wait_auto>トビラよ、我を通せ！
+{"str_num": 64, "bank": "0xF6", "str_pos": "0x361A8B", "length": 21, "table": "normal"}
+#ベンホルム
+#よろしく、といっとるダスな。
 
+{"str_num": 65, "bank": "0xF6", "str_pos": "0x361AA5", "length": 10, "table": "normal"}
+#リンクル
+#[protag]……。
 
-{"str_num": 57, "bank": "0xF6", "str_pos": "0x361947", "length": 11}
-#[protag]<wait_auto>こ、ここは……？
-
-
-{"str_num": 58, "bank": "0xF6", "str_pos": "0x361953", "length": 30}
-#バルモア<wait_auto>バビルシア山じゃねえか！<wait_auto>戻ってこれたんだ！
-
-
-{"str_num": 59, "bank": "0xF6", "str_pos": "0x361972", "length": 33}
-#王子・ベベル<wait_auto>NIOHOUQAHONB、NIUHOSBUOW。
-
-
-{"str_num": 60, "bank": "0xF6", "str_pos": "0x361994", "length": 75}
-#王子・ベベル<wait_auto>MIPMPEM。<wait_auto>NIIHF0PW、NIPWPQP＋NJIDW。<wait_auto>MNIPW、MPOWJDNICP、NUHP＋Q＋IHIWDO。
-
-
-{"str_num": 61, "bank": "0xF6", "str_pos": "0x3619E0", "length": 62}
-#ベンホルム<wait_auto>フムム。<wait_auto>女王のしたことを、謝っとるダス。<wait_auto>国を守ろうとしただけで、悪気はなかったんダスと……。
-
-
-{"str_num": 62, "bank": "0xF6", "str_pos": "0x361A1F", "length": 48}
-#[protag]<wait_auto>そんなこと、もういいんだ。<wait_auto>いっしょに行こう。<wait_auto>二人っきりになんか、できないよ。
-
-
-{"str_num": 63, "bank": "0xF6", "str_pos": "0x361A50", "length": 35}
-#王子・ベベル<wait_auto>HNNIPO、NNCOLSLNJQHODSBJOC。
-
-
-{"str_num": 64, "bank": "0xF6", "str_pos": "0x361A74", "length": 22}
-#王女・リンクル<wait_auto>NKSPAHIPHPW。
-
-
-{"str_num": 65, "bank": "0xF6", "str_pos": "0x361A8B", "length": 21}
-#ベンホルム<wait_auto>よろしく、といっとるダスな。
-
-
-{"str_num": 66, "bank": "0xF6", "str_pos": "0x361AA1", "length": 14}
-#王女・リンクル<wait_auto>[protag]……。
-
-
-{"str_num": 67, "bank": "0xF6", "str_pos": "0x361AB0", "length": 17}
+{"str_num": 66, "bank": "0xF6", "str_pos": "0x361AB0", "length": 17, "table": "normal"}
 #ベベル・カムイが仲間になった！
 
-
-{"str_num": 68, "bank": "0xF6", "str_pos": "0x361AC2", "length": 18}
+{"str_num": 67, "bank": "0xF6", "str_pos": "0x361AC2", "length": 18, "table": "normal"}
 #リンクル・カムイが仲間になった！
 
+{"str_num": 68, "bank": "0xF6", "str_pos": "0x361AD9", "length": 41, "table": "normal"}
+#ベベル
+#やはり、人食いトンネルと同じ力を持つ、穴だったようだな……。
 
-{"str_num": 69, "bank": "0xF6", "str_pos": "0x361AD5", "length": 45}
-#王子・ベベル<wait_auto>やはり、人食いトンネルと同じ力を持つ、穴だったようだな……。
+{"str_num": 69, "bank": "0xF6", "str_pos": "0x361B07", "length": 72, "table": "normal"}
+#ベベル
+#気にしないでくれ。
+#それより母上……いや、女王のことを許してほしい。
+#我がエルドラドを守るため、必死だったのだ。
 
+{"str_num": 70, "bank": "0xF6", "str_pos": "0x361B50", "length": 56, "table": "normal"}
+#[protag]
+#……そんなことは、もういいんだ。
+#それより、いっしょに行こう。
+#二人っきりになんか、できないよ。
 
-{"str_num": 70, "bank": "0xF6", "str_pos": "0x361B03", "length": 76}
-#王子・ベベル<wait_auto>気にしないでくれ。<wait_auto>それより母上……いや、女王のことを許してほしい。<wait_auto>我がエルドラドを守るため、必死だったのだ。
+{"str_num": 71, "bank": "0xF6", "str_pos": "0x361B8D", "length": 22, "table": "normal"}
+#ベベル
+#ありがとう……こちらこそよろしく。
 
+{"str_num": 72, "bank": "0xF6", "str_pos": "0x361BA8", "length": 18, "table": "normal"}
+#リンクル
+#よろしくお願いします。
 
-{"str_num": 71, "bank": "0xF6", "str_pos": "0x361B50", "length": 56}
-#[protag]<wait_auto>……そんなことは、もういいんだ。<wait_auto>それより、いっしょに行こう。<wait_auto>二人っきりになんか、できないよ。
+{"str_num": 73, "bank": "0xF6", "str_pos": "0x361BBF", "length": 12, "table": "normal"}
+#リンクル
+#[protag]……さん。
 
+{"str_num": 74, "bank": "0xF6", "str_pos": "0x361BCC", "length": 5, "table": "normal"}
+#[protag]
+#ん？
 
-{"str_num": 72, "bank": "0xF6", "str_pos": "0x361B89", "length": 26}
-#王子・ベベル<wait_auto>ありがとう……こちらこそよろしく。
+{"str_num": 75, "bank": "0xF6", "str_pos": "0x361BD2", "length": 23, "table": "normal"}
+#[protag]
+#何か、土にうまってるみたいだな……？
 
+{"str_num": 76, "bank": "0xF6", "str_pos": "0x361BEA", "length": 34, "table": "normal"}
+#バルモア
+#おお、なにかいいもんかもしれねえぞ。
+#ほってみようぜ。
 
-{"str_num": 73, "bank": "0xF6", "str_pos": "0x361BA4", "length": 22}
-#王女・リンクル<wait_auto>よろしくお願いします。
-
-
-{"str_num": 74, "bank": "0xF6", "str_pos": "0x361BBB", "length": 16}
-#王女・リンクル<wait_auto>[protag]……さん。
-
-
-{"str_num": 75, "bank": "0xF6", "str_pos": "0x361BCC", "length": 5}
-#[protag]<wait_auto>ん？
-
-
-{"str_num": 76, "bank": "0xF6", "str_pos": "0x361BD2", "length": 23}
-#[protag]<wait_auto>何か、土にうまってるみたいだな……？
-
-
-{"str_num": 77, "bank": "0xF6", "str_pos": "0x361BEA", "length": 34}
-#バルモア<wait_auto>おお、なにかいいもんかもしれねえぞ。<wait_auto>ほってみようぜ。
-
-
-{"str_num": 78, "bank": "0xF6", "str_pos": "0x361C0D", "length": 15}
+{"str_num": 77, "bank": "0xF6", "str_pos": "0x361C0D", "length": 15, "table": "normal"}
 #金のくびわを手に入れた！
 
+{"str_num": 78, "bank": "0xF6", "str_pos": "0x361C1D", "length": 24, "table": "normal"}
+#[protag]
+#何か、刻んであるけど……読めないや。
 
-{"str_num": 79, "bank": "0xF6", "str_pos": "0x361C1D", "length": 24}
-#[protag]<wait_auto>何か、刻んであるけど……読めないや。
+{"str_num": 79, "bank": "0xF6", "str_pos": "0x361C36", "length": 49, "table": "normal"}
+#ベンホルム
+#どれどれ……フムム。
+#これは、大好きな友達、アマル、と書いてあるんダスな。
 
+{"str_num": 80, "bank": "0xF6", "str_pos": "0x361C68", "length": 30, "table": "normal"}
+#[protag]
+#アマルって、エルドラドにいたコイヌの名前じゃ……？
 
-{"str_num": 80, "bank": "0xF6", "str_pos": "0x361C36", "length": 49}
-#ベンホルム<wait_auto>どれどれ……フムム。<wait_auto>これは、大好きな友達、アマル、と書いてあるんダスな。
+{"str_num": 81, "bank": "0xF6", "str_pos": "0x361C87", "length": 34, "table": "normal"}
+#バルモア
+#オレたち、時間をさかのぼってたのかよ。 ……まさか！
 
+{"str_num": 82, "bank": "0xF6", "str_pos": "0x361CAA", "length": 47, "table": "normal"}
+#ベベル
+#これは……我々の国の言葉だ。
+#大好きな友達、アマル、と書いてある。
 
-{"str_num": 81, "bank": "0xF6", "str_pos": "0x361C68", "length": 30}
-#[protag]<wait_auto>アマルって、エルドラドにいたコイヌの名前じゃ……？
+{"str_num": 83, "bank": "0xF6", "str_pos": "0x361CDA", "length": 30, "table": "normal"}
+#[protag]
+#アマルって、エルドラドにいたコイヌの名前じゃ……？
 
+{"str_num": 84, "bank": "0xF6", "str_pos": "0x361CF9", "length": 34, "table": "normal"}
+#バルモア
+#オレたち、時間をさかのぼってたのかよ。 ……まさか！
 
-{"str_num": 82, "bank": "0xF6", "str_pos": "0x361C87", "length": 34}
-#バルモア<wait_auto>オレたち、時間をさかのぼってたのかよ。 ……まさか！
+{"str_num": 85, "bank": "0xF6", "str_pos": "0x361D1C", "length": 39, "table": "normal"}
+#ベベル
+#我がエルドラドへ戻る手だては、本当に、もうないのだな……。
 
+{"str_num": 86, "bank": "0xF6", "str_pos": "0x361D50", "length": 25, "table": "normal"}
+#[protag]
+#……なんだ、これ？
+#こんな物いらないな。
 
-{"str_num": 83, "bank": "0xF6", "str_pos": "0x361CAA", "length": 47}
-#ベベル<wait_auto>これは……我々の国の言葉だ。<wait_auto>大好きな友達、アマル、と書いてある。
-
-
-{"str_num": 84, "bank": "0xF6", "str_pos": "0x361CDA", "length": 30}
-#[protag]<wait_auto>アマルって、エルドラドにいたコイヌの名前じゃ……？
-
-
-{"str_num": 85, "bank": "0xF6", "str_pos": "0x361CF9", "length": 34}
-#バルモア<wait_auto>オレたち、時間をさかのぼってたのかよ。 ……まさか！
-
-
-{"str_num": 86, "bank": "0xF6", "str_pos": "0x361D1C", "length": 39}
-#ベベル<wait_auto>我がエルドラドへ戻る手だては、本当に、もうないのだな……。
-
-
-{"str_num": 87, "bank": "0xF6", "str_pos": "0x361D50", "length": 25}
-#[protag]<wait_auto>……なんだ、これ？<wait_auto>こんな物いらないな。
-
-
-{"str_num": 88, "bank": "0xF6", "str_pos": "0x361D6A", "length": 18}
+{"str_num": 87, "bank": "0xF6", "str_pos": "0x361D6A", "length": 18, "table": "normal"}
 #アンテナを宝箱の中に戻した！
 
+{"str_num": 88, "bank": "0xF6", "str_pos": "0x361D7D", "length": 6, "table": "normal"}
+#[protag]
+#あっ！
 
-{"str_num": 89, "bank": "0xF6", "str_pos": "0x361D7D", "length": 6}
-#[protag]<wait_auto>あっ！
-
-
-{"str_num": 90, "bank": "0xF6", "str_pos": "0x361D84", "length": 13}
+{"str_num": 89, "bank": "0xF6", "str_pos": "0x361D84", "length": 13, "table": "normal"}
 #アンテナを手に入れた！
 
+{"str_num": 90, "bank": "0xF6", "str_pos": "0x361D92", "length": 25, "table": "normal"}
+#[protag]
+#持って行くのかい？
+#……まあいいけど。
 
-{"str_num": 91, "bank": "0xF6", "str_pos": "0x361D92", "length": 25}
-#[protag]<wait_auto>持って行くのかい？<wait_auto>……まあいいけど。
+{"str_num": 91, "bank": "0xF6", "str_pos": "0x361DAC", "length": 13, "table": "normal"}
+#ピピ・パパ
+#○○★△★。
 
+{"str_num": 92, "bank": "0xF6", "str_pos": "0x361DBA", "length": 11, "table": "normal"}
+#[sub]
+#あなたたち……。
 
-{"str_num": 92, "bank": "0xF6", "str_pos": "0x361DAC", "length": 13}
-#ピピ・パパ<wait_auto>○○★△★。
+{"str_num": 93, "bank": "0xF6", "str_pos": "0x361DC6", "length": 53, "table": "normal"}
+#[sub]
+#穴も、人食いトンネルもなくなってる。
+#あなたたちは、もう、自分の国へ帰れないのね……。
 
+{"str_num": 94, "bank": "0xF6", "str_pos": "0x361DFC", "length": 12, "table": "normal"}
+#[protag]
+#いいだろ、みんな。
 
-{"str_num": 93, "bank": "0xF6", "str_pos": "0x361DBA", "length": 11}
-#[sub]<wait_auto>あなたたち……。
+{"str_num": 95, "bank": "0xF6", "str_pos": "0x361E09", "length": 30, "table": "normal"}
+#バルモア
+#しょうがねえな。
+#まあ、助けてもらったしよ。
 
+{"str_num": 96, "bank": "0xF6", "str_pos": "0x361E28", "length": 33, "table": "normal"}
+#[sub]
+#ベベル王子と。リンクル王女よね。
+#これからもよろしく☆
 
-{"str_num": 94, "bank": "0xF6", "str_pos": "0x361DC6", "length": 53}
-#[sub]<wait_auto>穴も、人食いトンネルもなくなってる。<wait_auto>あなたたちは、もう、自分の国へ帰れないのね……。
+{"str_num": 97, "bank": "0xF6", "str_pos": "0x361E4A", "length": 16, "table": "normal"}
+#[protag]
+#こちらこそ！
+#僕は[protag]。
 
+{"str_num": 98, "bank": "0xF6", "str_pos": "0x361E5B", "length": 14, "table": "normal"}
+#[protag]
+#こっちが[sub]とバルモア。
 
-{"str_num": 95, "bank": "0xF6", "str_pos": "0x361DFC", "length": 12}
-#[protag]<wait_auto>いいだろ、みんな。
-
-
-{"str_num": 96, "bank": "0xF6", "str_pos": "0x361E09", "length": 30}
-#バルモア<wait_auto>しょうがねえな。<wait_auto>まあ、助けてもらったしよ。
-
-
-{"str_num": 97, "bank": "0xF6", "str_pos": "0x361E28", "length": 33}
-#[sub]<wait_auto>ベベル王子と。リンクル王女よね。<wait_auto>これからもよろしく☆
-
-
-{"str_num": 98, "bank": "0xF6", "str_pos": "0x361E4A", "length": 16}
-#[protag]<wait_auto>こちらこそ！<wait_auto>僕は[protag]。
-
-
-{"str_num": 99, "bank": "0xF6", "str_pos": "0x361E5B", "length": 14}
-#[protag]<wait_auto>こっちが[sub]とバルモア。
-
-
-{"str_num": 100, "bank": "0xF6", "str_pos": "0x361E6A", "length": 15}
+{"str_num": 99, "bank": "0xF6", "str_pos": "0x361E6A", "length": 15, "table": "normal"}
 #フェニックスを手に入れた！
 
-
-{"str_num": 101, "bank": "0xF6", "str_pos": "0x361E7A", "length": 18}
+{"str_num": 100, "bank": "0xF6", "str_pos": "0x361E7A", "length": 18, "table": "normal"}
 #手裏剣を3個手に入れた！
 
-
-{"str_num": 102, "bank": "0xF6", "str_pos": "0x361E8D", "length": 15}
+{"str_num": 101, "bank": "0xF6", "str_pos": "0x361E8D", "length": 15, "table": "normal"}
 #クルスを5個手に入れた！
 
-
-{"str_num": 103, "bank": "0xF6", "str_pos": "0x361E9D", "length": 17}
+{"str_num": 102, "bank": "0xF6", "str_pos": "0x361E9D", "length": 17, "table": "normal"}
 #ウインドシールドを手に入れた！
 
-
-{"str_num": 104, "bank": "0xF6", "str_pos": "0x361EAF", "length": 15}
+{"str_num": 103, "bank": "0xF6", "str_pos": "0x361EAF", "length": 15, "table": "normal"}
 #キランディアを手に入れた！
 
-
-{"str_num": 105, "bank": "0xF6", "str_pos": "0x361EBF", "length": 17}
+{"str_num": 104, "bank": "0xF6", "str_pos": "0x361EBF", "length": 17, "table": "normal"}
 #エリクサーを5個手に入れた！
 
+{"str_num": 105, "bank": "0xF6", "str_pos": "0x361ED1", "length": 21, "table": "normal"}
+#[protag]
+#なんだか、すごく安心できる……。
 
-{"str_num": 106, "bank": "0xF6", "str_pos": "0x361ED1", "length": 21}
-#[protag]<wait_auto>なんだか、すごく安心できる……。
-
-
-{"str_num": 107, "bank": "0xF6", "str_pos": "0x361EE7", "length": 12}
+{"str_num": 106, "bank": "0xF6", "str_pos": "0x361EE7", "length": 12, "table": "normal"}
 #体力が回復した！
 
-
-{"str_num": 108, "bank": "0xF6", "str_pos": "0x361EF4", "length": 21}
-# 記録しますか？<wait_auto> はい<wait_auto> いいえ
-
-
-{"str_num": 109, "bank": "0xF6", "str_pos": "0x361F60", "length": 9}
-#1 [protag]<wait_auto>うわっ！
-
-
-{"str_num": 110, "bank": "0xF6", "str_pos": "0x361FA4", "length": 48}
-#7 [protag]<wait_auto>なんだ、今の風！？<wait_auto>絶対消えないはずのマジックトーチが、消えるなんて！？
-
-
-{"str_num": 111, "bank": "0xF6", "str_pos": "0x361FD5", "length": 9}
-#[sub]<wait_auto>[protag]、どこ！？
-
-
-{"str_num": 112, "bank": "0xF6", "str_pos": "0x361FDF", "length": 9}
-#[protag]<wait_auto>ここだよ、[sub]
-
-
-{"str_num": 113, "bank": "0xF6", "str_pos": "0x361FE9", "length": 48}
-#バルモア<wait_auto>とにかく、先へすすもうぜ。<wait_auto>こんな真っ暗なトコにいたら、どうにかなっちまう。
-
-
-{"str_num": 114, "bank": "0xF6", "str_pos": "0x36201A", "length": 9}
-#[protag]<wait_auto>出口だ！
-
-
-{"str_num": 115, "bank": "0xF6", "str_pos": "0x3624B1", "length": 31}
-#O1Fヂ<wait_auto>HョEH街EH村EH凡EH太EH郎EH森E2なFY
-
-
-{"str_num": 116, "bank": "0xF6", "str_pos": "0x3626F0", "length": 46}
-#O0  [protag]<wait_auto>なんだ、ここは？<wait_auto>こんなにきれいな場所が、洞窟の果てにあるなんて……。
-
-
-{"str_num": 117, "bank": "0xF6", "str_pos": "0x36271F", "length": 34}
-#バルモア<wait_auto>おう、ちょうどいいや。<wait_auto>ここは、なんて場所なんだ？
-
-
-{"str_num": 118, "bank": "0xF6", "str_pos": "0x362742", "length": 26}
-#女<wait_auto>JKSARO、WPJFDHD＋LKBBA！！
-
-
-{"str_num": 119, "bank": "0xF6", "str_pos": "0x36275D", "length": 11}
-#[protag]<wait_auto>あっ、ちょっと！
-
-
-{"str_num": 120, "bank": "0xF6", "str_pos": "0x362769", "length": 20}
-#バルモア<wait_auto>あの女、なんていったんだ？
-
-
-{"str_num": 121, "bank": "0xF6", "str_pos": "0x36277E", "length": 21}
-#[sub]<wait_auto>聞いたこともない言葉だったわ。
-
-
-{"str_num": 122, "bank": "0xF6", "str_pos": "0x362794", "length": 58}
-#ベンホルム<wait_auto>フムム、あれは古代語ダスな。<wait_auto>五千年くらい前にほろびた王国で、使われた言葉ダス。
-
-
-{"str_num": 123, "bank": "0xF6", "str_pos": "0x3627CF", "length": 44}
-#バルモア<wait_auto>てきとうなこというな。<wait_auto>実際に使ってる奴を、今見たじゃねえか。
-
-
-{"str_num": 124, "bank": "0xF6", "str_pos": "0x3627FC", "length": 21}
-#ベンホルム<wait_auto>フムム……おかしいダスなあ。
-
-
-{"str_num": 125, "bank": "0xF6", "str_pos": "0x362812", "length": 41}
-#[sub]<wait_auto>それより、ベンホルムさん？<wait_auto>さっきの言葉の意味、わかったんですか？
-
-
-{"str_num": 126, "bank": "0xF6", "str_pos": "0x36283C", "length": 56}
-#ベンホルム<wait_auto>ワスは天才言語学者ダスよ。<wait_auto>さっきの女性は、キャア、ゴリラ！！<wait_auto>といったダス。
-
-
-{"str_num": 127, "bank": "0xF6", "str_pos": "0x362875", "length": 11}
-#[sub]<wait_auto>ゴリラって……。
-
-
-{"str_num": 128, "bank": "0xF6", "str_pos": "0x362881", "length": 19}
-#[sub]<wait_auto>バルモアのこと？<wait_auto>きゃははは。
-
-
-{"str_num": 129, "bank": "0xF6", "str_pos": "0x362895", "length": 46}
-#バルモア<wait_auto>うるせえっ！<wait_auto>ベンホルム、てめえ言葉がわかるなら、これから通訳しろよ！
-
-
-{"str_num": 130, "bank": "0xF6", "str_pos": "0x3628C4", "length": 17}
-#ベンホルム<wait_auto>お安いご用ダス。
-
-
-{"str_num": 131, "bank": "0xF6", "str_pos": "0x3628D6", "length": 12}
-#[protag]<wait_auto>うわあ、すごいや。
-
-
-{"str_num": 132, "bank": "0xF6", "str_pos": "0x3628E3", "length": 52}
-#[protag]<wait_auto>ここの人とは、言葉が通じないのかな。<wait_auto>言語ほん訳機のスイッチを、入れておこう。
-
-
-{"str_num": 133, "bank": "0xF6", "str_pos": "0x362918", "length": 34}
-#少女<wait_auto>AODKK……MSHALERJHD、KKGSGTREO？
-
-
-{"str_num": 134, "bank": "0xF6", "str_pos": "0x36293B", "length": 38}
-#ベンホルム<wait_auto>フムム。<wait_auto>彼女は、み使いだわ……、といっておったダス。
-
-
-{"str_num": 135, "bank": "0xF6", "str_pos": "0x362962", "length": 19}
-#[protag]<wait_auto>み使い？<wait_auto>何のことだろう。
-
-
-{"str_num": 136, "bank": "0xF6", "str_pos": "0x362976", "length": 23}
-#少女<wait_auto>そんな……み使いが、本当に？
-
-
-{"str_num": 137, "bank": "0xF6", "str_pos": "0x36298E", "length": 19}
-#[protag]<wait_auto>み使い？<wait_auto>何のことだろう。
-
-
-{"str_num": 138, "bank": "0xF6", "str_pos": "0x3629A2", "length": 29}
-#[protag]<wait_auto>ドアが閉まってるな。<wait_auto>誰もいないのかなあ……？
-
-
-{"str_num": 139, "bank": "0xF6", "str_pos": "0x3629C0", "length": 21}
-#男<wait_auto>MNIDLA、MCLAPDOIW。
-
-
-{"str_num": 140, "bank": "0xF6", "str_pos": "0x3629D6", "length": 20}
-#ベンホルム<wait_auto>フムム。<wait_auto>自分は、<FD>
-
-
-{"str_num": 141, "bank": "0xF6", "str_pos": "0x362A02", "length": 9}
-#人？<wait_auto>へえ、<FD>
-
-
-{"str_num": 142, "bank": "0xF6", "str_pos": "0x362A17", "length": 36}
-#ユバンキ<wait_auto>KJKJOWS、LAJMDJKAPDIKWQICJ＋AKD。
-
-
-{"str_num": 143, "bank": "0xF6", "str_pos": "0x362A3C", "length": 28}
-#ベンホルム<wait_auto>フムム。<wait_auto>絶対に、後世に残る<FD>
-
-
-{"str_num": 144, "bank": "0xF6", "str_pos": "0x362A59", "length": 12}
-#を書いてみせる。<wait_auto><FD>
-
-
-{"str_num": 145, "bank": "0xF6", "str_pos": "0x362A66", "length": 14}
+{"str_num": 107, "bank": "0xF6", "str_pos": "0x361EF4", "length": 21, "table": "normal"}
+# 記録しますか？
+# はい
+# いいえ
+
+{"str_num": 108, "bank": "0xF6", "str_pos": "0x361F60", "length": 9, "table": "normal"}
+#1 [protag]
+#うわっ！
+
+{"str_num": 109, "bank": "0xF6", "str_pos": "0x361FA4", "length": 48, "table": "normal"}
+#7 [protag]
+#なんだ、今の風！？
+#絶対消えないはずのマジックトーチが、消えるなんて！？
+
+{"str_num": 110, "bank": "0xF6", "str_pos": "0x361FD5", "length": 9, "table": "normal"}
+#[sub]
+#[protag]、どこ！？
+
+{"str_num": 111, "bank": "0xF6", "str_pos": "0x361FDF", "length": 9, "table": "normal"}
+#[protag]
+#ここだよ、[sub]
+
+{"str_num": 112, "bank": "0xF6", "str_pos": "0x361FE9", "length": 48, "table": "normal"}
+#バルモア
+#とにかく、先へすすもうぜ。
+#こんな真っ暗なトコにいたら、どうにかなっちまう。
+
+{"str_num": 113, "bank": "0xF6", "str_pos": "0x36201A", "length": 9, "table": "normal"}
+#[protag]
+#出口だ！
+
+{"str_num": 114, "bank": "0xF6", "str_pos": "0x3626F0", "length": 46, "table": "normal"}
+#O0  [protag]
+#なんだ、ここは？
+#こんなにきれいな場所が、洞窟の果てにあるなんて……。
+
+{"str_num": 115, "bank": "0xF6", "str_pos": "0x36271F", "length": 34, "table": "normal"}
+#バルモア
+#おう、ちょうどいいや。
+#ここは、なんて場所なんだ？
+
+{"str_num": 116, "bank": "0xF6", "str_pos": "0x36275D", "length": 11, "table": "normal"}
+#[protag]
+#あっ、ちょっと！
+
+{"str_num": 117, "bank": "0xF6", "str_pos": "0x362769", "length": 20, "table": "normal"}
+#バルモア
+#あの女、なんていったんだ？
+
+{"str_num": 118, "bank": "0xF6", "str_pos": "0x36277E", "length": 21, "table": "normal"}
+#[sub]
+#聞いたこともない言葉だったわ。
+
+{"str_num": 119, "bank": "0xF6", "str_pos": "0x362794", "length": 58, "table": "normal"}
+#ベンホルム
+#フムム、あれは古代語ダスな。
+#五千年くらい前にほろびた王国で、使われた言葉ダス。
+
+{"str_num": 120, "bank": "0xF6", "str_pos": "0x3627CF", "length": 44, "table": "normal"}
+#バルモア
+#てきとうなこというな。
+#実際に使ってる奴を、今見たじゃねえか。
+
+{"str_num": 121, "bank": "0xF6", "str_pos": "0x3627FC", "length": 21, "table": "normal"}
+#ベンホルム
+#フムム……おかしいダスなあ。
+
+{"str_num": 122, "bank": "0xF6", "str_pos": "0x362812", "length": 41, "table": "normal"}
+#[sub]
+#それより、ベンホルムさん？
+#さっきの言葉の意味、わかったんですか？
+
+{"str_num": 123, "bank": "0xF6", "str_pos": "0x36283C", "length": 56, "table": "normal"}
+#ベンホルム
+#ワスは天才言語学者ダスよ。
+#さっきの女性は、キャア、ゴリラ！！
+#といったダス。
+
+{"str_num": 124, "bank": "0xF6", "str_pos": "0x362875", "length": 11, "table": "normal"}
+#[sub]
+#ゴリラって……。
+
+{"str_num": 125, "bank": "0xF6", "str_pos": "0x362881", "length": 19, "table": "normal"}
+#[sub]
+#バルモアのこと？
+#きゃははは。
+
+{"str_num": 126, "bank": "0xF6", "str_pos": "0x362895", "length": 46, "table": "normal"}
+#バルモア
+#うるせえっ！
+#ベンホルム、てめえ言葉がわかるなら、これから通訳しろよ！
+
+{"str_num": 127, "bank": "0xF6", "str_pos": "0x3628C4", "length": 17, "table": "normal"}
+#ベンホルム
+#お安いご用ダス。
+
+{"str_num": 128, "bank": "0xF6", "str_pos": "0x3628D6", "length": 12, "table": "normal"}
+#[protag]
+#うわあ、すごいや。
+
+{"str_num": 129, "bank": "0xF6", "str_pos": "0x3628E3", "length": 52, "table": "normal"}
+#[protag]
+#ここの人とは、言葉が通じないのかな。
+#言語ほん訳機のスイッチを、入れておこう。
+
+{"str_num": 130, "bank": "0xF6", "str_pos": "0x362918", "length": 34, "table": "normal"}
+#少女
+#AODKK……MSHALERJHD、KKGSGTREO？
+
+{"str_num": 131, "bank": "0xF6", "str_pos": "0x36293B", "length": 38, "table": "normal"}
+#ベンホルム
+#フムム。
+#彼女は、み使いだわ……、といっておったダス。
+
+{"str_num": 132, "bank": "0xF6", "str_pos": "0x362962", "length": 19, "table": "normal"}
+#[protag]
+#み使い？
+#何のことだろう。
+
+{"str_num": 133, "bank": "0xF6", "str_pos": "0x362976", "length": 23, "table": "normal"}
+#少女
+#そんな……み使いが、本当に？
+
+{"str_num": 134, "bank": "0xF6", "str_pos": "0x36298E", "length": 19, "table": "normal"}
+#[protag]
+#み使い？
+#何のことだろう。
+
+{"str_num": 135, "bank": "0xF6", "str_pos": "0x3629A2", "length": 29, "table": "normal"}
+#[protag]
+#ドアが閉まってるな。
+#誰もいないのかなあ……？
+
+{"str_num": 136, "bank": "0xF6", "str_pos": "0x3629D6", "length": 20, "table": "normal"}
+#ベンホルム
+#フムム。
+#自分は、<FD>
+
+{"str_num": 137, "bank": "0xF6", "str_pos": "0x362A02", "length": 9, "table": "normal"}
+#人？
+#へえ、<FD>
+
+{"str_num": 138, "bank": "0xF6", "str_pos": "0x362A3C", "length": 28, "table": "normal"}
+#ベンホルム
+#フムム。
+#絶対に、後世に残る<FD>
+
+{"str_num": 139, "bank": "0xF6", "str_pos": "0x362A59", "length": 12, "table": "normal"}
+#を書いてみせる。
+#<FD>
+
+{"str_num": 140, "bank": "0xF6", "str_pos": "0x362A66", "length": 14, "table": "normal"}
 #人・ユバンキの名前を<FC>
 
+{"str_num": 141, "bank": "0xF6", "str_pos": "0x362A86", "length": 9, "table": "normal"}
+#[protag]
+#この人が<FD>
 
-{"str_num": 146, "bank": "0xF6", "str_pos": "0x362A86", "length": 9}
-#[protag]<wait_auto>この人が<FD>
-
-
-{"str_num": 147, "bank": "0xF6", "str_pos": "0x362A90", "length": 31}
+{"str_num": 142, "bank": "0xF6", "str_pos": "0x362A90", "length": 31, "table": "normal"}
 #を書き終えるまでには、もとの世界に戻れるといいなあ。
 
+{"str_num": 143, "bank": "0xF6", "str_pos": "0x362AB0", "length": 8, "table": "normal"}
+#男
+#私は<FD>
 
-{"str_num": 148, "bank": "0xF6", "str_pos": "0x362AB0", "length": 8}
-#男<wait_auto>私は<FD>
+{"str_num": 144, "bank": "0xF6", "str_pos": "0x362AB9", "length": 27, "table": "normal"}
+#人のユバンキ。
+#僕の名前を知っているかい？
 
+{"str_num": 145, "bank": "0xF6", "str_pos": "0x362AD5", "length": 34, "table": "normal"}
+# なんと答えますか？
+# もちろん知っているよ
+# 知らないな
 
-{"str_num": 149, "bank": "0xF6", "str_pos": "0x362AB9", "length": 27}
-#人のユバンキ。<wait_auto>僕の名前を知っているかい？
+{"str_num": 146, "bank": "0xF6", "str_pos": "0x362AF9", "length": 45, "table": "normal"}
+#ユバンキ
+#……だろうな。
+#でも、きっといつか、後世に残るような、素晴らしい<FD>
 
+{"str_num": 147, "bank": "0xF6", "str_pos": "0x362B32", "length": 13, "table": "normal"}
+#[protag]
+#がんばってください。
 
-{"str_num": 150, "bank": "0xF6", "str_pos": "0x362AD5", "length": 34}
-# なんと答えますか？<wait_auto> もちろん知っているよ<wait_auto> 知らないな
+{"str_num": 148, "bank": "0xF6", "str_pos": "0x362B40", "length": 35, "table": "normal"}
+#ユバンキ
+#いいんだ、気をつかわなくて。
+#僕はまだ、無名の<FD>
 
+{"str_num": 149, "bank": "0xF6", "str_pos": "0x362B64", "length": 36, "table": "normal"}
+#人さ。
+#でも、きっといつか、後世に残るような、素晴らしい<FD>
 
-{"str_num": 151, "bank": "0xF6", "str_pos": "0x362AF9", "length": 45}
-#ユバンキ<wait_auto>……だろうな。<wait_auto>でも、きっといつか、後世に残るような、素晴らしい<FD>
+{"str_num": 150, "bank": "0xF6", "str_pos": "0x362B94", "length": 13, "table": "normal"}
+#[protag]
+#がんばってください。
 
+{"str_num": 151, "bank": "0xF6", "str_pos": "0x362BCB", "length": 28, "table": "normal"}
+#ベンホルム
+#フムム。
+#絶対に、後世に残る<FD>
 
-{"str_num": 152, "bank": "0xF6", "str_pos": "0x362B32", "length": 13}
-#[protag]<wait_auto>がんばってください。
+{"str_num": 152, "bank": "0xF6", "str_pos": "0x362BE8", "length": 12, "table": "normal"}
+#を書いてみせる。
+#<FD>
 
-
-{"str_num": 153, "bank": "0xF6", "str_pos": "0x362B40", "length": 35}
-#ユバンキ<wait_auto>いいんだ、気をつかわなくて。<wait_auto>僕はまだ、無名の<FD>
-
-
-{"str_num": 154, "bank": "0xF6", "str_pos": "0x362B64", "length": 36}
-#人さ。<wait_auto>でも、きっといつか、後世に残るような、素晴らしい<FD>
-
-
-{"str_num": 155, "bank": "0xF6", "str_pos": "0x362B94", "length": 13}
-#[protag]<wait_auto>がんばってください。
-
-
-{"str_num": 156, "bank": "0xF6", "str_pos": "0x362BA2", "length": 40}
-#ユバンキ<wait_auto>JJSLAJDNBCX、MNMNCN、JNSL＋PAHCHLAIW。
-
-
-{"str_num": 157, "bank": "0xF6", "str_pos": "0x362BCB", "length": 28}
-#ベンホルム<wait_auto>フムム。<wait_auto>絶対に、後世に残る<FD>
-
-
-{"str_num": 158, "bank": "0xF6", "str_pos": "0x362BE8", "length": 12}
-#を書いてみせる。<wait_auto><FD>
-
-
-{"str_num": 159, "bank": "0xF6", "str_pos": "0x362BF5", "length": 14}
+{"str_num": 153, "bank": "0xF6", "str_pos": "0x362BF5", "length": 14, "table": "normal"}
 #人・ユバンキの名前を<FC>
 
+{"str_num": 154, "bank": "0xF6", "str_pos": "0x362C18", "length": 9, "table": "normal"}
+#[protag]
+#この人が<FD>
 
-{"str_num": 160, "bank": "0xF6", "str_pos": "0x362C18", "length": 9}
-#[protag]<wait_auto>この人が<FD>
-
-
-{"str_num": 161, "bank": "0xF6", "str_pos": "0x362C22", "length": 31}
+{"str_num": 155, "bank": "0xF6", "str_pos": "0x362C22", "length": 31, "table": "normal"}
 #を書き終わるまでには、もとの世界に戻れるといいなあ。
 
+{"str_num": 156, "bank": "0xF6", "str_pos": "0x362C42", "length": 33, "table": "normal"}
+#ユバンキ
+#きっといつか、後世に残るような、素晴らしい<FD>
 
-{"str_num": 162, "bank": "0xF6", "str_pos": "0x362C42", "length": 33}
-#ユバンキ<wait_auto>きっといつか、後世に残るような、素晴らしい<FD>
+{"str_num": 157, "bank": "0xF6", "str_pos": "0x362C6F", "length": 13, "table": "normal"}
+#[protag]
+#がんばってください。
 
+{"str_num": 158, "bank": "0xF6", "str_pos": "0x362C7D", "length": 24, "table": "normal"}
+#少女
+#MMALMA、MMXIOKJXPA。
 
-{"str_num": 163, "bank": "0xF6", "str_pos": "0x362C6F", "length": 13}
-#[protag]<wait_auto>がんばってください。
+{"str_num": 159, "bank": "0xF6", "str_pos": "0x362C96", "length": 35, "table": "normal"}
+#ベンホルム
+#フムム。
+#かわいいイヌでしょう……、といっているダス。
 
+{"str_num": 160, "bank": "0xF6", "str_pos": "0x362CBA", "length": 25, "table": "normal"}
+#[protag]
+#うわあ、あのイヌのくびわ、金でできてるぞ。
 
-{"str_num": 164, "bank": "0xF6", "str_pos": "0x362C7D", "length": 24}
-#少女<wait_auto>MMALMA、MMXIOKJXPA。
+{"str_num": 161, "bank": "0xF6", "str_pos": "0x362CD4", "length": 25, "table": "normal"}
+#少女
+#NCSKNCLS、AMARUBSLJ。
 
+{"str_num": 162, "bank": "0xF6", "str_pos": "0x362CEE", "length": 36, "table": "normal"}
+#ベンホルム
+#フムム。
+#名前はアマルっていうの、といっているダス。
 
-{"str_num": 165, "bank": "0xF6", "str_pos": "0x362C96", "length": 35}
-#ベンホルム<wait_auto>フムム。<wait_auto>かわいいイヌでしょう……、といっているダス。
+{"str_num": 163, "bank": "0xF6", "str_pos": "0x362D13", "length": 19, "table": "normal"}
+#[protag]
+#人なつっこい女の子だなあ。
 
+{"str_num": 164, "bank": "0xF6", "str_pos": "0x362D27", "length": 25, "table": "normal"}
+#少女
+#INU、KADHBCBKJAGGUW。
 
-{"str_num": 166, "bank": "0xF6", "str_pos": "0x362CBA", "length": 25}
-#[protag]<wait_auto>うわあ、あのイヌのくびわ、金でできてるぞ。
+{"str_num": 165, "bank": "0xF6", "str_pos": "0x362D41", "length": 31, "table": "normal"}
+#ベンホルム
+#フムム。
+#イヌをなでてもいいといっているダス。
 
+{"str_num": 166, "bank": "0xF6", "str_pos": "0x362D61", "length": 34, "table": "normal"}
+#少女
+#見たこともない人たちね。
+#あたしのイヌ、見たい？
 
-{"str_num": 167, "bank": "0xF6", "str_pos": "0x362CD4", "length": 25}
-#少女<wait_auto>NCSKNCLS、AMARUBSLJ。
+{"str_num": 167, "bank": "0xF6", "str_pos": "0x362D84", "length": 33, "table": "normal"}
+#[protag]
+#あ……うん、かわいいイヌだね。
+#あのくびわ、金なのかい？
 
+{"str_num": 168, "bank": "0xF6", "str_pos": "0x362DA6", "length": 48, "table": "normal"}
+#少女
+#そうよ、似合ってるでしょう。
+#名前はアマルっていうの。
+#なでてもいいわよ。
 
-{"str_num": 168, "bank": "0xF6", "str_pos": "0x362CEE", "length": 36}
-#ベンホルム<wait_auto>フムム。<wait_auto>名前はアマルっていうの、といっているダス。
+{"str_num": 169, "bank": "0xF6", "str_pos": "0x362DD7", "length": 15, "table": "normal"}
+#[protag]
+#あ……うん、ありがとう。
 
+{"str_num": 170, "bank": "0xF6", "str_pos": "0x362DE7", "length": 31, "table": "normal"}
+#少女
+#イヌは好き？
+#このアマルを、なでてもいいわよ。
 
-{"str_num": 169, "bank": "0xF6", "str_pos": "0x362D13", "length": 19}
-#[protag]<wait_auto>人なつっこい女の子だなあ。
+{"str_num": 171, "bank": "0xF6", "str_pos": "0x362E07", "length": 10, "table": "normal"}
+#イヌ
+#ワン、ワン！
 
+{"str_num": 172, "bank": "0xF6", "str_pos": "0x362E12", "length": 38, "table": "normal"}
+# イヌをなでますか？
+# なでてみようかな
+# イヌは好きじゃないんだよな
 
-{"str_num": 170, "bank": "0xF6", "str_pos": "0x362D27", "length": 25}
-#少女<wait_auto>INU、KADHBCBKJAGGUW。
+{"str_num": 173, "bank": "0xF6", "str_pos": "0x362E3A", "length": 14, "table": "normal"}
+#イヌ
+#クウーン、クウーン☆
 
-
-{"str_num": 171, "bank": "0xF6", "str_pos": "0x362D41", "length": 31}
-#ベンホルム<wait_auto>フムム。<wait_auto>イヌをなでてもいいといっているダス。
-
-
-{"str_num": 172, "bank": "0xF6", "str_pos": "0x362D61", "length": 34}
-#少女<wait_auto>見たこともない人たちね。<wait_auto>あたしのイヌ、見たい？
-
-
-{"str_num": 173, "bank": "0xF6", "str_pos": "0x362D84", "length": 33}
-#[protag]<wait_auto>あ……うん、かわいいイヌだね。<wait_auto>あのくびわ、金なのかい？
-
-
-{"str_num": 174, "bank": "0xF6", "str_pos": "0x362DA6", "length": 48}
-#少女<wait_auto>そうよ、似合ってるでしょう。<wait_auto>名前はアマルっていうの。<wait_auto>なでてもいいわよ。
-
-
-{"str_num": 175, "bank": "0xF6", "str_pos": "0x362DD7", "length": 15}
-#[protag]<wait_auto>あ……うん、ありがとう。
-
-
-{"str_num": 176, "bank": "0xF6", "str_pos": "0x362DE7", "length": 31}
-#少女<wait_auto>イヌは好き？<wait_auto>このアマルを、なでてもいいわよ。
-
-
-{"str_num": 177, "bank": "0xF6", "str_pos": "0x362E07", "length": 10}
-#イヌ<wait_auto>ワン、ワン！
-
-
-{"str_num": 178, "bank": "0xF6", "str_pos": "0x362E12", "length": 38}
-# イヌをなでますか？<wait_auto> なでてみようかな<wait_auto> イヌは好きじゃないんだよな
-
-
-{"str_num": 179, "bank": "0xF6", "str_pos": "0x362E3A", "length": 14}
-#イヌ<wait_auto>クウーン、クウーン☆
-
-
-{"str_num": 180, "bank": "0xF6", "str_pos": "0x362E49", "length": 21}
+{"str_num": 174, "bank": "0xF6", "str_pos": "0x362E49", "length": 21, "table": "normal"}
 #[protag]は、ちょっと幸せな気持ちになった！
 
-
-{"str_num": 181, "bank": "0xF6", "str_pos": "0x362E5F", "length": 22}
-#イヌ<wait_auto>ヒトダ、ヒトダ。<wait_auto>ナデテ、ナデテ☆
-
-
-{"str_num": 182, "bank": "0xF6", "str_pos": "0x36538D", "length": 31}
-#王J [protag]<wait_auto>せっかくもてなされたんだから、ゆっくりしていこう。
-
-
-{"str_num": 183, "bank": "0xF6", "str_pos": "0x3653AD", "length": 52}
-#女王<wait_auto>AIIKJSDLWWSD＋／GG。<wait_auto>ASIIIPWJND、KDHGAAAD・KHGSAMU。
-
-
-{"str_num": 184, "bank": "0xF6", "str_pos": "0x3653E2", "length": 52}
-#ベンホルム<wait_auto>どうやら、あの女性が、この国の女王らしいダスな。<wait_auto>フェリアラと名乗ってるダス。
-
-
-{"str_num": 185, "bank": "0xF6", "str_pos": "0x365417", "length": 15}
-#[protag]<wait_auto>さっきの女性もいる。
-
-
-{"str_num": 186, "bank": "0xF6", "str_pos": "0x365427", "length": 44}
-#女王フェリアラ<wait_auto>AKKJHFNX＋。<wait_auto>ASSD、KDHIWPSA、ALD＋L＋P。
-
-
-{"str_num": 187, "bank": "0xF6", "str_pos": "0x365454", "length": 16}
-#青年<wait_auto>JGDKS＋PUU。
-
-
-{"str_num": 188, "bank": "0xF6", "str_pos": "0x365465", "length": 42}
-#女王フェリアラ<wait_auto>KGGGH、OISRTUBCL＋HOUG、DFBVPNDHKD。
-
-
-{"str_num": 189, "bank": "0xF6", "str_pos": "0x365490", "length": 34}
-#青年<wait_auto>YYJJGBDMLDSHFDUXPOEWNMDO、CX。
-
-
-{"str_num": 190, "bank": "0xF6", "str_pos": "0x3654B3", "length": 28}
-#女王フェリアラ<wait_auto>HLSNCPPE、AGFSKDLE。
-
-
-{"str_num": 191, "bank": "0xF6", "str_pos": "0x3654D0", "length": 15}
-#[protag]<wait_auto>何をもめてるんだろう？
-
-
-{"str_num": 192, "bank": "0xF6", "str_pos": "0x3654E0", "length": 56}
-#ベンホルム<wait_auto>フムム、ワスたちをかんげいするか、追い出すかでもめていたようダスな。<wait_auto>もう終わったダスよ。
-
-
-{"str_num": 193, "bank": "0xF6", "str_pos": "0x365519", "length": 41}
-#女王・フェリアラ<wait_auto>AHHHL、PHHDFSK、PSJS＋CXNKKKSAER。
-
-
-{"str_num": 194, "bank": "0xF6", "str_pos": "0x365543", "length": 45}
-#ベンホルム<wait_auto>あの少年は、ベベル王子だそうダス。<wait_auto>少女はリンクル王女ダスな。
-
-
-{"str_num": 195, "bank": "0xF6", "str_pos": "0x365571", "length": 32}
-#[protag]<wait_auto>王女様だったのか。<wait_auto>僕は、[protag]。<wait_auto>冒険家です。
-
-
-{"str_num": 196, "bank": "0xF6", "str_pos": "0x365592", "length": 21}
-#[protag]<wait_auto>ふーん、あの子、王女だったんだ。
-
-
-{"str_num": 197, "bank": "0xF6", "str_pos": "0x3655A8", "length": 29}
-#女王・フェリアラ<wait_auto>JPLKG、DOGUGUEBOBV。
-
-
-{"str_num": 198, "bank": "0xF6", "str_pos": "0x3655C6", "length": 35}
-#ベンホルム<wait_auto>フムム、ワスたちを、かんげいしてくれるといっているダス。
-
-
-{"str_num": 199, "bank": "0xF6", "str_pos": "0x3655EA", "length": 24}
-#[protag]<wait_auto>この人たちに、ついて行けってことかな。
-
-
-{"str_num": 200, "bank": "0xF6", "str_pos": "0x365603", "length": 36}
-#女王<wait_auto>ようこそ、きゃく人よ。<wait_auto>私は女王、フェリアラ・カムイ。
-
-
-{"str_num": 201, "bank": "0xF6", "str_pos": "0x365628", "length": 10}
-#[protag]<wait_auto>女王様！？
-
-
-{"str_num": 202, "bank": "0xF6", "str_pos": "0x365633", "length": 46}
-#女王・フェリアラ<wait_auto>この国に、きゃく人はめずらしい。<wait_auto>どうか、ゆっくりしていきなさい。
-
-
-{"str_num": 203, "bank": "0xF6", "str_pos": "0x365662", "length": 23}
-#王子<wait_auto>母上！<wait_auto>私は、はんたいです。
-
-
-{"str_num": 204, "bank": "0xF6", "str_pos": "0x36567A", "length": 42}
-#女王・フェリアラ<wait_auto>下がりなさい、ベベル。<wait_auto>私のいうことに逆らうのですか。
-
-
-{"str_num": 205, "bank": "0xF6", "str_pos": "0x3656A5", "length": 32}
-#王子・ベベル<wait_auto>しかし、母上。<wait_auto>こんな、よそ者を……！
-
-
-{"str_num": 206, "bank": "0xF6", "str_pos": "0x3656C6", "length": 40}
-#女王・フェリアラ<wait_auto>ベベル、それ以上いうと、我が子でも許しませんよ。
-
-
-{"str_num": 207, "bank": "0xF6", "str_pos": "0x3656EF", "length": 20}
-#[protag]<wait_auto>なにか、もめてるみたいだけど……。
-
-
-{"str_num": 208, "bank": "0xF6", "str_pos": "0x365704", "length": 72}
-#女王・フェリアラ<wait_auto>旅人よ、見苦しいところを見せてしまいましたね。<wait_auto>これは私の娘リンクル、そしてこちらが息子のベベルです。
-
-
-{"str_num": 209, "bank": "0xF6", "str_pos": "0x36574D", "length": 19}
-#[protag]<wait_auto>あ、[protag]です。<wait_auto>冒険家です。
-
-
-{"str_num": 210, "bank": "0xF6", "str_pos": "0x365761", "length": 66}
-#女王・フェリアラ<wait_auto>ならば、いろいろな話を聞かせてくれますか。<wait_auto>今日は、ここにとまりなさい。<wait_auto>さあ、案内しなさい。
-
-
-{"str_num": 211, "bank": "0xF6", "str_pos": "0x3657A4", "length": 35}
-#バルモア<wait_auto>すげえごちそうじゃねえか。<wait_auto>これ、食っていいんだよな。
-
-
-{"str_num": 212, "bank": "0xF6", "str_pos": "0x3657C8", "length": 20}
-#[sub]<wait_auto>でも、なんだか……変な感じね。
-
-
-{"str_num": 213, "bank": "0xF6", "str_pos": "0x3657DD", "length": 14}
+{"str_num": 175, "bank": "0xF6", "str_pos": "0x362E5F", "length": 22, "table": "normal"}
+#イヌ
+#ヒトダ、ヒトダ。
+#ナデテ、ナデテ☆
+
+{"str_num": 176, "bank": "0xF6", "str_pos": "0x36538D", "length": 31, "table": "normal"}
+#王J [protag]
+#せっかくもてなされたんだから、ゆっくりしていこう。
+
+{"str_num": 177, "bank": "0xF6", "str_pos": "0x3653E2", "length": 52, "table": "normal"}
+#ベンホルム
+#どうやら、あの女性が、この国の女王らしいダスな。
+#フェリアラと名乗ってるダス。
+
+{"str_num": 178, "bank": "0xF6", "str_pos": "0x365417", "length": 15, "table": "normal"}
+#[protag]
+#さっきの女性もいる。
+
+{"str_num": 179, "bank": "0xF6", "str_pos": "0x36542A", "length": 41, "table": "normal"}
+#フェリアラ
+#AKKJHFNX＋。
+#ASSD、KDHIWPSA、ALD＋L＋P。
+
+{"str_num": 180, "bank": "0xF6", "str_pos": "0x365454", "length": 16, "table": "normal"}
+#青年
+#JGDKS＋PUU。
+
+{"str_num": 181, "bank": "0xF6", "str_pos": "0x3654B6", "length": 25, "table": "normal"}
+#フェリアラ
+#HLSNCPPE、AGFSKDLE。
+
+{"str_num": 182, "bank": "0xF6", "str_pos": "0x3654D0", "length": 15, "table": "normal"}
+#[protag]
+#何をもめてるんだろう？
+
+{"str_num": 183, "bank": "0xF6", "str_pos": "0x3654E0", "length": 56, "table": "normal"}
+#ベンホルム
+#フムム、ワスたちをかんげいするか、追い出すかでもめていたようダスな。
+#もう終わったダスよ。
+
+{"str_num": 184, "bank": "0xF6", "str_pos": "0x365543", "length": 45, "table": "normal"}
+#ベンホルム
+#あの少年は、ベベル王子だそうダス。
+#少女はリンクル王女ダスな。
+
+{"str_num": 185, "bank": "0xF6", "str_pos": "0x365571", "length": 32, "table": "normal"}
+#[protag]
+#王女様だったのか。
+#僕は、[protag]。
+#冒険家です。
+
+{"str_num": 186, "bank": "0xF6", "str_pos": "0x365592", "length": 21, "table": "normal"}
+#[protag]
+#ふーん、あの子、王女だったんだ。
+
+{"str_num": 187, "bank": "0xF6", "str_pos": "0x3655AC", "length": 25, "table": "normal"}
+#フェリアラ
+#JPLKG、DOGUGUEBOBV。
+
+{"str_num": 188, "bank": "0xF6", "str_pos": "0x3655C6", "length": 35, "table": "normal"}
+#ベンホルム
+#フムム、ワスたちを、かんげいしてくれるといっているダス。
+
+{"str_num": 189, "bank": "0xF6", "str_pos": "0x3655EA", "length": 24, "table": "normal"}
+#[protag]
+#この人たちに、ついて行けってことかな。
+
+{"str_num": 190, "bank": "0xF6", "str_pos": "0x365603", "length": 36, "table": "normal"}
+#女王
+#ようこそ、きゃく人よ。
+#私は女王、フェリアラ・カムイ。
+
+{"str_num": 191, "bank": "0xF6", "str_pos": "0x365628", "length": 10, "table": "normal"}
+#[protag]
+#女王様！？
+
+{"str_num": 192, "bank": "0xF6", "str_pos": "0x365637", "length": 42, "table": "normal"}
+#フェリアラ
+#この国に、きゃく人はめずらしい。
+#どうか、ゆっくりしていきなさい。
+
+{"str_num": 193, "bank": "0xF6", "str_pos": "0x365662", "length": 23, "table": "normal"}
+#王子
+#母上！
+#私は、はんたいです。
+
+{"str_num": 194, "bank": "0xF6", "str_pos": "0x36567E", "length": 38, "table": "normal"}
+#フェリアラ
+#下がりなさい、ベベル。
+#私のいうことに逆らうのですか。
+
+{"str_num": 195, "bank": "0xF6", "str_pos": "0x3656A9", "length": 28, "table": "normal"}
+#ベベル
+#しかし、母上。
+#こんな、よそ者を……！
+
+{"str_num": 196, "bank": "0xF6", "str_pos": "0x3656CA", "length": 36, "table": "normal"}
+#フェリアラ
+#ベベル、それ以上いうと、我が子でも許しませんよ。
+
+{"str_num": 197, "bank": "0xF6", "str_pos": "0x3656EF", "length": 20, "table": "normal"}
+#[protag]
+#なにか、もめてるみたいだけど……。
+
+{"str_num": 198, "bank": "0xF6", "str_pos": "0x365708", "length": 68, "table": "normal"}
+#フェリアラ
+#旅人よ、見苦しいところを見せてしまいましたね。
+#これは私の娘リンクル、そしてこちらが息子のベベルです。
+
+{"str_num": 199, "bank": "0xF6", "str_pos": "0x36574D", "length": 19, "table": "normal"}
+#[protag]
+#あ、[protag]です。
+#冒険家です。
+
+{"str_num": 200, "bank": "0xF6", "str_pos": "0x365765", "length": 62, "table": "normal"}
+#フェリアラ
+#ならば、いろいろな話を聞かせてくれますか。
+#今日は、ここにとまりなさい。
+#さあ、案内しなさい。
+
+{"str_num": 201, "bank": "0xF6", "str_pos": "0x3657A4", "length": 35, "table": "normal"}
+#バルモア
+#すげえごちそうじゃねえか。
+#これ、食っていいんだよな。
+
+{"str_num": 202, "bank": "0xF6", "str_pos": "0x3657C8", "length": 20, "table": "normal"}
+#[sub]
+#でも、なんだか……変な感じね。
+
+{"str_num": 203, "bank": "0xF6", "str_pos": "0x3657DD", "length": 14, "table": "normal"}
 #鍵がかかってて開かない！
 
-
-{"str_num": 214, "bank": "0xF6", "str_pos": "0x3657EC", "length": 18}
-#[protag]<wait_auto>このドア、鍵がかかってるな。
-
-
-{"str_num": 215, "bank": "0xF6", "str_pos": "0x3657FF", "length": 41}
-#バルモア<wait_auto>こういうときは、ポポロンだ。<wait_auto>チョコチョコッと開けちゃってくれよ。
-
-
-{"str_num": 216, "bank": "0xF6", "str_pos": "0x365829", "length": 29}
-#ポポロン<wait_auto>そんなこと……あんまりやりたくないんですけど。
-
-
-{"str_num": 217, "bank": "0xF6", "str_pos": "0x365847", "length": 27}
-# ポポロンに鍵を開けさせる？<wait_auto> はい<wait_auto> いいえ
-
-
-{"str_num": 218, "bank": "0xF6", "str_pos": "0x365864", "length": 27}
-#[protag]<wait_auto>やりたくないなら、いいよ。<wait_auto>かわいそうだから。
-
-
-{"str_num": 219, "bank": "0xF6", "str_pos": "0x365880", "length": 39}
-#ポポロン<wait_auto>[protag]さん、ありがとうございます。<wait_auto>本当に、やさしい方ですね。
-
-
-{"str_num": 220, "bank": "0xF6", "str_pos": "0x3658A8", "length": 10}
-#バルモア<wait_auto>チェッ。
-
-
-{"str_num": 221, "bank": "0xF6", "str_pos": "0x3658B3", "length": 17}
-#[protag]<wait_auto>やってくれないか、ポポロン。
-
-
-{"str_num": 222, "bank": "0xF6", "str_pos": "0x3658C5", "length": 27}
-#ポポロン<wait_auto>……わかりました。<wait_auto>[protag]さんの頼みなら。
-
-
-{"str_num": 223, "bank": "0xF6", "str_pos": "0x3658E1", "length": 20}
-#ポポロン<wait_auto>お許しください、神様！
-
-
-{"str_num": 224, "bank": "0xF6", "str_pos": "0x3658F6", "length": 41}
-#ポポロン<wait_auto>見たこともない、複雑な鍵ですね。<wait_auto>私には開けられません。
-
-
-{"str_num": 225, "bank": "0xF6", "str_pos": "0x365920", "length": 21}
-#バルモア<wait_auto>チェッ、じゃあしょうがねえな。
-
-
-{"str_num": 226, "bank": "0xF6", "str_pos": "0x365936", "length": 27}
-# ポポロンに鍵を開けさせる？<wait_auto> はい<wait_auto> いいえ
-
-
-{"str_num": 227, "bank": "0xF6", "str_pos": "0x365953", "length": 10}
-#[protag]<wait_auto>別にいいや。
-
-
-{"str_num": 228, "bank": "0xF6", "str_pos": "0x36595E", "length": 26}
-# 今日は、もう寝ますか？<wait_auto> はい<wait_auto> いいえ
-
-
-{"str_num": 229, "bank": "0xF6", "str_pos": "0x36597A", "length": 13}
-#[protag]<wait_auto>まだ、眠くないな。
-
-
-{"str_num": 230, "bank": "0xF6", "str_pos": "0x365988", "length": 14}
-#[protag]<wait_auto>そろそろ寝ようかな。
-
-
-{"str_num": 231, "bank": "0xF6", "str_pos": "0x365997", "length": 14}
-#[protag]<wait_auto>うーん……なんだ……？
-
-
-{"str_num": 232, "bank": "0xF6", "str_pos": "0x3659A6", "length": 16}
-#[protag]<wait_auto>なにごとなんだ、これは！？
-
-
-{"str_num": 233, "bank": "0xF6", "str_pos": "0x3659B7", "length": 12}
-#[protag]<wait_auto>なんだ、ここは！？
-
-
-{"str_num": 234, "bank": "0xF6", "str_pos": "0x3659C4", "length": 29}
-#バルモア<wait_auto>てめえ、なんのつもりだ。<wait_auto>暴れるぞ、こら！
-
-
-{"str_num": 235, "bank": "0xF6", "str_pos": "0x3659E2", "length": 15}
-#[sub]<wait_auto>[protag]！<wait_auto>どうなってるの。
-
-
-{"str_num": 236, "bank": "0xF6", "str_pos": "0x3659F2", "length": 26}
-#[protag]<wait_auto>わからない。<wait_auto>急にたたき起こされて……。
-
-
-{"str_num": 237, "bank": "0xF6", "str_pos": "0x365A0D", "length": 36}
-#女王・フェリアラ<wait_auto>HGBIUGU、JHIPGYYWAXNDJPWJ。
-
-
-{"str_num": 238, "bank": "0xF6", "str_pos": "0x365A32", "length": 36}
-#ベンホルム<wait_auto>フムム。<wait_auto>ワスらは、今年のいけにえだといっとるダス。
-
-
-{"str_num": 239, "bank": "0xF6", "str_pos": "0x365A57", "length": 11}
-#[sub]<wait_auto>い、いけにえ！？
-
-
-{"str_num": 240, "bank": "0xF6", "str_pos": "0x365A63", "length": 25}
-#女王・フェリアラ<wait_auto>KKOKPKLKMANX！！
-
-
-{"str_num": 241, "bank": "0xF6", "str_pos": "0x365A7D", "length": 17}
-#[sub]<wait_auto>キャーッ！<wait_auto>助けて、[protag]！
-
-
-{"str_num": 242, "bank": "0xF6", "str_pos": "0x365A8F", "length": 24}
-#王子・ベベルの声<wait_auto>HDFLSHNUIC！！
-
-
-{"str_num": 243, "bank": "0xF6", "str_pos": "0x365AA8", "length": 43}
-#女王・フェリアラ<wait_auto>KKOPWBBIUX！<wait_auto>NBYHBKAPJ、NIUSHUGW！
-
-
-{"str_num": 244, "bank": "0xF6", "str_pos": "0x365AD4", "length": 31}
-#ベンホルム<wait_auto>おお、ベベル王子はワスらをかばってくれるダス。
-
-
-{"str_num": 245, "bank": "0xF6", "str_pos": "0x365AF4", "length": 12}
-#[protag]<wait_auto>ベベル王子が！？
-
-
-{"str_num": 246, "bank": "0xF6", "str_pos": "0x365B01", "length": 51}
-#王女・リンクル<wait_auto>L＋HWHXNBCKD、HNHD。<wait_auto>OMMN、GGDIHWUBBCXUOLL！！
-
-
-{"str_num": 247, "bank": "0xF6", "str_pos": "0x365B35", "length": 22}
-#[protag]<wait_auto>君！？<wait_auto>危ない、早く逃げて！
-
-
-{"str_num": 248, "bank": "0xF6", "str_pos": "0x365B4C", "length": 49}
-#王女・リンクル<wait_auto>JKKBGSNX。<wait_auto>KOKWIOJIJPOJN、NIHEIOHPNPIE！！
-
-
-{"str_num": 249, "bank": "0xF6", "str_pos": "0x365B7E", "length": 68}
-#ベンホルム<wait_auto>フムム。<wait_auto>本当なら、このリンクル王女がいけにえになる予定だったダス。<wait_auto>でも、ちょうどワスらが来たので……。
-
-
-{"str_num": 250, "bank": "0xF6", "str_pos": "0x365BC3", "length": 21}
-#バルモア<wait_auto>身代わりかよ、ふざけんな！
-
-
-{"str_num": 251, "bank": "0xF6", "str_pos": "0x365BD9", "length": 19}
-#[protag]<wait_auto>僕たちをかばおうとしてるのか？
-
-
-{"str_num": 252, "bank": "0xF6", "str_pos": "0x365BED", "length": 25}
-#ベンホルム<wait_auto>女王のやり方を、謝っとるダス。
-
-
-{"str_num": 253, "bank": "0xF6", "str_pos": "0x365C07", "length": 42}
-#女王・フェリアラ<wait_auto>LLKJL、NUHWO。<wait_auto>NIHNOICHNIPKMNXK！
-
-
-{"str_num": 254, "bank": "0xF6", "str_pos": "0x365C32", "length": 17}
-#モンスター<wait_auto>ギャアオオオスッ！！
-
-
-{"str_num": 255, "bank": "0xF6", "str_pos": "0x365C44", "length": 26}
-#[protag]<wait_auto>このままじゃあ、みんな危ない！<wait_auto>行こう！
-
-
-{"str_num": 256, "bank": "0xF6", "str_pos": "0x365C5F", "length": 37}
-#女王・フェリアラ<wait_auto>さあ、この者たちを、いけにえの洞窟に放り込め！
-
-
-{"str_num": 257, "bank": "0xF6", "str_pos": "0x365C85", "length": 14}
-#バルモア<wait_auto>いけにえだと！？
-
-
-{"str_num": 258, "bank": "0xF6", "str_pos": "0x365C94", "length": 8}
-#[sub]<wait_auto>そんなあ！
-
-
-{"str_num": 259, "bank": "0xF6", "str_pos": "0x365C9D", "length": 24}
-#女王・フェリアラ<wait_auto>さあ、今年のギシキを！
-
-
-{"str_num": 260, "bank": "0xF6", "str_pos": "0x365CB6", "length": 17}
-#[sub]<wait_auto>キャーッ！<wait_auto>助けて、[protag]！
-
-
-{"str_num": 261, "bank": "0xF6", "str_pos": "0x365CC8", "length": 18}
-#王子・ベベル<wait_auto>やめろーーーーっ！
-
-
-{"str_num": 262, "bank": "0xF6", "str_pos": "0x365CDB", "length": 22}
-#女王・フェリアラ<wait_auto>何をするの、ベベル！
-
-
-{"str_num": 263, "bank": "0xF6", "str_pos": "0x365CF2", "length": 39}
-#王子・ベベル<wait_auto>母上、関係のない者をまき込むのは、やめましょう！
-
-
-{"str_num": 264, "bank": "0xF6", "str_pos": "0x365D1A", "length": 38}
-#女王・フェリアラ<wait_auto>ならばお前は、リンクルが殺されてもよいというの！？
-
-
-{"str_num": 265, "bank": "0xF6", "str_pos": "0x365D41", "length": 17}
-#王子・ベベル<wait_auto>そ、それは……。
-
-
-{"str_num": 266, "bank": "0xF6", "str_pos": "0x365D53", "length": 38}
-#王女・リンクル<wait_auto>いけにえは私です！<wait_auto>神よ、うばうなら私の命を！
-
-
-{"str_num": 267, "bank": "0xF6", "str_pos": "0x365D7A", "length": 22}
-#[protag]<wait_auto>君！？<wait_auto>危ない、早く逃げて！
-
-
-{"str_num": 268, "bank": "0xF6", "str_pos": "0x365D91", "length": 46}
-#王女・リンクル<wait_auto>初めから、こうすればよかったのです。<wait_auto>ここは、私が何とかします。
-
-
-{"str_num": 269, "bank": "0xF6", "str_pos": "0x365DC0", "length": 29}
-#王子・ベベル<wait_auto>早く逃げろ！<wait_auto>いけにえにされるぞ！
-
-
-{"str_num": 270, "bank": "0xF6", "str_pos": "0x365DDE", "length": 29}
-#[protag]<wait_auto>僕たちが逃げたら、君たちが危ないじゃないか！
-
-
-{"str_num": 271, "bank": "0xF6", "str_pos": "0x365DFC", "length": 31}
-#女王・フェリアラ<wait_auto>ベベル！ リンクル！<wait_auto>逃げるのよ！！
-
-
-{"str_num": 272, "bank": "0xF6", "str_pos": "0x365E1C", "length": 17}
-#モンスター<wait_auto>ギャアオオオスッ！！
-
-
-{"str_num": 273, "bank": "0xF6", "str_pos": "0x365E2E", "length": 9}
-#[protag]<wait_auto>危ないっ！
-
-
-{"str_num": 274, "bank": "0xF6", "str_pos": "0x365E38", "length": 17}
-#モンスター<wait_auto>ギャアオオオスッ！！
-
-
-{"str_num": 275, "bank": "0xF6", "str_pos": "0x365E4A", "length": 21}
-#王女・リンクル<wait_auto>HNUHGUODP！！
-
-
-{"str_num": 276, "bank": "0xF6", "str_pos": "0x365E60", "length": 33}
-#王女・リンクル<wait_auto>そんな……そんな。<wait_auto>助けられなかった……。
-
-
-{"str_num": 277, "bank": "0xF6", "str_pos": "0x365E82", "length": 56}
-#女王・フェリアラ<wait_auto>しかたありません。<wait_auto>神にいけにえをささげなければ、この国はほろびてしまうのだから……。
-
-
-{"str_num": 278, "bank": "0xF6", "str_pos": "0x365EBB", "length": 16}
-#モンスター<wait_auto>グオウワアアッ！！
-
-
-{"str_num": 279, "bank": "0xF6", "str_pos": "0x365ECC", "length": 10}
-#[protag]<wait_auto>な、なんだ！？
-
-
-{"str_num": 280, "bank": "0xF6", "str_pos": "0x365ED7", "length": 35}
-#女王・フェリアラ<wait_auto>HLLHJIOLL＋、NBNUOWKJOJH！！
-
-
-{"str_num": 281, "bank": "0xF6", "str_pos": "0x365EFB", "length": 10}
-#[sub]<wait_auto>大地震よ！
-
-
-{"str_num": 282, "bank": "0xF6", "str_pos": "0x365F06", "length": 32}
-#バルモア<wait_auto>うおーーーーっ！<wait_auto>どうすりゃいいんだーーーーっ！！
-
-
-{"str_num": 283, "bank": "0xF6", "str_pos": "0x365F27", "length": 23}
-#王子・ベベル<wait_auto>LKLKJIJOJPOD！！
-
-
-{"str_num": 284, "bank": "0xF6", "str_pos": "0x365F3F", "length": 6}
-#[protag]<wait_auto>えっ？
-
-
-{"str_num": 285, "bank": "0xF6", "str_pos": "0x365F46", "length": 16}
-#王女・リンクル<wait_auto>JOPJO！
-
-
-{"str_num": 286, "bank": "0xF6", "str_pos": "0x365F57", "length": 48}
-#ベンホルム<wait_auto>あの穴に飛び込むダス！<wait_auto>それしか、助かる方法はないっていっとるダス！
-
-
-{"str_num": 287, "bank": "0xF6", "str_pos": "0x365F88", "length": 25}
-#[protag]<wait_auto>しかたないな。<wait_auto>行こう、[sub]！ バルモア！
-
-
-{"str_num": 288, "bank": "0xF6", "str_pos": "0x365FA2", "length": 8}
-#[sub]<wait_auto>う、うん！
-
-
-{"str_num": 289, "bank": "0xF6", "str_pos": "0x365FAB", "length": 24}
-#バルモア<wait_auto>オ、オレを置いていくんじゃねえっ。
-
-
-{"str_num": 290, "bank": "0xF6", "str_pos": "0x365FC4", "length": 24}
-#王子・ベベル<wait_auto>NJIPOCMP＋OMCLD。
-
-
-{"str_num": 291, "bank": "0xF6", "str_pos": "0x365FDD", "length": 29}
-#王女・リンクル<wait_auto>MMIKNC、NMNIOJIWOWQ。
-
-
-{"str_num": 292, "bank": "0xF6", "str_pos": "0x365FFB", "length": 26}
-#王女・リンクル<wait_auto>POKJOCFMIPW…………。
-
-
-{"str_num": 293, "bank": "0xF6", "str_pos": "0x366016", "length": 37}
-#女王・フェリアラ<wait_auto>なんということをしたのだ！<wait_auto>神を怒らせるとは。
-
-
-{"str_num": 294, "bank": "0xF6", "str_pos": "0x36603C", "length": 23}
-#[protag]<wait_auto>あのモンスターが神？<wait_auto>そんなバカな！
-
-
-{"str_num": 295, "bank": "0xF6", "str_pos": "0x366054", "length": 22}
-#[sub]<wait_auto>倒さなきゃ、こっちがやられてたのよ！
-
-
-{"str_num": 296, "bank": "0xF6", "str_pos": "0x36606B", "length": 43}
-#女王・フェリアラ<wait_auto>うるさい！<wait_auto>神を怒らせたのだ……真任をとってもらおう。
-
-
-{"str_num": 297, "bank": "0xF6", "str_pos": "0x366097", "length": 8}
-#[protag]<wait_auto>真任？
-
-
-{"str_num": 298, "bank": "0xF6", "str_pos": "0x3660A0", "length": 35}
-#女王・フェリアラ<wait_auto>あの洞窟に入り、その身を神にささげてこい！
-
-
-{"str_num": 299, "bank": "0xF6", "str_pos": "0x3660C4", "length": 25}
-#バルモア<wait_auto>な……なんだとおっ！<wait_auto>ふざけんなっ！
-
-
-{"str_num": 300, "bank": "0xF6", "str_pos": "0x3660DE", "length": 23}
-#女王・フェリアラ<wait_auto>出口の見張りを！
-
-
-{"str_num": 301, "bank": "0xF6", "str_pos": "0x3660F6", "length": 21}
-#王子・ベベル<wait_auto>母上、なんてことを！
-
-
-{"str_num": 302, "bank": "0xF6", "str_pos": "0x36610C", "length": 36}
-#女王・フェリアラ<wait_auto>なんとでもおいい。<wait_auto>この国を守るためです……。
-
-
-{"str_num": 303, "bank": "0xF6", "str_pos": "0x366131", "length": 21}
-#王子・ベベル<wait_auto>無事か、みなの者！
-
-
-{"str_num": 304, "bank": "0xF6", "str_pos": "0x366147", "length": 15}
-#王女・リンクル<wait_auto>よかった！
-
-
-{"str_num": 305, "bank": "0xF6", "str_pos": "0x366157", "length": 19}
-#[protag]<wait_auto>君たちも、早く逃げなきゃ！
-
-
-{"str_num": 306, "bank": "0xF6", "str_pos": "0x36616B", "length": 17}
-#王子・ベベル<wait_auto>ああ、こっちだ！
-
-
-{"str_num": 307, "bank": "0xF6", "str_pos": "0x36617D", "length": 7}
-#[protag]<wait_auto>うわっ！
-
-
-{"str_num": 308, "bank": "0xF6", "str_pos": "0x366185", "length": 20}
-#王子・ベベル<wait_auto>しまった、出口が！
-
-
-{"str_num": 309, "bank": "0xF6", "str_pos": "0x36619A", "length": 32}
-#王子・ベベル<wait_auto>これは……人食いトンネルと同じ感じだ！
-
-
-{"str_num": 310, "bank": "0xF6", "str_pos": "0x3661BB", "length": 6}
-#[protag]<wait_auto>えっ？
-
-
-{"str_num": 311, "bank": "0xF6", "str_pos": "0x3661C2", "length": 47}
-#王子・ベベル<wait_auto>この穴に飛び込むんだ！<wait_auto>そなたたちの世界に戻れるかもしれない。
-
-
-{"str_num": 312, "bank": "0xF6", "str_pos": "0x3661F2", "length": 10}
-#[protag]<wait_auto>で、でも……。
-
-
-{"str_num": 313, "bank": "0xF6", "str_pos": "0x3661FD", "length": 28}
-#王子・ベベル<wait_auto>早くするんだ！<wait_auto>死にたいのか！？
-
-
-{"str_num": 314, "bank": "0xF6", "str_pos": "0x36621A", "length": 17}
-#[protag]<wait_auto>……えーい、いちかばちかだ！
-
-
-{"str_num": 315, "bank": "0xF6", "str_pos": "0x36622C", "length": 17}
-#王子・ベベル<wait_auto>さあ、リンクル！
-
-
-{"str_num": 316, "bank": "0xF6", "str_pos": "0x36623E", "length": 25}
-#王女・リンクル<wait_auto>兄上、まだ母上が……。
-
-
-{"str_num": 317, "bank": "0xF6", "str_pos": "0x366258", "length": 35}
-#王子・ベベル<wait_auto>もう間に合わない！<wait_auto>私たちだけでも、行くぞ！
-
-
-{"str_num": 318, "bank": "0xF6", "str_pos": "0x36627C", "length": 15}
-#王女・リンクル<wait_auto>兄上！
-
-
-{"str_num": 319, "bank": "0xF6", "str_pos": "0x36628C", "length": 26}
-#女王・フェリアラの声<wait_auto>ベベル……リンクル……。
-
-
-{"str_num": 320, "bank": "0xF6", "str_pos": "0x3662A7", "length": 16}
-#王女・リンクル<wait_auto>母上！？
-
-
-{"str_num": 321, "bank": "0xF6", "str_pos": "0x3662B8", "length": 84}
-#女王・フェリアラの声<wait_auto>全ての出口は、ガレキでうまってしまいました。<wait_auto>……わたくしは、もう駄目……。<wait_auto>……お前たちだけでも、生きのびてちょうだい。
-
-
-{"str_num": 322, "bank": "0xF6", "str_pos": "0x36630D", "length": 25}
-#王女・リンクル<wait_auto>そんな……そんなの、いやです！
-
-
-{"str_num": 323, "bank": "0xF6", "str_pos": "0x366327", "length": 123}
-#女王・フェリアラの声<wait_auto>いけにえをささげて、王国を守ってきたのは……間違いだったのでしょうね。<wait_auto>わたくしたちは、本当の神の怒りに触れてしまったのかもしれません。<wait_auto>…………でも、おまえたちは生きて。<wait_auto>私の分まで……。
-
-
-{"str_num": 324, "bank": "0xF6", "str_pos": "0x3663A3", "length": 42}
-#王子・ベベル<wait_auto>クッ！<wait_auto>母上、リンクルは必ず、私が守ってみせます……。
-
-
-{"str_num": 325, "bank": "0xF6", "str_pos": "0x3663CE", "length": 19}
-#王子・ベベル<wait_auto>行くぞ、リンクル！
-
-
-{"str_num": 326, "bank": "0xF6", "str_pos": "0x3663E2", "length": 17}
-#王女・リンクル<wait_auto>母上……。
-
-
-{"str_num": 327, "bank": "0xF6", "str_pos": "0x3663F4", "length": 44}
-#女<wait_auto>AJHDGLKSPJD、HJDLJFHHC（IYUFY。<wait_auto>JNIHFMNCL。
-
-
-{"str_num": 328, "bank": "0xF6", "str_pos": "0x366421", "length": 44}
-#ベンホルム<wait_auto>フムム。<wait_auto>よそ者が来るなんて、とてもめずらしいことだといっとるダス。
-
-
-{"str_num": 329, "bank": "0xF6", "str_pos": "0x36644E", "length": 23}
-#女<wait_auto>JIHIHSNIFNWP、VCIEJ。
-
-
-{"str_num": 330, "bank": "0xF6", "str_pos": "0x366466", "length": 30}
-#ベンホルム<wait_auto>フムム。<wait_auto>どうぞ、ごゆっくり……だそうダス。
-
-
-{"str_num": 331, "bank": "0xF6", "str_pos": "0x366485", "length": 34}
-#女<wait_auto>よその国からの旅人なんて、とてもめずらしいことですのよ。
-
-
-{"str_num": 332, "bank": "0xF6", "str_pos": "0x3664A8", "length": 38}
-#女<wait_auto>あなたたちは、天のみ使いですわ。<wait_auto>ゆっくりなさってくださいね。
-
-
-{"str_num": 333, "bank": "0xF6", "str_pos": "0x3664CF", "length": 27}
-#女<wait_auto>HUGUEONIO、UNOVUEUOWDNI。
-
-
-{"str_num": 334, "bank": "0xF6", "str_pos": "0x3664EB", "length": 37}
-#ベンホルム<wait_auto>フムム。<wait_auto>この国の名は、エルドラド……と、いうそうダス。
-
-
-{"str_num": 335, "bank": "0xF6", "str_pos": "0x366511", "length": 41}
-#女<wait_auto>IHUOUBUVCBOEO。<wait_auto>NUHEOCNI、WDIJNIHIUFE。
-
-
-{"str_num": 336, "bank": "0xF6", "str_pos": "0x36653B", "length": 30}
-#ベンホルム<wait_auto>フムム。<wait_auto>どうぞ、ごゆっくり……だそうダス。
-
-
-{"str_num": 337, "bank": "0xF6", "str_pos": "0x36655A", "length": 35}
-#女<wait_auto>この国の名はエルドラド。<wait_auto>争いのない、平和な国ですわ。
-
-
-{"str_num": 338, "bank": "0xF6", "str_pos": "0x36657E", "length": 47}
-#女<wait_auto>この国の平和は、女王様のおかげなんですのよ。<wait_auto>あなたたちも、どうぞごゆっくり。
-
-
-{"str_num": 339, "bank": "0xF6", "str_pos": "0x3665AE", "length": 21}
-#女<wait_auto>NUHGUBJ、NUOPWQPQ。
-
-
-{"str_num": 340, "bank": "0xF6", "str_pos": "0x3665C4", "length": 27}
-#ベンホルム<wait_auto>フムム。<wait_auto>ここは、王きゅうらしいダス。
-
-
-{"str_num": 341, "bank": "0xF6", "str_pos": "0x3665E0", "length": 46}
-#女<wait_auto>NUHOUL＋KOMMKMJ。<wait_auto>IUHIUO、MINI＋MFOMMCKOIWJD。
-
-
-{"str_num": 342, "bank": "0xF6", "str_pos": "0x36660F", "length": 39}
-#ベンホルム<wait_auto>フムム。<wait_auto>王きゅうのおくのトビラは、開けてはいかんそうダス。
-
-
-{"str_num": 343, "bank": "0xF6", "str_pos": "0x366637", "length": 40}
-#女<wait_auto>ここは王きゅうです。<wait_auto>この国をおさめる女王様が、いらっしゃいます。
-
-
-{"str_num": 344, "bank": "0xF6", "str_pos": "0x366660", "length": 29}
-#女<wait_auto>このおくのトビラは、決して開けないでください。
-
-
-{"str_num": 345, "bank": "0xF6", "str_pos": "0x36667E", "length": 13}
-#男<wait_auto>……………………。
-
-
-{"str_num": 346, "bank": "0xF6", "str_pos": "0x36668C", "length": 36}
-#女王・フェリアラ<wait_auto>NIUHNIU、OUONIPVEPOEKMGOE。
-
-
-{"str_num": 347, "bank": "0xF6", "str_pos": "0x3666B1", "length": 39}
-#ベンホルム<wait_auto>フムム。<wait_auto>どうか、ゆっくりしていくように……と、いっとるダス。
-
-
-{"str_num": 348, "bank": "0xF6", "str_pos": "0x3666D9", "length": 27}
-#女王・フェリアラ<wait_auto>ゆっくり、くつろいでいきなさい。
-
-
-{"str_num": 349, "bank": "0xF6", "str_pos": "0x3666F5", "length": 36}
-#王女・リンクル<wait_auto>MINONIHUHUGBUBOG、NUHUOLLL。
-
-
-{"str_num": 350, "bank": "0xF6", "str_pos": "0x36671A", "length": 42}
-#ベンホルム<wait_auto>フムム。<wait_auto>あんまり、ここに長くいてはいけない……と、いっとるダス。
-
-
-{"str_num": 351, "bank": "0xF6", "str_pos": "0x366745", "length": 22}
-#[protag]<wait_auto>なんだか、悲しそうな顔をしてるな。
-
-
-{"str_num": 352, "bank": "0xF6", "str_pos": "0x36675C", "length": 30}
-#王女・リンクル<wait_auto>ここに、あまり長くいては、いけません。
-
-
-{"str_num": 353, "bank": "0xF6", "str_pos": "0x36677B", "length": 16}
-#モンスター<wait_auto>グオオーーーーッ！
-
-
-{"str_num": 354, "bank": "0xF6", "str_pos": "0x36678C", "length": 10}
-#[protag]<wait_auto>モンスターだ！
-
-
-{"str_num": 355, "bank": "0xF6", "str_pos": "0x366B11", "length": 61}
-#は9KH合D 王TAX35ぱ04AYGナDやで0 [sub]<wait_auto>外で、誰か見張ってるみたい。<wait_auto>これじゃあ出られないわ。
-
-
-{"str_num": 356, "bank": "0xF6", "str_pos": "0x366B4F", "length": 9}
-#[protag]<wait_auto>いてて……。
-
-
-{"str_num": 357, "bank": "0xF6", "str_pos": "0x366B59", "length": 27}
-#[sub]<wait_auto>さっきのモンスターの洞窟ね。<wait_auto>どうしよう、[protag]。
-
-
-{"str_num": 358, "bank": "0xF6", "str_pos": "0x366B75", "length": 30}
-#バルモア<wait_auto>とにかく、あのモンスターをブッ倒してやろうぜ。
-
-
-{"str_num": 359, "bank": "0xF6", "str_pos": "0x366B94", "length": 14}
-#[sub]<wait_auto>なんで、そうなるのよ？
-
-
-{"str_num": 360, "bank": "0xF6", "str_pos": "0x366BA3", "length": 39}
-#[protag]<wait_auto>いや、モンスターを倒して、神様じゃないってわからせればいいんだよ。
-
-
-{"str_num": 361, "bank": "0xF6", "str_pos": "0x366BCB", "length": 27}
-#バルモア<wait_auto>そ、そうそう。<wait_auto>オレもそう思ったんだ。
-
-
-{"str_num": 362, "bank": "0xF6", "str_pos": "0x366BE7", "length": 11}
-#[sub]<wait_auto>本当かしら。
-
-
-{"str_num": 363, "bank": "0xF6", "str_pos": "0x366BF3", "length": 8}
-#[protag]<wait_auto>あいつだ！
-
-
-{"str_num": 364, "bank": "0xF6", "str_pos": "0x366BFC", "length": 44}
-#[sub]<wait_auto>神様のふりをして、いけにえを欲しがるなんて許せない！<wait_auto>やっつけよう、[protag]！
-
-
-{"str_num": 365, "bank": "0xF6", "str_pos": "0x366C29", "length": 16}
-#モンスター<wait_auto>グオウワアアッ！！
-
-
-{"str_num": 366, "bank": "0xF6", "str_pos": "0x366C3A", "length": 13}
-#バルモア<wait_auto>な、なんだ！？
-
-
-{"str_num": 367, "bank": "0xF6", "str_pos": "0x366C48", "length": 34}
-#[sub]<wait_auto>神様を倒したから世界がくずれるの！？<wait_auto>ま、まさか！
-
-
-{"str_num": 368, "bank": "0xF6", "str_pos": "0x366C6B", "length": 9}
-#[protag]<wait_auto>逃げよう！
-
-
-{"str_num": 369, "bank": "0xF6", "str_pos": "0x366C75", "length": 13}
+{"str_num": 204, "bank": "0xF6", "str_pos": "0x3657EC", "length": 18, "table": "normal"}
+#[protag]
+#このドア、鍵がかかってるな。
+
+{"str_num": 205, "bank": "0xF6", "str_pos": "0x3657FF", "length": 41, "table": "normal"}
+#バルモア
+#こういうときは、ポポロンだ。
+#チョコチョコッと開けちゃってくれよ。
+
+{"str_num": 206, "bank": "0xF6", "str_pos": "0x365829", "length": 29, "table": "normal"}
+#ポポロン
+#そんなこと……あんまりやりたくないんですけど。
+
+{"str_num": 207, "bank": "0xF6", "str_pos": "0x365847", "length": 27, "table": "normal"}
+# ポポロンに鍵を開けさせる？
+# はい
+# いいえ
+
+{"str_num": 208, "bank": "0xF6", "str_pos": "0x365864", "length": 27, "table": "normal"}
+#[protag]
+#やりたくないなら、いいよ。
+#かわいそうだから。
+
+{"str_num": 209, "bank": "0xF6", "str_pos": "0x365880", "length": 39, "table": "normal"}
+#ポポロン
+#[protag]さん、ありがとうございます。
+#本当に、やさしい方ですね。
+
+{"str_num": 210, "bank": "0xF6", "str_pos": "0x3658A8", "length": 10, "table": "normal"}
+#バルモア
+#チェッ。
+
+{"str_num": 211, "bank": "0xF6", "str_pos": "0x3658B3", "length": 17, "table": "normal"}
+#[protag]
+#やってくれないか、ポポロン。
+
+{"str_num": 212, "bank": "0xF6", "str_pos": "0x3658C5", "length": 27, "table": "normal"}
+#ポポロン
+#……わかりました。
+#[protag]さんの頼みなら。
+
+{"str_num": 213, "bank": "0xF6", "str_pos": "0x3658E1", "length": 20, "table": "normal"}
+#ポポロン
+#お許しください、神様！
+
+{"str_num": 214, "bank": "0xF6", "str_pos": "0x3658F6", "length": 41, "table": "normal"}
+#ポポロン
+#見たこともない、複雑な鍵ですね。
+#私には開けられません。
+
+{"str_num": 215, "bank": "0xF6", "str_pos": "0x365920", "length": 21, "table": "normal"}
+#バルモア
+#チェッ、じゃあしょうがねえな。
+
+{"str_num": 216, "bank": "0xF6", "str_pos": "0x365936", "length": 27, "table": "normal"}
+# ポポロンに鍵を開けさせる？
+# はい
+# いいえ
+
+{"str_num": 217, "bank": "0xF6", "str_pos": "0x365953", "length": 10, "table": "normal"}
+#[protag]
+#別にいいや。
+
+{"str_num": 218, "bank": "0xF6", "str_pos": "0x36595E", "length": 26, "table": "normal"}
+# 今日は、もう寝ますか？
+# はい
+# いいえ
+
+{"str_num": 219, "bank": "0xF6", "str_pos": "0x36597A", "length": 13, "table": "normal"}
+#[protag]
+#まだ、眠くないな。
+
+{"str_num": 220, "bank": "0xF6", "str_pos": "0x365988", "length": 14, "table": "normal"}
+#[protag]
+#そろそろ寝ようかな。
+
+{"str_num": 221, "bank": "0xF6", "str_pos": "0x365997", "length": 14, "table": "normal"}
+#[protag]
+#うーん……なんだ……？
+
+{"str_num": 222, "bank": "0xF6", "str_pos": "0x3659A6", "length": 16, "table": "normal"}
+#[protag]
+#なにごとなんだ、これは！？
+
+{"str_num": 223, "bank": "0xF6", "str_pos": "0x3659B7", "length": 12, "table": "normal"}
+#[protag]
+#なんだ、ここは！？
+
+{"str_num": 224, "bank": "0xF6", "str_pos": "0x3659C4", "length": 29, "table": "normal"}
+#バルモア
+#てめえ、なんのつもりだ。
+#暴れるぞ、こら！
+
+{"str_num": 225, "bank": "0xF6", "str_pos": "0x3659E2", "length": 15, "table": "normal"}
+#[sub]
+#[protag]！
+#どうなってるの。
+
+{"str_num": 226, "bank": "0xF6", "str_pos": "0x3659F2", "length": 26, "table": "normal"}
+#[protag]
+#わからない。
+#急にたたき起こされて……。
+
+{"str_num": 227, "bank": "0xF6", "str_pos": "0x365A11", "length": 32, "table": "normal"}
+#フェリアラ
+#HGBIUGU、JHIPGYYWAXNDJPWJ。
+
+{"str_num": 228, "bank": "0xF6", "str_pos": "0x365A32", "length": 36, "table": "normal"}
+#ベンホルム
+#フムム。
+#ワスらは、今年のいけにえだといっとるダス。
+
+{"str_num": 229, "bank": "0xF6", "str_pos": "0x365A57", "length": 11, "table": "normal"}
+#[sub]
+#い、いけにえ！？
+
+{"str_num": 230, "bank": "0xF6", "str_pos": "0x365A67", "length": 21, "table": "normal"}
+#フェリアラ
+#KKOKPKLKMANX！！
+
+{"str_num": 231, "bank": "0xF6", "str_pos": "0x365A7D", "length": 17, "table": "normal"}
+#[sub]
+#キャーッ！
+#助けて、[protag]！
+
+{"str_num": 232, "bank": "0xF6", "str_pos": "0x365A8F", "length": 24, "table": "normal"}
+#王子・ベベルの声
+#HDFLSHNUIC！！
+
+{"str_num": 233, "bank": "0xF6", "str_pos": "0x365AD4", "length": 31, "table": "normal"}
+#ベンホルム
+#おお、ベベル王子はワスらをかばってくれるダス。
+
+{"str_num": 234, "bank": "0xF6", "str_pos": "0x365AF4", "length": 12, "table": "normal"}
+#[protag]
+#ベベル王子が！？
+
+{"str_num": 235, "bank": "0xF6", "str_pos": "0x365B35", "length": 22, "table": "normal"}
+#[protag]
+#君！？
+#危ない、早く逃げて！
+
+{"str_num": 236, "bank": "0xF6", "str_pos": "0x365B7E", "length": 68, "table": "normal"}
+#ベンホルム
+#フムム。
+#本当なら、このリンクル王女がいけにえになる予定だったダス。
+#でも、ちょうどワスらが来たので……。
+
+{"str_num": 237, "bank": "0xF6", "str_pos": "0x365BC3", "length": 21, "table": "normal"}
+#バルモア
+#身代わりかよ、ふざけんな！
+
+{"str_num": 238, "bank": "0xF6", "str_pos": "0x365BD9", "length": 19, "table": "normal"}
+#[protag]
+#僕たちをかばおうとしてるのか？
+
+{"str_num": 239, "bank": "0xF6", "str_pos": "0x365BED", "length": 25, "table": "normal"}
+#ベンホルム
+#女王のやり方を、謝っとるダス。
+
+{"str_num": 240, "bank": "0xF6", "str_pos": "0x365C32", "length": 17, "table": "normal"}
+#モンスター
+#ギャアオオオスッ！！
+
+{"str_num": 241, "bank": "0xF6", "str_pos": "0x365C44", "length": 26, "table": "normal"}
+#[protag]
+#このままじゃあ、みんな危ない！
+#行こう！
+
+{"str_num": 242, "bank": "0xF6", "str_pos": "0x365C63", "length": 33, "table": "normal"}
+#フェリアラ
+#さあ、この者たちを、いけにえの洞窟に放り込め！
+
+{"str_num": 243, "bank": "0xF6", "str_pos": "0x365C85", "length": 14, "table": "normal"}
+#バルモア
+#いけにえだと！？
+
+{"str_num": 244, "bank": "0xF6", "str_pos": "0x365C94", "length": 8, "table": "normal"}
+#[sub]
+#そんなあ！
+
+{"str_num": 245, "bank": "0xF6", "str_pos": "0x365CA1", "length": 20, "table": "normal"}
+#フェリアラ
+#さあ、今年のギシキを！
+
+{"str_num": 246, "bank": "0xF6", "str_pos": "0x365CB6", "length": 17, "table": "normal"}
+#[sub]
+#キャーッ！
+#助けて、[protag]！
+
+{"str_num": 247, "bank": "0xF6", "str_pos": "0x365CCC", "length": 14, "table": "normal"}
+#ベベル
+#やめろーーーーっ！
+
+{"str_num": 248, "bank": "0xF6", "str_pos": "0x365CDF", "length": 18, "table": "normal"}
+#フェリアラ
+#何をするの、ベベル！
+
+{"str_num": 249, "bank": "0xF6", "str_pos": "0x365CF6", "length": 35, "table": "normal"}
+#ベベル
+#母上、関係のない者をまき込むのは、やめましょう！
+
+{"str_num": 250, "bank": "0xF6", "str_pos": "0x365D1E", "length": 34, "table": "normal"}
+#フェリアラ
+#ならばお前は、リンクルが殺されてもよいというの！？
+
+{"str_num": 251, "bank": "0xF6", "str_pos": "0x365D45", "length": 13, "table": "normal"}
+#ベベル
+#そ、それは……。
+
+{"str_num": 252, "bank": "0xF6", "str_pos": "0x365D57", "length": 34, "table": "normal"}
+#リンクル
+#いけにえは私です！
+#神よ、うばうなら私の命を！
+
+{"str_num": 253, "bank": "0xF6", "str_pos": "0x365D7A", "length": 22, "table": "normal"}
+#[protag]
+#君！？
+#危ない、早く逃げて！
+
+{"str_num": 254, "bank": "0xF6", "str_pos": "0x365D95", "length": 42, "table": "normal"}
+#リンクル
+#初めから、こうすればよかったのです。
+#ここは、私が何とかします。
+
+{"str_num": 255, "bank": "0xF6", "str_pos": "0x365DC4", "length": 25, "table": "normal"}
+#ベベル
+#早く逃げろ！
+#いけにえにされるぞ！
+
+{"str_num": 256, "bank": "0xF6", "str_pos": "0x365DDE", "length": 29, "table": "normal"}
+#[protag]
+#僕たちが逃げたら、君たちが危ないじゃないか！
+
+{"str_num": 257, "bank": "0xF6", "str_pos": "0x365E00", "length": 27, "table": "normal"}
+#フェリアラ
+#ベベル！ リンクル！
+#逃げるのよ！！
+
+{"str_num": 258, "bank": "0xF6", "str_pos": "0x365E1C", "length": 17, "table": "normal"}
+#モンスター
+#ギャアオオオスッ！！
+
+{"str_num": 259, "bank": "0xF6", "str_pos": "0x365E2E", "length": 9, "table": "normal"}
+#[protag]
+#危ないっ！
+
+{"str_num": 260, "bank": "0xF6", "str_pos": "0x365E38", "length": 17, "table": "normal"}
+#モンスター
+#ギャアオオオスッ！！
+
+{"str_num": 261, "bank": "0xF6", "str_pos": "0x365E4E", "length": 17, "table": "normal"}
+#リンクル
+#HNUHGUODP！！
+
+{"str_num": 262, "bank": "0xF6", "str_pos": "0x365E64", "length": 29, "table": "normal"}
+#リンクル
+#そんな……そんな。
+#助けられなかった……。
+
+{"str_num": 263, "bank": "0xF6", "str_pos": "0x365E86", "length": 52, "table": "normal"}
+#フェリアラ
+#しかたありません。
+#神にいけにえをささげなければ、この国はほろびてしまうのだから……。
+
+{"str_num": 264, "bank": "0xF6", "str_pos": "0x365EBB", "length": 16, "table": "normal"}
+#モンスター
+#グオウワアアッ！！
+
+{"str_num": 265, "bank": "0xF6", "str_pos": "0x365ECC", "length": 10, "table": "normal"}
+#[protag]
+#な、なんだ！？
+
+{"str_num": 266, "bank": "0xF6", "str_pos": "0x365EDB", "length": 31, "table": "normal"}
+#フェリアラ
+#HLLHJIOLL＋、NBNUOWKJOJH！！
+
+{"str_num": 267, "bank": "0xF6", "str_pos": "0x365EFB", "length": 10, "table": "normal"}
+#[sub]
+#大地震よ！
+
+{"str_num": 268, "bank": "0xF6", "str_pos": "0x365F06", "length": 32, "table": "normal"}
+#バルモア
+#うおーーーーっ！
+#どうすりゃいいんだーーーーっ！！
+
+{"str_num": 269, "bank": "0xF6", "str_pos": "0x365F2B", "length": 19, "table": "normal"}
+#ベベル
+#LKLKJIJOJPOD！！
+
+{"str_num": 270, "bank": "0xF6", "str_pos": "0x365F3F", "length": 6, "table": "normal"}
+#[protag]
+#えっ？
+
+{"str_num": 271, "bank": "0xF6", "str_pos": "0x365F4A", "length": 12, "table": "normal"}
+#リンクル
+#JOPJO！
+
+{"str_num": 272, "bank": "0xF6", "str_pos": "0x365F57", "length": 48, "table": "normal"}
+#ベンホルム
+#あの穴に飛び込むダス！
+#それしか、助かる方法はないっていっとるダス！
+
+{"str_num": 273, "bank": "0xF6", "str_pos": "0x365F88", "length": 25, "table": "normal"}
+#[protag]
+#しかたないな。
+#行こう、[sub]！ バルモア！
+
+{"str_num": 274, "bank": "0xF6", "str_pos": "0x365FA2", "length": 8, "table": "normal"}
+#[sub]
+#う、うん！
+
+{"str_num": 275, "bank": "0xF6", "str_pos": "0x365FAB", "length": 24, "table": "normal"}
+#バルモア
+#オ、オレを置いていくんじゃねえっ。
+
+{"str_num": 276, "bank": "0xF6", "str_pos": "0x365FC8", "length": 20, "table": "normal"}
+#ベベル
+#NJIPOCMP＋OMCLD。
+
+{"str_num": 277, "bank": "0xF6", "str_pos": "0x365FE1", "length": 25, "table": "normal"}
+#リンクル
+#MMIKNC、NMNIOJIWOWQ。
+
+{"str_num": 278, "bank": "0xF6", "str_pos": "0x365FFF", "length": 22, "table": "normal"}
+#リンクル
+#POKJOCFMIPW…………。
+
+{"str_num": 279, "bank": "0xF6", "str_pos": "0x36601A", "length": 33, "table": "normal"}
+#フェリアラ
+#なんということをしたのだ！
+#神を怒らせるとは。
+
+{"str_num": 280, "bank": "0xF6", "str_pos": "0x36603C", "length": 23, "table": "normal"}
+#[protag]
+#あのモンスターが神？
+#そんなバカな！
+
+{"str_num": 281, "bank": "0xF6", "str_pos": "0x366054", "length": 22, "table": "normal"}
+#[sub]
+#倒さなきゃ、こっちがやられてたのよ！
+
+{"str_num": 282, "bank": "0xF6", "str_pos": "0x36606F", "length": 39, "table": "normal"}
+#フェリアラ
+#うるさい！
+#神を怒らせたのだ……真任をとってもらおう。
+
+{"str_num": 283, "bank": "0xF6", "str_pos": "0x366097", "length": 8, "table": "normal"}
+#[protag]
+#真任？
+
+{"str_num": 284, "bank": "0xF6", "str_pos": "0x3660A4", "length": 31, "table": "normal"}
+#フェリアラ
+#あの洞窟に入り、その身を神にささげてこい！
+
+{"str_num": 285, "bank": "0xF6", "str_pos": "0x3660C4", "length": 25, "table": "normal"}
+#バルモア
+#な……なんだとおっ！
+#ふざけんなっ！
+
+{"str_num": 286, "bank": "0xF6", "str_pos": "0x3660E2", "length": 19, "table": "normal"}
+#フェリアラ
+#出口の見張りを！
+
+{"str_num": 287, "bank": "0xF6", "str_pos": "0x3660FA", "length": 17, "table": "normal"}
+#ベベル
+#母上、なんてことを！
+
+{"str_num": 288, "bank": "0xF6", "str_pos": "0x366110", "length": 32, "table": "normal"}
+#フェリアラ
+#なんとでもおいい。
+#この国を守るためです……。
+
+{"str_num": 289, "bank": "0xF6", "str_pos": "0x366135", "length": 17, "table": "normal"}
+#ベベル
+#無事か、みなの者！
+
+{"str_num": 290, "bank": "0xF6", "str_pos": "0x36614B", "length": 11, "table": "normal"}
+#リンクル
+#よかった！
+
+{"str_num": 291, "bank": "0xF6", "str_pos": "0x366157", "length": 19, "table": "normal"}
+#[protag]
+#君たちも、早く逃げなきゃ！
+
+{"str_num": 292, "bank": "0xF6", "str_pos": "0x36616F", "length": 13, "table": "normal"}
+#ベベル
+#ああ、こっちだ！
+
+{"str_num": 293, "bank": "0xF6", "str_pos": "0x36617D", "length": 7, "table": "normal"}
+#[protag]
+#うわっ！
+
+{"str_num": 294, "bank": "0xF6", "str_pos": "0x366189", "length": 16, "table": "normal"}
+#ベベル
+#しまった、出口が！
+
+{"str_num": 295, "bank": "0xF6", "str_pos": "0x36619E", "length": 28, "table": "normal"}
+#ベベル
+#これは……人食いトンネルと同じ感じだ！
+
+{"str_num": 296, "bank": "0xF6", "str_pos": "0x3661BB", "length": 6, "table": "normal"}
+#[protag]
+#えっ？
+
+{"str_num": 297, "bank": "0xF6", "str_pos": "0x3661C6", "length": 43, "table": "normal"}
+#ベベル
+#この穴に飛び込むんだ！
+#そなたたちの世界に戻れるかもしれない。
+
+{"str_num": 298, "bank": "0xF6", "str_pos": "0x3661F2", "length": 10, "table": "normal"}
+#[protag]
+#で、でも……。
+
+{"str_num": 299, "bank": "0xF6", "str_pos": "0x366201", "length": 24, "table": "normal"}
+#ベベル
+#早くするんだ！
+#死にたいのか！？
+
+{"str_num": 300, "bank": "0xF6", "str_pos": "0x36621A", "length": 17, "table": "normal"}
+#[protag]
+#……えーい、いちかばちかだ！
+
+{"str_num": 301, "bank": "0xF6", "str_pos": "0x366230", "length": 13, "table": "normal"}
+#ベベル
+#さあ、リンクル！
+
+{"str_num": 302, "bank": "0xF6", "str_pos": "0x366242", "length": 21, "table": "normal"}
+#リンクル
+#兄上、まだ母上が……。
+
+{"str_num": 303, "bank": "0xF6", "str_pos": "0x36625C", "length": 31, "table": "normal"}
+#ベベル
+#もう間に合わない！
+#私たちだけでも、行くぞ！
+
+{"str_num": 304, "bank": "0xF6", "str_pos": "0x366280", "length": 11, "table": "normal"}
+#リンクル
+#兄上！
+
+{"str_num": 305, "bank": "0xF6", "str_pos": "0x36628C", "length": 26, "table": "normal"}
+#女王・フェリアラの声
+#ベベル……リンクル……。
+
+{"str_num": 306, "bank": "0xF6", "str_pos": "0x3662AB", "length": 12, "table": "normal"}
+#リンクル
+#母上！？
+
+{"str_num": 307, "bank": "0xF6", "str_pos": "0x3662B8", "length": 84, "table": "normal"}
+#女王・フェリアラの声
+#全ての出口は、ガレキでうまってしまいました。
+#……わたくしは、もう駄目……。
+#……お前たちだけでも、生きのびてちょうだい。
+
+{"str_num": 308, "bank": "0xF6", "str_pos": "0x366311", "length": 21, "table": "normal"}
+#リンクル
+#そんな……そんなの、いやです！
+
+{"str_num": 309, "bank": "0xF6", "str_pos": "0x366327", "length": 123, "table": "normal"}
+#女王・フェリアラの声
+#いけにえをささげて、王国を守ってきたのは……間違いだったのでしょうね。
+#わたくしたちは、本当の神の怒りに触れてしまったのかもしれません。
+#…………でも、おまえたちは生きて。
+#私の分まで……。
+
+{"str_num": 310, "bank": "0xF6", "str_pos": "0x3663A7", "length": 38, "table": "normal"}
+#ベベル
+#クッ！
+#母上、リンクルは必ず、私が守ってみせます……。
+
+{"str_num": 311, "bank": "0xF6", "str_pos": "0x3663D2", "length": 15, "table": "normal"}
+#ベベル
+#行くぞ、リンクル！
+
+{"str_num": 312, "bank": "0xF6", "str_pos": "0x3663E6", "length": 13, "table": "normal"}
+#リンクル
+#母上……。
+
+{"str_num": 313, "bank": "0xF6", "str_pos": "0x366421", "length": 44, "table": "normal"}
+#ベンホルム
+#フムム。
+#よそ者が来るなんて、とてもめずらしいことだといっとるダス。
+
+{"str_num": 314, "bank": "0xF6", "str_pos": "0x366466", "length": 30, "table": "normal"}
+#ベンホルム
+#フムム。
+#どうぞ、ごゆっくり……だそうダス。
+
+{"str_num": 315, "bank": "0xF6", "str_pos": "0x366485", "length": 34, "table": "normal"}
+#女
+#よその国からの旅人なんて、とてもめずらしいことですのよ。
+
+{"str_num": 316, "bank": "0xF6", "str_pos": "0x3664A8", "length": 38, "table": "normal"}
+#女
+#あなたたちは、天のみ使いですわ。
+#ゆっくりなさってくださいね。
+
+{"str_num": 317, "bank": "0xF6", "str_pos": "0x3664EB", "length": 37, "table": "normal"}
+#ベンホルム
+#フムム。
+#この国の名は、エルドラド……と、いうそうダス。
+
+{"str_num": 318, "bank": "0xF6", "str_pos": "0x36653B", "length": 30, "table": "normal"}
+#ベンホルム
+#フムム。
+#どうぞ、ごゆっくり……だそうダス。
+
+{"str_num": 319, "bank": "0xF6", "str_pos": "0x36655A", "length": 35, "table": "normal"}
+#女
+#この国の名はエルドラド。
+#争いのない、平和な国ですわ。
+
+{"str_num": 320, "bank": "0xF6", "str_pos": "0x36657E", "length": 47, "table": "normal"}
+#女
+#この国の平和は、女王様のおかげなんですのよ。
+#あなたたちも、どうぞごゆっくり。
+
+{"str_num": 321, "bank": "0xF6", "str_pos": "0x3665C4", "length": 27, "table": "normal"}
+#ベンホルム
+#フムム。
+#ここは、王きゅうらしいダス。
+
+{"str_num": 322, "bank": "0xF6", "str_pos": "0x36660F", "length": 39, "table": "normal"}
+#ベンホルム
+#フムム。
+#王きゅうのおくのトビラは、開けてはいかんそうダス。
+
+{"str_num": 323, "bank": "0xF6", "str_pos": "0x366637", "length": 40, "table": "normal"}
+#女
+#ここは王きゅうです。
+#この国をおさめる女王様が、いらっしゃいます。
+
+{"str_num": 324, "bank": "0xF6", "str_pos": "0x366660", "length": 29, "table": "normal"}
+#女
+#このおくのトビラは、決して開けないでください。
+
+{"str_num": 325, "bank": "0xF6", "str_pos": "0x36667E", "length": 13, "table": "normal"}
+#男
+#……………………。
+
+{"str_num": 326, "bank": "0xF6", "str_pos": "0x366690", "length": 32, "table": "normal"}
+#フェリアラ
+#NIUHNIU、OUONIPVEPOEKMGOE。
+
+{"str_num": 327, "bank": "0xF6", "str_pos": "0x3666B1", "length": 39, "table": "normal"}
+#ベンホルム
+#フムム。
+#どうか、ゆっくりしていくように……と、いっとるダス。
+
+{"str_num": 328, "bank": "0xF6", "str_pos": "0x3666DD", "length": 23, "table": "normal"}
+#フェリアラ
+#ゆっくり、くつろいでいきなさい。
+
+{"str_num": 329, "bank": "0xF6", "str_pos": "0x3666F9", "length": 32, "table": "normal"}
+#リンクル
+#MINONIHUHUGBUBOG、NUHUOLLL。
+
+{"str_num": 330, "bank": "0xF6", "str_pos": "0x36671A", "length": 42, "table": "normal"}
+#ベンホルム
+#フムム。
+#あんまり、ここに長くいてはいけない……と、いっとるダス。
+
+{"str_num": 331, "bank": "0xF6", "str_pos": "0x366745", "length": 22, "table": "normal"}
+#[protag]
+#なんだか、悲しそうな顔をしてるな。
+
+{"str_num": 332, "bank": "0xF6", "str_pos": "0x366760", "length": 26, "table": "normal"}
+#リンクル
+#ここに、あまり長くいては、いけません。
+
+{"str_num": 333, "bank": "0xF6", "str_pos": "0x36677B", "length": 16, "table": "normal"}
+#モンスター
+#グオオーーーーッ！
+
+{"str_num": 334, "bank": "0xF6", "str_pos": "0x36678C", "length": 10, "table": "normal"}
+#[protag]
+#モンスターだ！
+
+{"str_num": 335, "bank": "0xF6", "str_pos": "0x366B2A", "length": 36, "table": "normal"}
+#[sub]
+#外で、誰か見張ってるみたい。
+#これじゃあ出られないわ。
+
+{"str_num": 336, "bank": "0xF6", "str_pos": "0x366B4F", "length": 9, "table": "normal"}
+#[protag]
+#いてて……。
+
+{"str_num": 337, "bank": "0xF6", "str_pos": "0x366B59", "length": 27, "table": "normal"}
+#[sub]
+#さっきのモンスターの洞窟ね。
+#どうしよう、[protag]。
+
+{"str_num": 338, "bank": "0xF6", "str_pos": "0x366B75", "length": 30, "table": "normal"}
+#バルモア
+#とにかく、あのモンスターをブッ倒してやろうぜ。
+
+{"str_num": 339, "bank": "0xF6", "str_pos": "0x366B94", "length": 14, "table": "normal"}
+#[sub]
+#なんで、そうなるのよ？
+
+{"str_num": 340, "bank": "0xF6", "str_pos": "0x366BA3", "length": 39, "table": "normal"}
+#[protag]
+#いや、モンスターを倒して、神様じゃないってわからせればいいんだよ。
+
+{"str_num": 341, "bank": "0xF6", "str_pos": "0x366BCB", "length": 27, "table": "normal"}
+#バルモア
+#そ、そうそう。
+#オレもそう思ったんだ。
+
+{"str_num": 342, "bank": "0xF6", "str_pos": "0x366BE7", "length": 11, "table": "normal"}
+#[sub]
+#本当かしら。
+
+{"str_num": 343, "bank": "0xF6", "str_pos": "0x366BF3", "length": 8, "table": "normal"}
+#[protag]
+#あいつだ！
+
+{"str_num": 344, "bank": "0xF6", "str_pos": "0x366BFC", "length": 44, "table": "normal"}
+#[sub]
+#神様のふりをして、いけにえを欲しがるなんて許せない！
+#やっつけよう、[protag]！
+
+{"str_num": 345, "bank": "0xF6", "str_pos": "0x366C29", "length": 16, "table": "normal"}
+#モンスター
+#グオウワアアッ！！
+
+{"str_num": 346, "bank": "0xF6", "str_pos": "0x366C3A", "length": 13, "table": "normal"}
+#バルモア
+#な、なんだ！？
+
+{"str_num": 347, "bank": "0xF6", "str_pos": "0x366C48", "length": 34, "table": "normal"}
+#[sub]
+#神様を倒したから世界がくずれるの！？
+#ま、まさか！
+
+{"str_num": 348, "bank": "0xF6", "str_pos": "0x366C6B", "length": 9, "table": "normal"}
+#[protag]
+#逃げよう！
+
+{"str_num": 349, "bank": "0xF6", "str_pos": "0x366C75", "length": 13, "table": "normal"}
 #アグリスを手に入れた！
 
-
-{"str_num": 370, "bank": "0xF6", "str_pos": "0x366C83", "length": 15}
+{"str_num": 350, "bank": "0xF6", "str_pos": "0x366C83", "length": 15, "table": "normal"}
 #ガーディアンを手に入れた！
 
-
-{"str_num": 371, "bank": "0xF6", "str_pos": "0x366C93", "length": 17}
+{"str_num": 351, "bank": "0xF6", "str_pos": "0x366C93", "length": 17, "table": "normal"}
 #ダリエルシールドを手に入れた！
 
+{"str_num": 352, "bank": "0xF6", "str_pos": "0x366F19", "length": 30, "table": "normal"}
+# [protag]
+#あれは、食材リストにあったオースむぎだけど……。
 
-{"str_num": 372, "bank": "0xF6", "str_pos": "0x366F19", "length": 30}
-# [protag]<wait_auto>あれは、食材リストにあったオースむぎだけど……。
+{"str_num": 353, "bank": "0xF6", "str_pos": "0x366F38", "length": 17, "table": "normal"}
+#バルモア
+#何ためらってんだよ。
 
+{"str_num": 354, "bank": "0xF6", "str_pos": "0x366F4A", "length": 6, "table": "normal"}
+#[protag]
+#あっ！
 
-{"str_num": 373, "bank": "0xF6", "str_pos": "0x366F38", "length": 17}
-#バルモア<wait_auto>何ためらってんだよ。
-
-
-{"str_num": 374, "bank": "0xF6", "str_pos": "0x366F4A", "length": 6}
-#[protag]<wait_auto>あっ！
-
-
-{"str_num": 375, "bank": "0xF6", "str_pos": "0x366F51", "length": 14}
+{"str_num": 355, "bank": "0xF6", "str_pos": "0x366F51", "length": 14, "table": "normal"}
 #オースむぎを手に入れた！
 
+{"str_num": 356, "bank": "0xF6", "str_pos": "0x366F60", "length": 26, "table": "normal"}
+#[protag]
+#あれは、食材リストにあったコメだけど……。
 
-{"str_num": 376, "bank": "0xF6", "str_pos": "0x366F60", "length": 26}
-#[protag]<wait_auto>あれは、食材リストにあったコメだけど……。
+{"str_num": 357, "bank": "0xF6", "str_pos": "0x366F7B", "length": 17, "table": "normal"}
+#バルモア
+#何ためらってんだよ。
 
+{"str_num": 358, "bank": "0xF6", "str_pos": "0x366F8D", "length": 6, "table": "normal"}
+#[protag]
+#あっ！
 
-{"str_num": 377, "bank": "0xF6", "str_pos": "0x366F7B", "length": 17}
-#バルモア<wait_auto>何ためらってんだよ。
-
-
-{"str_num": 378, "bank": "0xF6", "str_pos": "0x366F8D", "length": 6}
-#[protag]<wait_auto>あっ！
-
-
-{"str_num": 379, "bank": "0xF6", "str_pos": "0x366F94", "length": 11}
+{"str_num": 359, "bank": "0xF6", "str_pos": "0x366F94", "length": 11, "table": "normal"}
 #コメを手に入れた！
 
-
-{"str_num": 380, "bank": "0xF6", "str_pos": "0x367F24", "length": 66}
-#O9 K8C1 K9G2 KAD2 KBE1 L8けM皇乗9けM王乗AけMW乗BけMQ偉7F3 K8C2 Q77Q87R7漠
-
-
-{"str_num": 381, "bank": "0xF6", "str_pos": "0x3688A1", "length": 23}
-#7[protag]<wait_auto>ところで、勝負って何をするんだ？
-
-
-{"str_num": 382, "bank": "0xF6", "str_pos": "0x3688B9", "length": 46}
-#少年<wait_auto>おっと、急いては事をしそんじるっていうだろ。<wait_auto>ちょっとは待てないのかい？
-
-
-{"str_num": 383, "bank": "0xF6", "str_pos": "0x3688E8", "length": 19}
-#少年<wait_auto>準備はいいぜ、ハート！
-
-
-{"str_num": 384, "bank": "0xF6", "str_pos": "0x3688FC", "length": 33}
-#女<wait_auto>そいつが今回のカモかい。<wait_auto>ご苦労さん、スペード。
-
-
-{"str_num": 385, "bank": "0xF6", "str_pos": "0x36891E", "length": 14}
-#[protag]<wait_auto>君、あのときの……。
-
-
-{"str_num": 386, "bank": "0xF6", "str_pos": "0x36892D", "length": 37}
-#女<wait_auto>あたしは、ハート・ジャッカー。<wait_auto>このトランプ一家のリーダーさ。
-
-
-{"str_num": 387, "bank": "0xF6", "str_pos": "0x368953", "length": 18}
-#男<wait_auto>…………クラブ・ブレイカー。
-
-
-{"str_num": 388, "bank": "0xF6", "str_pos": "0x368966", "length": 45}
-#少女<wait_auto>アタイはダイヤ・クラッシャー！<wait_auto>歌わせたら、アタイにかなうヤツはいないよ！
-
-
-{"str_num": 389, "bank": "0xF6", "str_pos": "0x368994", "length": 67}
-#パブロス<wait_auto>おやおや……本当に人を感動させることのできる真の歌い手は、決して自分でそんなことをいわないものだよ。
-
-
-{"str_num": 390, "bank": "0xF6", "str_pos": "0x3689D8", "length": 31}
-#ダイヤ<wait_auto>何よ、オッサン！<wait_auto>アタイにモンクつけようっての！
-
-
-{"str_num": 391, "bank": "0xF6", "str_pos": "0x3689F8", "length": 31}
-#パブロス<wait_auto>とんでもない。<wait_auto>ミーは、戦士ではないからね。
-
-
-{"str_num": 392, "bank": "0xF6", "str_pos": "0x368A18", "length": 61}
-#スペード<wait_auto>オイラはスペード・ラッシャーだぜ。<wait_auto>あんたらみたいに、勝負に乗ってくれそうな相手を探してたんだ。
-
-
-{"str_num": 393, "bank": "0xF6", "str_pos": "0x368A56", "length": 44}
-#男<wait_auto>僕はジョーカー・パニッシャー。<wait_auto>君たちのお相手は、この僕がつとめる。
-
-
-{"str_num": 394, "bank": "0xF6", "str_pos": "0x368A83", "length": 14}
-#[protag]<wait_auto>勝負の方法は？
-
-
-{"str_num": 395, "bank": "0xF6", "str_pos": "0x368A92", "length": 28}
-#ジョーカー<wait_auto>カードさ。<wait_auto>ポーカーを知っているかな。
-
-
-{"str_num": 396, "bank": "0xF6", "str_pos": "0x368AAF", "length": 13}
-#[protag]<wait_auto>ああ、とりあえずは。
-
-
-{"str_num": 397, "bank": "0xF6", "str_pos": "0x368ABD", "length": 14}
-#ジョーカー<wait_auto>じゅうぶんだ。
-
-
-{"str_num": 398, "bank": "0xF6", "str_pos": "0x368ACC", "length": 40}
-#ジョーカー<wait_auto>じゃあ、カードを配るぜ…………。<wait_auto>君に5まい、僕に5まい。
-
-
-{"str_num": 399, "bank": "0xF6", "str_pos": "0x368AF5", "length": 9}
-#[protag]<wait_auto>勝負だ！
-
-
-{"str_num": 400, "bank": "0xF6", "str_pos": "0x368AFF", "length": 17}
-#ジョーカー<wait_auto>君はワンペアかい。
-
-
-{"str_num": 401, "bank": "0xF6", "str_pos": "0x368B11", "length": 27}
-#ジョーカー<wait_auto>……悪いな。<wait_auto>こっちはフルハウスだ。
-
-
-{"str_num": 402, "bank": "0xF6", "str_pos": "0x368B2D", "length": 12}
-#[protag]<wait_auto>あーあ、負けた。
-
-
-{"str_num": 403, "bank": "0xF6", "str_pos": "0x368B3A", "length": 28}
-#スペード<wait_auto>約束通り、100GOLDもらうからな。
-
-
-{"str_num": 404, "bank": "0xF6", "str_pos": "0x368B57", "length": 50}
-#ハート<wait_auto>うふふっ、くやしかったら、いつでもかかってきな。<wait_auto>ジョーカーにゃ、勝てっこないけどね。
-
-
-{"str_num": 405, "bank": "0xF6", "str_pos": "0x368B8A", "length": 30}
-#[protag]<wait_auto>ちょっと待った！<wait_auto>今、イカサマしたじゃないか！？
-
-
-{"str_num": 406, "bank": "0xF6", "str_pos": "0x368BA9", "length": 29}
-#ハート<wait_auto>ちょっと、あたしたちにケンカ売ろうってのかい！
-
-
-{"str_num": 407, "bank": "0xF6", "str_pos": "0x368BC7", "length": 47}
-#バルモア<wait_auto>うるせえ！<wait_auto>イカサマだと、ふざけやがって。<wait_auto>それじゃ勝てるわけねえだろうが！
-
-
-{"str_num": 408, "bank": "0xF6", "str_pos": "0x368BF7", "length": 21}
-#ハート<wait_auto>モンクがあるなら、かかってきな！
-
-
-{"str_num": 409, "bank": "0xF6", "str_pos": "0x368C0D", "length": 11}
-#バルモア<wait_auto>こうかっ！
-
-
-{"str_num": 410, "bank": "0xF6", "str_pos": "0x368C19", "length": 14}
-#ハートの声<wait_auto>きゃああっ！
-
-
-{"str_num": 411, "bank": "0xF6", "str_pos": "0x368C28", "length": 12}
-#クラブ<wait_auto>このヤロウ！！
-
-
-{"str_num": 412, "bank": "0xF6", "str_pos": "0x368C35", "length": 37}
-#バルモア<wait_auto>うるせえ、怒ってんのはこっちだ！<wait_auto>よくもだましやがったな！
-
-
-{"str_num": 413, "bank": "0xF6", "str_pos": "0x368C5B", "length": 20}
-#ダイヤ<wait_auto>やだ、バレちゃったじゃなーい！
-
-
-{"str_num": 414, "bank": "0xF6", "str_pos": "0x368C70", "length": 29}
-#スペード<wait_auto>あ、あれっ……。<wait_auto>いや、ちょ、ちょっと……。
-
-
-{"str_num": 415, "bank": "0xF6", "str_pos": "0x368C8E", "length": 13}
-#バルモア<wait_auto>………………。
-
-
-{"str_num": 416, "bank": "0xF6", "str_pos": "0x368C9C", "length": 97}
-#スペード<wait_auto>ご……ごめんよ、アニキッ！<wait_auto>オイラおどされて、しかたなくってやったんだ。<wait_auto>あんたみたいな強い男に、逆らうようなマネ、したくなかったんだけど……。<wait_auto>許してくれよ、アニキ！
-
-
-{"str_num": 417, "bank": "0xF6", "str_pos": "0x368CFE", "length": 28}
-#[protag]<wait_auto>謝ってるし、許してやろう。<wait_auto>なっ、バルモア。
-
-
-{"str_num": 418, "bank": "0xF6", "str_pos": "0x368D1B", "length": 42}
-#バルモア<wait_auto>……まだ、気がすまねえが、しかたねえ。 今度だけは許してやらあ。
-
-
-{"str_num": 419, "bank": "0xF6", "str_pos": "0x368D46", "length": 9}
-#スペード<wait_auto>ホッ。
-
-
-{"str_num": 420, "bank": "0xF6", "str_pos": "0x368D50", "length": 47}
-#バルモア<wait_auto>その代わり、オレたちが勝ったら、もらえるはずだった1000GOLDよこせよな。
-
-
-{"str_num": 421, "bank": "0xF6", "str_pos": "0x368D80", "length": 16}
-#スペード<wait_auto>ええーーーーーー！？
-
-
-{"str_num": 422, "bank": "0xF6", "str_pos": "0x368D91", "length": 46}
-#バルモア<wait_auto>いやならいいぜ。<wait_auto>金の代わりに、てめえの手足を一本か二本……。
-
-
-{"str_num": 423, "bank": "0xF6", "str_pos": "0x368DC0", "length": 33}
-#スペード<wait_auto>わ、わかったよ、わかりました！<wait_auto>払えばいいんだろ！
-
-
-{"str_num": 424, "bank": "0xF6", "str_pos": "0x368DF0", "length": 27}
-#[protag]<wait_auto>これにこりたら、もう二度とイカサマするなよ。
-
-
-{"str_num": 425, "bank": "0xF6", "str_pos": "0x368E0C", "length": 60}
-#ジョーカー<wait_auto>フッ……僕のイカサマを見破ったのは、君が初めてだよ。<wait_auto>世界はまだまだ、広いってことかな。
-
-
-{"str_num": 426, "bank": "0xF6", "str_pos": "0x368E49", "length": 6}
-#[protag]<wait_auto>えっ？
-
-
-{"str_num": 427, "bank": "0xF6", "str_pos": "0x368E50", "length": 78}
-#ジョーカー<wait_auto>君の顔は、見るからにお人好しそうだな。 君の元でしゅぎょうをしたいが、君に僕たちは重にすぎるだろう。<wait_auto>ざんねんだな……。
-
-
-{"str_num": 428, "bank": "0xF6", "str_pos": "0x368E9F", "length": 16}
-#スペード<wait_auto>あっ、ジョーカー！！
-
-
-{"str_num": 429, "bank": "0xF6", "str_pos": "0x368EB0", "length": 32}
-#バルモア<wait_auto>なんだ、あいつ。<wait_auto>まだ、あきらめてねえみたいだぜ。
-
-
-{"str_num": 430, "bank": "0xF6", "str_pos": "0x368ED1", "length": 64}
-#ジョーカー<wait_auto>それにしても、僕のイカサマが見破られたのは、初めてだ。<wait_auto>君たちも、よっぽどのギャンブラーなんだろうな。
-
-
-{"str_num": 431, "bank": "0xF6", "str_pos": "0x368F12", "length": 6}
-#[protag]<wait_auto>えっ？
-
-
-{"str_num": 432, "bank": "0xF6", "str_pos": "0x368F19", "length": 64}
-#ジョーカー<wait_auto>どうだろう、よければ仲間にしてもらえないか？<wait_auto>僕は、君を師にして、よりいっそう腕にみがきをかけたい。
-
-
-{"str_num": 433, "bank": "0xF6", "str_pos": "0x368F5A", "length": 26}
-#[protag]<wait_auto>ええっ！？<wait_auto>いきなりいわれても、そんな……。
-
-
-{"str_num": 434, "bank": "0xF6", "str_pos": "0x368F75", "length": 23}
-#バルモア<wait_auto>まてよ[protag]。<wait_auto>こいつは使えるぜ。
-
-
-{"str_num": 435, "bank": "0xF6", "str_pos": "0x368F8D", "length": 30}
-# ジョーカーたちを仲間にしますか？<wait_auto> はい<wait_auto> いいえ
-
-
-{"str_num": 436, "bank": "0xF6", "str_pos": "0x368FAD", "length": 11}
-#[protag]<wait_auto>悪いけど……。
-
-
-{"str_num": 437, "bank": "0xF6", "str_pos": "0x368FB9", "length": 69}
-#ジョーカー<wait_auto>……そうか、そうだな。<wait_auto>ギャンブラーたる者、おのれを高めるのはおのれ自身だ。<wait_auto>君には教えられることばかりだ。
-
-
-{"str_num": 438, "bank": "0xF6", "str_pos": "0x368FFF", "length": 17}
-#[protag]<wait_auto>いや、そういうわけじゃ……。
-
-
-{"str_num": 439, "bank": "0xF6", "str_pos": "0x369011", "length": 43}
-#ジョーカー<wait_auto>さらばだ、我がライバルよ。<wait_auto>いつか会ったら、また勝負してくれ。
-
-
-{"str_num": 440, "bank": "0xF6", "str_pos": "0x36903D", "length": 16}
-#スペード<wait_auto>あっ、ジョーカー！！
-
-
-{"str_num": 441, "bank": "0xF6", "str_pos": "0x36904E", "length": 27}
-#バルモア<wait_auto>なんだ、あいつ。<wait_auto>気取ったヤツだぜ。
-
-
-{"str_num": 442, "bank": "0xF6", "str_pos": "0x36906A", "length": 13}
-#ジョーカー<wait_auto>ありがたい。
-
-
-{"str_num": 443, "bank": "0xF6", "str_pos": "0x369078", "length": 23}
-#ジョーカー<wait_auto>スペード、みんなを起こすんだ。
-
-
-{"str_num": 444, "bank": "0xF6", "str_pos": "0x369090", "length": 10}
-#スペード<wait_auto>あいよ。
-
-
-{"str_num": 445, "bank": "0xF6", "str_pos": "0x36909B", "length": 13}
-#[protag]<wait_auto>さあ、勝負だぞ。
-
-
-{"str_num": 446, "bank": "0xF6", "str_pos": "0x3690A9", "length": 11}
-#スペード<wait_auto>オッケー！
-
-
-{"str_num": 447, "bank": "0xF6", "str_pos": "0x3690B5", "length": 27}
-#ジョーカー<wait_auto>また、君か。<wait_auto>今回もいただくよ。
-
-
-{"str_num": 448, "bank": "0xF6", "str_pos": "0x3690D1", "length": 11}
-#[protag]<wait_auto>負けるもんか。
-
-
-{"str_num": 449, "bank": "0xF6", "str_pos": "0x3690DD", "length": 32}
-#ハート<wait_auto>あー痛かった…………。<wait_auto>なんだよ、あのゴリラ……。
-
-
-{"str_num": 450, "bank": "0xF6", "str_pos": "0x3690FE", "length": 86}
-#ジョーカー<wait_auto>みんな、僕たちは今日から、彼の仲間になった。<wait_auto>僕よりもはるかに、ギャンブラーとしての腕は確かだ。<wait_auto>きっと、学ぶところは多いと思う。
-
-
-{"str_num": 451, "bank": "0xF6", "str_pos": "0x369155", "length": 32}
-#ハート<wait_auto>ジョーカーがそういうなら……。<wait_auto>いいさ、信じるよ。
-
-
-{"str_num": 452, "bank": "0xF6", "str_pos": "0x369176", "length": 50}
-#ハート<wait_auto>ダイヤ、大丈夫だよ。<wait_auto>あたしたちは、今日からこのボウヤといっしょに行くんだよ。
-
-
-{"str_num": 453, "bank": "0xF6", "str_pos": "0x3691A9", "length": 34}
-#[protag]<wait_auto>ボウヤはないだろ。<wait_auto>年だって、あんまり変わんないくせに。
-
-
-{"str_num": 454, "bank": "0xF6", "str_pos": "0x3691CC", "length": 22}
-#ハート<wait_auto>アタシにすりゃ、あんたはボウヤさ。
-
-
-{"str_num": 455, "bank": "0xF6", "str_pos": "0x3691E3", "length": 11}
-#ダイヤ<wait_auto>よろしくね☆
-
-
-{"str_num": 456, "bank": "0xF6", "str_pos": "0x3691EF", "length": 19}
+{"str_num": 360, "bank": "0xF6", "str_pos": "0x3688A1", "length": 23, "table": "normal"}
+#7[protag]
+#ところで、勝負って何をするんだ？
+
+{"str_num": 361, "bank": "0xF6", "str_pos": "0x3688B9", "length": 46, "table": "normal"}
+#少年
+#おっと、急いては事をしそんじるっていうだろ。
+#ちょっとは待てないのかい？
+
+{"str_num": 362, "bank": "0xF6", "str_pos": "0x3688E8", "length": 19, "table": "normal"}
+#少年
+#準備はいいぜ、ハート！
+
+{"str_num": 363, "bank": "0xF6", "str_pos": "0x3688FC", "length": 33, "table": "normal"}
+#女
+#そいつが今回のカモかい。
+#ご苦労さん、スペード。
+
+{"str_num": 364, "bank": "0xF6", "str_pos": "0x36891E", "length": 14, "table": "normal"}
+#[protag]
+#君、あのときの……。
+
+{"str_num": 365, "bank": "0xF6", "str_pos": "0x36892D", "length": 37, "table": "normal"}
+#女
+#あたしは、ハート・ジャッカー。
+#このトランプ一家のリーダーさ。
+
+{"str_num": 366, "bank": "0xF6", "str_pos": "0x368953", "length": 18, "table": "normal"}
+#男
+#…………クラブ・ブレイカー。
+
+{"str_num": 367, "bank": "0xF6", "str_pos": "0x368966", "length": 45, "table": "normal"}
+#少女
+#アタイはダイヤ・クラッシャー！
+#歌わせたら、アタイにかなうヤツはいないよ！
+
+{"str_num": 368, "bank": "0xF6", "str_pos": "0x368994", "length": 67, "table": "normal"}
+#パブロス
+#おやおや……本当に人を感動させることのできる真の歌い手は、決して自分でそんなことをいわないものだよ。
+
+{"str_num": 369, "bank": "0xF6", "str_pos": "0x3689D8", "length": 31, "table": "normal"}
+#ダイヤ
+#何よ、オッサン！
+#アタイにモンクつけようっての！
+
+{"str_num": 370, "bank": "0xF6", "str_pos": "0x3689F8", "length": 31, "table": "normal"}
+#パブロス
+#とんでもない。
+#ミーは、戦士ではないからね。
+
+{"str_num": 371, "bank": "0xF6", "str_pos": "0x368A18", "length": 61, "table": "normal"}
+#スペード
+#オイラはスペード・ラッシャーだぜ。
+#あんたらみたいに、勝負に乗ってくれそうな相手を探してたんだ。
+
+{"str_num": 372, "bank": "0xF6", "str_pos": "0x368A56", "length": 44, "table": "normal"}
+#男
+#僕はジョーカー・パニッシャー。
+#君たちのお相手は、この僕がつとめる。
+
+{"str_num": 373, "bank": "0xF6", "str_pos": "0x368A83", "length": 14, "table": "normal"}
+#[protag]
+#勝負の方法は？
+
+{"str_num": 374, "bank": "0xF6", "str_pos": "0x368A92", "length": 28, "table": "normal"}
+#ジョーカー
+#カードさ。
+#ポーカーを知っているかな。
+
+{"str_num": 375, "bank": "0xF6", "str_pos": "0x368AAF", "length": 13, "table": "normal"}
+#[protag]
+#ああ、とりあえずは。
+
+{"str_num": 376, "bank": "0xF6", "str_pos": "0x368ABD", "length": 14, "table": "normal"}
+#ジョーカー
+#じゅうぶんだ。
+
+{"str_num": 377, "bank": "0xF6", "str_pos": "0x368ACC", "length": 40, "table": "normal"}
+#ジョーカー
+#じゃあ、カードを配るぜ…………。
+#君に5まい、僕に5まい。
+
+{"str_num": 378, "bank": "0xF6", "str_pos": "0x368AF5", "length": 9, "table": "normal"}
+#[protag]
+#勝負だ！
+
+{"str_num": 379, "bank": "0xF6", "str_pos": "0x368AFF", "length": 17, "table": "normal"}
+#ジョーカー
+#君はワンペアかい。
+
+{"str_num": 380, "bank": "0xF6", "str_pos": "0x368B11", "length": 27, "table": "normal"}
+#ジョーカー
+#……悪いな。
+#こっちはフルハウスだ。
+
+{"str_num": 381, "bank": "0xF6", "str_pos": "0x368B2D", "length": 12, "table": "normal"}
+#[protag]
+#あーあ、負けた。
+
+{"str_num": 382, "bank": "0xF6", "str_pos": "0x368B3A", "length": 28, "table": "normal"}
+#スペード
+#約束通り、100GOLDもらうからな。
+
+{"str_num": 383, "bank": "0xF6", "str_pos": "0x368B57", "length": 50, "table": "normal"}
+#ハート
+#うふふっ、くやしかったら、いつでもかかってきな。
+#ジョーカーにゃ、勝てっこないけどね。
+
+{"str_num": 384, "bank": "0xF6", "str_pos": "0x368B8A", "length": 30, "table": "normal"}
+#[protag]
+#ちょっと待った！
+#今、イカサマしたじゃないか！？
+
+{"str_num": 385, "bank": "0xF6", "str_pos": "0x368BA9", "length": 29, "table": "normal"}
+#ハート
+#ちょっと、あたしたちにケンカ売ろうってのかい！
+
+{"str_num": 386, "bank": "0xF6", "str_pos": "0x368BC7", "length": 47, "table": "normal"}
+#バルモア
+#うるせえ！
+#イカサマだと、ふざけやがって。
+#それじゃ勝てるわけねえだろうが！
+
+{"str_num": 387, "bank": "0xF6", "str_pos": "0x368BF7", "length": 21, "table": "normal"}
+#ハート
+#モンクがあるなら、かかってきな！
+
+{"str_num": 388, "bank": "0xF6", "str_pos": "0x368C0D", "length": 11, "table": "normal"}
+#バルモア
+#こうかっ！
+
+{"str_num": 389, "bank": "0xF6", "str_pos": "0x368C19", "length": 14, "table": "normal"}
+#ハートの声
+#きゃああっ！
+
+{"str_num": 390, "bank": "0xF6", "str_pos": "0x368C28", "length": 12, "table": "normal"}
+#クラブ
+#このヤロウ！！
+
+{"str_num": 391, "bank": "0xF6", "str_pos": "0x368C35", "length": 37, "table": "normal"}
+#バルモア
+#うるせえ、怒ってんのはこっちだ！
+#よくもだましやがったな！
+
+{"str_num": 392, "bank": "0xF6", "str_pos": "0x368C5B", "length": 20, "table": "normal"}
+#ダイヤ
+#やだ、バレちゃったじゃなーい！
+
+{"str_num": 393, "bank": "0xF6", "str_pos": "0x368C70", "length": 29, "table": "normal"}
+#スペード
+#あ、あれっ……。
+#いや、ちょ、ちょっと……。
+
+{"str_num": 394, "bank": "0xF6", "str_pos": "0x368C8E", "length": 13, "table": "normal"}
+#バルモア
+#………………。
+
+{"str_num": 395, "bank": "0xF6", "str_pos": "0x368C9C", "length": 97, "table": "normal"}
+#スペード
+#ご……ごめんよ、アニキッ！
+#オイラおどされて、しかたなくってやったんだ。
+#あんたみたいな強い男に、逆らうようなマネ、したくなかったんだけど……。
+#許してくれよ、アニキ！
+
+{"str_num": 396, "bank": "0xF6", "str_pos": "0x368CFE", "length": 28, "table": "normal"}
+#[protag]
+#謝ってるし、許してやろう。
+#なっ、バルモア。
+
+{"str_num": 397, "bank": "0xF6", "str_pos": "0x368D1B", "length": 42, "table": "normal"}
+#バルモア
+#……まだ、気がすまねえが、しかたねえ。 今度だけは許してやらあ。
+
+{"str_num": 398, "bank": "0xF6", "str_pos": "0x368D46", "length": 9, "table": "normal"}
+#スペード
+#ホッ。
+
+{"str_num": 399, "bank": "0xF6", "str_pos": "0x368D50", "length": 47, "table": "normal"}
+#バルモア
+#その代わり、オレたちが勝ったら、もらえるはずだった1000GOLDよこせよな。
+
+{"str_num": 400, "bank": "0xF6", "str_pos": "0x368D80", "length": 16, "table": "normal"}
+#スペード
+#ええーーーーーー！？
+
+{"str_num": 401, "bank": "0xF6", "str_pos": "0x368D91", "length": 46, "table": "normal"}
+#バルモア
+#いやならいいぜ。
+#金の代わりに、てめえの手足を一本か二本……。
+
+{"str_num": 402, "bank": "0xF6", "str_pos": "0x368DC0", "length": 33, "table": "normal"}
+#スペード
+#わ、わかったよ、わかりました！
+#払えばいいんだろ！
+
+{"str_num": 403, "bank": "0xF6", "str_pos": "0x368DF0", "length": 27, "table": "normal"}
+#[protag]
+#これにこりたら、もう二度とイカサマするなよ。
+
+{"str_num": 404, "bank": "0xF6", "str_pos": "0x368E0C", "length": 60, "table": "normal"}
+#ジョーカー
+#フッ……僕のイカサマを見破ったのは、君が初めてだよ。
+#世界はまだまだ、広いってことかな。
+
+{"str_num": 405, "bank": "0xF6", "str_pos": "0x368E49", "length": 6, "table": "normal"}
+#[protag]
+#えっ？
+
+{"str_num": 406, "bank": "0xF6", "str_pos": "0x368E50", "length": 78, "table": "normal"}
+#ジョーカー
+#君の顔は、見るからにお人好しそうだな。 君の元でしゅぎょうをしたいが、君に僕たちは重にすぎるだろう。
+#ざんねんだな……。
+
+{"str_num": 407, "bank": "0xF6", "str_pos": "0x368E9F", "length": 16, "table": "normal"}
+#スペード
+#あっ、ジョーカー！！
+
+{"str_num": 408, "bank": "0xF6", "str_pos": "0x368EB0", "length": 32, "table": "normal"}
+#バルモア
+#なんだ、あいつ。
+#まだ、あきらめてねえみたいだぜ。
+
+{"str_num": 409, "bank": "0xF6", "str_pos": "0x368ED1", "length": 64, "table": "normal"}
+#ジョーカー
+#それにしても、僕のイカサマが見破られたのは、初めてだ。
+#君たちも、よっぽどのギャンブラーなんだろうな。
+
+{"str_num": 410, "bank": "0xF6", "str_pos": "0x368F12", "length": 6, "table": "normal"}
+#[protag]
+#えっ？
+
+{"str_num": 411, "bank": "0xF6", "str_pos": "0x368F19", "length": 64, "table": "normal"}
+#ジョーカー
+#どうだろう、よければ仲間にしてもらえないか？
+#僕は、君を師にして、よりいっそう腕にみがきをかけたい。
+
+{"str_num": 412, "bank": "0xF6", "str_pos": "0x368F5A", "length": 26, "table": "normal"}
+#[protag]
+#ええっ！？
+#いきなりいわれても、そんな……。
+
+{"str_num": 413, "bank": "0xF6", "str_pos": "0x368F75", "length": 23, "table": "normal"}
+#バルモア
+#まてよ[protag]。
+#こいつは使えるぜ。
+
+{"str_num": 414, "bank": "0xF6", "str_pos": "0x368F8D", "length": 30, "table": "normal"}
+# ジョーカーたちを仲間にしますか？
+# はい
+# いいえ
+
+{"str_num": 415, "bank": "0xF6", "str_pos": "0x368FAD", "length": 11, "table": "normal"}
+#[protag]
+#悪いけど……。
+
+{"str_num": 416, "bank": "0xF6", "str_pos": "0x368FB9", "length": 69, "table": "normal"}
+#ジョーカー
+#……そうか、そうだな。
+#ギャンブラーたる者、おのれを高めるのはおのれ自身だ。
+#君には教えられることばかりだ。
+
+{"str_num": 417, "bank": "0xF6", "str_pos": "0x368FFF", "length": 17, "table": "normal"}
+#[protag]
+#いや、そういうわけじゃ……。
+
+{"str_num": 418, "bank": "0xF6", "str_pos": "0x369011", "length": 43, "table": "normal"}
+#ジョーカー
+#さらばだ、我がライバルよ。
+#いつか会ったら、また勝負してくれ。
+
+{"str_num": 419, "bank": "0xF6", "str_pos": "0x36903D", "length": 16, "table": "normal"}
+#スペード
+#あっ、ジョーカー！！
+
+{"str_num": 420, "bank": "0xF6", "str_pos": "0x36904E", "length": 27, "table": "normal"}
+#バルモア
+#なんだ、あいつ。
+#気取ったヤツだぜ。
+
+{"str_num": 421, "bank": "0xF6", "str_pos": "0x36906A", "length": 13, "table": "normal"}
+#ジョーカー
+#ありがたい。
+
+{"str_num": 422, "bank": "0xF6", "str_pos": "0x369078", "length": 23, "table": "normal"}
+#ジョーカー
+#スペード、みんなを起こすんだ。
+
+{"str_num": 423, "bank": "0xF6", "str_pos": "0x369090", "length": 10, "table": "normal"}
+#スペード
+#あいよ。
+
+{"str_num": 424, "bank": "0xF6", "str_pos": "0x36909B", "length": 13, "table": "normal"}
+#[protag]
+#さあ、勝負だぞ。
+
+{"str_num": 425, "bank": "0xF6", "str_pos": "0x3690A9", "length": 11, "table": "normal"}
+#スペード
+#オッケー！
+
+{"str_num": 426, "bank": "0xF6", "str_pos": "0x3690B5", "length": 27, "table": "normal"}
+#ジョーカー
+#また、君か。
+#今回もいただくよ。
+
+{"str_num": 427, "bank": "0xF6", "str_pos": "0x3690D1", "length": 11, "table": "normal"}
+#[protag]
+#負けるもんか。
+
+{"str_num": 428, "bank": "0xF6", "str_pos": "0x3690DD", "length": 32, "table": "normal"}
+#ハート
+#あー痛かった…………。
+#なんだよ、あのゴリラ……。
+
+{"str_num": 429, "bank": "0xF6", "str_pos": "0x3690FE", "length": 86, "table": "normal"}
+#ジョーカー
+#みんな、僕たちは今日から、彼の仲間になった。
+#僕よりもはるかに、ギャンブラーとしての腕は確かだ。
+#きっと、学ぶところは多いと思う。
+
+{"str_num": 430, "bank": "0xF6", "str_pos": "0x369155", "length": 32, "table": "normal"}
+#ハート
+#ジョーカーがそういうなら……。
+#いいさ、信じるよ。
+
+{"str_num": 431, "bank": "0xF6", "str_pos": "0x369176", "length": 50, "table": "normal"}
+#ハート
+#ダイヤ、大丈夫だよ。
+#あたしたちは、今日からこのボウヤといっしょに行くんだよ。
+
+{"str_num": 432, "bank": "0xF6", "str_pos": "0x3691A9", "length": 34, "table": "normal"}
+#[protag]
+#ボウヤはないだろ。
+#年だって、あんまり変わんないくせに。
+
+{"str_num": 433, "bank": "0xF6", "str_pos": "0x3691CC", "length": 22, "table": "normal"}
+#ハート
+#アタシにすりゃ、あんたはボウヤさ。
+
+{"str_num": 434, "bank": "0xF6", "str_pos": "0x3691E3", "length": 11, "table": "normal"}
+#ダイヤ
+#よろしくね☆
+
+{"str_num": 435, "bank": "0xF6", "str_pos": "0x3691EF", "length": 19, "table": "normal"}
 #ハート・ジャッカーが仲間になった！
 
-
-{"str_num": 457, "bank": "0xF6", "str_pos": "0x369203", "length": 19}
+{"str_num": 436, "bank": "0xF6", "str_pos": "0x369203", "length": 19, "table": "normal"}
 #クラブ・ブレイカーが仲間になった！
 
-
-{"str_num": 458, "bank": "0xF6", "str_pos": "0x369217", "length": 20}
+{"str_num": 437, "bank": "0xF6", "str_pos": "0x369217", "length": 20, "table": "normal"}
 #ダイヤ・クラッシャーが仲間になった！
 
-
-{"str_num": 459, "bank": "0xF6", "str_pos": "0x36922C", "length": 20}
+{"str_num": 438, "bank": "0xF6", "str_pos": "0x36922C", "length": 20, "table": "normal"}
 #スペード・ラッシャーが仲間になった！
 
-
-{"str_num": 460, "bank": "0xF6", "str_pos": "0x369241", "length": 22}
+{"str_num": 439, "bank": "0xF6", "str_pos": "0x369241", "length": 22, "table": "normal"}
 #ジョーカー・パニッシャーが仲間になった！
 
+{"str_num": 440, "bank": "0xF6", "str_pos": "0x369258", "length": 30, "table": "normal"}
+#[protag]
+#なんだか、大変な旅になりそうな気がしてきたなあ。
 
-{"str_num": 461, "bank": "0xF6", "str_pos": "0x369258", "length": 30}
-#[protag]<wait_auto>なんだか、大変な旅になりそうな気がしてきたなあ。
+{"str_num": 441, "bank": "0xF6", "str_pos": "0x369277", "length": 22, "table": "normal"}
+#バルモア
+#何を、今さらいってやがんだ。
 
+{"str_num": 442, "bank": "0xF6", "str_pos": "0x36928E", "length": 40, "table": "normal"}
+#おじいさん
+#ここは楽しいところじゃな。
+#わしはよく、ここへ来るんじゃよ。
 
-{"str_num": 462, "bank": "0xF6", "str_pos": "0x369277", "length": 22}
-#バルモア<wait_auto>何を、今さらいってやがんだ。
+{"str_num": 443, "bank": "0xF6", "str_pos": "0x3692B7", "length": 14, "table": "normal"}
+#チャラン
+#ルキマンさーん！
 
+{"str_num": 444, "bank": "0xF6", "str_pos": "0x3692C6", "length": 19, "table": "normal"}
+#[protag]
+#チャランちゃん、こ、この人が？
 
-{"str_num": 463, "bank": "0xF6", "str_pos": "0x36928E", "length": 40}
-#おじいさん<wait_auto>ここは楽しいところじゃな。<wait_auto>わしはよく、ここへ来るんじゃよ。
+{"str_num": 445, "bank": "0xF6", "str_pos": "0x3692DA", "length": 14, "table": "normal"}
+#ポラン
+#ルキマンさんなの！
 
+{"str_num": 446, "bank": "0xF6", "str_pos": "0x3692E9", "length": 47, "table": "normal"}
+#ルキマン
+#こ……こりゃ、チャランとポランじゃないか。
+#こんなところで、何をしとるんじゃ？
 
-{"str_num": 464, "bank": "0xF6", "str_pos": "0x3692B7", "length": 14}
-#チャラン<wait_auto>ルキマンさーん！
+{"str_num": 447, "bank": "0xF6", "str_pos": "0x369319", "length": 24, "table": "normal"}
+#パンプキンの声
+#それは、こっちのセリフだよ。
 
+{"str_num": 448, "bank": "0xF6", "str_pos": "0x369332", "length": 28, "table": "normal"}
+#ルキマン
+#な、なつかしくもおっかない、この声は……。
 
-{"str_num": 465, "bank": "0xF6", "str_pos": "0x3692C6", "length": 19}
-#[protag]<wait_auto>チャランちゃん、こ、この人が？
+{"str_num": 449, "bank": "0xF6", "str_pos": "0x36934F", "length": 24, "table": "normal"}
+#パンプキン
+#あんた、こんなところにいたのかい！
 
+{"str_num": 450, "bank": "0xF6", "str_pos": "0x369368", "length": 15, "table": "normal"}
+#ルキマン
+#げっ、カーチャン！
 
-{"str_num": 466, "bank": "0xF6", "str_pos": "0x3692DA", "length": 14}
-#ポラン<wait_auto>ルキマンさんなの！
+{"str_num": 451, "bank": "0xF6", "str_pos": "0x369378", "length": 33, "table": "normal"}
+#パンプキン
+#まったく、しょうのない男だね。
+#ほら、帰るよ。
 
+{"str_num": 452, "bank": "0xF6", "str_pos": "0x36939A", "length": 90, "table": "normal"}
+#ルキマン
+#カーチャン、わしは遊んでばかりいたわけじゃないぞい。
+#ちゃんと、あちこち行って、見聞をふかめて。
+#…………そ、そのために気球だって作ったんじゃからな。
 
-{"str_num": 467, "bank": "0xF6", "str_pos": "0x3692E9", "length": 47}
-#ルキマン<wait_auto>こ……こりゃ、チャランとポランじゃないか。<wait_auto>こんなところで、何をしとるんじゃ？
+{"str_num": 453, "bank": "0xF6", "str_pos": "0x3693F5", "length": 23, "table": "normal"}
+#パンプキン
+#だから、何だっていうんだい！？
 
+{"str_num": 454, "bank": "0xF6", "str_pos": "0x36940D", "length": 23, "table": "normal"}
+#ルキマン
+#……なんでもないです、すいません。
 
-{"str_num": 468, "bank": "0xF6", "str_pos": "0x369319", "length": 24}
-#パンプキンの声<wait_auto>それは、こっちのセリフだよ。
+{"str_num": 455, "bank": "0xF6", "str_pos": "0x369425", "length": 16, "table": "normal"}
+#パンプキン
+#わかりゃいいのさ。
 
+{"str_num": 456, "bank": "0xF6", "str_pos": "0x369436", "length": 36, "table": "normal"}
+#パンプキン
+#じゃあ、あたしたちは帰るよ。
+#手間をかけさせたね。
 
-{"str_num": 469, "bank": "0xF6", "str_pos": "0x369332", "length": 28}
-#ルキマン<wait_auto>な、なつかしくもおっかない、この声は……。
+{"str_num": 457, "bank": "0xF6", "str_pos": "0x36945B", "length": 10, "table": "normal"}
+#[protag]
+#いいんですよ。
 
+{"str_num": 458, "bank": "0xF6", "str_pos": "0x369466", "length": 53, "table": "normal"}
+#パンプキン
+#そうだ、トーチャンが作った気球をあげるよ。
+#あんたたちの冒険に役立つだろう。
 
-{"str_num": 470, "bank": "0xF6", "str_pos": "0x36934F", "length": 24}
-#パンプキン<wait_auto>あんた、こんなところにいたのかい！
+{"str_num": 459, "bank": "0xF6", "str_pos": "0x36949C", "length": 47, "table": "normal"}
+#ルキマン
+#あれ作るのに、けっこう時間かかったんじゃぞ！
+#やるなら、もっと他に……。
 
+{"str_num": 460, "bank": "0xF6", "str_pos": "0x3694CC", "length": 19, "table": "normal"}
+#パンプキン
+#不服があるのかい！？
 
-{"str_num": 471, "bank": "0xF6", "str_pos": "0x369368", "length": 15}
-#ルキマン<wait_auto>げっ、カーチャン！
+{"str_num": 461, "bank": "0xF6", "str_pos": "0x3694E0", "length": 17, "table": "normal"}
+#ルキマン
+#……気球、どうぞ。
 
-
-{"str_num": 472, "bank": "0xF6", "str_pos": "0x369378", "length": 33}
-#パンプキン<wait_auto>まったく、しょうのない男だね。<wait_auto>ほら、帰るよ。
-
-
-{"str_num": 473, "bank": "0xF6", "str_pos": "0x36939A", "length": 90}
-#ルキマン<wait_auto>カーチャン、わしは遊んでばかりいたわけじゃないぞい。<wait_auto>ちゃんと、あちこち行って、見聞をふかめて。<wait_auto>…………そ、そのために気球だって作ったんじゃからな。
-
-
-{"str_num": 474, "bank": "0xF6", "str_pos": "0x3693F5", "length": 23}
-#パンプキン<wait_auto>だから、何だっていうんだい！？
-
-
-{"str_num": 475, "bank": "0xF6", "str_pos": "0x36940D", "length": 23}
-#ルキマン<wait_auto>……なんでもないです、すいません。
-
-
-{"str_num": 476, "bank": "0xF6", "str_pos": "0x369425", "length": 16}
-#パンプキン<wait_auto>わかりゃいいのさ。
-
-
-{"str_num": 477, "bank": "0xF6", "str_pos": "0x369436", "length": 36}
-#パンプキン<wait_auto>じゃあ、あたしたちは帰るよ。<wait_auto>手間をかけさせたね。
-
-
-{"str_num": 478, "bank": "0xF6", "str_pos": "0x36945B", "length": 10}
-#[protag]<wait_auto>いいんですよ。
-
-
-{"str_num": 479, "bank": "0xF6", "str_pos": "0x369466", "length": 53}
-#パンプキン<wait_auto>そうだ、トーチャンが作った気球をあげるよ。<wait_auto>あんたたちの冒険に役立つだろう。
-
-
-{"str_num": 480, "bank": "0xF6", "str_pos": "0x36949C", "length": 47}
-#ルキマン<wait_auto>あれ作るのに、けっこう時間かかったんじゃぞ！<wait_auto>やるなら、もっと他に……。
-
-
-{"str_num": 481, "bank": "0xF6", "str_pos": "0x3694CC", "length": 19}
-#パンプキン<wait_auto>不服があるのかい！？
-
-
-{"str_num": 482, "bank": "0xF6", "str_pos": "0x3694E0", "length": 17}
-#ルキマン<wait_auto>……気球、どうぞ。
-
-
-{"str_num": 483, "bank": "0xF6", "str_pos": "0x3694F2", "length": 13}
+{"str_num": 462, "bank": "0xF6", "str_pos": "0x3694F2", "length": 13, "table": "normal"}
 #気球を手に入れた！
 
-
-{"str_num": 484, "bank": "0xF6", "str_pos": "0x369500", "length": 14}
-#[protag]<wait_auto>ありがとうございます。
-
-
-{"str_num": 485, "bank": "0xF6", "str_pos": "0x36950F", "length": 46}
-#パンプキン<wait_auto>また遊びにおいで。<wait_auto>あたしにできることがあったら、何でもしたげるからね。
-
-
-{"str_num": 486, "bank": "0xF6", "str_pos": "0x36953E", "length": 16}
-#チャラン<wait_auto>パンプキンさーーん！
-
-
-{"str_num": 487, "bank": "0xF6", "str_pos": "0x36954F", "length": 13}
-#ポラン<wait_auto>元気でなの！
-
-
-{"str_num": 488, "bank": "0xF6", "str_pos": "0x36955D", "length": 23}
-#パンプキン<wait_auto>じゃ、またね……。<wait_auto>うりゃっ！
-
-
-{"str_num": 489, "bank": "0xF6", "str_pos": "0x369575", "length": 24}
-#ルキマン<wait_auto>とほほ……もっと遊びたかったのう。
-
-
-{"str_num": 490, "bank": "0xF6", "str_pos": "0x36958E", "length": 30}
-#女<wait_auto>あーら、何か用？<wait_auto>あたしとデートでもしたいの？
-
-
-{"str_num": 491, "bank": "0xF6", "str_pos": "0x3695AD", "length": 29}
-#ハート<wait_auto>ジョーカーと勝負したきゃ、スペードにいいな。
-
-
-{"str_num": 492, "bank": "0xF6", "str_pos": "0x3695CB", "length": 25}
-#少年<wait_auto>……あんたなんか、お呼びじゃないな。
-
-
-{"str_num": 493, "bank": "0xF6", "str_pos": "0x3695E5", "length": 35}
-#スペード<wait_auto>どーせ、また負けるんだから、代金用意してきたら？
-
-
-{"str_num": 494, "bank": "0xF6", "str_pos": "0x369609", "length": 38}
-#少年<wait_auto>ノホホンと平和そうな顔したヤツは、相手にしたかないんだ。
-
-
-{"str_num": 495, "bank": "0xF6", "str_pos": "0x369630", "length": 42}
-#スペード<wait_auto>あんたみたいな、お坊っちゃんには、オレたちのゲームはキツイんじゃない。
-
-
-{"str_num": 496, "bank": "0xF6", "str_pos": "0x36965B", "length": 19}
-#少年<wait_auto>……ふーん、なかなかかな。
-
-
-{"str_num": 497, "bank": "0xF6", "str_pos": "0x36966F", "length": 6}
-#[protag]<wait_auto>えっ？
-
-
-{"str_num": 498, "bank": "0xF6", "str_pos": "0x369676", "length": 45}
-#少年<wait_auto>オイラたちと勝負しないか？<wait_auto>あんたが勝てば、1000GOLDあげるよ。
-
-
-{"str_num": 499, "bank": "0xF6", "str_pos": "0x3696A4", "length": 36}
-#バルモア<wait_auto>なんだと、1000GOLD！？<wait_auto>勝負する、するぜえっ！
-
-
-{"str_num": 500, "bank": "0xF6", "str_pos": "0x3696C9", "length": 42}
-#少年<wait_auto>その代わり、オイラたちが勝ったら、100GOLDこっちがもらうけど。
-
-
-{"str_num": 501, "bank": "0xF6", "str_pos": "0x3696F4", "length": 26}
-# 勝負しますか？<wait_auto> 受けてたとう<wait_auto> いやだ
-
-
-{"str_num": 502, "bank": "0xF6", "str_pos": "0x369710", "length": 19}
-#少年<wait_auto>チェッ、意気地なし。
-
-
-{"str_num": 503, "bank": "0xF6", "str_pos": "0x369724", "length": 43}
-#少年<wait_auto>よーし。<wait_auto>特別に部屋を用意してあるから、そっちに行こうぜ。
-
-
-{"str_num": 504, "bank": "0xF6", "str_pos": "0x369750", "length": 19}
-#スペード<wait_auto>また、勝負するのかい？
-
-
-{"str_num": 505, "bank": "0xF6", "str_pos": "0x369764", "length": 34}
-#スペード<wait_auto>………………あんたたちとは、もう勝負なんかしないよ。
-
-
-{"str_num": 506, "bank": "0xF6", "str_pos": "0x369787", "length": 81}
-#少年<wait_auto>オイラたちと勝負する気になったかい？<wait_auto>そっちが勝てば1000GOLD、オイラたちが勝てば100GOLD。<wait_auto>得な勝負だと思うけど？
-
-
-{"str_num": 507, "bank": "0xF6", "str_pos": "0x3697D9", "length": 38}
-#男<wait_auto>いやあ、もうけちゃったよー。<wait_auto>わらいがとまらいね。<wait_auto>ふふふ……。
-
-
-{"str_num": 508, "bank": "0xF6", "str_pos": "0x369800", "length": 101}
-#男<wait_auto>いいこと教えてやるよ。<wait_auto>おくから3番目のだい、クギがあまいんだよね。<wait_auto>……なあんて言ったら信じる？<wait_auto>……フフフ、うそだよ。<wait_auto>あのだいはやめた方がいい。<wait_auto>いや、ホントに……。
-
-
-{"str_num": 509, "bank": "0xF6", "str_pos": "0x369866", "length": 50}
-#男<wait_auto>よう、もうけてるかい？<wait_auto>俺はイマイチ調子が悪いや……。<wait_auto>今日はついてないよ。
-
-
-{"str_num": 510, "bank": "0xF6", "str_pos": "0x369899", "length": 56}
-#バニーちゃん<wait_auto>あなた、見かけない顔ね。<wait_auto>……えっ、知らないの？<wait_auto>ここは、会員せいのカジノなのよ。
-
-
-{"str_num": 511, "bank": "0xF6", "str_pos": "0x3698D2", "length": 47}
-#男<wait_auto>ギャンブルってさあ、見てるだけでもドキドキしちゃうよね。<wait_auto>キミ、何かやってみた？
-
-
-{"str_num": 512, "bank": "0xF6", "str_pos": "0x369902", "length": 45}
-# 何と答えますか？<wait_auto> ちょっとよっただけ<wait_auto> みてるだけ……<wait_auto> あそびたいけど……
-
-
-{"str_num": 513, "bank": "0xF6", "str_pos": "0x369931", "length": 31}
-#男<wait_auto>なあんだ、キミ、会員じゃないのか。<wait_auto>ははは……。
-
-
-{"str_num": 514, "bank": "0xF6", "str_pos": "0x369951", "length": 37}
-#男<wait_auto>そっか……。<wait_auto>キミも好きだねえ。<wait_auto>今日はすっちゃったの？
-
-
-{"str_num": 515, "bank": "0xF6", "str_pos": "0x369977", "length": 42}
-#男<wait_auto>なあんだ……。<wait_auto>もしかして、ここにカジノがあるってこと知らなかったとか？
-
-
-{"str_num": 516, "bank": "0xF6", "str_pos": "0x3699A2", "length": 7}
-#[protag]<wait_auto>ハート！
-
-
-{"str_num": 517, "bank": "0xF6", "str_pos": "0x3699AA", "length": 33}
-#ハート<wait_auto>おや、[protag]じゃないか。<wait_auto>どうしたのさ、そんなにあわてて。
-
-
-{"str_num": 518, "bank": "0xF6", "str_pos": "0x3699CC", "length": 15}
-#[protag]<wait_auto>ハート、結婚しよう！
-
-
-{"str_num": 519, "bank": "0xF6", "str_pos": "0x3699DC", "length": 8}
-#ハート<wait_auto>はあ？
-
-
-{"str_num": 520, "bank": "0xF6", "str_pos": "0x3699E5", "length": 45}
-#[protag]<wait_auto>だから……結婚しよう。<wait_auto>結婚するんだったら、絶対に君だと思うんだ。
-
-
-{"str_num": 521, "bank": "0xF6", "str_pos": "0x369A13", "length": 41}
-#ハート<wait_auto>な……なにいってんのっ。<wait_auto>そんな、あんたなんか……まだボウヤのくせに。
-
-
-{"str_num": 522, "bank": "0xF6", "str_pos": "0x369A3D", "length": 28}
-#[protag]<wait_auto>そりゃあ、僕は年下だけど……。<wait_auto>ダメかい？
-
-
-{"str_num": 523, "bank": "0xF6", "str_pos": "0x369A5A", "length": 77}
-#ハート<wait_auto>あ、あわてんじゃないよ！<wait_auto>誰もダメなんていってないだろ。<wait_auto>……しょ、しょうがないねえ。<wait_auto>[protag]がそこまでいうんなら……結婚してあげるよ。
-
-
-{"str_num": 524, "bank": "0xF6", "str_pos": "0x369AA8", "length": 13}
-#[protag]<wait_auto>ありがとう、ハート！
-
-
-{"str_num": 525, "bank": "0xF6", "str_pos": "0x369AB6", "length": 24}
-#ハート<wait_auto>なんだよ、そんな……照れるじゃない☆
-
-
-{"str_num": 526, "bank": "0xF6", "str_pos": "0x369ACF", "length": 62}
-#ハート<wait_auto>ああ、みんな。<wait_auto>今日をもって、トランプ一家はかいさんだよ。<wait_auto>あたしは…………。<FA> [protag]と結婚するんだ。
-
-
-{"str_num": 527, "bank": "0xF6", "str_pos": "0x369B0E", "length": 15}
-#スペード<wait_auto>ええーーーーっ！？
-
-
-{"str_num": 528, "bank": "0xF6", "str_pos": "0x369B1E", "length": 11}
-#ダイヤ<wait_auto>うっそーー！
-
-
-{"str_num": 529, "bank": "0xF6", "str_pos": "0x369B2A", "length": 23}
-#クラブ<wait_auto>そ、そんな……ハート、ウソだろう！？
-
-
-{"str_num": 530, "bank": "0xF6", "str_pos": "0x369B42", "length": 19}
-#ハート<wait_auto>こんなこと、ウソつくもんか。
-
-
-{"str_num": 531, "bank": "0xF6", "str_pos": "0x369B56", "length": 10}
-#ハート<wait_auto>ねえ、[protag]☆
-
-
-{"str_num": 532, "bank": "0xF6", "str_pos": "0x369B61", "length": 6}
-#[protag]<wait_auto>うん。
-
-
-{"str_num": 533, "bank": "0xF6", "str_pos": "0x369B68", "length": 43}
-#クラブ<wait_auto>……ううっ、[protag]……ゆるさねえ！<wait_auto>ハートと結婚したいなら、おれと戦え！
-
-
-{"str_num": 534, "bank": "0xF6", "str_pos": "0x369B94", "length": 23}
-# クラブと戦いますか？<wait_auto> はい<wait_auto> いいえ
-
-
-{"str_num": 535, "bank": "0xF6", "str_pos": "0x369BAD", "length": 12}
-#[protag]<wait_auto>そんなの嫌だよ。
-
-
-{"str_num": 536, "bank": "0xF6", "str_pos": "0x369BBA", "length": 59}
-#ハート<wait_auto>あたしのために戦ってくれないのかい？<wait_auto>チェッ、がっかりだよ。<wait_auto>あんたと結婚なんて、やっぱやーめた。
-
-
-{"str_num": 537, "bank": "0xF6", "str_pos": "0x369BF6", "length": 11}
-#[protag]<wait_auto>ああっ、ハート！
-
-
-{"str_num": 538, "bank": "0xF6", "str_pos": "0x369C02", "length": 25}
-#クラブ<wait_auto>なんか、変な具合だけど……よかった☆
-
-
-{"str_num": 539, "bank": "0xF6", "str_pos": "0x369C1C", "length": 14}
-#[protag]<wait_auto>相手になってやる！
-
-
-{"str_num": 540, "bank": "0xF6", "str_pos": "0x369C2B", "length": 28}
-#ハート<wait_auto>[protag]、クラブ！<wait_auto>あたしのために戦うのかい！？
-
-
-{"str_num": 541, "bank": "0xF6", "str_pos": "0x369C48", "length": 20}
-#クラブ<wait_auto>……あんた、本気なんだな。
-
-
-{"str_num": 542, "bank": "0xF6", "str_pos": "0x369C5D", "length": 6}
-#[protag]<wait_auto>えっ？
-
-
-{"str_num": 543, "bank": "0xF6", "str_pos": "0x369C64", "length": 36}
-#クラブ<wait_auto>見直したぜ、[protag]。<wait_auto>あんたになら、ハートを任せられるな。
-
-
-{"str_num": 544, "bank": "0xF6", "str_pos": "0x369C89", "length": 9}
-#[protag]<wait_auto>クラブ……。
-
-
-{"str_num": 545, "bank": "0xF6", "str_pos": "0x369C93", "length": 23}
-#クラブ<wait_auto>幸せになってくれよ。<wait_auto>じゃあな！
-
-
-{"str_num": 546, "bank": "0xF6", "str_pos": "0x369CAB", "length": 18}
-#スペード<wait_auto>……男だねえ、クラブ。
-
-
-{"str_num": 547, "bank": "0xF6", "str_pos": "0x369CBE", "length": 41}
-#ジョーカー<wait_auto>僕たちも行くとしよう。<wait_auto>二人の邪魔になってはいけない。
-
-
-{"str_num": 548, "bank": "0xF6", "str_pos": "0x369CE8", "length": 9}
-#ダイヤ<wait_auto>そうね。
-
-
-{"str_num": 549, "bank": "0xF6", "str_pos": "0x369CF2", "length": 16}
-#ダイヤ<wait_auto>じゃあ、元気でね。
-
-
-{"str_num": 550, "bank": "0xF6", "str_pos": "0x369D03", "length": 12}
-#[protag]<wait_auto>うん、ありがとう。
-
-
-{"str_num": 551, "bank": "0xF6", "str_pos": "0x369D10", "length": 26}
-#ハート<wait_auto>[protag]……。<wait_auto>やっと二人きりになれたね☆
-
-
-{"str_num": 552, "bank": "0xF6", "str_pos": "0x369D2B", "length": 6}
-#[protag]<wait_auto>えっ☆
-
-
-{"str_num": 553, "bank": "0xF6", "str_pos": "0x369D32", "length": 56}
-#ハート<wait_auto>さあ、とっくんだよ。<wait_auto>これから、あたしたちはギャンブラー2人ぐみなんだから。<wait_auto>[protag]にも、いろいろ<FC>
-
-
-{"str_num": 554, "bank": "0xF6", "str_pos": "0x369D76", "length": 12}
-#[protag]<wait_auto>ええっ、僕も！？
-
-
-{"str_num": 555, "bank": "0xF6", "str_pos": "0x369D83", "length": 21}
-#ハート<wait_auto>もちろん！<wait_auto>ほら、行くわよ。
-
-
-{"str_num": 556, "bank": "0xF6", "str_pos": "0x369D99", "length": 16}
-#[protag]<wait_auto>……こんなはずじゃあ……。
-
-
-{"str_num": 557, "bank": "0xF6", "str_pos": "0x369DAA", "length": 28}
-#ハートの声<wait_auto>何やってんのさ、[protag]！<wait_auto>ほら、早く！
-
-
-{"str_num": 558, "bank": "0xF6", "str_pos": "0x369DC7", "length": 12}
-#[protag]<wait_auto>あ、は……はーい！
-
-
-{"str_num": 559, "bank": "0xF6", "str_pos": "0x369DD4", "length": 15}
-#ダイヤ<wait_auto>何か用なの、[protag]？
-
-
-{"str_num": 560, "bank": "0xF6", "str_pos": "0x369DE4", "length": 25}
-#[protag]<wait_auto>ダイヤ……あの、結婚なんて興味ある？
-
-
-{"str_num": 561, "bank": "0xF6", "str_pos": "0x369DFE", "length": 48}
-#ダイヤ<wait_auto>もっちろん！<wait_auto>アタイ、自分の結婚しきでワンマンショーすんのが夢なんだから。
-
-
-{"str_num": 562, "bank": "0xF6", "str_pos": "0x369E2F", "length": 24}
-#[protag]<wait_auto>それじゃあ……僕と結婚してくれるの？
-
-
-{"str_num": 563, "bank": "0xF6", "str_pos": "0x369E48", "length": 17}
-#ダイヤ<wait_auto>[protag]……ほ、本気なの？
-
-
-{"str_num": 564, "bank": "0xF6", "str_pos": "0x369E5A", "length": 21}
-#[protag]<wait_auto>こんなこと、冗談じゃいえないよ。
-
-
-{"str_num": 565, "bank": "0xF6", "str_pos": "0x369E70", "length": 11}
-#ダイヤ<wait_auto>や…………。
-
-
-{"str_num": 566, "bank": "0xF6", "str_pos": "0x369E7C", "length": 29}
-#ダイヤ<wait_auto>やったーーーー！<wait_auto>ワンマンショーよーーーーっ！
-
-
-{"str_num": 567, "bank": "0xF6", "str_pos": "0x369E9A", "length": 33}
-#[protag]<wait_auto>な……なんか、ちょっと違うよろこび方をしてるような……？
-
-
-{"str_num": 568, "bank": "0xF6", "str_pos": "0x369EBC", "length": 238}
-#K7大の K8大の K9大の KA大の L7CIそ5L8NWで5L9帝Aサ5LAい衆ェ5A0IョE2 F6 ろXPそす127Sか家37Tか湖37Uか☆37Q7047R7結7S7原37T7[pet]37U7○37XS☆37FH 47C衆前7合皇漠37あT[sub]37おI★37XR砂3をC0共 Iオ0V 7Tおそ K    K5大と U L   マ4L5Tしノ4P1 P1 7Tおデ3K    K5大と U L Tし…4L5Sし」4P1 Iオ0っ4W0Iウ0と1K5大な Q57王0R7原
-
-
-{"str_num": 569, "bank": "0xF6", "str_pos": "0x36A636", "length": 31}
-#  美しい青年<wait_auto>ご苦労だった……疲れたであろう。
-
-
-{"str_num": 570, "bank": "0xF6", "str_pos": "0x36A656", "length": 22}
-#ナゾの人物<wait_auto>大丈夫です、長老。
-
-
-{"str_num": 571, "bank": "0xF6", "str_pos": "0x36A66D", "length": 16}
-#美しい青年<wait_auto>誰だっ！？
-
-
-{"str_num": 572, "bank": "0xF6", "str_pos": "0x36A67E", "length": 46}
-#美しい青年<wait_auto>お主たちは何者だ。<wait_auto>ここをマーフ族[Axe]と知って、来たのか？
-
-
-{"str_num": 573, "bank": "0xF6", "str_pos": "0x36A6AD", "length": 31}
-#[sub]<wait_auto>おどかすつもりじゃなかったんです。<wait_auto>ごめんなさい……。
-
-
-{"str_num": 574, "bank": "0xF6", "str_pos": "0x36A6CD", "length": 43}
-#[protag]<wait_auto>その人のにもつが重そうだったから、心配だったんだ。<wait_auto>悪気はないよ。
-
-
-{"str_num": 575, "bank": "0xF6", "str_pos": "0x36A6F9", "length": 14}
-#マーフ族<wait_auto>長老……。
-
-
-{"str_num": 576, "bank": "0xF6", "str_pos": "0x36A708", "length": 11}
-#長老<wait_auto>うむ……。
-
-
-{"str_num": 577, "bank": "0xF6", "str_pos": "0x36A714", "length": 69}
-#長老<wait_auto>ウソはついていないようだな。<wait_auto>ここはマーフ[Axe]……。<wait_auto>忘れられた者たち[Axe]だ。<wait_auto>さっさと立ちさることをすすめるぞ。
-
-
-{"str_num": 578, "bank": "0xF6", "str_pos": "0x36A75A", "length": 28}
-#[sub]<wait_auto>あんなに若くてきれいな男の人が、長老！？
-
-
-{"str_num": 579, "bank": "0xF6", "str_pos": "0x36A777", "length": 32}
-#美しい青年<wait_auto>ご苦労だった……ム？<wait_auto>その者たちは？
-
-
-{"str_num": 580, "bank": "0xF6", "str_pos": "0x36A798", "length": 14}
-#[sub]<wait_auto>きゃっ、きれいな人☆
-
-
-{"str_num": 581, "bank": "0xF6", "str_pos": "0x36A7A7", "length": 35}
-#ナゾの人物<wait_auto>にもつを持ってもらったのです。<wait_auto>助かりました。
-
-
-{"str_num": 582, "bank": "0xF6", "str_pos": "0x36A7CB", "length": 74}
-#美しい青年<wait_auto>そうか……ありがとう。<wait_auto>わしはマーフ族の長老。<wait_auto>この者は一族だ。<wait_auto>村には何もないが……まあ、くつろいでくれ。
-
-
-{"str_num": 583, "bank": "0xF6", "str_pos": "0x36A816", "length": 30}
-#[sub]<wait_auto>あんなに若くてきれいな男の人が、長老なの！？
-
-
-{"str_num": 584, "bank": "0xF6", "str_pos": "0x36A835", "length": 27}
-#マーフ族<wait_auto>私たちは、年をとりませんからね……。
-
-
-{"str_num": 585, "bank": "0xF6", "str_pos": "0x36A851", "length": 8}
-#[protag]<wait_auto>ええっ！？
-
-
-{"str_num": 586, "bank": "0xF6", "str_pos": "0x36A85A", "length": 24}
-#マーフ族<wait_auto>では、リュックを返してください。
-
-
-{"str_num": 587, "bank": "0xF6", "str_pos": "0x36A880", "length": 19}
-#マーフ族<wait_auto>ありがとうございました。
-
-
-{"str_num": 588, "bank": "0xF6", "str_pos": "0x36A894", "length": 13}
-#[sub]<wait_auto>本当かしら……？
-
-
-{"str_num": 589, "bank": "0xF6", "str_pos": "0x36A8A2", "length": 12}
-#[protag]<wait_auto>もう帰ろうかな？
-
-
-{"str_num": 590, "bank": "0xF6", "str_pos": "0x36A8AF", "length": 30}
-# 帰りますか？<wait_auto> 帰ろう<wait_auto> もう少し、ここにいよう
-
-
-{"str_num": 591, "bank": "0xF6", "str_pos": "0x36A8CF", "length": 14}
-#[protag]<wait_auto>誰もいないみたいだ。
-
-
-{"str_num": 592, "bank": "0xF6", "str_pos": "0x36A8DE", "length": 35}
-#マーフ族<wait_auto>ありがとう……。<wait_auto>では、私はにもつを置いてきます。
-
-
-{"str_num": 593, "bank": "0xF6", "str_pos": "0x36A902", "length": 54}
-#マーフ族<wait_auto>昔は、もっとたくさんのマーフ族がいたのです。<wait_auto>今では数少なくなってしまいましたが。
-
-
-{"str_num": 594, "bank": "0xF6", "str_pos": "0x36A939", "length": 56}
-#マーフ族<wait_auto>神殿の泉は、私たちの命です。<wait_auto>あの水を飲まなければ、とっくにほろびていたでしょう。
-
-
-{"str_num": 595, "bank": "0xF6", "str_pos": "0x36A972", "length": 33}
-#マーフ族<wait_auto>これはめずらしい。<wait_auto>あなたたち、外の者ですね。
-
-
-{"str_num": 596, "bank": "0xF6", "str_pos": "0x36A994", "length": 68}
-#マーフ族<wait_auto>本当は、外の者と仲良くしてはいけないのだけれど……。<wait_auto>こんなくらしをしていると、見なれぬ顔が嬉しくて。
-
-
-{"str_num": 597, "bank": "0xF6", "str_pos": "0x36A9D9", "length": 73}
-#マーフ族<wait_auto>はるか昔、我々の仲間はヴァルカノン島にもいたそうです。<wait_auto>でも、聖なる泉が枯れて、住めなくなったということです。
-
-
-{"str_num": 598, "bank": "0xF6", "str_pos": "0x36AD57", "length": 33}
-#35皇14  [sub]<wait_auto>きれいな水だけど……。<wait_auto>飲んでみる、[protag]？
-
-
-{"str_num": 599, "bank": "0xF6", "str_pos": "0x36AD79", "length": 30}
-# 水を飲みますか？<wait_auto> 飲んでみよう<wait_auto> やめておこう
-
-
-{"str_num": 600, "bank": "0xF6", "str_pos": "0x36AD99", "length": 14}
+{"str_num": 463, "bank": "0xF6", "str_pos": "0x369500", "length": 14, "table": "normal"}
+#[protag]
+#ありがとうございます。
+
+{"str_num": 464, "bank": "0xF6", "str_pos": "0x36950F", "length": 46, "table": "normal"}
+#パンプキン
+#また遊びにおいで。
+#あたしにできることがあったら、何でもしたげるからね。
+
+{"str_num": 465, "bank": "0xF6", "str_pos": "0x36953E", "length": 16, "table": "normal"}
+#チャラン
+#パンプキンさーーん！
+
+{"str_num": 466, "bank": "0xF6", "str_pos": "0x36954F", "length": 13, "table": "normal"}
+#ポラン
+#元気でなの！
+
+{"str_num": 467, "bank": "0xF6", "str_pos": "0x36955D", "length": 23, "table": "normal"}
+#パンプキン
+#じゃ、またね……。
+#うりゃっ！
+
+{"str_num": 468, "bank": "0xF6", "str_pos": "0x369575", "length": 24, "table": "normal"}
+#ルキマン
+#とほほ……もっと遊びたかったのう。
+
+{"str_num": 469, "bank": "0xF6", "str_pos": "0x36958E", "length": 30, "table": "normal"}
+#女
+#あーら、何か用？
+#あたしとデートでもしたいの？
+
+{"str_num": 470, "bank": "0xF6", "str_pos": "0x3695AD", "length": 29, "table": "normal"}
+#ハート
+#ジョーカーと勝負したきゃ、スペードにいいな。
+
+{"str_num": 471, "bank": "0xF6", "str_pos": "0x3695CB", "length": 25, "table": "normal"}
+#少年
+#……あんたなんか、お呼びじゃないな。
+
+{"str_num": 472, "bank": "0xF6", "str_pos": "0x3695E5", "length": 35, "table": "normal"}
+#スペード
+#どーせ、また負けるんだから、代金用意してきたら？
+
+{"str_num": 473, "bank": "0xF6", "str_pos": "0x369609", "length": 38, "table": "normal"}
+#少年
+#ノホホンと平和そうな顔したヤツは、相手にしたかないんだ。
+
+{"str_num": 474, "bank": "0xF6", "str_pos": "0x369630", "length": 42, "table": "normal"}
+#スペード
+#あんたみたいな、お坊っちゃんには、オレたちのゲームはキツイんじゃない。
+
+{"str_num": 475, "bank": "0xF6", "str_pos": "0x36965B", "length": 19, "table": "normal"}
+#少年
+#……ふーん、なかなかかな。
+
+{"str_num": 476, "bank": "0xF6", "str_pos": "0x36966F", "length": 6, "table": "normal"}
+#[protag]
+#えっ？
+
+{"str_num": 477, "bank": "0xF6", "str_pos": "0x369676", "length": 45, "table": "normal"}
+#少年
+#オイラたちと勝負しないか？
+#あんたが勝てば、1000GOLDあげるよ。
+
+{"str_num": 478, "bank": "0xF6", "str_pos": "0x3696A4", "length": 36, "table": "normal"}
+#バルモア
+#なんだと、1000GOLD！？
+#勝負する、するぜえっ！
+
+{"str_num": 479, "bank": "0xF6", "str_pos": "0x3696C9", "length": 42, "table": "normal"}
+#少年
+#その代わり、オイラたちが勝ったら、100GOLDこっちがもらうけど。
+
+{"str_num": 480, "bank": "0xF6", "str_pos": "0x3696F4", "length": 26, "table": "normal"}
+# 勝負しますか？
+# 受けてたとう
+# いやだ
+
+{"str_num": 481, "bank": "0xF6", "str_pos": "0x369710", "length": 19, "table": "normal"}
+#少年
+#チェッ、意気地なし。
+
+{"str_num": 482, "bank": "0xF6", "str_pos": "0x369724", "length": 43, "table": "normal"}
+#少年
+#よーし。
+#特別に部屋を用意してあるから、そっちに行こうぜ。
+
+{"str_num": 483, "bank": "0xF6", "str_pos": "0x369750", "length": 19, "table": "normal"}
+#スペード
+#また、勝負するのかい？
+
+{"str_num": 484, "bank": "0xF6", "str_pos": "0x369764", "length": 34, "table": "normal"}
+#スペード
+#………………あんたたちとは、もう勝負なんかしないよ。
+
+{"str_num": 485, "bank": "0xF6", "str_pos": "0x369787", "length": 81, "table": "normal"}
+#少年
+#オイラたちと勝負する気になったかい？
+#そっちが勝てば1000GOLD、オイラたちが勝てば100GOLD。
+#得な勝負だと思うけど？
+
+{"str_num": 486, "bank": "0xF6", "str_pos": "0x3697D9", "length": 38, "table": "normal"}
+#男
+#いやあ、もうけちゃったよー。
+#わらいがとまらいね。
+#ふふふ……。
+
+{"str_num": 487, "bank": "0xF6", "str_pos": "0x369800", "length": 101, "table": "normal"}
+#男
+#いいこと教えてやるよ。
+#おくから3番目のだい、クギがあまいんだよね。
+#……なあんて言ったら信じる？
+#……フフフ、うそだよ。
+#あのだいはやめた方がいい。
+#いや、ホントに……。
+
+{"str_num": 488, "bank": "0xF6", "str_pos": "0x369866", "length": 50, "table": "normal"}
+#男
+#よう、もうけてるかい？
+#俺はイマイチ調子が悪いや……。
+#今日はついてないよ。
+
+{"str_num": 489, "bank": "0xF6", "str_pos": "0x369899", "length": 56, "table": "normal"}
+#バニーちゃん
+#あなた、見かけない顔ね。
+#……えっ、知らないの？
+#ここは、会員せいのカジノなのよ。
+
+{"str_num": 490, "bank": "0xF6", "str_pos": "0x3698D2", "length": 47, "table": "normal"}
+#男
+#ギャンブルってさあ、見てるだけでもドキドキしちゃうよね。
+#キミ、何かやってみた？
+
+{"str_num": 491, "bank": "0xF6", "str_pos": "0x369902", "length": 45, "table": "normal"}
+# 何と答えますか？
+# ちょっとよっただけ
+# みてるだけ……
+# あそびたいけど……
+
+{"str_num": 492, "bank": "0xF6", "str_pos": "0x369931", "length": 31, "table": "normal"}
+#男
+#なあんだ、キミ、会員じゃないのか。
+#ははは……。
+
+{"str_num": 493, "bank": "0xF6", "str_pos": "0x369951", "length": 37, "table": "normal"}
+#男
+#そっか……。
+#キミも好きだねえ。
+#今日はすっちゃったの？
+
+{"str_num": 494, "bank": "0xF6", "str_pos": "0x369977", "length": 42, "table": "normal"}
+#男
+#なあんだ……。
+#もしかして、ここにカジノがあるってこと知らなかったとか？
+
+{"str_num": 495, "bank": "0xF6", "str_pos": "0x3699A2", "length": 7, "table": "normal"}
+#[protag]
+#ハート！
+
+{"str_num": 496, "bank": "0xF6", "str_pos": "0x3699AA", "length": 33, "table": "normal"}
+#ハート
+#おや、[protag]じゃないか。
+#どうしたのさ、そんなにあわてて。
+
+{"str_num": 497, "bank": "0xF6", "str_pos": "0x3699CC", "length": 15, "table": "normal"}
+#[protag]
+#ハート、結婚しよう！
+
+{"str_num": 498, "bank": "0xF6", "str_pos": "0x3699DC", "length": 8, "table": "normal"}
+#ハート
+#はあ？
+
+{"str_num": 499, "bank": "0xF6", "str_pos": "0x3699E5", "length": 45, "table": "normal"}
+#[protag]
+#だから……結婚しよう。
+#結婚するんだったら、絶対に君だと思うんだ。
+
+{"str_num": 500, "bank": "0xF6", "str_pos": "0x369A13", "length": 41, "table": "normal"}
+#ハート
+#な……なにいってんのっ。
+#そんな、あんたなんか……まだボウヤのくせに。
+
+{"str_num": 501, "bank": "0xF6", "str_pos": "0x369A3D", "length": 28, "table": "normal"}
+#[protag]
+#そりゃあ、僕は年下だけど……。
+#ダメかい？
+
+{"str_num": 502, "bank": "0xF6", "str_pos": "0x369A5A", "length": 77, "table": "normal"}
+#ハート
+#あ、あわてんじゃないよ！
+#誰もダメなんていってないだろ。
+#……しょ、しょうがないねえ。
+#[protag]がそこまでいうんなら……結婚してあげるよ。
+
+{"str_num": 503, "bank": "0xF6", "str_pos": "0x369AA8", "length": 13, "table": "normal"}
+#[protag]
+#ありがとう、ハート！
+
+{"str_num": 504, "bank": "0xF6", "str_pos": "0x369AB6", "length": 24, "table": "normal"}
+#ハート
+#なんだよ、そんな……照れるじゃない☆
+
+{"str_num": 505, "bank": "0xF6", "str_pos": "0x369ACF", "length": 62, "table": "normal"}
+#ハート
+#ああ、みんな。
+#今日をもって、トランプ一家はかいさんだよ。
+#あたしは…………。<FA> [protag]と結婚するんだ。
+
+{"str_num": 506, "bank": "0xF6", "str_pos": "0x369B0E", "length": 15, "table": "normal"}
+#スペード
+#ええーーーーっ！？
+
+{"str_num": 507, "bank": "0xF6", "str_pos": "0x369B1E", "length": 11, "table": "normal"}
+#ダイヤ
+#うっそーー！
+
+{"str_num": 508, "bank": "0xF6", "str_pos": "0x369B2A", "length": 23, "table": "normal"}
+#クラブ
+#そ、そんな……ハート、ウソだろう！？
+
+{"str_num": 509, "bank": "0xF6", "str_pos": "0x369B42", "length": 19, "table": "normal"}
+#ハート
+#こんなこと、ウソつくもんか。
+
+{"str_num": 510, "bank": "0xF6", "str_pos": "0x369B56", "length": 10, "table": "normal"}
+#ハート
+#ねえ、[protag]☆
+
+{"str_num": 511, "bank": "0xF6", "str_pos": "0x369B61", "length": 6, "table": "normal"}
+#[protag]
+#うん。
+
+{"str_num": 512, "bank": "0xF6", "str_pos": "0x369B68", "length": 43, "table": "normal"}
+#クラブ
+#……ううっ、[protag]……ゆるさねえ！
+#ハートと結婚したいなら、おれと戦え！
+
+{"str_num": 513, "bank": "0xF6", "str_pos": "0x369B94", "length": 23, "table": "normal"}
+# クラブと戦いますか？
+# はい
+# いいえ
+
+{"str_num": 514, "bank": "0xF6", "str_pos": "0x369BAD", "length": 12, "table": "normal"}
+#[protag]
+#そんなの嫌だよ。
+
+{"str_num": 515, "bank": "0xF6", "str_pos": "0x369BBA", "length": 59, "table": "normal"}
+#ハート
+#あたしのために戦ってくれないのかい？
+#チェッ、がっかりだよ。
+#あんたと結婚なんて、やっぱやーめた。
+
+{"str_num": 516, "bank": "0xF6", "str_pos": "0x369BF6", "length": 11, "table": "normal"}
+#[protag]
+#ああっ、ハート！
+
+{"str_num": 517, "bank": "0xF6", "str_pos": "0x369C02", "length": 25, "table": "normal"}
+#クラブ
+#なんか、変な具合だけど……よかった☆
+
+{"str_num": 518, "bank": "0xF6", "str_pos": "0x369C1C", "length": 14, "table": "normal"}
+#[protag]
+#相手になってやる！
+
+{"str_num": 519, "bank": "0xF6", "str_pos": "0x369C2B", "length": 28, "table": "normal"}
+#ハート
+#[protag]、クラブ！
+#あたしのために戦うのかい！？
+
+{"str_num": 520, "bank": "0xF6", "str_pos": "0x369C48", "length": 20, "table": "normal"}
+#クラブ
+#……あんた、本気なんだな。
+
+{"str_num": 521, "bank": "0xF6", "str_pos": "0x369C5D", "length": 6, "table": "normal"}
+#[protag]
+#えっ？
+
+{"str_num": 522, "bank": "0xF6", "str_pos": "0x369C64", "length": 36, "table": "normal"}
+#クラブ
+#見直したぜ、[protag]。
+#あんたになら、ハートを任せられるな。
+
+{"str_num": 523, "bank": "0xF6", "str_pos": "0x369C89", "length": 9, "table": "normal"}
+#[protag]
+#クラブ……。
+
+{"str_num": 524, "bank": "0xF6", "str_pos": "0x369C93", "length": 23, "table": "normal"}
+#クラブ
+#幸せになってくれよ。
+#じゃあな！
+
+{"str_num": 525, "bank": "0xF6", "str_pos": "0x369CAB", "length": 18, "table": "normal"}
+#スペード
+#……男だねえ、クラブ。
+
+{"str_num": 526, "bank": "0xF6", "str_pos": "0x369CBE", "length": 41, "table": "normal"}
+#ジョーカー
+#僕たちも行くとしよう。
+#二人の邪魔になってはいけない。
+
+{"str_num": 527, "bank": "0xF6", "str_pos": "0x369CE8", "length": 9, "table": "normal"}
+#ダイヤ
+#そうね。
+
+{"str_num": 528, "bank": "0xF6", "str_pos": "0x369CF2", "length": 16, "table": "normal"}
+#ダイヤ
+#じゃあ、元気でね。
+
+{"str_num": 529, "bank": "0xF6", "str_pos": "0x369D03", "length": 12, "table": "normal"}
+#[protag]
+#うん、ありがとう。
+
+{"str_num": 530, "bank": "0xF6", "str_pos": "0x369D10", "length": 26, "table": "normal"}
+#ハート
+#[protag]……。
+#やっと二人きりになれたね☆
+
+{"str_num": 531, "bank": "0xF6", "str_pos": "0x369D2B", "length": 6, "table": "normal"}
+#[protag]
+#えっ☆
+
+{"str_num": 532, "bank": "0xF6", "str_pos": "0x369D32", "length": 56, "table": "normal"}
+#ハート
+#さあ、とっくんだよ。
+#これから、あたしたちはギャンブラー2人ぐみなんだから。
+#[protag]にも、いろいろ<FC>
+
+{"str_num": 533, "bank": "0xF6", "str_pos": "0x369D76", "length": 12, "table": "normal"}
+#[protag]
+#ええっ、僕も！？
+
+{"str_num": 534, "bank": "0xF6", "str_pos": "0x369D83", "length": 21, "table": "normal"}
+#ハート
+#もちろん！
+#ほら、行くわよ。
+
+{"str_num": 535, "bank": "0xF6", "str_pos": "0x369D99", "length": 16, "table": "normal"}
+#[protag]
+#……こんなはずじゃあ……。
+
+{"str_num": 536, "bank": "0xF6", "str_pos": "0x369DAA", "length": 28, "table": "normal"}
+#ハートの声
+#何やってんのさ、[protag]！
+#ほら、早く！
+
+{"str_num": 537, "bank": "0xF6", "str_pos": "0x369DC7", "length": 12, "table": "normal"}
+#[protag]
+#あ、は……はーい！
+
+{"str_num": 538, "bank": "0xF6", "str_pos": "0x369DD4", "length": 15, "table": "normal"}
+#ダイヤ
+#何か用なの、[protag]？
+
+{"str_num": 539, "bank": "0xF6", "str_pos": "0x369DE4", "length": 25, "table": "normal"}
+#[protag]
+#ダイヤ……あの、結婚なんて興味ある？
+
+{"str_num": 540, "bank": "0xF6", "str_pos": "0x369DFE", "length": 48, "table": "normal"}
+#ダイヤ
+#もっちろん！
+#アタイ、自分の結婚しきでワンマンショーすんのが夢なんだから。
+
+{"str_num": 541, "bank": "0xF6", "str_pos": "0x369E2F", "length": 24, "table": "normal"}
+#[protag]
+#それじゃあ……僕と結婚してくれるの？
+
+{"str_num": 542, "bank": "0xF6", "str_pos": "0x369E48", "length": 17, "table": "normal"}
+#ダイヤ
+#[protag]……ほ、本気なの？
+
+{"str_num": 543, "bank": "0xF6", "str_pos": "0x369E5A", "length": 21, "table": "normal"}
+#[protag]
+#こんなこと、冗談じゃいえないよ。
+
+{"str_num": 544, "bank": "0xF6", "str_pos": "0x369E70", "length": 11, "table": "normal"}
+#ダイヤ
+#や…………。
+
+{"str_num": 545, "bank": "0xF6", "str_pos": "0x369E7C", "length": 29, "table": "normal"}
+#ダイヤ
+#やったーーーー！
+#ワンマンショーよーーーーっ！
+
+{"str_num": 546, "bank": "0xF6", "str_pos": "0x369E9A", "length": 33, "table": "normal"}
+#[protag]
+#な……なんか、ちょっと違うよろこび方をしてるような……？
+
+{"str_num": 547, "bank": "0xF6", "str_pos": "0x36A636", "length": 31, "table": "normal"}
+#  美しい青年
+#ご苦労だった……疲れたであろう。
+
+{"str_num": 548, "bank": "0xF6", "str_pos": "0x36A656", "length": 22, "table": "normal"}
+#ナゾの人物
+#大丈夫です、長老。
+
+{"str_num": 549, "bank": "0xF6", "str_pos": "0x36A66D", "length": 16, "table": "normal"}
+#美しい青年
+#誰だっ！？
+
+{"str_num": 550, "bank": "0xF6", "str_pos": "0x36A67E", "length": 46, "table": "normal"}
+#美しい青年
+#お主たちは何者だ。
+#ここをマーフ族[Axe]と知って、来たのか？
+
+{"str_num": 551, "bank": "0xF6", "str_pos": "0x36A6AD", "length": 31, "table": "normal"}
+#[sub]
+#おどかすつもりじゃなかったんです。
+#ごめんなさい……。
+
+{"str_num": 552, "bank": "0xF6", "str_pos": "0x36A6CD", "length": 43, "table": "normal"}
+#[protag]
+#その人のにもつが重そうだったから、心配だったんだ。
+#悪気はないよ。
+
+{"str_num": 553, "bank": "0xF6", "str_pos": "0x36A6F9", "length": 14, "table": "normal"}
+#マーフ族
+#長老……。
+
+{"str_num": 554, "bank": "0xF6", "str_pos": "0x36A708", "length": 11, "table": "normal"}
+#長老
+#うむ……。
+
+{"str_num": 555, "bank": "0xF6", "str_pos": "0x36A714", "length": 69, "table": "normal"}
+#長老
+#ウソはついていないようだな。
+#ここはマーフ[Axe]……。
+#忘れられた者たち[Axe]だ。
+#さっさと立ちさることをすすめるぞ。
+
+{"str_num": 556, "bank": "0xF6", "str_pos": "0x36A75A", "length": 28, "table": "normal"}
+#[sub]
+#あんなに若くてきれいな男の人が、長老！？
+
+{"str_num": 557, "bank": "0xF6", "str_pos": "0x36A777", "length": 32, "table": "normal"}
+#美しい青年
+#ご苦労だった……ム？
+#その者たちは？
+
+{"str_num": 558, "bank": "0xF6", "str_pos": "0x36A798", "length": 14, "table": "normal"}
+#[sub]
+#きゃっ、きれいな人☆
+
+{"str_num": 559, "bank": "0xF6", "str_pos": "0x36A7A7", "length": 35, "table": "normal"}
+#ナゾの人物
+#にもつを持ってもらったのです。
+#助かりました。
+
+{"str_num": 560, "bank": "0xF6", "str_pos": "0x36A7CB", "length": 74, "table": "normal"}
+#美しい青年
+#そうか……ありがとう。
+#わしはマーフ族の長老。
+#この者は一族だ。
+#村には何もないが……まあ、くつろいでくれ。
+
+{"str_num": 561, "bank": "0xF6", "str_pos": "0x36A816", "length": 30, "table": "normal"}
+#[sub]
+#あんなに若くてきれいな男の人が、長老なの！？
+
+{"str_num": 562, "bank": "0xF6", "str_pos": "0x36A835", "length": 27, "table": "normal"}
+#マーフ族
+#私たちは、年をとりませんからね……。
+
+{"str_num": 563, "bank": "0xF6", "str_pos": "0x36A851", "length": 8, "table": "normal"}
+#[protag]
+#ええっ！？
+
+{"str_num": 564, "bank": "0xF6", "str_pos": "0x36A85A", "length": 24, "table": "normal"}
+#マーフ族
+#では、リュックを返してください。
+
+{"str_num": 565, "bank": "0xF6", "str_pos": "0x36A880", "length": 19, "table": "normal"}
+#マーフ族
+#ありがとうございました。
+
+{"str_num": 566, "bank": "0xF6", "str_pos": "0x36A894", "length": 13, "table": "normal"}
+#[sub]
+#本当かしら……？
+
+{"str_num": 567, "bank": "0xF6", "str_pos": "0x36A8A2", "length": 12, "table": "normal"}
+#[protag]
+#もう帰ろうかな？
+
+{"str_num": 568, "bank": "0xF6", "str_pos": "0x36A8AF", "length": 30, "table": "normal"}
+# 帰りますか？
+# 帰ろう
+# もう少し、ここにいよう
+
+{"str_num": 569, "bank": "0xF6", "str_pos": "0x36A8CF", "length": 14, "table": "normal"}
+#[protag]
+#誰もいないみたいだ。
+
+{"str_num": 570, "bank": "0xF6", "str_pos": "0x36A8DE", "length": 35, "table": "normal"}
+#マーフ族
+#ありがとう……。
+#では、私はにもつを置いてきます。
+
+{"str_num": 571, "bank": "0xF6", "str_pos": "0x36A902", "length": 54, "table": "normal"}
+#マーフ族
+#昔は、もっとたくさんのマーフ族がいたのです。
+#今では数少なくなってしまいましたが。
+
+{"str_num": 572, "bank": "0xF6", "str_pos": "0x36A939", "length": 56, "table": "normal"}
+#マーフ族
+#神殿の泉は、私たちの命です。
+#あの水を飲まなければ、とっくにほろびていたでしょう。
+
+{"str_num": 573, "bank": "0xF6", "str_pos": "0x36A972", "length": 33, "table": "normal"}
+#マーフ族
+#これはめずらしい。
+#あなたたち、外の者ですね。
+
+{"str_num": 574, "bank": "0xF6", "str_pos": "0x36A994", "length": 68, "table": "normal"}
+#マーフ族
+#本当は、外の者と仲良くしてはいけないのだけれど……。
+#こんなくらしをしていると、見なれぬ顔が嬉しくて。
+
+{"str_num": 575, "bank": "0xF6", "str_pos": "0x36A9D9", "length": 73, "table": "normal"}
+#マーフ族
+#はるか昔、我々の仲間はヴァルカノン島にもいたそうです。
+#でも、聖なる泉が枯れて、住めなくなったということです。
+
+{"str_num": 576, "bank": "0xF6", "str_pos": "0x36AD5E", "length": 26, "table": "normal"}
+#[sub]
+#きれいな水だけど……。
+#飲んでみる、[protag]？
+
+{"str_num": 577, "bank": "0xF6", "str_pos": "0x36AD79", "length": 30, "table": "normal"}
+# 水を飲みますか？
+# 飲んでみよう
+# やめておこう
+
+{"str_num": 578, "bank": "0xF6", "str_pos": "0x36AD99", "length": 14, "table": "normal"}
 #[protag]たちは、水を飲んだ！！
 
+{"str_num": 579, "bank": "0xF6", "str_pos": "0x36ADA8", "length": 23, "table": "normal"}
+#[protag]
+#何も起こらなかったみたいだけど……？
 
-{"str_num": 601, "bank": "0xF6", "str_pos": "0x36ADA8", "length": 23}
-#[protag]<wait_auto>何も起こらなかったみたいだけど……？
+{"str_num": 580, "bank": "0xF6", "str_pos": "0x36ADC0", "length": 28, "table": "normal"}
+#[protag]
+#これが聖水だな。
+#さあ、リンクル！ ベベル！
 
+{"str_num": 581, "bank": "0xF6", "str_pos": "0x36ADDD", "length": 14, "table": "normal"}
+#[protag]
+#この水を飲むんだ。
 
-{"str_num": 602, "bank": "0xF6", "str_pos": "0x36ADC0", "length": 28}
-#[protag]<wait_auto>これが聖水だな。<wait_auto>さあ、リンクル！ ベベル！
+{"str_num": 582, "bank": "0xF6", "str_pos": "0x36ADEC", "length": 16, "table": "normal"}
+#ベンホルム
+#通訳するダス。
 
+{"str_num": 583, "bank": "0xF6", "str_pos": "0x36AE2D", "length": 25, "table": "normal"}
+#ベベル
+#JJIWJFDIJIC？
+#MIMPP。
 
-{"str_num": 603, "bank": "0xF6", "str_pos": "0x36ADDD", "length": 14}
-#[protag]<wait_auto>この水を飲むんだ。
-
-
-{"str_num": 604, "bank": "0xF6", "str_pos": "0x36ADEC", "length": 16}
-#ベンホルム<wait_auto>通訳するダス。
-
-
-{"str_num": 605, "bank": "0xF6", "str_pos": "0x36ADFD", "length": 47}
-#ベンホルム<wait_auto>NUHDUVPOWP。<wait_auto>AUJBVUDPW、MMKPSNJNANBJDHWI。
-
-
-{"str_num": 606, "bank": "0xF6", "str_pos": "0x36AE2D", "length": 25}
-#ベベル<wait_auto>JJIWJFDIJIC？<wait_auto>MIMPP。
-
-
-{"str_num": 607, "bank": "0xF6", "str_pos": "0x36AE47", "length": 21}
+{"str_num": 584, "bank": "0xF6", "str_pos": "0x36AE47", "length": 21, "table": "normal"}
 #ベベルとリンクルは、聖水を飲んだ！！
 
+{"str_num": 585, "bank": "0xF6", "str_pos": "0x36AE5D", "length": 21, "table": "normal"}
+#[protag]
+#これで、君たちは助かったんだよ。
 
-{"str_num": 608, "bank": "0xF6", "str_pos": "0x36AE5D", "length": 21}
-#[protag]<wait_auto>これで、君たちは助かったんだよ。
+{"str_num": 586, "bank": "0xF6", "str_pos": "0x36AE98", "length": 18, "table": "normal"}
+#ベベル
+#JIJIPC＋A＋KSO。
 
+{"str_num": 587, "bank": "0xF6", "str_pos": "0x36AEAB", "length": 25, "table": "normal"}
+#リンクル
+#JIJIPCMKA＋、NKJXKLN。
 
-{"str_num": 609, "bank": "0xF6", "str_pos": "0x36AE73", "length": 36}
-#ベンホルム<wait_auto>KKIJIOJIWP、MNNCLLAJUHD、MIKCX。
+{"str_num": 588, "bank": "0xF6", "str_pos": "0x36AEC5", "length": 39, "table": "normal"}
+#ベンホルム
+#お礼をいっとるダスな。
+#本当にありがとう……だそうダス。
 
+{"str_num": 589, "bank": "0xF6", "str_pos": "0x36AEED", "length": 29, "table": "normal"}
+#[protag]
+#いや……いいんだ、そんなこと。
+#仲間だもんな。
 
-{"str_num": 610, "bank": "0xF6", "str_pos": "0x36AE98", "length": 18}
-#ベベル<wait_auto>JIJIPC＋A＋KSO。
-
-
-{"str_num": 611, "bank": "0xF6", "str_pos": "0x36AEAB", "length": 25}
-#リンクル<wait_auto>JIJIPCMKA＋、NKJXKLN。
-
-
-{"str_num": 612, "bank": "0xF6", "str_pos": "0x36AEC5", "length": 39}
-#ベンホルム<wait_auto>お礼をいっとるダスな。<wait_auto>本当にありがとう……だそうダス。
-
-
-{"str_num": 613, "bank": "0xF6", "str_pos": "0x36AEED", "length": 29}
-#[protag]<wait_auto>いや……いいんだ、そんなこと。<wait_auto>仲間だもんな。
-
-
-{"str_num": 614, "bank": "0xF6", "str_pos": "0x36AF0B", "length": 21}
+{"str_num": 590, "bank": "0xF6", "str_pos": "0x36AF0B", "length": 21, "table": "normal"}
 #ベベルとリンクルは、聖水を飲んだ！！
 
+{"str_num": 591, "bank": "0xF6", "str_pos": "0x36AF21", "length": 21, "table": "normal"}
+#[protag]
+#これで、君たちは助かったんだよ。
 
-{"str_num": 615, "bank": "0xF6", "str_pos": "0x36AF21", "length": 21}
-#[protag]<wait_auto>これで、君たちは助かったんだよ。
+{"str_num": 592, "bank": "0xF6", "str_pos": "0x36AF37", "length": 18, "table": "normal"}
+#ベベル
+#[protag]……礼をいわせてくれ。
 
+{"str_num": 593, "bank": "0xF6", "str_pos": "0x36AF4A", "length": 31, "table": "normal"}
+#リンクル
+#本当に、ありがとうございます……。
+#[protag]さん。
 
-{"str_num": 616, "bank": "0xF6", "str_pos": "0x36AF37", "length": 18}
-#ベベル<wait_auto>[protag]……礼をいわせてくれ。
+{"str_num": 594, "bank": "0xF6", "str_pos": "0x36AF6A", "length": 29, "table": "normal"}
+#[protag]
+#いや……いいんだ、そんなこと。
+#仲間だもんな。
 
+{"str_num": 595, "bank": "0xF6", "str_pos": "0x36AF88", "length": 18, "table": "normal"}
+#[protag]
+#不思議な水だなあ……。
 
-{"str_num": 617, "bank": "0xF6", "str_pos": "0x36AF4A", "length": 31}
-#リンクル<wait_auto>本当に、ありがとうございます……。<wait_auto>[protag]さん。
+{"str_num": 596, "bank": "0xF6", "str_pos": "0x36BE5F", "length": 22, "table": "normal"}
+# ジーメイ
+#さあ、それじゃあ始めようか。
 
+{"str_num": 597, "bank": "0xF6", "str_pos": "0x36BE76", "length": 18, "table": "normal"}
+#[protag]
+#始めるって……何をですか？
 
-{"str_num": 618, "bank": "0xF6", "str_pos": "0x36AF6A", "length": 29}
-#[protag]<wait_auto>いや……いいんだ、そんなこと。<wait_auto>仲間だもんな。
+{"str_num": 598, "bank": "0xF6", "str_pos": "0x36BE89", "length": 67, "table": "normal"}
+#ジーメイ
+#決まっとる。
+#ボナパール山に登るには、ぎ術が必要なんだ。
+#ここで練習しなけりゃ、本番にのぞめないぞ。
 
+{"str_num": 599, "bank": "0xF6", "str_pos": "0x36BECD", "length": 28, "table": "normal"}
+#[protag]
+#練習って、まさかここを登れってことですか！？
 
-{"str_num": 619, "bank": "0xF6", "str_pos": "0x36AF88", "length": 18}
-#[protag]<wait_auto>不思議な水だなあ……。
+{"str_num": 600, "bank": "0xF6", "str_pos": "0x36BEEA", "length": 60, "table": "normal"}
+#ジーメイ
+#そうだとも。
+#ツルがあるからな、あれを使って、上まで行くといい。
+#かなり体力を使うぞ。
+#<FC>
 
+{"str_num": 601, "bank": "0xF6", "str_pos": "0x36BF30", "length": 17, "table": "normal"}
+#ジーメイ
+#それじゃ、がんばれよ。
 
-{"str_num": 620, "bank": "0xF6", "str_pos": "0x36B921", "length": 114}
-#K2E3 王9K2E  王9A 王すK2E6 王すじ6王0 L69Xき罰む国郎3はむ国ョ3王9O6王9じ6王0 L69XQ罰む国ヂ3はむ国ジ3王9O6王TK2E3 王すA835L75X7まNT25え74K2E0 Q23R7城
+{"str_num": 602, "bank": "0xF6", "str_pos": "0x36BF42", "length": 12, "table": "normal"}
+#[sub]
+#[protag]……大丈夫？
 
+{"str_num": 603, "bank": "0xF6", "str_pos": "0x36BF4F", "length": 47, "table": "normal"}
+#バルモア
+#ったく、何でも簡単に引き受けるんじゃねえよ。
+#オレは知らねえからな。
 
-{"str_num": 621, "bank": "0xF6", "str_pos": "0x36BA4B", "length": 130}
-#K1N30王9K1N  王9A 王すK1N6 王すじ6王0 L67XB興む国ワ2はむ国ラ2王9O6王9じ6王0 L67X[sub]師む国チ2はむ国シ2王9O6王TK1N30王すは9K7合D A835さ65つ6K1N  5は64K000 K1N0 Q03Q13R7漠
+{"str_num": 604, "bank": "0xF6", "str_pos": "0x36BF7F", "length": 12, "table": "normal"}
+#[sub]
+#がんばってね、[protag]。
 
+{"str_num": 605, "bank": "0xF6", "str_pos": "0x36BF8C", "length": 30, "table": "normal"}
+#[protag]
+#ここが、一番上だな。
+#やった、登りきったぞ！
 
-{"str_num": 622, "bank": "0xF6", "str_pos": "0x36BE5F", "length": 22}
-# ジーメイ<wait_auto>さあ、それじゃあ始めようか。
+{"str_num": 606, "bank": "0xF6", "str_pos": "0x36BFAB", "length": 13, "table": "normal"}
+#[protag]
+#うっ……力が……。
 
+{"str_num": 607, "bank": "0xF6", "str_pos": "0x36BFB9", "length": 10, "table": "normal"}
+#[protag]
+#う……イテテ。
 
-{"str_num": 623, "bank": "0xF6", "str_pos": "0x36BE76", "length": 18}
-#[protag]<wait_auto>始めるって……何をですか？
+{"str_num": 608, "bank": "0xF6", "str_pos": "0x36BFC4", "length": 84, "table": "normal"}
+#ジーメイ
+#よくやったな。
+#おまえさんは、りっぱな登山家だよ。
+#今のお前さんなら、ボナパール山にも登れるかもしれん。
+#ぜひ、わしとパーティーをくんでくれ。
 
+{"str_num": 609, "bank": "0xF6", "str_pos": "0x36C019", "length": 9, "table": "normal"}
+#[protag]
+#よろこんで。
 
-{"str_num": 624, "bank": "0xF6", "str_pos": "0x36BE89", "length": 67}
-#ジーメイ<wait_auto>決まっとる。<wait_auto>ボナパール山に登るには、ぎ術が必要なんだ。<wait_auto>ここで練習しなけりゃ、本番にのぞめないぞ。
+{"str_num": 610, "bank": "0xF6", "str_pos": "0x36C023", "length": 60, "table": "normal"}
+#ジーメイ
+#それじゃあ、行こうか。
+#ボナパール山は、ソートワリナ連邦にある港街、ゼライル[Sword]の北西にある山だ。
 
-
-{"str_num": 625, "bank": "0xF6", "str_pos": "0x36BECD", "length": 28}
-#[protag]<wait_auto>練習って、まさかここを登れってことですか！？
-
-
-{"str_num": 626, "bank": "0xF6", "str_pos": "0x36BEEA", "length": 60}
-#ジーメイ<wait_auto>そうだとも。<wait_auto>ツルがあるからな、あれを使って、上まで行くといい。<wait_auto>かなり体力を使うぞ。<wait_auto><FC>
-
-
-{"str_num": 627, "bank": "0xF6", "str_pos": "0x36BF30", "length": 17}
-#ジーメイ<wait_auto>それじゃ、がんばれよ。
-
-
-{"str_num": 628, "bank": "0xF6", "str_pos": "0x36BF42", "length": 12}
-#[sub]<wait_auto>[protag]……大丈夫？
-
-
-{"str_num": 629, "bank": "0xF6", "str_pos": "0x36BF4F", "length": 47}
-#バルモア<wait_auto>ったく、何でも簡単に引き受けるんじゃねえよ。<wait_auto>オレは知らねえからな。
-
-
-{"str_num": 630, "bank": "0xF6", "str_pos": "0x36BF7F", "length": 12}
-#[sub]<wait_auto>がんばってね、[protag]。
-
-
-{"str_num": 631, "bank": "0xF6", "str_pos": "0x36BF8C", "length": 30}
-#[protag]<wait_auto>ここが、一番上だな。<wait_auto>やった、登りきったぞ！
-
-
-{"str_num": 632, "bank": "0xF6", "str_pos": "0x36BFAB", "length": 13}
-#[protag]<wait_auto>うっ……力が……。
-
-
-{"str_num": 633, "bank": "0xF6", "str_pos": "0x36BFB9", "length": 10}
-#[protag]<wait_auto>う……イテテ。
-
-
-{"str_num": 634, "bank": "0xF6", "str_pos": "0x36BFC4", "length": 84}
-#ジーメイ<wait_auto>よくやったな。<wait_auto>おまえさんは、りっぱな登山家だよ。<wait_auto>今のお前さんなら、ボナパール山にも登れるかもしれん。<wait_auto>ぜひ、わしとパーティーをくんでくれ。
-
-
-{"str_num": 635, "bank": "0xF6", "str_pos": "0x36C019", "length": 9}
-#[protag]<wait_auto>よろこんで。
-
-
-{"str_num": 636, "bank": "0xF6", "str_pos": "0x36C023", "length": 60}
-#ジーメイ<wait_auto>それじゃあ、行こうか。<wait_auto>ボナパール山は、ソートワリナ連邦にある港街、ゼライル[Sword]の北西にある山だ。
-
-
-{"str_num": 637, "bank": "0xF6", "str_pos": "0x36C060", "length": 20}
+{"str_num": 611, "bank": "0xF6", "str_pos": "0x36C060", "length": 20, "table": "normal"}
 #ジーメイ・プロシストが仲間になった！
 
+{"str_num": 612, "bank": "0xF6", "str_pos": "0x36C075", "length": 17, "table": "normal"}
+#ジーメイ
+#まあ、がんばるんだな。
 
-{"str_num": 638, "bank": "0xF6", "str_pos": "0x36C075", "length": 17}
-#ジーメイ<wait_auto>まあ、がんばるんだな。
+{"str_num": 613, "bank": "0xF6", "str_pos": "0x36C087", "length": 16, "table": "normal"}
+#[sub]
+#いったん、街に戻らない？
 
+{"str_num": 614, "bank": "0xF6", "str_pos": "0x36C098", "length": 24, "table": "normal"}
+# どうしよう？
+# そうしよう
+# やめておくよ
 
-{"str_num": 639, "bank": "0xF6", "str_pos": "0x36C087", "length": 16}
-#[sub]<wait_auto>いったん、街に戻らない？
+{"str_num": 615, "bank": "0xF6", "str_pos": "0x36C0B2", "length": 16, "table": "normal"}
+#[sub]
+#じゃあ、行きましょうよ。
 
+{"str_num": 616, "bank": "0xF6", "str_pos": "0x36C0C3", "length": 25, "table": "normal"}
+#バルモア
+#こんなガケ、本当に登れるのかよ。
 
-{"str_num": 640, "bank": "0xF6", "str_pos": "0x36C098", "length": 24}
-# どうしよう？<wait_auto> そうしよう<wait_auto> やめておくよ
+{"str_num": 617, "bank": "0xF6", "str_pos": "0x36C0DD", "length": 50, "table": "normal"}
+#[protag]
+#何か書いてあるぞ……。
+#えーと、この宝箱を開く鍵は、美しき歌声……だって。
 
+{"str_num": 618, "bank": "0xF6", "str_pos": "0x36C110", "length": 14, "table": "normal"}
+#[protag]
+#じゃあ、[sub]に頼もう。
 
-{"str_num": 641, "bank": "0xF6", "str_pos": "0x36C0B2", "length": 16}
-#[sub]<wait_auto>じゃあ、行きましょうよ。
+{"str_num": 619, "bank": "0xF6", "str_pos": "0x36C11F", "length": 15, "table": "normal"}
+#[protag]
+#歌ってくれるかい、[sub]？
 
+{"str_num": 620, "bank": "0xF6", "str_pos": "0x36C12F", "length": 23, "table": "normal"}
+#[sub]
+#いいわよ、ちょっと恥ずかしいけど……。
 
-{"str_num": 642, "bank": "0xF6", "str_pos": "0x36C0C3", "length": 25}
-#バルモア<wait_auto>こんなガケ、本当に登れるのかよ。
+{"str_num": 621, "bank": "0xF6", "str_pos": "0x36C147", "length": 18, "table": "normal"}
+#[sub]
+#……やっぱり、駄目みたい。
 
+{"str_num": 622, "bank": "0xF6", "str_pos": "0x36C15A", "length": 10, "table": "normal"}
+#[sub]
+#ごめんね、[protag]。
 
-{"str_num": 643, "bank": "0xF6", "str_pos": "0x36C0DD", "length": 50}
-#[protag]<wait_auto>何か書いてあるぞ……。<wait_auto>えーと、この宝箱を開く鍵は、美しき歌声……だって。
+{"str_num": 623, "bank": "0xF6", "str_pos": "0x36C165", "length": 21, "table": "normal"}
+#[protag]
+#いいんだ。
+#他の手を探そう。
 
+{"str_num": 624, "bank": "0xF6", "str_pos": "0x36C17B", "length": 23, "table": "normal"}
+#ダイヤ
+#そーいうことなら、アタイにまかして！
 
-{"str_num": 644, "bank": "0xF6", "str_pos": "0x36C110", "length": 14}
-#[protag]<wait_auto>じゃあ、[sub]に頼もう。
+{"str_num": 625, "bank": "0xF6", "str_pos": "0x36C193", "length": 14, "table": "normal"}
+#[protag]
+#……駄目みたいだ。
 
+{"str_num": 626, "bank": "0xF6", "str_pos": "0x36C1A2", "length": 23, "table": "normal"}
+#ダイヤ
+#何さ、変な宝箱！
+#フンだ！
 
-{"str_num": 645, "bank": "0xF6", "str_pos": "0x36C11F", "length": 15}
-#[protag]<wait_auto>歌ってくれるかい、[sub]？
+{"str_num": 627, "bank": "0xF6", "str_pos": "0x36C1BA", "length": 22, "table": "normal"}
+#[protag]
+#しょうがない、他の手を探そうか。
 
+{"str_num": 628, "bank": "0xF6", "str_pos": "0x36C1D1", "length": 22, "table": "normal"}
+#パブロス
+#では、ミーが試してみましょう。
 
-{"str_num": 646, "bank": "0xF6", "str_pos": "0x36C12F", "length": 23}
-#[sub]<wait_auto>いいわよ、ちょっと恥ずかしいけど……。
+{"str_num": 629, "bank": "0xF6", "str_pos": "0x36C1E8", "length": 9, "table": "normal"}
+#[sub]
+#開いたわ！
 
+{"str_num": 630, "bank": "0xF6", "str_pos": "0x36C1F2", "length": 15, "table": "normal"}
+#[protag]
+#すごいや、パブロスさん。
 
-{"str_num": 647, "bank": "0xF6", "str_pos": "0x36C147", "length": 18}
-#[sub]<wait_auto>……やっぱり、駄目みたい。
+{"str_num": 631, "bank": "0xF6", "str_pos": "0x36C202", "length": 27, "table": "normal"}
+#パブロス
+#いやいや、なになに、ほんの実力ですね。
 
-
-{"str_num": 648, "bank": "0xF6", "str_pos": "0x36C15A", "length": 10}
-#[sub]<wait_auto>ごめんね、[protag]。
-
-
-{"str_num": 649, "bank": "0xF6", "str_pos": "0x36C165", "length": 21}
-#[protag]<wait_auto>いいんだ。<wait_auto>他の手を探そう。
-
-
-{"str_num": 650, "bank": "0xF6", "str_pos": "0x36C17B", "length": 23}
-#ダイヤ<wait_auto>そーいうことなら、アタイにまかして！
-
-
-{"str_num": 651, "bank": "0xF6", "str_pos": "0x36C193", "length": 14}
-#[protag]<wait_auto>……駄目みたいだ。
-
-
-{"str_num": 652, "bank": "0xF6", "str_pos": "0x36C1A2", "length": 23}
-#ダイヤ<wait_auto>何さ、変な宝箱！<wait_auto>フンだ！
-
-
-{"str_num": 653, "bank": "0xF6", "str_pos": "0x36C1BA", "length": 22}
-#[protag]<wait_auto>しょうがない、他の手を探そうか。
-
-
-{"str_num": 654, "bank": "0xF6", "str_pos": "0x36C1D1", "length": 22}
-#パブロス<wait_auto>では、ミーが試してみましょう。
-
-
-{"str_num": 655, "bank": "0xF6", "str_pos": "0x36C1E8", "length": 9}
-#[sub]<wait_auto>開いたわ！
-
-
-{"str_num": 656, "bank": "0xF6", "str_pos": "0x36C1F2", "length": 15}
-#[protag]<wait_auto>すごいや、パブロスさん。
-
-
-{"str_num": 657, "bank": "0xF6", "str_pos": "0x36C202", "length": 27}
-#パブロス<wait_auto>いやいや、なになに、ほんの実力ですね。
-
-
-{"str_num": 658, "bank": "0xF6", "str_pos": "0x36C21E", "length": 13}
+{"str_num": 632, "bank": "0xF6", "str_pos": "0x36C21E", "length": 13, "table": "normal"}
 #Aパーツを手に入れた！
 
+{"str_num": 633, "bank": "0xF6", "str_pos": "0x36C22C", "length": 44, "table": "normal"}
+#[protag]
+#それにしても、これは何の部品なんだろう。
+#3つも集まっちゃったけど……。
 
-{"str_num": 659, "bank": "0xF6", "str_pos": "0x36C22C", "length": 44}
-#[protag]<wait_auto>それにしても、これは何の部品なんだろう。<wait_auto>3つも集まっちゃったけど……。
+{"str_num": 634, "bank": "0xF6", "str_pos": "0x36C259", "length": 11, "table": "normal"}
+#[protag]
+#どうしたんだい？
 
+{"str_num": 635, "bank": "0xF6", "str_pos": "0x36C265", "length": 21, "table": "normal"}
+#からくり凡太郎
+#ソレを貸してください。
 
-{"str_num": 660, "bank": "0xF6", "str_pos": "0x36C259", "length": 11}
-#[protag]<wait_auto>どうしたんだい？
+{"str_num": 636, "bank": "0xF6", "str_pos": "0x36C27B", "length": 6, "table": "normal"}
+#[protag]
+#えっ？
 
+{"str_num": 637, "bank": "0xF6", "str_pos": "0x36C282", "length": 24, "table": "normal"}
+#からくり凡太郎
+#ピピピ……カチカチ、ピピ……。
 
-{"str_num": 661, "bank": "0xF6", "str_pos": "0x36C265", "length": 21}
-#からくり凡太郎<wait_auto>ソレを貸してください。
+{"str_num": 638, "bank": "0xF6", "str_pos": "0x36C29B", "length": 21, "table": "normal"}
+#[protag]
+#凡太郎君？
+#大丈夫なのかい？
 
+{"str_num": 639, "bank": "0xF6", "str_pos": "0x36C2B1", "length": 14, "table": "normal"}
+#からくり凡太郎
+#デキタ！！
 
-{"str_num": 662, "bank": "0xF6", "str_pos": "0x36C27B", "length": 6}
-#[protag]<wait_auto>えっ？
+{"str_num": 640, "bank": "0xF6", "str_pos": "0x36C2C0", "length": 15, "table": "normal"}
+#[protag]
+#え……えっ？
+#何が？
 
+{"str_num": 641, "bank": "0xF6", "str_pos": "0x36C2D0", "length": 34, "table": "normal"}
+#からくり凡太郎
+#部品をくみ合わせたら、こんなモノができました。
 
-{"str_num": 663, "bank": "0xF6", "str_pos": "0x36C282", "length": 24}
-#からくり凡太郎<wait_auto>ピピピ……カチカチ、ピピ……。
-
-
-{"str_num": 664, "bank": "0xF6", "str_pos": "0x36C29B", "length": 21}
-#[protag]<wait_auto>凡太郎君？<wait_auto>大丈夫なのかい？
-
-
-{"str_num": 665, "bank": "0xF6", "str_pos": "0x36C2B1", "length": 14}
-#からくり凡太郎<wait_auto>デキタ！！
-
-
-{"str_num": 666, "bank": "0xF6", "str_pos": "0x36C2C0", "length": 15}
-#[protag]<wait_auto>え……えっ？<wait_auto>何が？
-
-
-{"str_num": 667, "bank": "0xF6", "str_pos": "0x36C2D0", "length": 34}
-#からくり凡太郎<wait_auto>部品をくみ合わせたら、こんなモノができました。
-
-
-{"str_num": 668, "bank": "0xF6", "str_pos": "0x36C2F3", "length": 14}
+{"str_num": 642, "bank": "0xF6", "str_pos": "0x36C2F3", "length": 14, "table": "normal"}
 #スピーカーを手に入れた！
 
+{"str_num": 643, "bank": "0xF6", "str_pos": "0x36C302", "length": 32, "table": "normal"}
+#[protag]
+#凡太郎君、部品のくみ合わせ方を知っていたのかい？
 
-{"str_num": 669, "bank": "0xF6", "str_pos": "0x36C302", "length": 32}
-#[protag]<wait_auto>凡太郎君、部品のくみ合わせ方を知っていたのかい？
+{"str_num": 644, "bank": "0xF6", "str_pos": "0x36C323", "length": 68, "table": "normal"}
+#からくり凡太郎
+#そ、そうイエバ、なぜワタシはこんなコトができるのでしょう。
+#ワタシのカコは、なんてナゾめいているのだ……ウーム……。
 
+{"str_num": 645, "bank": "0xF6", "str_pos": "0x36C368", "length": 22, "table": "normal"}
+#パブロス
+#では、ミーが試してみましょう。
 
-{"str_num": 670, "bank": "0xF6", "str_pos": "0x36C323", "length": 68}
-#からくり凡太郎<wait_auto>そ、そうイエバ、なぜワタシはこんなコトができるのでしょう。<wait_auto>ワタシのカコは、なんてナゾめいているのだ……ウーム……。
+{"str_num": 646, "bank": "0xF6", "str_pos": "0x36C37F", "length": 38, "table": "normal"}
+#ダイヤ
+#アタイが駄目だったのに、おっさんの歌で開くわけないじゃん。
 
+{"str_num": 647, "bank": "0xF6", "str_pos": "0x36C3A6", "length": 23, "table": "normal"}
+#パブロス
+#物は試しだよ、おじょうちゃん。
 
-{"str_num": 671, "bank": "0xF6", "str_pos": "0x36C368", "length": 22}
-#パブロス<wait_auto>では、ミーが試してみましょう。
+{"str_num": 648, "bank": "0xF6", "str_pos": "0x36C3BE", "length": 8, "table": "normal"}
+#[protag]
+#開いた！
 
+{"str_num": 649, "bank": "0xF6", "str_pos": "0x36C3C7", "length": 27, "table": "normal"}
+#パブロス
+#いやいや、なになに、ほんの実力ですね。
 
-{"str_num": 672, "bank": "0xF6", "str_pos": "0x36C37F", "length": 38}
-#ダイヤ<wait_auto>アタイが駄目だったのに、おっさんの歌で開くわけないじゃん。
+{"str_num": 650, "bank": "0xF6", "str_pos": "0x36C3E3", "length": 31, "table": "normal"}
+#ダイヤ
+#なによ、この宝箱。
+#耳くさってんじゃないの？
 
-
-{"str_num": 673, "bank": "0xF6", "str_pos": "0x36C3A6", "length": 23}
-#パブロス<wait_auto>物は試しだよ、おじょうちゃん。
-
-
-{"str_num": 674, "bank": "0xF6", "str_pos": "0x36C3BE", "length": 8}
-#[protag]<wait_auto>開いた！
-
-
-{"str_num": 675, "bank": "0xF6", "str_pos": "0x36C3C7", "length": 27}
-#パブロス<wait_auto>いやいや、なになに、ほんの実力ですね。
-
-
-{"str_num": 676, "bank": "0xF6", "str_pos": "0x36C3E3", "length": 31}
-#ダイヤ<wait_auto>なによ、この宝箱。<wait_auto>耳くさってんじゃないの？
-
-
-{"str_num": 677, "bank": "0xF6", "str_pos": "0x36C403", "length": 13}
+{"str_num": 651, "bank": "0xF6", "str_pos": "0x36C403", "length": 13, "table": "normal"}
 #Aパーツを手に入れた！
 
+{"str_num": 652, "bank": "0xF6", "str_pos": "0x36CDAA", "length": 56, "table": "normal"}
+#バルモア
+#こいつは、ボナパール山っていって、世界一高い山なんだぜ。
+#オレたちにゃあ登れっこねえよ。
 
-{"str_num": 678, "bank": "0xF6", "str_pos": "0x36C411", "length": 1094}
-#日とIニDD KF合C LFI皇ぷ7FA KF合D LFI皇ぜ7IヌDD KG合C LG衆んぷ7FA KG合D LG衆んぜ7IネDD KH合C LHずEぷ7FA KH合D LHずEぜ7IノDD KI合C LIぱ邦ぷ7FA KI合D LIぱ邦ぜ7IハDD KJ合C LJひ和ぷ7FA KJ合D LJひ和ぜ7IヒDD KK合C LKんみぷ7FA KK合D LKんみぜ7IフDD KL合C LL、ぜぷ7FA KL合D LL、ぜぜ7IヘDD KM合C LMれ…ぷ7FA KM合D LMれ…ぜ7ぃJB4555ゆヅ I ゆズ D KE合C LEやIウ4FA KE合D LEやI×4KDYI LDぞウむ7げ 4 Y6F1 Y を50H 7Gイ城1K  う U L Gケら47Gウ街37Pイお47Pエ衆47Yカ邦47Y・大47帝…V47帝イQ47か）L47か」G47衆「B47衆ぷ647共ぼ147共ぁ内7Xぽ家37Xべ湖37Dょ☆37Dぽ窟37Dぱ太37Dぜュ37Gぜゥ37Gづプ37Kぢブ37Kぜヅ37Oぎズ37Oわグ37Yごヲ37Yぐリ37共ばモ37共げホ37Wんノ37Wりト37Iまソ37Dたコ37Iいオ37Pへ：37Pちー37あえ」37あ王ょ37王Tぇ37王Hぺ37Wうべ37WXで37Y8ぜ37Y8げ37ごキん37ご：る37ごぺや37ぼぷま37ぼゃは37ぶばな37ぶゆた37ぶもさ37ぺにか37ぺなあ37ぷけ連37ぶに国37ん・W37んでR37ぜづM37ぜびH37ぐざC37ゆ？737んも237ゆせ<FE>27へて城27もえ浜27ひ皇△27ふも山27があ郎27がこョ27、王ェ27、Tペ27らXベ27らOデ27、Dゼ27Pウジ27Yオギ27Y（ワ27帝・ラ27帝アメ27か（ヘ27か！ネ27衆×テ27衆ぺセ27共ぱケ27共ぽエ27Xぺ）27Xぼ。27Dゅ「27Dぁゅ27Dぼぅ27Dぞぷ27Gぞぶ27Gぢづ27Kだず27Kぞぐ27Oがを27Oをり27Yげも27共どほ27共ごの27Wをと27Wるそ27Iほこ27Dそお27Iう衆27Pふ邦27Pつ大27あうV27あ共Q27王SL27王IG27WいB27WY627Y7127ごク真7ご）家17ごぽ湖17ぼぺ☆17ぼっ窟17ぶど太17ぶよュ17ぶめゥ17ぷなプ17ぷにブ17ぷこヅ17ぶぬズ17ん…グ17んどヲ17ぜでリ17ぜばモ17ぐごホ17ゆ！ノ17んやト17ゆそソ17ほてコ17もおオ17ひ合：17ふやー17がい」17がけょ17、国ぇ17、Uぺ17らWべ17らPで17、Cぜ17Y6じ17ごコず17、6ぜ1P2 を50じ1K  え Q 7R7城
+{"str_num": 653, "bank": "0xF6", "str_pos": "0x36CDE3", "length": 36, "table": "normal"}
+#バルモア
+#こんなトコに来たって、しょうがねえだろうが。
+#帰るぜ。
 
+{"str_num": 654, "bank": "0xF6", "str_pos": "0x36CE08", "length": 60, "table": "normal"}
+#ジーメイ
+#おお、ついにやって来たぞ。
+#夢にまで見た白銀の世界よ、いざ、このわしを受け入れるがいい。
 
-{"str_num": 679, "bank": "0xF6", "str_pos": "0x36CC98", "length": 330}
-# IニDI<FE>は9KF合D 王TAX35ッ14AとGニDや共0 IヌD砂罰9KG合D 王TAX35ベ14AとGヌDやべ9 IネDポ罰9KH合D 王TAX35ゼ14AとGネDやぼ9 IノDレ罰9KI合D 王TAX35ヲ14AとGノDやう0 IハDシ罰9KJ合D 王TAX35ミ14AとGハDやそ0 IヒDっ罰9KK合D 王TAX35テ14AとGヒDやゆ0 IフDが罰9KL合D 王TAX35カ14AとGフDやぅ9 IヘDつ罰9KM合D 王TAX35・14AとGヘDやべ4 970  AZ35ー1はめ5シ1×D15テ1E03 4Aと 4る バルモア<wait_auto>こいつは、ボナパール山っていって、世界一高い山なんだぜ。<wait_auto>オレたちにゃあ登れっこねえよ。
+{"str_num": 655, "bank": "0xF6", "str_pos": "0x36CE45", "length": 23, "table": "normal"}
+#[sub]
+#こうやってみると、けっこう高いわねえ。
 
+{"str_num": 656, "bank": "0xF6", "str_pos": "0x36CE5D", "length": 40, "table": "normal"}
+#バルモア
+#当たり前だ、世界一だぞ。
+#本当に登る気かよ、[protag]？
 
-{"str_num": 680, "bank": "0xF6", "str_pos": "0x36CDE3", "length": 36}
-#バルモア<wait_auto>こんなトコに来たって、しょうがねえだろうが。<wait_auto>帰るぜ。
+{"str_num": 657, "bank": "0xF6", "str_pos": "0x36CE86", "length": 23, "table": "normal"}
+# ボナパール山に登る？
+# はい
+# いいえ
 
+{"str_num": 658, "bank": "0xF6", "str_pos": "0x36CE9F", "length": 24, "table": "normal"}
+#[protag]
+#もう少し、心の準備が必要だな。
 
-{"str_num": 681, "bank": "0xF6", "str_pos": "0x36CE08", "length": 60}
-#ジーメイ<wait_auto>おお、ついにやって来たぞ。<wait_auto>夢にまで見た白銀の世界よ、いざ、このわしを受け入れるがいい。
+{"str_num": 659, "bank": "0xF6", "str_pos": "0x36CEB8", "length": 24, "table": "normal"}
+#ジーメイ
+#うう、心がはやるが……しかたない。
 
+{"str_num": 660, "bank": "0xF6", "str_pos": "0x36CED1", "length": 11, "table": "normal"}
+#[protag]
+#よし、行こう。
 
-{"str_num": 682, "bank": "0xF6", "str_pos": "0x36CE45", "length": 23}
-#[sub]<wait_auto>こうやってみると、けっこう高いわねえ。
+{"str_num": 661, "bank": "0xF6", "str_pos": "0x36CEDD", "length": 9, "table": "normal"}
+#ジーメイ
+#おう！
 
+{"str_num": 662, "bank": "0xF6", "str_pos": "0x36CEE7", "length": 28, "table": "normal"}
+#ジーメイ
+#こんどこそ、ボナパール山に登るんだろうな？
 
-{"str_num": 683, "bank": "0xF6", "str_pos": "0x36CE5D", "length": 40}
-#バルモア<wait_auto>当たり前だ、世界一だぞ。<wait_auto>本当に登る気かよ、[protag]？
+{"str_num": 663, "bank": "0xF6", "str_pos": "0x36CF04", "length": 20, "table": "normal"}
+# 山をおりますか？
+# はい
+# いいえ
 
-
-{"str_num": 684, "bank": "0xF6", "str_pos": "0x36CE86", "length": 23}
-# ボナパール山に登る？<wait_auto> はい<wait_auto> いいえ
-
-
-{"str_num": 685, "bank": "0xF6", "str_pos": "0x36CE9F", "length": 24}
-#[protag]<wait_auto>もう少し、心の準備が必要だな。
-
-
-{"str_num": 686, "bank": "0xF6", "str_pos": "0x36CEB8", "length": 24}
-#ジーメイ<wait_auto>うう、心がはやるが……しかたない。
-
-
-{"str_num": 687, "bank": "0xF6", "str_pos": "0x36CED1", "length": 11}
-#[protag]<wait_auto>よし、行こう。
-
-
-{"str_num": 688, "bank": "0xF6", "str_pos": "0x36CEDD", "length": 9}
-#ジーメイ<wait_auto>おう！
-
-
-{"str_num": 689, "bank": "0xF6", "str_pos": "0x36CEE7", "length": 28}
-#ジーメイ<wait_auto>こんどこそ、ボナパール山に登るんだろうな？
-
-
-{"str_num": 690, "bank": "0xF6", "str_pos": "0x36CF04", "length": 20}
-# 山をおりますか？<wait_auto> はい<wait_auto> いいえ
-
-
-{"str_num": 691, "bank": "0xF6", "str_pos": "0x36CF1A", "length": 13}
+{"str_num": 664, "bank": "0xF6", "str_pos": "0x36CF1A", "length": 13, "table": "normal"}
 #文字ばんを見つけた！
 
+{"str_num": 665, "bank": "0xF6", "str_pos": "0x36CF28", "length": 25, "table": "normal"}
+#[protag]
+#……なんだ、これ？
+#こんな物いらないな。
 
-{"str_num": 692, "bank": "0xF6", "str_pos": "0x36CF28", "length": 25}
-#[protag]<wait_auto>……なんだ、これ？<wait_auto>こんな物いらないな。
-
-
-{"str_num": 693, "bank": "0xF6", "str_pos": "0x36CF42", "length": 20}
+{"str_num": 666, "bank": "0xF6", "str_pos": "0x36CF42", "length": 20, "table": "normal"}
 #文字ばんを宝箱の中に戻した！
 
+{"str_num": 667, "bank": "0xF6", "str_pos": "0x36CF57", "length": 6, "table": "normal"}
+#[protag]
+#あっ！
 
-{"str_num": 694, "bank": "0xF6", "str_pos": "0x36CF57", "length": 6}
-#[protag]<wait_auto>あっ！
-
-
-{"str_num": 695, "bank": "0xF6", "str_pos": "0x36CF5E", "length": 15}
+{"str_num": 668, "bank": "0xF6", "str_pos": "0x36CF5E", "length": 15, "table": "normal"}
 #文字ばんを手に入れた！
 
+{"str_num": 669, "bank": "0xF6", "str_pos": "0x36CF6E", "length": 13, "table": "normal"}
+#[protag]
+#それ、なんなんだい？
 
-{"str_num": 696, "bank": "0xF6", "str_pos": "0x36CF6E", "length": 13}
-#[protag]<wait_auto>それ、なんなんだい？
+{"str_num": 670, "bank": "0xF6", "str_pos": "0x36CF7C", "length": 13, "table": "normal"}
+#ピピ・パパ
+#○○★△★。
 
-
-{"str_num": 697, "bank": "0xF6", "str_pos": "0x36CF7C", "length": 13}
-#ピピ・パパ<wait_auto>○○★△★。
-
-
-{"str_num": 698, "bank": "0xF6", "str_pos": "0x36CF8A", "length": 17}
+{"str_num": 671, "bank": "0xF6", "str_pos": "0x36CF8A", "length": 17, "table": "normal"}
 #クリスタルロッドを手に入れた！
 
-
-{"str_num": 699, "bank": "0xF6", "str_pos": "0x36CF9C", "length": 19}
+{"str_num": 672, "bank": "0xF6", "str_pos": "0x36CF9C", "length": 19, "table": "normal"}
 #ウェルプラスを10個手に入れた！
 
-
-{"str_num": 700, "bank": "0xF6", "str_pos": "0x36CFB0", "length": 18}
+{"str_num": 673, "bank": "0xF6", "str_pos": "0x36CFB0", "length": 18, "table": "normal"}
 #ウルウェルを10個手に入れた！
 
-
-{"str_num": 701, "bank": "0xF6", "str_pos": "0x36CFC3", "length": 16}
+{"str_num": 674, "bank": "0xF6", "str_pos": "0x36CFC3", "length": 16, "table": "normal"}
 #トールハンマーを手に入れた！
 
-
-{"str_num": 702, "bank": "0xF6", "str_pos": "0x36CFD4", "length": 16}
+{"str_num": 675, "bank": "0xF6", "str_pos": "0x36CFD4", "length": 16, "table": "normal"}
 #ドラゴンクロウを手に入れた！
 
-
-{"str_num": 703, "bank": "0xF6", "str_pos": "0x36CFE5", "length": 16}
+{"str_num": 676, "bank": "0xF6", "str_pos": "0x36CFE5", "length": 16, "table": "normal"}
 #ブラッドメイルを手に入れた！
 
-
-{"str_num": 704, "bank": "0xF6", "str_pos": "0x36CFF6", "length": 20}
+{"str_num": 677, "bank": "0xF6", "str_pos": "0x36CFF6", "length": 20, "table": "normal"}
 #ハイエリクサーを10個手に入れた！
 
-
-{"str_num": 705, "bank": "0xF6", "str_pos": "0x36D00B", "length": 18}
+{"str_num": 678, "bank": "0xF6", "str_pos": "0x36D00B", "length": 18, "table": "normal"}
 #ウェルプラスを5個手に入れた！
 
+{"str_num": 679, "bank": "0xF6", "str_pos": "0x36D01E", "length": 21, "table": "normal"}
+#[protag]
+#なんだか、すごく安心できる……。
 
-{"str_num": 706, "bank": "0xF6", "str_pos": "0x36D01E", "length": 21}
-#[protag]<wait_auto>なんだか、すごく安心できる……。
-
-
-{"str_num": 707, "bank": "0xF6", "str_pos": "0x36D034", "length": 12}
+{"str_num": 680, "bank": "0xF6", "str_pos": "0x36D034", "length": 12, "table": "normal"}
 #体力が回復した！
 
-
-{"str_num": 708, "bank": "0xF6", "str_pos": "0x36D041", "length": 21}
-# 記録しますか？<wait_auto> はい<wait_auto> いいえ
-
-
-{"str_num": 709, "bank": "0xF6", "str_pos": "0x36D257", "length": 87}
-#3 5ジーメイ<wait_auto>頂上だ！<wait_auto>ついに、ボナパール山の頂上にたどりついたぞ！<wait_auto>ああ……何という感動。<wait_auto>これが、長い間夢見た、ボナパール山の山頂……。
-
-
-{"str_num": 710, "bank": "0xF6", "str_pos": "0x36D2AF", "length": 18}
-#[protag]<wait_auto>よかったですね、ジーメイさん。
-
-
-{"str_num": 711, "bank": "0xF6", "str_pos": "0x36D2C2", "length": 40}
-#バルモア<wait_auto>これで、気が済んだだろ。<wait_auto>寒いから、早いとこ下りようぜ。
-
-
-{"str_num": 712, "bank": "0xF6", "str_pos": "0x36D2EB", "length": 32}
-#ジーメイ<wait_auto>ありがとう、[protag]君。<wait_auto>君と出会えてよかった。
-
-
-{"str_num": 713, "bank": "0xF6", "str_pos": "0x36D30C", "length": 25}
-#[protag]<wait_auto>……ふう。<wait_auto>何度見ても、きれいだな。
-
-
-{"str_num": 714, "bank": "0xF6", "str_pos": "0x36DE4B", "length": 58}
-#は9KG合D 王TAX35ち54A8GマDやぉ4  どうしよう？<wait_auto> 山から出る<wait_auto> ついらく現場にいってみる
-
-
-{"str_num": 715, "bank": "0xF6", "str_pos": "0x36DE87", "length": 14}
-#[sub]<wait_auto>きれいな景色ねえ。
-
-
-{"str_num": 716, "bank": "0xF6", "str_pos": "0x36DE96", "length": 37}
-#バルモア<wait_auto>オレは、こういうところへ来ると、大声でさけびたくなるんだ。
-
-
-{"str_num": 717, "bank": "0xF6", "str_pos": "0x36DEBC", "length": 18}
-#バルモア<wait_auto>ヤッホーーーーーーッ！！
-
-
-{"str_num": 718, "bank": "0xF6", "str_pos": "0x36DECF", "length": 19}
-#やまびこ<wait_auto>ヤッホーーーーーー…………
-
-
-{"str_num": 719, "bank": "0xF6", "str_pos": "0x36DEE3", "length": 16}
-#バルモア<wait_auto>やっぱ、これだよな。
-
-
-{"str_num": 720, "bank": "0xF6", "str_pos": "0x36DEF4", "length": 29}
-#[sub]<wait_auto>何が、これだよな……よ。<wait_auto>たんじゅんなんだから。
-
-
-{"str_num": 721, "bank": "0xF6", "str_pos": "0x36DF12", "length": 18}
-#チャラン<wait_auto>チャランもやるーーーー！
-
-
-{"str_num": 722, "bank": "0xF6", "str_pos": "0x36DF25", "length": 12}
-#ポラン<wait_auto>ポランもなの！
-
-
-{"str_num": 723, "bank": "0xF6", "str_pos": "0x36DF32", "length": 13}
-#[sub]<wait_auto>ちょ、ちょっと……。
-
-
-{"str_num": 724, "bank": "0xF6", "str_pos": "0x36DF40", "length": 22}
-#チャラン<wait_auto>ヤッホーーーーーーーーッ！！！！
-
-
-{"str_num": 725, "bank": "0xF6", "str_pos": "0x36DF57", "length": 22}
-#やまびこ<wait_auto>ヤッホーーーーーーーーッ！！！！
-
-
-{"str_num": 726, "bank": "0xF6", "str_pos": "0x36DF6E", "length": 16}
-#チャラン<wait_auto>オモシローーーーイ！
-
-
-{"str_num": 727, "bank": "0xF6", "str_pos": "0x36DF7F", "length": 23}
-#ポラン<wait_auto>オモシロイの！<wait_auto>ポランもやるなの！
-
-
-{"str_num": 728, "bank": "0xF6", "str_pos": "0x36DF97", "length": 11}
-#バルモア<wait_auto>ダメだっ！
-
-
-{"str_num": 729, "bank": "0xF6", "str_pos": "0x36DFA3", "length": 33}
-#バルモア<wait_auto>コマクが破れるかと思ったぜ！<wait_auto>こいつは使うな。
-
-
-{"str_num": 730, "bank": "0xF6", "str_pos": "0x36DFC5", "length": 19}
-#チャラン<wait_auto>ポランもやらせてーーーー！
-
-
-{"str_num": 731, "bank": "0xF6", "str_pos": "0x36DFD9", "length": 12}
-#ポラン<wait_auto>やりたいなの。
-
-
-{"str_num": 732, "bank": "0xF6", "str_pos": "0x36DFE6", "length": 26}
-#バルモア<wait_auto>ダメだったらダメだ！<wait_auto>ほら、行くぞ。
-
-
-{"str_num": 733, "bank": "0xF6", "str_pos": "0x36E001", "length": 17}
-#[sub]<wait_auto>あっ見て！<wait_auto>流れ星！
-
-
-{"str_num": 734, "bank": "0xF6", "str_pos": "0x36E013", "length": 33}
-#[sub]<wait_auto>チャランちゃん、ポランちゃん。<wait_auto>ちゃんとお願い事した？
-
-
-{"str_num": 735, "bank": "0xF6", "str_pos": "0x36E035", "length": 15}
-#チャラン<wait_auto>忘れたーーーー！
-
-
-{"str_num": 736, "bank": "0xF6", "str_pos": "0x36E045", "length": 12}
-#ポラン<wait_auto>ポランもなの！
-
-
-{"str_num": 737, "bank": "0xF6", "str_pos": "0x36E052", "length": 14}
-#[sub]<wait_auto>そう、ざんねんね……。
-
-
-{"str_num": 738, "bank": "0xF6", "str_pos": "0x36E061", "length": 13}
-#バルモア<wait_auto>なんだあっ！？
-
-
-{"str_num": 739, "bank": "0xF6", "str_pos": "0x36E06F", "length": 22}
-#[sub]<wait_auto>流れ星が、地上に落ちたの！？
-
-
-{"str_num": 740, "bank": "0xF6", "str_pos": "0x36E086", "length": 19}
-#[protag]<wait_auto>あっちの方だ、行ってみよう！
-
-
-{"str_num": 741, "bank": "0xF6", "str_pos": "0x36E09A", "length": 40}
-#バルモア<wait_auto>チャラン、ポラン。<wait_auto>スピーカー使わねえんなら、さけんでもいいぜ。
-
-
-{"str_num": 742, "bank": "0xF6", "str_pos": "0x36E0C3", "length": 13}
-#チャラン<wait_auto>ワーーーーイ！
-
-
-{"str_num": 743, "bank": "0xF6", "str_pos": "0x36E0D1", "length": 11}
-#ポラン<wait_auto>ウレシイの！
-
-
-{"str_num": 744, "bank": "0xF6", "str_pos": "0x36E0DD", "length": 17}
-#チャラン<wait_auto>ヤッホーーーーーーッ！
-
-
-{"str_num": 745, "bank": "0xF6", "str_pos": "0x36E0EF", "length": 18}
-#やまびこ<wait_auto>ヤッホーーーーーーッ……
-
-
-{"str_num": 746, "bank": "0xF6", "str_pos": "0x36E102", "length": 18}
-#ポラン<wait_auto>ヤッホーなのーーーーーー！
-
-
-{"str_num": 747, "bank": "0xF6", "str_pos": "0x36E115", "length": 20}
-#やまびこ<wait_auto>ヤッホーなのーーーーーー……
-
-
-{"str_num": 748, "bank": "0xF6", "str_pos": "0x36E12A", "length": 16}
-#チャラン<wait_auto>オモシローーーーイ！
-
-
-{"str_num": 749, "bank": "0xF6", "str_pos": "0x36E13B", "length": 21}
-#ポラン<wait_auto>オモシロイの！<wait_auto>オモシロイの！
-
-
-{"str_num": 750, "bank": "0xF6", "str_pos": "0x36E151", "length": 23}
-#バルモア<wait_auto>満足したら、さっさと行くぜ。
-
-
-{"str_num": 751, "bank": "0xF6", "str_pos": "0x36E169", "length": 25}
-#[protag]<wait_auto>ん？<wait_auto>水龍にもらったアクアベルが……。
-
-
-{"str_num": 752, "bank": "0xF6", "str_pos": "0x36E183", "length": 17}
-#[sub]<wait_auto>あなたが賢者様ですか？
-
-
-{"str_num": 753, "bank": "0xF6", "str_pos": "0x36E195", "length": 23}
-#バルモア<wait_auto>ただのジジイにしか、見えねえぞ。
-
-
-{"str_num": 754, "bank": "0xF6", "str_pos": "0x36E1AD", "length": 24}
-#老人<wait_auto>おぬしたち、水龍の使いじゃな。
-
-
-{"str_num": 755, "bank": "0xF6", "str_pos": "0x36E1C6", "length": 46}
-#バルモア<wait_auto>まだ、何もいってねえのに！<wait_auto>やっぱ、このジジイは、ただのジジイじゃないんだ。
-
-
-{"str_num": 756, "bank": "0xF6", "str_pos": "0x36E1F5", "length": 66}
-#老人<wait_auto>ジジイ、ジジイとしつこいぞ、こわっぱ。 水龍の用件はわかっておる。<wait_auto>誰かに倒され、復活したのであろう。
-
-
-{"str_num": 757, "bank": "0xF6", "str_pos": "0x36E238", "length": 36}
-# 何と答えますか？<wait_auto> まあ、そんなとこです<wait_auto> 実は、僕が……
-
-
-{"str_num": 758, "bank": "0xF6", "str_pos": "0x36E25E", "length": 47}
-#老人<wait_auto>ほほう、倒した本人が、復活した水龍の手助けをのう。<wait_auto>……ムッ？
-
-
-{"str_num": 759, "bank": "0xF6", "str_pos": "0x36E28E", "length": 11}
-#[protag]<wait_auto>な、なんですか？
-
-
-{"str_num": 760, "bank": "0xF6", "str_pos": "0x36E29A", "length": 38}
-#老人<wait_auto>……ほう、お主は興味ぶかい星のもとに、生まれておるな。
-
-
-{"str_num": 761, "bank": "0xF6", "str_pos": "0x36E2C1", "length": 7}
-#[protag]<wait_auto>ええっ？
-
-
-{"str_num": 762, "bank": "0xF6", "str_pos": "0x36E2C9", "length": 49}
-#老人<wait_auto>まあ、じきにわかるじゃろうて。<wait_auto>それより、ほれ。<wait_auto>これを水龍に渡しておくれ。
-
-
-{"str_num": 763, "bank": "0xF6", "str_pos": "0x36E2FB", "length": 18}
+{"str_num": 681, "bank": "0xF6", "str_pos": "0x36D041", "length": 21, "table": "normal"}
+# 記録しますか？
+# はい
+# いいえ
+
+{"str_num": 682, "bank": "0xF6", "str_pos": "0x36D257", "length": 87, "table": "normal"}
+#3 5ジーメイ
+#頂上だ！
+#ついに、ボナパール山の頂上にたどりついたぞ！
+#ああ……何という感動。
+#これが、長い間夢見た、ボナパール山の山頂……。
+
+{"str_num": 683, "bank": "0xF6", "str_pos": "0x36D2AF", "length": 18, "table": "normal"}
+#[protag]
+#よかったですね、ジーメイさん。
+
+{"str_num": 684, "bank": "0xF6", "str_pos": "0x36D2C2", "length": 40, "table": "normal"}
+#バルモア
+#これで、気が済んだだろ。
+#寒いから、早いとこ下りようぜ。
+
+{"str_num": 685, "bank": "0xF6", "str_pos": "0x36D2EB", "length": 32, "table": "normal"}
+#ジーメイ
+#ありがとう、[protag]君。
+#君と出会えてよかった。
+
+{"str_num": 686, "bank": "0xF6", "str_pos": "0x36D30C", "length": 25, "table": "normal"}
+#[protag]
+#……ふう。
+#何度見ても、きれいだな。
+
+{"str_num": 687, "bank": "0xF6", "str_pos": "0x36DE4B", "length": 58, "table": "normal"}
+#は9KG合D 王TAX35ち54A8GマDやぉ4  どうしよう？
+# 山から出る
+# ついらく現場にいってみる
+
+{"str_num": 688, "bank": "0xF6", "str_pos": "0x36DE87", "length": 14, "table": "normal"}
+#[sub]
+#きれいな景色ねえ。
+
+{"str_num": 689, "bank": "0xF6", "str_pos": "0x36DE96", "length": 37, "table": "normal"}
+#バルモア
+#オレは、こういうところへ来ると、大声でさけびたくなるんだ。
+
+{"str_num": 690, "bank": "0xF6", "str_pos": "0x36DEBC", "length": 18, "table": "normal"}
+#バルモア
+#ヤッホーーーーーーッ！！
+
+{"str_num": 691, "bank": "0xF6", "str_pos": "0x36DECF", "length": 19, "table": "normal"}
+#やまびこ
+#ヤッホーーーーーー…………
+
+{"str_num": 692, "bank": "0xF6", "str_pos": "0x36DEE3", "length": 16, "table": "normal"}
+#バルモア
+#やっぱ、これだよな。
+
+{"str_num": 693, "bank": "0xF6", "str_pos": "0x36DEF4", "length": 29, "table": "normal"}
+#[sub]
+#何が、これだよな……よ。
+#たんじゅんなんだから。
+
+{"str_num": 694, "bank": "0xF6", "str_pos": "0x36DF12", "length": 18, "table": "normal"}
+#チャラン
+#チャランもやるーーーー！
+
+{"str_num": 695, "bank": "0xF6", "str_pos": "0x36DF25", "length": 12, "table": "normal"}
+#ポラン
+#ポランもなの！
+
+{"str_num": 696, "bank": "0xF6", "str_pos": "0x36DF32", "length": 13, "table": "normal"}
+#[sub]
+#ちょ、ちょっと……。
+
+{"str_num": 697, "bank": "0xF6", "str_pos": "0x36DF40", "length": 22, "table": "normal"}
+#チャラン
+#ヤッホーーーーーーーーッ！！！！
+
+{"str_num": 698, "bank": "0xF6", "str_pos": "0x36DF57", "length": 22, "table": "normal"}
+#やまびこ
+#ヤッホーーーーーーーーッ！！！！
+
+{"str_num": 699, "bank": "0xF6", "str_pos": "0x36DF6E", "length": 16, "table": "normal"}
+#チャラン
+#オモシローーーーイ！
+
+{"str_num": 700, "bank": "0xF6", "str_pos": "0x36DF7F", "length": 23, "table": "normal"}
+#ポラン
+#オモシロイの！
+#ポランもやるなの！
+
+{"str_num": 701, "bank": "0xF6", "str_pos": "0x36DF97", "length": 11, "table": "normal"}
+#バルモア
+#ダメだっ！
+
+{"str_num": 702, "bank": "0xF6", "str_pos": "0x36DFA3", "length": 33, "table": "normal"}
+#バルモア
+#コマクが破れるかと思ったぜ！
+#こいつは使うな。
+
+{"str_num": 703, "bank": "0xF6", "str_pos": "0x36DFC5", "length": 19, "table": "normal"}
+#チャラン
+#ポランもやらせてーーーー！
+
+{"str_num": 704, "bank": "0xF6", "str_pos": "0x36DFD9", "length": 12, "table": "normal"}
+#ポラン
+#やりたいなの。
+
+{"str_num": 705, "bank": "0xF6", "str_pos": "0x36DFE6", "length": 26, "table": "normal"}
+#バルモア
+#ダメだったらダメだ！
+#ほら、行くぞ。
+
+{"str_num": 706, "bank": "0xF6", "str_pos": "0x36E001", "length": 17, "table": "normal"}
+#[sub]
+#あっ見て！
+#流れ星！
+
+{"str_num": 707, "bank": "0xF6", "str_pos": "0x36E013", "length": 33, "table": "normal"}
+#[sub]
+#チャランちゃん、ポランちゃん。
+#ちゃんとお願い事した？
+
+{"str_num": 708, "bank": "0xF6", "str_pos": "0x36E035", "length": 15, "table": "normal"}
+#チャラン
+#忘れたーーーー！
+
+{"str_num": 709, "bank": "0xF6", "str_pos": "0x36E045", "length": 12, "table": "normal"}
+#ポラン
+#ポランもなの！
+
+{"str_num": 710, "bank": "0xF6", "str_pos": "0x36E052", "length": 14, "table": "normal"}
+#[sub]
+#そう、ざんねんね……。
+
+{"str_num": 711, "bank": "0xF6", "str_pos": "0x36E061", "length": 13, "table": "normal"}
+#バルモア
+#なんだあっ！？
+
+{"str_num": 712, "bank": "0xF6", "str_pos": "0x36E06F", "length": 22, "table": "normal"}
+#[sub]
+#流れ星が、地上に落ちたの！？
+
+{"str_num": 713, "bank": "0xF6", "str_pos": "0x36E086", "length": 19, "table": "normal"}
+#[protag]
+#あっちの方だ、行ってみよう！
+
+{"str_num": 714, "bank": "0xF6", "str_pos": "0x36E09A", "length": 40, "table": "normal"}
+#バルモア
+#チャラン、ポラン。
+#スピーカー使わねえんなら、さけんでもいいぜ。
+
+{"str_num": 715, "bank": "0xF6", "str_pos": "0x36E0C3", "length": 13, "table": "normal"}
+#チャラン
+#ワーーーーイ！
+
+{"str_num": 716, "bank": "0xF6", "str_pos": "0x36E0D1", "length": 11, "table": "normal"}
+#ポラン
+#ウレシイの！
+
+{"str_num": 717, "bank": "0xF6", "str_pos": "0x36E0DD", "length": 17, "table": "normal"}
+#チャラン
+#ヤッホーーーーーーッ！
+
+{"str_num": 718, "bank": "0xF6", "str_pos": "0x36E0EF", "length": 18, "table": "normal"}
+#やまびこ
+#ヤッホーーーーーーッ……
+
+{"str_num": 719, "bank": "0xF6", "str_pos": "0x36E102", "length": 18, "table": "normal"}
+#ポラン
+#ヤッホーなのーーーーーー！
+
+{"str_num": 720, "bank": "0xF6", "str_pos": "0x36E115", "length": 20, "table": "normal"}
+#やまびこ
+#ヤッホーなのーーーーーー……
+
+{"str_num": 721, "bank": "0xF6", "str_pos": "0x36E12A", "length": 16, "table": "normal"}
+#チャラン
+#オモシローーーーイ！
+
+{"str_num": 722, "bank": "0xF6", "str_pos": "0x36E13B", "length": 21, "table": "normal"}
+#ポラン
+#オモシロイの！
+#オモシロイの！
+
+{"str_num": 723, "bank": "0xF6", "str_pos": "0x36E151", "length": 23, "table": "normal"}
+#バルモア
+#満足したら、さっさと行くぜ。
+
+{"str_num": 724, "bank": "0xF6", "str_pos": "0x36E169", "length": 25, "table": "normal"}
+#[protag]
+#ん？
+#水龍にもらったアクアベルが……。
+
+{"str_num": 725, "bank": "0xF6", "str_pos": "0x36E183", "length": 17, "table": "normal"}
+#[sub]
+#あなたが賢者様ですか？
+
+{"str_num": 726, "bank": "0xF6", "str_pos": "0x36E195", "length": 23, "table": "normal"}
+#バルモア
+#ただのジジイにしか、見えねえぞ。
+
+{"str_num": 727, "bank": "0xF6", "str_pos": "0x36E1AD", "length": 24, "table": "normal"}
+#老人
+#おぬしたち、水龍の使いじゃな。
+
+{"str_num": 728, "bank": "0xF6", "str_pos": "0x36E1C6", "length": 46, "table": "normal"}
+#バルモア
+#まだ、何もいってねえのに！
+#やっぱ、このジジイは、ただのジジイじゃないんだ。
+
+{"str_num": 729, "bank": "0xF6", "str_pos": "0x36E1F5", "length": 66, "table": "normal"}
+#老人
+#ジジイ、ジジイとしつこいぞ、こわっぱ。 水龍の用件はわかっておる。
+#誰かに倒され、復活したのであろう。
+
+{"str_num": 730, "bank": "0xF6", "str_pos": "0x36E238", "length": 36, "table": "normal"}
+# 何と答えますか？
+# まあ、そんなとこです
+# 実は、僕が……
+
+{"str_num": 731, "bank": "0xF6", "str_pos": "0x36E25E", "length": 47, "table": "normal"}
+#老人
+#ほほう、倒した本人が、復活した水龍の手助けをのう。
+#……ムッ？
+
+{"str_num": 732, "bank": "0xF6", "str_pos": "0x36E28E", "length": 11, "table": "normal"}
+#[protag]
+#な、なんですか？
+
+{"str_num": 733, "bank": "0xF6", "str_pos": "0x36E29A", "length": 38, "table": "normal"}
+#老人
+#……ほう、お主は興味ぶかい星のもとに、生まれておるな。
+
+{"str_num": 734, "bank": "0xF6", "str_pos": "0x36E2C1", "length": 7, "table": "normal"}
+#[protag]
+#ええっ？
+
+{"str_num": 735, "bank": "0xF6", "str_pos": "0x36E2C9", "length": 49, "table": "normal"}
+#老人
+#まあ、じきにわかるじゃろうて。
+#それより、ほれ。
+#これを水龍に渡しておくれ。
+
+{"str_num": 736, "bank": "0xF6", "str_pos": "0x36E2FB", "length": 18, "table": "normal"}
 #マジックポーションを手に入れた！
 
+{"str_num": 737, "bank": "0xF6", "str_pos": "0x36E30E", "length": 67, "table": "normal"}
+#老人
+#龍が飲めば、力が復活するクスリじゃ。
+#今度こそ、水の守り神としての使命をまっとうするじゃろうて。
 
-{"str_num": 764, "bank": "0xF6", "str_pos": "0x36E30E", "length": 67}
-#老人<wait_auto>龍が飲めば、力が復活するクスリじゃ。<wait_auto>今度こそ、水の守り神としての使命をまっとうするじゃろうて。
+{"str_num": 738, "bank": "0xF6", "str_pos": "0x36E352", "length": 30, "table": "normal"}
+# ………………。
+# 別れをつげる
+# もっと話を聞く
 
+{"str_num": 739, "bank": "0xF6", "str_pos": "0x36E372", "length": 41, "table": "normal"}
+#[protag]
+#あの、賢者様。
+#興味ぶかい星って、どういう意味なんですか？
 
-{"str_num": 765, "bank": "0xF6", "str_pos": "0x36E352", "length": 30}
-# ………………。<wait_auto> 別れをつげる<wait_auto> もっと話を聞く
+{"str_num": 740, "bank": "0xF6", "str_pos": "0x36E39C", "length": 125, "table": "normal"}
+#老人
+#ふふふ……そのうちわかる。
+#一つ、教えておいてやろう。
+#世界中のあちらこちらに、12体の女神のぞうがある。
+#見つけたら、祈りをささげてみよ……。
+#おぬしの身に、何かが起こるはずじゃからな。
+#ふふふ……。
 
+{"str_num": 741, "bank": "0xF6", "str_pos": "0x36E41A", "length": 17, "table": "normal"}
+#[protag]
+#僕の身に、何かが……？
 
-{"str_num": 766, "bank": "0xF6", "str_pos": "0x36E372", "length": 41}
-#[protag]<wait_auto>あの、賢者様。<wait_auto>興味ぶかい星って、どういう意味なんですか？
+{"str_num": 742, "bank": "0xF6", "str_pos": "0x36E42C", "length": 22, "table": "normal"}
+#老人
+#そうであろうとも。
+#……ムッ？
 
+{"str_num": 743, "bank": "0xF6", "str_pos": "0x36E443", "length": 30, "table": "normal"}
+#[protag]
+#賢者様、ありがとうございました。
+#さようなら。
 
-{"str_num": 767, "bank": "0xF6", "str_pos": "0x36E39C", "length": 125}
-#老人<wait_auto>ふふふ……そのうちわかる。<wait_auto>一つ、教えておいてやろう。<wait_auto>世界中のあちらこちらに、12体の女神のぞうがある。<wait_auto>見つけたら、祈りをささげてみよ……。<wait_auto>おぬしの身に、何かが起こるはずじゃからな。<wait_auto>ふふふ……。
+{"str_num": 744, "bank": "0xF6", "str_pos": "0x36E462", "length": 21, "table": "normal"}
+#老人
+#おう、おぬしらもたっしゃでな。
 
-
-{"str_num": 768, "bank": "0xF6", "str_pos": "0x36E41A", "length": 17}
-#[protag]<wait_auto>僕の身に、何かが……？
-
-
-{"str_num": 769, "bank": "0xF6", "str_pos": "0x36E42C", "length": 22}
-#老人<wait_auto>そうであろうとも。<wait_auto>……ムッ？
-
-
-{"str_num": 770, "bank": "0xF6", "str_pos": "0x36E443", "length": 30}
-#[protag]<wait_auto>賢者様、ありがとうございました。<wait_auto>さようなら。
-
-
-{"str_num": 771, "bank": "0xF6", "str_pos": "0x36E462", "length": 21}
-#老人<wait_auto>おう、おぬしらもたっしゃでな。
-
-
-{"str_num": 772, "bank": "0xF6", "str_pos": "0x36E478", "length": 16}
+{"str_num": 745, "bank": "0xF6", "str_pos": "0x36E478", "length": 16, "table": "normal"}
 #マジックトーチを手に入れた！
 
-
-{"str_num": 773, "bank": "0xF6", "str_pos": "0x36E489", "length": 16}
+{"str_num": 746, "bank": "0xF6", "str_pos": "0x36E489", "length": 16, "table": "normal"}
 #フレイムメイスを手に入れた！
 
-
-{"str_num": 774, "bank": "0xF6", "str_pos": "0x36E49A", "length": 20}
+{"str_num": 747, "bank": "0xF6", "str_pos": "0x36E49A", "length": 20, "table": "normal"}
 #フレイムスケイルを5個手に入れた！
-
 

@@ -1,1029 +1,771 @@
-{"str_num": 0, "bank": "0xC1", "ptr_pos": "0x012F4A", "str_pos": "0x01314A", "length": 4}
+{"str_num": 0, "bank": "0xC1", "ptr_pos": "0x012F4A", "str_pos": "0x01314A", "length": 4, "table": "normal"}
 #短剣
-Testing VWF English font engine!
 
-
-{"str_num": 1, "bank": "0xC1", "ptr_pos": "0x012F4C", "str_pos": "0x01314F", "length": 21}
+{"str_num": 1, "bank": "0xC1", "ptr_pos": "0x012F4C", "str_pos": "0x01314F", "length": 21, "table": "normal"}
 #一般的に使用される普通の剣
 
-
-{"str_num": 2, "bank": "0xC1", "ptr_pos": "0x012F4E", "str_pos": "0x013165", "length": 20}
+{"str_num": 2, "bank": "0xC1", "ptr_pos": "0x012F4E", "str_pos": "0x013165", "length": 20, "table": "normal"}
 #騎士が愛用する戦闘用の剣
 
-
-{"str_num": 3, "bank": "0xC1", "ptr_pos": "0x012F50", "str_pos": "0x01317A", "length": 20}
+{"str_num": 3, "bank": "0xC1", "ptr_pos": "0x012F50", "str_pos": "0x01317A", "length": 20, "table": "normal"}
 #赤紫の刃を持つ暗殺用の剣
 
-
-{"str_num": 4, "bank": "0xC1", "ptr_pos": "0x012F52", "str_pos": "0x01318F", "length": 13}
+{"str_num": 4, "bank": "0xC1", "ptr_pos": "0x012F52", "str_pos": "0x01318F", "length": 13, "table": "normal"}
 #刃が炎で包まれた剣
 
-
-{"str_num": 5, "bank": "0xC1", "ptr_pos": "0x012F54", "str_pos": "0x01319D", "length": 17}
+{"str_num": 5, "bank": "0xC1", "ptr_pos": "0x012F54", "str_pos": "0x01319D", "length": 17, "table": "normal"}
 #氷の精霊を刃に宿した剣
 
-
-{"str_num": 6, "bank": "0xC1", "ptr_pos": "0x012F56", "str_pos": "0x0131AF", "length": 21}
+{"str_num": 6, "bank": "0xC1", "ptr_pos": "0x012F56", "str_pos": "0x0131AF", "length": 21, "table": "normal"}
 #刃にうねりを持ち、敵を混乱させる
 
-
-{"str_num": 7, "bank": "0xC1", "ptr_pos": "0x012F58", "str_pos": "0x0131C5", "length": 19}
+{"str_num": 7, "bank": "0xC1", "ptr_pos": "0x012F58", "str_pos": "0x0131C5", "length": 19, "table": "normal"}
 #龍退治に古くから使われる剣
 
-
-{"str_num": 8, "bank": "0xC1", "ptr_pos": "0x012F5A", "str_pos": "0x0131D9", "length": 27}
+{"str_num": 8, "bank": "0xC1", "ptr_pos": "0x012F5A", "str_pos": "0x0131D9", "length": 27, "table": "normal"}
 #刃の幅が広く、数人を一度に惨殺できる
 
-
-{"str_num": 9, "bank": "0xC1", "ptr_pos": "0x012F5C", "str_pos": "0x0131F5", "length": 19}
+{"str_num": 9, "bank": "0xC1", "ptr_pos": "0x012F5C", "str_pos": "0x0131F5", "length": 19, "table": "normal"}
 #刃に闇の暗さと輝きを宿す剣
 
-
-{"str_num": 10, "bank": "0xC1", "ptr_pos": "0x012F5E", "str_pos": "0x013209", "length": 16}
+{"str_num": 10, "bank": "0xC1", "ptr_pos": "0x012F5E", "str_pos": "0x013209", "length": 16, "table": "normal"}
 #古代の英雄が用いた剣
 
-
-{"str_num": 11, "bank": "0xC1", "ptr_pos": "0x012F60", "str_pos": "0x01321A", "length": 16}
+{"str_num": 11, "bank": "0xC1", "ptr_pos": "0x012F60", "str_pos": "0x01321A", "length": 16, "table": "normal"}
 #黄金色に輝く神聖剣
 
-
-{"str_num": 12, "bank": "0xC1", "ptr_pos": "0x012F62", "str_pos": "0x01322B", "length": 7}
+{"str_num": 12, "bank": "0xC1", "ptr_pos": "0x012F62", "str_pos": "0x01322B", "length": 7, "table": "normal"}
 #小型の斧
 
-
-{"str_num": 13, "bank": "0xC1", "ptr_pos": "0x012F64", "str_pos": "0x013233", "length": 14}
+{"str_num": 13, "bank": "0xC1", "ptr_pos": "0x012F64", "str_pos": "0x013233", "length": 14, "table": "normal"}
 #戦闘用に作られた斧
 
-
-{"str_num": 14, "bank": "0xC1", "ptr_pos": "0x012F66", "str_pos": "0x013242", "length": 7}
+{"str_num": 14, "bank": "0xC1", "ptr_pos": "0x012F66", "str_pos": "0x013242", "length": 7, "table": "normal"}
 #両刃の斧
 
-
-{"str_num": 15, "bank": "0xC1", "ptr_pos": "0x012F68", "str_pos": "0x01324A", "length": 17}
+{"str_num": 15, "bank": "0xC1", "ptr_pos": "0x012F68", "str_pos": "0x01324A", "length": 17, "table": "normal"}
 #威力の高い戦闘用の斧
 
-
-{"str_num": 16, "bank": "0xC1", "ptr_pos": "0x012F6A", "str_pos": "0x01325C", "length": 17}
+{"str_num": 16, "bank": "0xC1", "ptr_pos": "0x012F6A", "str_pos": "0x01325C", "length": 17, "table": "normal"}
 #雷神の力を封じ込めた斧
 
-
-{"str_num": 17, "bank": "0xC1", "ptr_pos": "0x012F6C", "str_pos": "0x01326E", "length": 24}
+{"str_num": 17, "bank": "0xC1", "ptr_pos": "0x012F6C", "str_pos": "0x01326E", "length": 24, "table": "normal"}
 #地獄の業火を封じ込めた暗黒の斧
 
-
-{"str_num": 18, "bank": "0xC1", "ptr_pos": "0x012F6E", "str_pos": "0x013287", "length": 26}
+{"str_num": 18, "bank": "0xC1", "ptr_pos": "0x012F6E", "str_pos": "0x013287", "length": 26, "table": "normal"}
 #別名、神々の怒りと呼ばれる神秘の斧
 
-
-{"str_num": 19, "bank": "0xC1", "ptr_pos": "0x012F70", "str_pos": "0x0132A2", "length": 20}
+{"str_num": 19, "bank": "0xC1", "ptr_pos": "0x012F70", "str_pos": "0x0132A2", "length": 20, "table": "normal"}
 #地震を起こすといわれる巨大な斧
 
-
-{"str_num": 20, "bank": "0xC1", "ptr_pos": "0x012F72", "str_pos": "0x0132B7", "length": 9}
+{"str_num": 20, "bank": "0xC1", "ptr_pos": "0x012F72", "str_pos": "0x0132B7", "length": 9, "table": "normal"}
 #一般的な槍
 
-
-{"str_num": 21, "bank": "0xC1", "ptr_pos": "0x012F74", "str_pos": "0x0132C1", "length": 19}
+{"str_num": 21, "bank": "0xC1", "ptr_pos": "0x012F74", "str_pos": "0x0132C1", "length": 19, "table": "normal"}
 #柄の部分まで鉄製でできた槍
 
-
-{"str_num": 22, "bank": "0xC1", "ptr_pos": "0x012F76", "str_pos": "0x0132D5", "length": 22}
+{"str_num": 22, "bank": "0xC1", "ptr_pos": "0x012F76", "str_pos": "0x0132D5", "length": 22, "table": "normal"}
 #炎の精霊カーマインの力を宿した槍
 
-
-{"str_num": 23, "bank": "0xC1", "ptr_pos": "0x012F78", "str_pos": "0x0132EC", "length": 14}
+{"str_num": 23, "bank": "0xC1", "ptr_pos": "0x012F78", "str_pos": "0x0132EC", "length": 14, "table": "normal"}
 #毒の効果を持った槍
 
-
-{"str_num": 24, "bank": "0xC1", "ptr_pos": "0x012F7A", "str_pos": "0x0132FB", "length": 12}
+{"str_num": 24, "bank": "0xC1", "ptr_pos": "0x012F7A", "str_pos": "0x0132FB", "length": 12, "table": "normal"}
 #風の力を秘めた槍
 
-
-{"str_num": 25, "bank": "0xC1", "ptr_pos": "0x012F7C", "str_pos": "0x013308", "length": 23}
+{"str_num": 25, "bank": "0xC1", "ptr_pos": "0x012F7C", "str_pos": "0x013308", "length": 23, "table": "normal"}
 #古の神殿の守護神が使用した槍
 
-
-{"str_num": 26, "bank": "0xC1", "ptr_pos": "0x012F7E", "str_pos": "0x013320", "length": 21}
+{"str_num": 26, "bank": "0xC1", "ptr_pos": "0x012F7E", "str_pos": "0x013320", "length": 21, "table": "normal"}
 #海神がもたらしたとされる神秘の槍
 
-
-{"str_num": 27, "bank": "0xC1", "ptr_pos": "0x012F80", "str_pos": "0x013336", "length": 22}
+{"str_num": 27, "bank": "0xC1", "ptr_pos": "0x012F80", "str_pos": "0x013336", "length": 22, "table": "normal"}
 #発詳などが闇に包まれた暗黒の槍
 
-
-{"str_num": 28, "bank": "0xC1", "ptr_pos": "0x012F82", "str_pos": "0x01334D", "length": 21}
+{"str_num": 28, "bank": "0xC1", "ptr_pos": "0x012F82", "str_pos": "0x01334D", "length": 21, "table": "normal"}
 #狩りなどに使用する一般的な弓
 
-
-{"str_num": 29, "bank": "0xC1", "ptr_pos": "0x012F84", "str_pos": "0x013363", "length": 16}
+{"str_num": 29, "bank": "0xC1", "ptr_pos": "0x012F84", "str_pos": "0x013363", "length": 16, "table": "normal"}
 #戦闘用に改良された弓
 
-
-{"str_num": 30, "bank": "0xC1", "ptr_pos": "0x012F86", "str_pos": "0x013374", "length": 17}
+{"str_num": 30, "bank": "0xC1", "ptr_pos": "0x012F86", "str_pos": "0x013374", "length": 17, "table": "normal"}
 #ロングボウの威力を増した弓
 
-
-{"str_num": 31, "bank": "0xC1", "ptr_pos": "0x012F88", "str_pos": "0x013386", "length": 15}
+{"str_num": 31, "bank": "0xC1", "ptr_pos": "0x012F88", "str_pos": "0x013386", "length": 15, "table": "normal"}
 #風の力を封じ込めた弓
 
-
-{"str_num": 32, "bank": "0xC1", "ptr_pos": "0x012F8A", "str_pos": "0x013396", "length": 20}
+{"str_num": 32, "bank": "0xC1", "ptr_pos": "0x012F8A", "str_pos": "0x013396", "length": 20, "table": "normal"}
 #抜群の威力を誇る強力な弓
 
-
-{"str_num": 33, "bank": "0xC1", "ptr_pos": "0x012F8C", "str_pos": "0x0133AB", "length": 27}
+{"str_num": 33, "bank": "0xC1", "ptr_pos": "0x012F8C", "str_pos": "0x0133AB", "length": 27, "table": "normal"}
 #炎の象徴、不死島の力を封じ込めた弓
 
-
-{"str_num": 34, "bank": "0xC1", "ptr_pos": "0x012F8E", "str_pos": "0x0133C7", "length": 23}
+{"str_num": 34, "bank": "0xC1", "ptr_pos": "0x012F8E", "str_pos": "0x0133C7", "length": 23, "table": "normal"}
 #堕天使がもたらしたとされる天界の弓
 
-
-{"str_num": 35, "bank": "0xC1", "ptr_pos": "0x012F90", "str_pos": "0x0133DF", "length": 22}
+{"str_num": 35, "bank": "0xC1", "ptr_pos": "0x012F90", "str_pos": "0x0133DF", "length": 22, "table": "normal"}
 #シャニル皇国に伝わる暗殺者用の弓
 
-
-{"str_num": 36, "bank": "0xC1", "ptr_pos": "0x012F92", "str_pos": "0x0133F6", "length": 8}
+{"str_num": 36, "bank": "0xC1", "ptr_pos": "0x012F92", "str_pos": "0x0133F6", "length": 8, "table": "normal"}
 #木でできた杖
 
-
-{"str_num": 37, "bank": "0xC1", "ptr_pos": "0x012F94", "str_pos": "0x0133FF", "length": 18}
+{"str_num": 37, "bank": "0xC1", "ptr_pos": "0x012F94", "str_pos": "0x0133FF", "length": 18, "table": "normal"}
 #装飾を施し豪華になった杖
 
-
-{"str_num": 38, "bank": "0xC1", "ptr_pos": "0x012F96", "str_pos": "0x013412", "length": 20}
+{"str_num": 38, "bank": "0xC1", "ptr_pos": "0x012F96", "str_pos": "0x013412", "length": 20, "table": "normal"}
 #魔導士が古くから愛用する杖
 
-
-{"str_num": 39, "bank": "0xC1", "ptr_pos": "0x012F98", "str_pos": "0x013427", "length": 20}
+{"str_num": 39, "bank": "0xC1", "ptr_pos": "0x012F98", "str_pos": "0x013427", "length": 20, "table": "normal"}
 #疲れをとる神秘の力を秘めた杖
 
-
-{"str_num": 40, "bank": "0xC1", "ptr_pos": "0x012F9A", "str_pos": "0x01343C", "length": 21}
+{"str_num": 40, "bank": "0xC1", "ptr_pos": "0x012F9A", "str_pos": "0x01343C", "length": 21, "table": "normal"}
 #光のクリスタルを装飾にあしらった杖
 
-
-{"str_num": 41, "bank": "0xC1", "ptr_pos": "0x012F9C", "str_pos": "0x013452", "length": 12}
+{"str_num": 41, "bank": "0xC1", "ptr_pos": "0x012F9C", "str_pos": "0x013452", "length": 12, "table": "normal"}
 #蛇の形を象った杖
 
-
-{"str_num": 42, "bank": "0xC1", "ptr_pos": "0x012F9E", "str_pos": "0x01345F", "length": 19}
+{"str_num": 42, "bank": "0xC1", "ptr_pos": "0x012F9E", "str_pos": "0x01345F", "length": 19, "table": "normal"}
 #十字架を装飾にあしらった杖
 
-
-{"str_num": 43, "bank": "0xC1", "ptr_pos": "0x012FA0", "str_pos": "0x013473", "length": 22}
+{"str_num": 43, "bank": "0xC1", "ptr_pos": "0x012FA0", "str_pos": "0x013473", "length": 22, "table": "normal"}
 #偉大なる賢者が使用したとされる杖
 
-
-{"str_num": 44, "bank": "0xC1", "ptr_pos": "0x012FA2", "str_pos": "0x01348A", "length": 19}
+{"str_num": 44, "bank": "0xC1", "ptr_pos": "0x012FA2", "str_pos": "0x01348A", "length": 19, "table": "normal"}
 #木でできた打撃専用の武器
 
-
-{"str_num": 45, "bank": "0xC1", "ptr_pos": "0x012FA4", "str_pos": "0x01349E", "length": 19}
+{"str_num": 45, "bank": "0xC1", "ptr_pos": "0x012FA4", "str_pos": "0x01349E", "length": 19, "table": "normal"}
 #鉄でできた打撃専用の武器
 
-
-{"str_num": 46, "bank": "0xC1", "ptr_pos": "0x012FA6", "str_pos": "0x0134B2", "length": 14}
+{"str_num": 46, "bank": "0xC1", "ptr_pos": "0x012FA6", "str_pos": "0x0134B2", "length": 14, "table": "normal"}
 #巨大な殺人用ハンマー
 
-
-{"str_num": 47, "bank": "0xC1", "ptr_pos": "0x012FA8", "str_pos": "0x0134C1", "length": 20}
+{"str_num": 47, "bank": "0xC1", "ptr_pos": "0x012FA8", "str_pos": "0x0134C1", "length": 20, "table": "normal"}
 #鎖でつながれた鉄球がついた武器
 
-
-{"str_num": 48, "bank": "0xC1", "ptr_pos": "0x012FAA", "str_pos": "0x0134D6", "length": 16}
+{"str_num": 48, "bank": "0xC1", "ptr_pos": "0x012FAA", "str_pos": "0x0134D6", "length": 16, "table": "normal"}
 #炎の力を封じ込めたメイス
 
-
-{"str_num": 49, "bank": "0xC1", "ptr_pos": "0x012FAC", "str_pos": "0x0134E7", "length": 18}
+{"str_num": 49, "bank": "0xC1", "ptr_pos": "0x012FAC", "str_pos": "0x0134E7", "length": 18, "table": "normal"}
 #死を呼ぶといわれる巨大なメイス
 
-
-{"str_num": 50, "bank": "0xC1", "ptr_pos": "0x012FAE", "str_pos": "0x0134FA", "length": 21}
+{"str_num": 50, "bank": "0xC1", "ptr_pos": "0x012FAE", "str_pos": "0x0134FA", "length": 21, "table": "normal"}
 #古の巨人トールが使用したハンマー
 
-
-{"str_num": 51, "bank": "0xC1", "ptr_pos": "0x012FB0", "str_pos": "0x013510", "length": 18}
+{"str_num": 51, "bank": "0xC1", "ptr_pos": "0x012FB0", "str_pos": "0x013510", "length": 18, "table": "normal"}
 #地割れを起こす巨大なハンマー
 
-
-{"str_num": 52, "bank": "0xC1", "ptr_pos": "0x012FB2", "str_pos": "0x013523", "length": 7}
+{"str_num": 52, "bank": "0xC1", "ptr_pos": "0x012FB2", "str_pos": "0x013523", "length": 7, "table": "normal"}
 #普通のムチ
 
-
-{"str_num": 53, "bank": "0xC1", "ptr_pos": "0x012FB4", "str_pos": "0x01352B", "length": 11}
+{"str_num": 53, "bank": "0xC1", "ptr_pos": "0x012FB4", "str_pos": "0x01352B", "length": 11, "table": "normal"}
 #バラの刺をつけたムチ
 
-
-{"str_num": 54, "bank": "0xC1", "ptr_pos": "0x012FB6", "str_pos": "0x013537", "length": 18}
+{"str_num": 54, "bank": "0xC1", "ptr_pos": "0x012FB6", "str_pos": "0x013537", "length": 18, "table": "normal"}
 #ツルが3本ついている変わったムチ
 
-
-{"str_num": 55, "bank": "0xC1", "ptr_pos": "0x012FB8", "str_pos": "0x01354A", "length": 18}
+{"str_num": 55, "bank": "0xC1", "ptr_pos": "0x012FB8", "str_pos": "0x01354A", "length": 18, "table": "normal"}
 #闇の力に染まった暗黒のムチ
 
-
-{"str_num": 56, "bank": "0xC1", "ptr_pos": "0x012FBA", "str_pos": "0x01355D", "length": 8}
+{"str_num": 56, "bank": "0xC1", "ptr_pos": "0x012FBA", "str_pos": "0x01355D", "length": 8, "table": "normal"}
 #鉄でできた爪
 
-
-{"str_num": 57, "bank": "0xC1", "ptr_pos": "0x012FBC", "str_pos": "0x013566", "length": 15}
+{"str_num": 57, "bank": "0xC1", "ptr_pos": "0x012FBC", "str_pos": "0x013566", "length": 15, "table": "normal"}
 #暗殺者が使用する爪
 
-
-{"str_num": 58, "bank": "0xC1", "ptr_pos": "0x012FBE", "str_pos": "0x013576", "length": 11}
+{"str_num": 58, "bank": "0xC1", "ptr_pos": "0x012FBE", "str_pos": "0x013576", "length": 11, "table": "normal"}
 #毒を仕込んだ爪
 
-
-{"str_num": 59, "bank": "0xC1", "ptr_pos": "0x012FC0", "str_pos": "0x013582", "length": 25}
+{"str_num": 59, "bank": "0xC1", "ptr_pos": "0x012FC0", "str_pos": "0x013582", "length": 25, "table": "normal"}
 #黒猫の呪いを込めて作成された闇の爪
 
-
-{"str_num": 60, "bank": "0xC1", "ptr_pos": "0x012FC2", "str_pos": "0x01359C", "length": 19}
+{"str_num": 60, "bank": "0xC1", "ptr_pos": "0x012FC2", "str_pos": "0x01359C", "length": 19, "table": "normal"}
 #虎の爪を用いて作成された爪
 
-
-{"str_num": 61, "bank": "0xC1", "ptr_pos": "0x012FC4", "str_pos": "0x0135B0", "length": 17}
+{"str_num": 61, "bank": "0xC1", "ptr_pos": "0x012FC4", "str_pos": "0x0135B0", "length": 17, "table": "normal"}
 #雷神の力を封じ込めた爪
 
-
-{"str_num": 62, "bank": "0xC1", "ptr_pos": "0x012FC6", "str_pos": "0x0135C2", "length": 15}
+{"str_num": 62, "bank": "0xC1", "ptr_pos": "0x012FC6", "str_pos": "0x0135C2", "length": 15, "table": "normal"}
 #龍の牙で作成された爪
 
-
-{"str_num": 63, "bank": "0xC1", "ptr_pos": "0x012FC8", "str_pos": "0x0135D2", "length": 20}
+{"str_num": 63, "bank": "0xC1", "ptr_pos": "0x012FC8", "str_pos": "0x0135D2", "length": 20, "table": "normal"}
 #オリハルコンを使用した強力な爪
 
-
-{"str_num": 64, "bank": "0xC1", "ptr_pos": "0x012FCA", "str_pos": "0x0135E7", "length": 22}
+{"str_num": 64, "bank": "0xC1", "ptr_pos": "0x012FCA", "str_pos": "0x0135E7", "length": 22, "table": "normal"}
 #ほとんどの人間が着ている通常の服
 
-
-{"str_num": 65, "bank": "0xC1", "ptr_pos": "0x012FCC", "str_pos": "0x0135FE", "length": 17}
+{"str_num": 65, "bank": "0xC1", "ptr_pos": "0x012FCC", "str_pos": "0x0135FE", "length": 17, "table": "normal"}
 #魔導士などが愛用する服
 
-
-{"str_num": 66, "bank": "0xC1", "ptr_pos": "0x012FCE", "str_pos": "0x013610", "length": 20}
+{"str_num": 66, "bank": "0xC1", "ptr_pos": "0x012FCE", "str_pos": "0x013610", "length": 20, "table": "normal"}
 #女性が愛用する可愛らしい服
 
-
-{"str_num": 67, "bank": "0xC1", "ptr_pos": "0x012FD0", "str_pos": "0x013625", "length": 18}
+{"str_num": 67, "bank": "0xC1", "ptr_pos": "0x012FD0", "str_pos": "0x013625", "length": 18, "table": "normal"}
 #高貴な女性が愛用する服
 
-
-{"str_num": 68, "bank": "0xC1", "ptr_pos": "0x012FD2", "str_pos": "0x013638", "length": 26}
+{"str_num": 68, "bank": "0xC1", "ptr_pos": "0x012FD2", "str_pos": "0x013638", "length": 26, "table": "normal"}
 #一般兵が着用する、皮で作成された鎧
 
-
-{"str_num": 69, "bank": "0xC1", "ptr_pos": "0x012FD4", "str_pos": "0x013653", "length": 14}
+{"str_num": 69, "bank": "0xC1", "ptr_pos": "0x012FD4", "str_pos": "0x013653", "length": 14, "table": "normal"}
 #固いウロコで作られた鎧
 
-
-{"str_num": 70, "bank": "0xC1", "ptr_pos": "0x012FD6", "str_pos": "0x013662", "length": 10}
+{"str_num": 70, "bank": "0xC1", "ptr_pos": "0x012FD6", "str_pos": "0x013662", "length": 10, "table": "normal"}
 #鎖で作られた鎧
 
-
-{"str_num": 71, "bank": "0xC1", "ptr_pos": "0x012FD8", "str_pos": "0x01366D", "length": 21}
+{"str_num": 71, "bank": "0xC1", "ptr_pos": "0x012FD8", "str_pos": "0x01366D", "length": 21, "table": "normal"}
 #鉄より軽い材質で作成された鎧
 
-
-{"str_num": 72, "bank": "0xC1", "ptr_pos": "0x012FDA", "str_pos": "0x013683", "length": 15}
+{"str_num": 72, "bank": "0xC1", "ptr_pos": "0x012FDA", "str_pos": "0x013683", "length": 15, "table": "normal"}
 #全身を覆う強固な鎧
 
-
-{"str_num": 73, "bank": "0xC1", "ptr_pos": "0x012FDC", "str_pos": "0x013693", "length": 19}
+{"str_num": 73, "bank": "0xC1", "ptr_pos": "0x012FDC", "str_pos": "0x013693", "length": 19, "table": "normal"}
 #上級魔導士が愛用する服
 
-
-{"str_num": 74, "bank": "0xC1", "ptr_pos": "0x012FDE", "str_pos": "0x0136A7", "length": 22}
+{"str_num": 74, "bank": "0xC1", "ptr_pos": "0x012FDE", "str_pos": "0x0136A7", "length": 22, "table": "normal"}
 #古の賢者が使用していた聖なる服
 
-
-{"str_num": 75, "bank": "0xC1", "ptr_pos": "0x012FE0", "str_pos": "0x0136BE", "length": 20}
+{"str_num": 75, "bank": "0xC1", "ptr_pos": "0x012FE0", "str_pos": "0x0136BE", "length": 20, "table": "normal"}
 #闇の力を織り込んだ邪悪な服
 
-
-{"str_num": 76, "bank": "0xC1", "ptr_pos": "0x012FE2", "str_pos": "0x0136D3", "length": 22}
+{"str_num": 76, "bank": "0xC1", "ptr_pos": "0x012FE2", "str_pos": "0x0136D3", "length": 22, "table": "normal"}
 #天からもたらされたといわれる神秘の服
 
-
-{"str_num": 77, "bank": "0xC1", "ptr_pos": "0x012FE4", "str_pos": "0x0136EA", "length": 13}
+{"str_num": 77, "bank": "0xC1", "ptr_pos": "0x012FE4", "str_pos": "0x0136EA", "length": 13, "table": "normal"}
 #かわいらしいきぐるみの服
 
-
-{"str_num": 78, "bank": "0xC1", "ptr_pos": "0x012FE6", "str_pos": "0x0136F8", "length": 17}
+{"str_num": 78, "bank": "0xC1", "ptr_pos": "0x012FE6", "str_pos": "0x0136F8", "length": 17, "table": "normal"}
 #炎の力を秘めた神秘の鎧
 
-
-{"str_num": 79, "bank": "0xC1", "ptr_pos": "0x012FE8", "str_pos": "0x01370A", "length": 17}
+{"str_num": 79, "bank": "0xC1", "ptr_pos": "0x012FE8", "str_pos": "0x01370A", "length": 17, "table": "normal"}
 #氷の力を秘めた神秘の鎧
 
-
-{"str_num": 80, "bank": "0xC1", "ptr_pos": "0x012FEA", "str_pos": "0x01371C", "length": 17}
+{"str_num": 80, "bank": "0xC1", "ptr_pos": "0x012FEA", "str_pos": "0x01371C", "length": 17, "table": "normal"}
 #風の力を秘めた神秘の鎧
 
-
-{"str_num": 81, "bank": "0xC1", "ptr_pos": "0x012FEC", "str_pos": "0x01372E", "length": 18}
+{"str_num": 81, "bank": "0xC1", "ptr_pos": "0x012FEC", "str_pos": "0x01372E", "length": 18, "table": "normal"}
 #大地の力を秘めた神秘の鎧
 
-
-{"str_num": 82, "bank": "0xC1", "ptr_pos": "0x012FEE", "str_pos": "0x013741", "length": 23}
+{"str_num": 82, "bank": "0xC1", "ptr_pos": "0x012FEE", "str_pos": "0x013741", "length": 23, "table": "normal"}
 #龍のウロコを鎧の裏側に使用した鎧
 
-
-{"str_num": 83, "bank": "0xC1", "ptr_pos": "0x012FF0", "str_pos": "0x013759", "length": 14}
+{"str_num": 83, "bank": "0xC1", "ptr_pos": "0x012FF0", "str_pos": "0x013759", "length": 14, "table": "normal"}
 #プラチナで作成された鎧
 
-
-{"str_num": 84, "bank": "0xC1", "ptr_pos": "0x012FF2", "str_pos": "0x013768", "length": 25}
+{"str_num": 84, "bank": "0xC1", "ptr_pos": "0x012FF2", "str_pos": "0x013768", "length": 25, "table": "normal"}
 #伝説の戦士が愛用した血塗られた鎧
 
-
-{"str_num": 85, "bank": "0xC1", "ptr_pos": "0x012FF4", "str_pos": "0x013782", "length": 22}
+{"str_num": 85, "bank": "0xC1", "ptr_pos": "0x012FF4", "str_pos": "0x013782", "length": 22, "table": "normal"}
 #黄泉の悪魔が作成したとされる鎧
 
-
-{"str_num": 86, "bank": "0xC1", "ptr_pos": "0x012FF6", "str_pos": "0x013799", "length": 21}
+{"str_num": 86, "bank": "0xC1", "ptr_pos": "0x012FF6", "str_pos": "0x013799", "length": 21, "table": "normal"}
 #装備した者の力を増幅させる鎧
 
-
-{"str_num": 87, "bank": "0xC1", "ptr_pos": "0x012FF8", "str_pos": "0x0137AF", "length": 15}
+{"str_num": 87, "bank": "0xC1", "ptr_pos": "0x012FF8", "str_pos": "0x0137AF", "length": 15, "table": "normal"}
 #全て金で作成された鎧
 
-
-{"str_num": 88, "bank": "0xC1", "ptr_pos": "0x012FFA", "str_pos": "0x0137BF", "length": 25}
+{"str_num": 88, "bank": "0xC1", "ptr_pos": "0x012FFA", "str_pos": "0x0137BF", "length": 25, "table": "normal"}
 #装備した者の敏捷力を増幅させる鎧
 
-
-{"str_num": 89, "bank": "0xC1", "ptr_pos": "0x012FFC", "str_pos": "0x0137D9", "length": 27}
+{"str_num": 89, "bank": "0xC1", "ptr_pos": "0x012FFC", "str_pos": "0x0137D9", "length": 27, "table": "normal"}
 #幸運の鎧と呼ばれ必殺の一撃が出やすい
 
-
-{"str_num": 90, "bank": "0xC1", "ptr_pos": "0x012FFE", "str_pos": "0x0137F5", "length": 14}
+{"str_num": 90, "bank": "0xC1", "ptr_pos": "0x012FFE", "str_pos": "0x0137F5", "length": 14, "table": "normal"}
 #戦闘用に作られた鎧
 
-
-{"str_num": 91, "bank": "0xC1", "ptr_pos": "0x013000", "str_pos": "0x013804", "length": 14}
+{"str_num": 91, "bank": "0xC1", "ptr_pos": "0x013000", "str_pos": "0x013804", "length": 14, "table": "normal"}
 #バトルアーマーの究極形
 
-
-{"str_num": 92, "bank": "0xC1", "ptr_pos": "0x013002", "str_pos": "0x013813", "length": 24}
+{"str_num": 92, "bank": "0xC1", "ptr_pos": "0x013002", "str_pos": "0x013813", "length": 24, "table": "normal"}
 #古代の英雄、ゴーディスが愛用した鎧
 
-
-{"str_num": 93, "bank": "0xC1", "ptr_pos": "0x013004", "str_pos": "0x01382C", "length": 27}
+{"str_num": 93, "bank": "0xC1", "ptr_pos": "0x013004", "str_pos": "0x01382C", "length": 27, "table": "normal"}
 #受けた攻撃の半分を相手に返す魔の鎧
 
-
-{"str_num": 94, "bank": "0xC1", "ptr_pos": "0x013006", "str_pos": "0x013848", "length": 19}
+{"str_num": 94, "bank": "0xC1", "ptr_pos": "0x013006", "str_pos": "0x013848", "length": 19, "table": "normal"}
 #神龍が姿を変えた伝説の鎧
 
-
-{"str_num": 95, "bank": "0xC1", "ptr_pos": "0x013008", "str_pos": "0x01385C", "length": 25}
+{"str_num": 95, "bank": "0xC1", "ptr_pos": "0x013008", "str_pos": "0x01385C", "length": 25, "table": "normal"}
 #光の鎧と呼ばれ、闇をはらう効力を持つ
 
-
-{"str_num": 96, "bank": "0xC1", "ptr_pos": "0x01300A", "str_pos": "0x013876", "length": 7}
+{"str_num": 96, "bank": "0xC1", "ptr_pos": "0x01300A", "str_pos": "0x013876", "length": 7, "table": "normal"}
 #小型の盾
 
-
-{"str_num": 97, "bank": "0xC1", "ptr_pos": "0x01300C", "str_pos": "0x01387E", "length": 17}
+{"str_num": 97, "bank": "0xC1", "ptr_pos": "0x01300C", "str_pos": "0x01387E", "length": 17, "table": "normal"}
 #一般兵士が使用する盾
 
-
-{"str_num": 98, "bank": "0xC1", "ptr_pos": "0x01300E", "str_pos": "0x013890", "length": 20}
+{"str_num": 98, "bank": "0xC1", "ptr_pos": "0x01300E", "str_pos": "0x013890", "length": 20, "table": "normal"}
 #全身を覆い隠せるほどの長い盾
 
-
-{"str_num": 99, "bank": "0xC1", "ptr_pos": "0x013010", "str_pos": "0x0138A5", "length": 20}
+{"str_num": 99, "bank": "0xC1", "ptr_pos": "0x013010", "str_pos": "0x0138A5", "length": 20, "table": "normal"}
 #龍のウロコを使用して作られた盾
 
-
-{"str_num": 100, "bank": "0xC1", "ptr_pos": "0x013012", "str_pos": "0x0138BA", "length": 17}
+{"str_num": 100, "bank": "0xC1", "ptr_pos": "0x013012", "str_pos": "0x0138BA", "length": 17, "table": "normal"}
 #炎の力を秘めた神秘の盾
 
-
-{"str_num": 101, "bank": "0xC1", "ptr_pos": "0x013014", "str_pos": "0x0138CC", "length": 17}
+{"str_num": 101, "bank": "0xC1", "ptr_pos": "0x013014", "str_pos": "0x0138CC", "length": 17, "table": "normal"}
 #氷の力を秘めた神秘の盾
 
-
-{"str_num": 102, "bank": "0xC1", "ptr_pos": "0x013016", "str_pos": "0x0138DE", "length": 17}
+{"str_num": 102, "bank": "0xC1", "ptr_pos": "0x013016", "str_pos": "0x0138DE", "length": 17, "table": "normal"}
 #風の力を秘めた神秘の盾
 
-
-{"str_num": 103, "bank": "0xC1", "ptr_pos": "0x013018", "str_pos": "0x0138F0", "length": 18}
+{"str_num": 103, "bank": "0xC1", "ptr_pos": "0x013018", "str_pos": "0x0138F0", "length": 18, "table": "normal"}
 #大地の力を秘めた神秘の盾
 
-
-{"str_num": 104, "bank": "0xC1", "ptr_pos": "0x01301A", "str_pos": "0x013903", "length": 21}
+{"str_num": 104, "bank": "0xC1", "ptr_pos": "0x01301A", "str_pos": "0x013903", "length": 21, "table": "normal"}
 #接近戦用に軽量に作られた盾
 
-
-{"str_num": 105, "bank": "0xC1", "ptr_pos": "0x01301C", "str_pos": "0x013919", "length": 13}
+{"str_num": 105, "bank": "0xC1", "ptr_pos": "0x01301C", "str_pos": "0x013919", "length": 13, "table": "normal"}
 #全て金で作られた盾
 
-
-{"str_num": 106, "bank": "0xC1", "ptr_pos": "0x01301E", "str_pos": "0x013927", "length": 12}
+{"str_num": 106, "bank": "0xC1", "ptr_pos": "0x01301E", "str_pos": "0x013927", "length": 12, "table": "normal"}
 #プラチナで作られた盾
 
-
-{"str_num": 107, "bank": "0xC1", "ptr_pos": "0x013020", "str_pos": "0x013934", "length": 25}
+{"str_num": 107, "bank": "0xC1", "ptr_pos": "0x013020", "str_pos": "0x013934", "length": 25, "table": "normal"}
 #魔界の戦士が愛用した血塗られた盾
 
-
-{"str_num": 108, "bank": "0xC1", "ptr_pos": "0x013022", "str_pos": "0x01394E", "length": 23}
+{"str_num": 108, "bank": "0xC1", "ptr_pos": "0x013022", "str_pos": "0x01394E", "length": 23, "table": "normal"}
 #堕天使ダリエルが使用したとされる盾
 
-
-{"str_num": 109, "bank": "0xC1", "ptr_pos": "0x013024", "str_pos": "0x013966", "length": 20}
+{"str_num": 109, "bank": "0xC1", "ptr_pos": "0x013024", "str_pos": "0x013966", "length": 20, "table": "normal"}
 #魔界に眠るといわれる暗黒の盾
 
-
-{"str_num": 110, "bank": "0xC1", "ptr_pos": "0x013026", "str_pos": "0x01397B", "length": 22}
+{"str_num": 110, "bank": "0xC1", "ptr_pos": "0x013026", "str_pos": "0x01397B", "length": 22, "table": "normal"}
 #勇者クランズが使用した伝説の盾
 
-
-{"str_num": 111, "bank": "0xC1", "ptr_pos": "0x013028", "str_pos": "0x013992", "length": 18}
+{"str_num": 111, "bank": "0xC1", "ptr_pos": "0x013028", "str_pos": "0x013992", "length": 18, "table": "normal"}
 #魔の力をはらう光を宿した盾
 
-
-{"str_num": 112, "bank": "0xC1", "ptr_pos": "0x01302A", "str_pos": "0x0139A5", "length": 11}
+{"str_num": 112, "bank": "0xC1", "ptr_pos": "0x01302A", "str_pos": "0x0139A5", "length": 11, "table": "normal"}
 #FPを15回復する
 
-
-{"str_num": 113, "bank": "0xC1", "ptr_pos": "0x01302C", "str_pos": "0x0139B1", "length": 11}
+{"str_num": 113, "bank": "0xC1", "ptr_pos": "0x01302C", "str_pos": "0x0139B1", "length": 11, "table": "normal"}
 #FPを40回復する
 
-
-{"str_num": 114, "bank": "0xC1", "ptr_pos": "0x01302E", "str_pos": "0x0139BD", "length": 13}
+{"str_num": 114, "bank": "0xC1", "ptr_pos": "0x01302E", "str_pos": "0x0139BD", "length": 13, "table": "normal"}
 #FPを完全回復する
 
-
-{"str_num": 115, "bank": "0xC1", "ptr_pos": "0x013030", "str_pos": "0x0139CB", "length": 8}
+{"str_num": 115, "bank": "0xC1", "ptr_pos": "0x013030", "str_pos": "0x0139CB", "length": 8, "table": "normal"}
 #麻痺をなおす
 
-
-{"str_num": 116, "bank": "0xC1", "ptr_pos": "0x013032", "str_pos": "0x0139D4", "length": 6}
+{"str_num": 116, "bank": "0xC1", "ptr_pos": "0x013032", "str_pos": "0x0139D4", "length": 6, "table": "normal"}
 #毒をなおす
 
-
-{"str_num": 117, "bank": "0xC1", "ptr_pos": "0x013034", "str_pos": "0x0139DB", "length": 8}
+{"str_num": 117, "bank": "0xC1", "ptr_pos": "0x013034", "str_pos": "0x0139DB", "length": 8, "table": "normal"}
 #沈黙をなおす
 
-
-{"str_num": 118, "bank": "0xC1", "ptr_pos": "0x013036", "str_pos": "0x0139E4", "length": 8}
+{"str_num": 118, "bank": "0xC1", "ptr_pos": "0x013036", "str_pos": "0x0139E4", "length": 8, "table": "normal"}
 #石化をなおす
 
-
-{"str_num": 119, "bank": "0xC1", "ptr_pos": "0x013038", "str_pos": "0x0139ED", "length": 8}
+{"str_num": 119, "bank": "0xC1", "ptr_pos": "0x013038", "str_pos": "0x0139ED", "length": 8, "table": "normal"}
 #混乱回復
 
-
-{"str_num": 120, "bank": "0xC1", "ptr_pos": "0x01303A", "str_pos": "0x0139F6", "length": 22}
+{"str_num": 120, "bank": "0xC1", "ptr_pos": "0x01303A", "str_pos": "0x0139F6", "length": 22, "table": "normal"}
 #石化以外の状態を完全になおす
 
-
-{"str_num": 121, "bank": "0xC1", "ptr_pos": "0x01303C", "str_pos": "0x013A0D", "length": 19}
+{"str_num": 121, "bank": "0xC1", "ptr_pos": "0x01303C", "str_pos": "0x013A0D", "length": 19, "table": "normal"}
 #戦闘不能を回復（FPは1）
 
-
-{"str_num": 122, "bank": "0xC1", "ptr_pos": "0x01303E", "str_pos": "0x013A21", "length": 25}
+{"str_num": 122, "bank": "0xC1", "ptr_pos": "0x01303E", "str_pos": "0x013A21", "length": 25, "table": "normal"}
 #戦闘不能を回復（FP完全回復）
 
-
-{"str_num": 123, "bank": "0xC1", "ptr_pos": "0x013040", "str_pos": "0x013A3B", "length": 17}
+{"str_num": 123, "bank": "0xC1", "ptr_pos": "0x013040", "str_pos": "0x013A3B", "length": 17, "table": "normal"}
 #ボス以外の戦闘から逃げる
 
-
-{"str_num": 124, "bank": "0xC1", "ptr_pos": "0x013042", "str_pos": "0x013A4D", "length": 12}
+{"str_num": 124, "bank": "0xC1", "ptr_pos": "0x013042", "str_pos": "0x013A4D", "length": 12, "table": "normal"}
 #炎の攻撃を与える
 
-
-{"str_num": 125, "bank": "0xC1", "ptr_pos": "0x013044", "str_pos": "0x013A5A", "length": 12}
+{"str_num": 125, "bank": "0xC1", "ptr_pos": "0x013044", "str_pos": "0x013A5A", "length": 12, "table": "normal"}
 #氷の攻撃を与える
 
-
-{"str_num": 126, "bank": "0xC1", "ptr_pos": "0x013046", "str_pos": "0x013A67", "length": 12}
+{"str_num": 126, "bank": "0xC1", "ptr_pos": "0x013046", "str_pos": "0x013A67", "length": 12, "table": "normal"}
 #風の攻撃を与える
 
-
-{"str_num": 127, "bank": "0xC1", "ptr_pos": "0x013048", "str_pos": "0x013A74", "length": 13}
+{"str_num": 127, "bank": "0xC1", "ptr_pos": "0x013048", "str_pos": "0x013A74", "length": 13, "table": "normal"}
 #大地の攻撃を与える
 
-
-{"str_num": 128, "bank": "0xC1", "ptr_pos": "0x01304A", "str_pos": "0x013A82", "length": 14}
+{"str_num": 128, "bank": "0xC1", "ptr_pos": "0x01304A", "str_pos": "0x013A82", "length": 14, "table": "normal"}
 #味方の素早さをあげる
 
-
-{"str_num": 129, "bank": "0xC1", "ptr_pos": "0x01304C", "str_pos": "0x013A91", "length": 14}
+{"str_num": 129, "bank": "0xC1", "ptr_pos": "0x01304C", "str_pos": "0x013A91", "length": 14, "table": "normal"}
 #敵の防御力を下げる
 
-
-{"str_num": 130, "bank": "0xC1", "ptr_pos": "0x01304E", "str_pos": "0x013AA0", "length": 11}
+{"str_num": 130, "bank": "0xC1", "ptr_pos": "0x01304E", "str_pos": "0x013AA0", "length": 11, "table": "normal"}
 #敵の目をくらませる
 
-
-{"str_num": 131, "bank": "0xC1", "ptr_pos": "0x013050", "str_pos": "0x013AAC", "length": 5}
+{"str_num": 131, "bank": "0xC1", "ptr_pos": "0x013050", "str_pos": "0x013AAC", "length": 5, "table": "normal"}
 #生の肉
 
-
-{"str_num": 132, "bank": "0xC1", "ptr_pos": "0x013052", "str_pos": "0x013AB2", "length": 6}
+{"str_num": 132, "bank": "0xC1", "ptr_pos": "0x013052", "str_pos": "0x013AB2", "length": 6, "table": "normal"}
 #焼いた肉
 
-
-{"str_num": 133, "bank": "0xC1", "ptr_pos": "0x013054", "str_pos": "0x013AB9", "length": 15}
+{"str_num": 133, "bank": "0xC1", "ptr_pos": "0x013054", "str_pos": "0x013AB9", "length": 15, "table": "normal"}
 #棒の先に火をつけてなげる
 
-
-{"str_num": 134, "bank": "0xC1", "ptr_pos": "0x013056", "str_pos": "0x013AC9", "length": 7}
+{"str_num": 134, "bank": "0xC1", "ptr_pos": "0x013056", "str_pos": "0x013AC9", "length": 7, "table": "normal"}
 #普通の酒
 
-
-{"str_num": 135, "bank": "0xC1", "ptr_pos": "0x013058", "str_pos": "0x013AD1", "length": 14}
+{"str_num": 135, "bank": "0xC1", "ptr_pos": "0x013058", "str_pos": "0x013AD1", "length": 14, "table": "normal"}
 #アンデットを一撃で倒す
 
-
-{"str_num": 136, "bank": "0xC1", "ptr_pos": "0x01305A", "str_pos": "0x013AE0", "length": 7}
+{"str_num": 136, "bank": "0xC1", "ptr_pos": "0x01305A", "str_pos": "0x013AE0", "length": 7, "table": "normal"}
 #飛び道具
 
-
-{"str_num": 137, "bank": "0xC1", "ptr_pos": "0x01305C", "str_pos": "0x013AE8", "length": 12}
+{"str_num": 137, "bank": "0xC1", "ptr_pos": "0x01305C", "str_pos": "0x013AE8", "length": 12, "table": "normal"}
 #なげてダメージを与える
 
-
-{"str_num": 138, "bank": "0xC1", "ptr_pos": "0x01305E", "str_pos": "0x013AF5", "length": 10}
+{"str_num": 138, "bank": "0xC1", "ptr_pos": "0x01305E", "str_pos": "0x013AF5", "length": 10, "table": "normal"}
 #敵に毒を与える
 
-
-{"str_num": 139, "bank": "0xC1", "ptr_pos": "0x013060", "str_pos": "0x013B00", "length": 8}
+{"str_num": 139, "bank": "0xC1", "ptr_pos": "0x013060", "str_pos": "0x013B00", "length": 8, "table": "normal"}
 #敵をマヒさせる
 
-
-{"str_num": 140, "bank": "0xC1", "ptr_pos": "0x013062", "str_pos": "0x013B09", "length": 15}
+{"str_num": 140, "bank": "0xC1", "ptr_pos": "0x013062", "str_pos": "0x013B09", "length": 15, "table": "normal"}
 #魔法防御力を上げる
 
-
-{"str_num": 141, "bank": "0xC1", "ptr_pos": "0x013064", "str_pos": "0x013B19", "length": 19}
+{"str_num": 141, "bank": "0xC1", "ptr_pos": "0x013064", "str_pos": "0x013B19", "length": 19, "table": "normal"}
 #アイテム141の助けてーーーーーーー
 
-
-{"str_num": 142, "bank": "0xC1", "ptr_pos": "0x013066", "str_pos": "0x013B2D", "length": 19}
+{"str_num": 142, "bank": "0xC1", "ptr_pos": "0x013066", "str_pos": "0x013B2D", "length": 19, "table": "normal"}
 #アイテム142の助けてーーーーーーー
 
-
-{"str_num": 143, "bank": "0xC1", "ptr_pos": "0x013068", "str_pos": "0x013B41", "length": 19}
+{"str_num": 143, "bank": "0xC1", "ptr_pos": "0x013068", "str_pos": "0x013B41", "length": 19, "table": "normal"}
 #アイテム143の助けてーーーーーーー
 
-
-{"str_num": 144, "bank": "0xC1", "ptr_pos": "0x01306A", "str_pos": "0x013B55", "length": 19}
+{"str_num": 144, "bank": "0xC1", "ptr_pos": "0x01306A", "str_pos": "0x013B55", "length": 19, "table": "normal"}
 #アイテム144の助けてーーーーーーー
 
-
-{"str_num": 145, "bank": "0xC1", "ptr_pos": "0x01306C", "str_pos": "0x013B69", "length": 19}
+{"str_num": 145, "bank": "0xC1", "ptr_pos": "0x01306C", "str_pos": "0x013B69", "length": 19, "table": "normal"}
 #アイテム145の助けてーーーーーーー
 
-
-{"str_num": 146, "bank": "0xC1", "ptr_pos": "0x01306E", "str_pos": "0x013B7D", "length": 19}
+{"str_num": 146, "bank": "0xC1", "ptr_pos": "0x01306E", "str_pos": "0x013B7D", "length": 19, "table": "normal"}
 #アイテム146の助けてーーーーーーー
 
-
-{"str_num": 147, "bank": "0xC1", "ptr_pos": "0x013070", "str_pos": "0x013B91", "length": 19}
+{"str_num": 147, "bank": "0xC1", "ptr_pos": "0x013070", "str_pos": "0x013B91", "length": 19, "table": "normal"}
 #アイテム147の助けてーーーーーーー
 
-
-{"str_num": 148, "bank": "0xC1", "ptr_pos": "0x013072", "str_pos": "0x013BA5", "length": 19}
+{"str_num": 148, "bank": "0xC1", "ptr_pos": "0x013072", "str_pos": "0x013BA5", "length": 19, "table": "normal"}
 #アイテム148の助けてーーーーーーー
 
-
-{"str_num": 149, "bank": "0xC1", "ptr_pos": "0x013074", "str_pos": "0x013BB9", "length": 19}
+{"str_num": 149, "bank": "0xC1", "ptr_pos": "0x013074", "str_pos": "0x013BB9", "length": 19, "table": "normal"}
 #アイテム149の助けてーーーーーーー
 
-
-{"str_num": 150, "bank": "0xC1", "ptr_pos": "0x013076", "str_pos": "0x013BCD", "length": 19}
+{"str_num": 150, "bank": "0xC1", "ptr_pos": "0x013076", "str_pos": "0x013BCD", "length": 19, "table": "normal"}
 #アイテム150の助けてーーーーーーー
 
-
-{"str_num": 151, "bank": "0xC1", "ptr_pos": "0x013078", "str_pos": "0x013BE1", "length": 19}
+{"str_num": 151, "bank": "0xC1", "ptr_pos": "0x013078", "str_pos": "0x013BE1", "length": 19, "table": "normal"}
 #アイテム151の助けてーーーーーーー
 
-
-{"str_num": 152, "bank": "0xC1", "ptr_pos": "0x01307A", "str_pos": "0x013BF5", "length": 19}
+{"str_num": 152, "bank": "0xC1", "ptr_pos": "0x01307A", "str_pos": "0x013BF5", "length": 19, "table": "normal"}
 #アイテム152の助けてーーーーーーー
 
-
-{"str_num": 153, "bank": "0xC1", "ptr_pos": "0x01307C", "str_pos": "0x013C09", "length": 19}
+{"str_num": 153, "bank": "0xC1", "ptr_pos": "0x01307C", "str_pos": "0x013C09", "length": 19, "table": "normal"}
 #アイテム153の助けてーーーーーーー
 
-
-{"str_num": 154, "bank": "0xC1", "ptr_pos": "0x01307E", "str_pos": "0x013C1D", "length": 19}
+{"str_num": 154, "bank": "0xC1", "ptr_pos": "0x01307E", "str_pos": "0x013C1D", "length": 19, "table": "normal"}
 #アイテム154の助けてーーーーーーー
 
-
-{"str_num": 155, "bank": "0xC1", "ptr_pos": "0x013080", "str_pos": "0x013C31", "length": 19}
+{"str_num": 155, "bank": "0xC1", "ptr_pos": "0x013080", "str_pos": "0x013C31", "length": 19, "table": "normal"}
 #アイテム155の助けてーーーーーーー
 
-
-{"str_num": 156, "bank": "0xC1", "ptr_pos": "0x013082", "str_pos": "0x013C45", "length": 19}
+{"str_num": 156, "bank": "0xC1", "ptr_pos": "0x013082", "str_pos": "0x013C45", "length": 19, "table": "normal"}
 #アイテム156の助けてーーーーーーー
 
-
-{"str_num": 157, "bank": "0xC1", "ptr_pos": "0x013084", "str_pos": "0x013C59", "length": 19}
+{"str_num": 157, "bank": "0xC1", "ptr_pos": "0x013084", "str_pos": "0x013C59", "length": 19, "table": "normal"}
 #アイテム157の助けてーーーーーーー
 
-
-{"str_num": 158, "bank": "0xC1", "ptr_pos": "0x013086", "str_pos": "0x013C6D", "length": 19}
+{"str_num": 158, "bank": "0xC1", "ptr_pos": "0x013086", "str_pos": "0x013C6D", "length": 19, "table": "normal"}
 #アイテム158の助けてーーーーーーー
 
-
-{"str_num": 159, "bank": "0xC1", "ptr_pos": "0x013088", "str_pos": "0x013C81", "length": 19}
+{"str_num": 159, "bank": "0xC1", "ptr_pos": "0x013088", "str_pos": "0x013C81", "length": 19, "table": "normal"}
 #アイテム159の助けてーーーーーーー
 
-
-{"str_num": 160, "bank": "0xC1", "ptr_pos": "0x01308A", "str_pos": "0x013C95", "length": 15}
+{"str_num": 160, "bank": "0xC1", "ptr_pos": "0x01308A", "str_pos": "0x013C95", "length": 15, "table": "normal"}
 #家に代々伝わる古い剣
 
-
-{"str_num": 161, "bank": "0xC1", "ptr_pos": "0x01308C", "str_pos": "0x013CA5", "length": 21}
+{"str_num": 161, "bank": "0xC1", "ptr_pos": "0x01308C", "str_pos": "0x013CA5", "length": 21, "table": "normal"}
 #パファオ山の頂上に咲く神秘の花
 
-
-{"str_num": 162, "bank": "0xC1", "ptr_pos": "0x01308E", "str_pos": "0x013CBB", "length": 20}
+{"str_num": 162, "bank": "0xC1", "ptr_pos": "0x01308E", "str_pos": "0x013CBB", "length": 20, "table": "normal"}
 #世界に一つしかない美しい水晶
 
-
-{"str_num": 163, "bank": "0xC1", "ptr_pos": "0x013090", "str_pos": "0x013CD0", "length": 21}
+{"str_num": 163, "bank": "0xC1", "ptr_pos": "0x013090", "str_pos": "0x013CD0", "length": 21, "table": "normal"}
 #ドリゴン王国の人間がつける装飾品
 
-
-{"str_num": 164, "bank": "0xC1", "ptr_pos": "0x013092", "str_pos": "0x013CE6", "length": 20}
+{"str_num": 164, "bank": "0xC1", "ptr_pos": "0x013092", "str_pos": "0x013CE6", "length": 20, "table": "normal"}
 #パンプキンさんにもらったお宝のリュック
 
-
-{"str_num": 165, "bank": "0xC1", "ptr_pos": "0x013094", "str_pos": "0x013CFB", "length": 19}
+{"str_num": 165, "bank": "0xC1", "ptr_pos": "0x013094", "str_pos": "0x013CFB", "length": 19, "table": "normal"}
 #高価そうな宝石がついている骨
 
-
-{"str_num": 166, "bank": "0xC1", "ptr_pos": "0x013096", "str_pos": "0x013D0F", "length": 17}
+{"str_num": 166, "bank": "0xC1", "ptr_pos": "0x013096", "str_pos": "0x013D0F", "length": 17, "table": "normal"}
 #迷い[Shield]で見つけた認定証
 
-
-{"str_num": 167, "bank": "0xC1", "ptr_pos": "0x013098", "str_pos": "0x013D21", "length": 22}
+{"str_num": 167, "bank": "0xC1", "ptr_pos": "0x013098", "str_pos": "0x013D21", "length": 22, "table": "normal"}
 #料理に必要な食材が記されている
 
-
-{"str_num": 168, "bank": "0xC1", "ptr_pos": "0x01309A", "str_pos": "0x013D38", "length": 8}
+{"str_num": 168, "bank": "0xC1", "ptr_pos": "0x01309A", "str_pos": "0x013D38", "length": 8, "table": "normal"}
 #水龍のウロコ
 
-
-{"str_num": 169, "bank": "0xC1", "ptr_pos": "0x01309C", "str_pos": "0x013D41", "length": 16}
+{"str_num": 169, "bank": "0xC1", "ptr_pos": "0x01309C", "str_pos": "0x013D41", "length": 16, "table": "normal"}
 #いろんなものをひやすことができる
 
-
-{"str_num": 170, "bank": "0xC1", "ptr_pos": "0x01309E", "str_pos": "0x013D52", "length": 12}
+{"str_num": 170, "bank": "0xC1", "ptr_pos": "0x01309E", "str_pos": "0x013D52", "length": 12, "table": "normal"}
 #ソニアからもらったお酒
 
-
-{"str_num": 171, "bank": "0xC1", "ptr_pos": "0x0130A0", "str_pos": "0x013D5F", "length": 14}
+{"str_num": 171, "bank": "0xC1", "ptr_pos": "0x0130A0", "str_pos": "0x013D5F", "length": 14, "table": "normal"}
 #ポポロン[Armor]にあった名画
 
-
-{"str_num": 172, "bank": "0xC1", "ptr_pos": "0x0130A2", "str_pos": "0x013D6E", "length": 17}
+{"str_num": 172, "bank": "0xC1", "ptr_pos": "0x0130A2", "str_pos": "0x013D6E", "length": 17, "table": "normal"}
 #ソニアにもらったきれいな首飾り
 
-
-{"str_num": 173, "bank": "0xC1", "ptr_pos": "0x0130A4", "str_pos": "0x013D80", "length": 14}
+{"str_num": 173, "bank": "0xC1", "ptr_pos": "0x0130A4", "str_pos": "0x013D80", "length": 14, "table": "normal"}
 #宝のありかが記されている
 
-
-{"str_num": 174, "bank": "0xC1", "ptr_pos": "0x0130A6", "str_pos": "0x013D8F", "length": 16}
+{"str_num": 174, "bank": "0xC1", "ptr_pos": "0x0130A6", "str_pos": "0x013D8F", "length": 16, "table": "normal"}
 #パンプキンさんにもらった水晶
 
-
-{"str_num": 175, "bank": "0xC1", "ptr_pos": "0x0130A8", "str_pos": "0x013DA0", "length": 7}
+{"str_num": 175, "bank": "0xC1", "ptr_pos": "0x0130A8", "str_pos": "0x013DA0", "length": 7, "table": "normal"}
 #空を飛べる
 
-
-{"str_num": 176, "bank": "0xC1", "ptr_pos": "0x0130AA", "str_pos": "0x013DA8", "length": 8}
+{"str_num": 176, "bank": "0xC1", "ptr_pos": "0x0130AA", "str_pos": "0x013DA8", "length": 8, "table": "normal"}
 #食材の一つ
 
-
-{"str_num": 177, "bank": "0xC1", "ptr_pos": "0x0130AC", "str_pos": "0x013DA8", "length": 8}
+{"str_num": 177, "bank": "0xC1", "ptr_pos": "0x0130AC", "str_pos": "0x013DA8", "length": 8, "table": "normal"}
 #食材の一つ
 
-
-{"str_num": 178, "bank": "0xC1", "ptr_pos": "0x0130AE", "str_pos": "0x013DA8", "length": 8}
+{"str_num": 178, "bank": "0xC1", "ptr_pos": "0x0130AE", "str_pos": "0x013DA8", "length": 8, "table": "normal"}
 #食材の一つ
 
-
-{"str_num": 179, "bank": "0xC1", "ptr_pos": "0x0130B0", "str_pos": "0x013DA8", "length": 8}
+{"str_num": 179, "bank": "0xC1", "ptr_pos": "0x0130B0", "str_pos": "0x013DA8", "length": 8, "table": "normal"}
 #食材の一つ
 
-
-{"str_num": 180, "bank": "0xC1", "ptr_pos": "0x0130B2", "str_pos": "0x013DA8", "length": 8}
+{"str_num": 180, "bank": "0xC1", "ptr_pos": "0x0130B2", "str_pos": "0x013DA8", "length": 8, "table": "normal"}
 #食材の一つ
 
-
-{"str_num": 181, "bank": "0xC1", "ptr_pos": "0x0130B4", "str_pos": "0x013DA8", "length": 8}
+{"str_num": 181, "bank": "0xC1", "ptr_pos": "0x0130B4", "str_pos": "0x013DA8", "length": 8, "table": "normal"}
 #食材の一つ
 
-
-{"str_num": 182, "bank": "0xC1", "ptr_pos": "0x0130B6", "str_pos": "0x013DA8", "length": 8}
+{"str_num": 182, "bank": "0xC1", "ptr_pos": "0x0130B6", "str_pos": "0x013DA8", "length": 8, "table": "normal"}
 #食材の一つ
 
-
-{"str_num": 183, "bank": "0xC1", "ptr_pos": "0x0130B8", "str_pos": "0x013DA8", "length": 8}
+{"str_num": 183, "bank": "0xC1", "ptr_pos": "0x0130B8", "str_pos": "0x013DA8", "length": 8, "table": "normal"}
 #食材の一つ
 
-
-{"str_num": 184, "bank": "0xC1", "ptr_pos": "0x0130BA", "str_pos": "0x013DA8", "length": 8}
+{"str_num": 184, "bank": "0xC1", "ptr_pos": "0x0130BA", "str_pos": "0x013DA8", "length": 8, "table": "normal"}
 #食材の一つ
 
-
-{"str_num": 185, "bank": "0xC1", "ptr_pos": "0x0130BC", "str_pos": "0x013DA8", "length": 8}
+{"str_num": 185, "bank": "0xC1", "ptr_pos": "0x0130BC", "str_pos": "0x013DA8", "length": 8, "table": "normal"}
 #食材の一つ
 
-
-{"str_num": 186, "bank": "0xC1", "ptr_pos": "0x0130BE", "str_pos": "0x013DB1", "length": 17}
+{"str_num": 186, "bank": "0xC1", "ptr_pos": "0x0130BE", "str_pos": "0x013DB1", "length": 17, "table": "normal"}
 #ピピ・パパが見つけたきかいパーツ
 
-
-{"str_num": 187, "bank": "0xC1", "ptr_pos": "0x0130C0", "str_pos": "0x013DB1", "length": 17}
+{"str_num": 187, "bank": "0xC1", "ptr_pos": "0x0130C0", "str_pos": "0x013DB1", "length": 17, "table": "normal"}
 #ピピ・パパが見つけたきかいパーツ
 
-
-{"str_num": 188, "bank": "0xC1", "ptr_pos": "0x0130C2", "str_pos": "0x013DB1", "length": 17}
+{"str_num": 188, "bank": "0xC1", "ptr_pos": "0x0130C2", "str_pos": "0x013DB1", "length": 17, "table": "normal"}
 #ピピ・パパが見つけたきかいパーツ
 
-
-{"str_num": 189, "bank": "0xC1", "ptr_pos": "0x0130C4", "str_pos": "0x013DB1", "length": 17}
+{"str_num": 189, "bank": "0xC1", "ptr_pos": "0x0130C4", "str_pos": "0x013DB1", "length": 17, "table": "normal"}
 #ピピ・パパが見つけたきかいパーツ
 
-
-{"str_num": 190, "bank": "0xC1", "ptr_pos": "0x0130C6", "str_pos": "0x013DB1", "length": 17}
+{"str_num": 190, "bank": "0xC1", "ptr_pos": "0x0130C6", "str_pos": "0x013DB1", "length": 17, "table": "normal"}
 #ピピ・パパが見つけたきかいパーツ
 
-
-{"str_num": 191, "bank": "0xC1", "ptr_pos": "0x0130C8", "str_pos": "0x013DB1", "length": 17}
+{"str_num": 191, "bank": "0xC1", "ptr_pos": "0x0130C8", "str_pos": "0x013DB1", "length": 17, "table": "normal"}
 #ピピ・パパが見つけたきかいパーツ
 
-
-{"str_num": 192, "bank": "0xC1", "ptr_pos": "0x0130CA", "str_pos": "0x013DB1", "length": 17}
+{"str_num": 192, "bank": "0xC1", "ptr_pos": "0x0130CA", "str_pos": "0x013DB1", "length": 17, "table": "normal"}
 #ピピ・パパが見つけたきかいパーツ
 
-
-{"str_num": 193, "bank": "0xC1", "ptr_pos": "0x0130CC", "str_pos": "0x013DB1", "length": 17}
+{"str_num": 193, "bank": "0xC1", "ptr_pos": "0x0130CC", "str_pos": "0x013DB1", "length": 17, "table": "normal"}
 #ピピ・パパが見つけたきかいパーツ
 
-
-{"str_num": 194, "bank": "0xC1", "ptr_pos": "0x0130CE", "str_pos": "0x013DB1", "length": 17}
+{"str_num": 194, "bank": "0xC1", "ptr_pos": "0x0130CE", "str_pos": "0x013DB1", "length": 17, "table": "normal"}
 #ピピ・パパが見つけたきかいパーツ
 
-
-{"str_num": 195, "bank": "0xC1", "ptr_pos": "0x0130D0", "str_pos": "0x013DB1", "length": 17}
+{"str_num": 195, "bank": "0xC1", "ptr_pos": "0x0130D0", "str_pos": "0x013DB1", "length": 17, "table": "normal"}
 #ピピ・パパが見つけたきかいパーツ
 
-
-{"str_num": 196, "bank": "0xC1", "ptr_pos": "0x0130D2", "str_pos": "0x013DB1", "length": 17}
+{"str_num": 196, "bank": "0xC1", "ptr_pos": "0x0130D2", "str_pos": "0x013DB1", "length": 17, "table": "normal"}
 #ピピ・パパが見つけたきかいパーツ
 
-
-{"str_num": 197, "bank": "0xC1", "ptr_pos": "0x0130D4", "str_pos": "0x013DB1", "length": 17}
+{"str_num": 197, "bank": "0xC1", "ptr_pos": "0x0130D4", "str_pos": "0x013DB1", "length": 17, "table": "normal"}
 #ピピ・パパが見つけたきかいパーツ
 
-
-{"str_num": 198, "bank": "0xC1", "ptr_pos": "0x0130D6", "str_pos": "0x013DB1", "length": 17}
+{"str_num": 198, "bank": "0xC1", "ptr_pos": "0x0130D6", "str_pos": "0x013DB1", "length": 17, "table": "normal"}
 #ピピ・パパが見つけたきかいパーツ
 
-
-{"str_num": 199, "bank": "0xC1", "ptr_pos": "0x0130D8", "str_pos": "0x013DC3", "length": 16}
+{"str_num": 199, "bank": "0xC1", "ptr_pos": "0x0130D8", "str_pos": "0x013DC3", "length": 16, "table": "normal"}
 #どんな暗闇でも照らすトーチ
 
-
-{"str_num": 200, "bank": "0xC1", "ptr_pos": "0x0130DA", "str_pos": "0x013DD4", "length": 11}
+{"str_num": 200, "bank": "0xC1", "ptr_pos": "0x0130DA", "str_pos": "0x013DD4", "length": 11, "table": "normal"}
 #何かの部品らしい
 
-
-{"str_num": 201, "bank": "0xC1", "ptr_pos": "0x0130DC", "str_pos": "0x013DD4", "length": 11}
+{"str_num": 201, "bank": "0xC1", "ptr_pos": "0x0130DC", "str_pos": "0x013DD4", "length": 11, "table": "normal"}
 #何かの部品らしい
 
-
-{"str_num": 202, "bank": "0xC1", "ptr_pos": "0x0130DE", "str_pos": "0x013DD4", "length": 11}
+{"str_num": 202, "bank": "0xC1", "ptr_pos": "0x0130DE", "str_pos": "0x013DD4", "length": 11, "table": "normal"}
 #何かの部品らしい
 
-
-{"str_num": 203, "bank": "0xC1", "ptr_pos": "0x0130E0", "str_pos": "0x013DE0", "length": 15}
+{"str_num": 203, "bank": "0xC1", "ptr_pos": "0x0130E0", "str_pos": "0x013DE0", "length": 15, "table": "normal"}
 #どんな言葉でもやくすきかい
 
-
-{"str_num": 204, "bank": "0xC1", "ptr_pos": "0x0130E2", "str_pos": "0x013DF0", "length": 11}
+{"str_num": 204, "bank": "0xC1", "ptr_pos": "0x0130E2", "str_pos": "0x013DF0", "length": 11, "table": "normal"}
 #声を大きくするきかい
 
-
-{"str_num": 205, "bank": "0xC1", "ptr_pos": "0x0130E4", "str_pos": "0x013DFC", "length": 14}
+{"str_num": 205, "bank": "0xC1", "ptr_pos": "0x0130E4", "str_pos": "0x013DFC", "length": 14, "table": "normal"}
 #空を自由に飛べる船
 
-
-{"str_num": 206, "bank": "0xC1", "ptr_pos": "0x0130E6", "str_pos": "0x013E0B", "length": 17}
+{"str_num": 206, "bank": "0xC1", "ptr_pos": "0x0130E6", "str_pos": "0x013E0B", "length": 17, "table": "normal"}
 #エルドラドのアマルがしていたくびわ
 
-
-{"str_num": 207, "bank": "0xC1", "ptr_pos": "0x0130E8", "str_pos": "0x013E1D", "length": 17}
+{"str_num": 207, "bank": "0xC1", "ptr_pos": "0x0130E8", "str_pos": "0x013E1D", "length": 17, "table": "normal"}
 #建築家ミツゾーの宝物の1つ
 
-
-{"str_num": 208, "bank": "0xC1", "ptr_pos": "0x0130EA", "str_pos": "0x013E1D", "length": 17}
+{"str_num": 208, "bank": "0xC1", "ptr_pos": "0x0130EA", "str_pos": "0x013E1D", "length": 17, "table": "normal"}
 #建築家ミツゾーの宝物の1つ
 
-
-{"str_num": 209, "bank": "0xC1", "ptr_pos": "0x0130EC", "str_pos": "0x013E1D", "length": 17}
+{"str_num": 209, "bank": "0xC1", "ptr_pos": "0x0130EC", "str_pos": "0x013E1D", "length": 17, "table": "normal"}
 #建築家ミツゾーの宝物の1つ
 
-
-{"str_num": 210, "bank": "0xC1", "ptr_pos": "0x0130EE", "str_pos": "0x013E2F", "length": 12}
+{"str_num": 210, "bank": "0xC1", "ptr_pos": "0x0130EE", "str_pos": "0x013E2F", "length": 12, "table": "normal"}
 #高そくで移動できる
 
-
-{"str_num": 211, "bank": "0xC1", "ptr_pos": "0x0130F0", "str_pos": "0x013E3C", "length": 14}
+{"str_num": 211, "bank": "0xC1", "ptr_pos": "0x0130F0", "str_pos": "0x013E3C", "length": 14, "table": "normal"}
 #賢者を呼び出せるベル
 
-
-{"str_num": 212, "bank": "0xC1", "ptr_pos": "0x0130F2", "str_pos": "0x013E4B", "length": 18}
+{"str_num": 212, "bank": "0xC1", "ptr_pos": "0x0130F2", "str_pos": "0x013E4B", "length": 18, "table": "normal"}
 #水龍の力を復活させるくすり
 
-
-{"str_num": 213, "bank": "0xC1", "ptr_pos": "0x0130F4", "str_pos": "0x013E5E", "length": 14}
+{"str_num": 213, "bank": "0xC1", "ptr_pos": "0x0130F4", "str_pos": "0x013E5E", "length": 14, "table": "normal"}
 #歩くスピードが少しアップ
 
-
-{"str_num": 214, "bank": "0xC1", "ptr_pos": "0x0130F6", "str_pos": "0x013E6D", "length": 22}
+{"str_num": 214, "bank": "0xC1", "ptr_pos": "0x0130F6", "str_pos": "0x013E6D", "length": 22, "table": "normal"}
 #自分が勇者であることが証明される
 
-
-{"str_num": 215, "bank": "0xC1", "ptr_pos": "0x0130F8", "str_pos": "0x013E84", "length": 19}
+{"str_num": 215, "bank": "0xC1", "ptr_pos": "0x0130F8", "str_pos": "0x013E84", "length": 19, "table": "normal"}
 #アイテム215の助けてーーーーーーー
 
-
-{"str_num": 216, "bank": "0xC1", "ptr_pos": "0x0130FA", "str_pos": "0x013E98", "length": 19}
+{"str_num": 216, "bank": "0xC1", "ptr_pos": "0x0130FA", "str_pos": "0x013E98", "length": 19, "table": "normal"}
 #アイテム216の助けてーーーーーーー
 
-
-{"str_num": 217, "bank": "0xC1", "ptr_pos": "0x0130FC", "str_pos": "0x013EAC", "length": 19}
+{"str_num": 217, "bank": "0xC1", "ptr_pos": "0x0130FC", "str_pos": "0x013EAC", "length": 19, "table": "normal"}
 #アイテム217の助けてーーーーーーー
 
-
-{"str_num": 218, "bank": "0xC1", "ptr_pos": "0x0130FE", "str_pos": "0x013EC0", "length": 19}
+{"str_num": 218, "bank": "0xC1", "ptr_pos": "0x0130FE", "str_pos": "0x013EC0", "length": 19, "table": "normal"}
 #アイテム218の助けてーーーーーーー
 
-
-{"str_num": 219, "bank": "0xC1", "ptr_pos": "0x013100", "str_pos": "0x013ED4", "length": 19}
+{"str_num": 219, "bank": "0xC1", "ptr_pos": "0x013100", "str_pos": "0x013ED4", "length": 19, "table": "normal"}
 #アイテム219の助けてーーーーーーー
 
-
-{"str_num": 220, "bank": "0xC1", "ptr_pos": "0x013102", "str_pos": "0x013EE8", "length": 19}
+{"str_num": 220, "bank": "0xC1", "ptr_pos": "0x013102", "str_pos": "0x013EE8", "length": 19, "table": "normal"}
 #アイテム220の助けてーーーーーーー
 
-
-{"str_num": 221, "bank": "0xC1", "ptr_pos": "0x013104", "str_pos": "0x013EFC", "length": 19}
+{"str_num": 221, "bank": "0xC1", "ptr_pos": "0x013104", "str_pos": "0x013EFC", "length": 19, "table": "normal"}
 #アイテム221の助けてーーーーーーー
 
-
-{"str_num": 222, "bank": "0xC1", "ptr_pos": "0x013106", "str_pos": "0x013F10", "length": 19}
+{"str_num": 222, "bank": "0xC1", "ptr_pos": "0x013106", "str_pos": "0x013F10", "length": 19, "table": "normal"}
 #アイテム222の助けてーーーーーーー
 
-
-{"str_num": 223, "bank": "0xC1", "ptr_pos": "0x013108", "str_pos": "0x013F24", "length": 19}
+{"str_num": 223, "bank": "0xC1", "ptr_pos": "0x013108", "str_pos": "0x013F24", "length": 19, "table": "normal"}
 #アイテム223の助けてーーーーーーー
 
-
-{"str_num": 224, "bank": "0xC1", "ptr_pos": "0x01310A", "str_pos": "0x013F38", "length": 19}
+{"str_num": 224, "bank": "0xC1", "ptr_pos": "0x01310A", "str_pos": "0x013F38", "length": 19, "table": "normal"}
 #アイテム224の助けてーーーーーーー
 
-
-{"str_num": 225, "bank": "0xC1", "ptr_pos": "0x01310C", "str_pos": "0x013F4C", "length": 19}
+{"str_num": 225, "bank": "0xC1", "ptr_pos": "0x01310C", "str_pos": "0x013F4C", "length": 19, "table": "normal"}
 #アイテム225の助けてーーーーーーー
 
-
-{"str_num": 226, "bank": "0xC1", "ptr_pos": "0x01310E", "str_pos": "0x013F60", "length": 19}
+{"str_num": 226, "bank": "0xC1", "ptr_pos": "0x01310E", "str_pos": "0x013F60", "length": 19, "table": "normal"}
 #アイテム226の助けてーーーーーーー
 
-
-{"str_num": 227, "bank": "0xC1", "ptr_pos": "0x013110", "str_pos": "0x013F74", "length": 19}
+{"str_num": 227, "bank": "0xC1", "ptr_pos": "0x013110", "str_pos": "0x013F74", "length": 19, "table": "normal"}
 #アイテム227の助けてーーーーーーー
 
-
-{"str_num": 228, "bank": "0xC1", "ptr_pos": "0x013112", "str_pos": "0x013F88", "length": 19}
+{"str_num": 228, "bank": "0xC1", "ptr_pos": "0x013112", "str_pos": "0x013F88", "length": 19, "table": "normal"}
 #アイテム228の助けてーーーーーーー
 
-
-{"str_num": 229, "bank": "0xC1", "ptr_pos": "0x013114", "str_pos": "0x013F9C", "length": 19}
+{"str_num": 229, "bank": "0xC1", "ptr_pos": "0x013114", "str_pos": "0x013F9C", "length": 19, "table": "normal"}
 #アイテム229の助けてーーーーーーー
 
-
-{"str_num": 230, "bank": "0xC1", "ptr_pos": "0x013116", "str_pos": "0x013FB0", "length": 19}
+{"str_num": 230, "bank": "0xC1", "ptr_pos": "0x013116", "str_pos": "0x013FB0", "length": 19, "table": "normal"}
 #アイテム230の助けてーーーーーーー
 
-
-{"str_num": 231, "bank": "0xC1", "ptr_pos": "0x013118", "str_pos": "0x013FC4", "length": 19}
+{"str_num": 231, "bank": "0xC1", "ptr_pos": "0x013118", "str_pos": "0x013FC4", "length": 19, "table": "normal"}
 #アイテム231の助けてーーーーーーー
 
-
-{"str_num": 232, "bank": "0xC1", "ptr_pos": "0x01311A", "str_pos": "0x013FD8", "length": 19}
+{"str_num": 232, "bank": "0xC1", "ptr_pos": "0x01311A", "str_pos": "0x013FD8", "length": 19, "table": "normal"}
 #アイテム232の助けてーーーーーーー
 
-
-{"str_num": 233, "bank": "0xC1", "ptr_pos": "0x01311C", "str_pos": "0x013FEC", "length": 19}
+{"str_num": 233, "bank": "0xC1", "ptr_pos": "0x01311C", "str_pos": "0x013FEC", "length": 19, "table": "normal"}
 #アイテム233の助けてーーーーーーー
 
-
-{"str_num": 234, "bank": "0xC1", "ptr_pos": "0x01311E", "str_pos": "0x014000", "length": 19}
+{"str_num": 234, "bank": "0xC1", "ptr_pos": "0x01311E", "str_pos": "0x014000", "length": 19, "table": "normal"}
 #アイテム234の助けてーーーーーーー
 
-
-{"str_num": 235, "bank": "0xC1", "ptr_pos": "0x013120", "str_pos": "0x014014", "length": 19}
+{"str_num": 235, "bank": "0xC1", "ptr_pos": "0x013120", "str_pos": "0x014014", "length": 19, "table": "normal"}
 #アイテム235の助けてーーーーーーー
 
-
-{"str_num": 236, "bank": "0xC1", "ptr_pos": "0x013122", "str_pos": "0x014028", "length": 19}
+{"str_num": 236, "bank": "0xC1", "ptr_pos": "0x013122", "str_pos": "0x014028", "length": 19, "table": "normal"}
 #アイテム236の助けてーーーーーーー
 
-
-{"str_num": 237, "bank": "0xC1", "ptr_pos": "0x013124", "str_pos": "0x01403C", "length": 19}
+{"str_num": 237, "bank": "0xC1", "ptr_pos": "0x013124", "str_pos": "0x01403C", "length": 19, "table": "normal"}
 #アイテム237の助けてーーーーーーー
 
-
-{"str_num": 238, "bank": "0xC1", "ptr_pos": "0x013126", "str_pos": "0x014050", "length": 19}
+{"str_num": 238, "bank": "0xC1", "ptr_pos": "0x013126", "str_pos": "0x014050", "length": 19, "table": "normal"}
 #アイテム238の助けてーーーーーーー
 
-
-{"str_num": 239, "bank": "0xC1", "ptr_pos": "0x013128", "str_pos": "0x014064", "length": 19}
+{"str_num": 239, "bank": "0xC1", "ptr_pos": "0x013128", "str_pos": "0x014064", "length": 19, "table": "normal"}
 #アイテム239の助けてーーーーーーー
 
-
-{"str_num": 240, "bank": "0xC1", "ptr_pos": "0x01312A", "str_pos": "0x014078", "length": 19}
+{"str_num": 240, "bank": "0xC1", "ptr_pos": "0x01312A", "str_pos": "0x014078", "length": 19, "table": "normal"}
 #アイテム240の助けてーーーーーーー
 
-
-{"str_num": 241, "bank": "0xC1", "ptr_pos": "0x01312C", "str_pos": "0x01408C", "length": 19}
+{"str_num": 241, "bank": "0xC1", "ptr_pos": "0x01312C", "str_pos": "0x01408C", "length": 19, "table": "normal"}
 #アイテム241の助けてーーーーーーー
 
-
-{"str_num": 242, "bank": "0xC1", "ptr_pos": "0x01312E", "str_pos": "0x0140A0", "length": 19}
+{"str_num": 242, "bank": "0xC1", "ptr_pos": "0x01312E", "str_pos": "0x0140A0", "length": 19, "table": "normal"}
 #アイテム242の助けてーーーーーーー
 
-
-{"str_num": 243, "bank": "0xC1", "ptr_pos": "0x013130", "str_pos": "0x0140B4", "length": 19}
+{"str_num": 243, "bank": "0xC1", "ptr_pos": "0x013130", "str_pos": "0x0140B4", "length": 19, "table": "normal"}
 #アイテム243の助けてーーーーーーー
 
-
-{"str_num": 244, "bank": "0xC1", "ptr_pos": "0x013132", "str_pos": "0x0140C8", "length": 19}
+{"str_num": 244, "bank": "0xC1", "ptr_pos": "0x013132", "str_pos": "0x0140C8", "length": 19, "table": "normal"}
 #アイテム244の助けてーーーーーーー
 
-
-{"str_num": 245, "bank": "0xC1", "ptr_pos": "0x013134", "str_pos": "0x0140DC", "length": 19}
+{"str_num": 245, "bank": "0xC1", "ptr_pos": "0x013134", "str_pos": "0x0140DC", "length": 19, "table": "normal"}
 #アイテム245の助けてーーーーーーー
 
-
-{"str_num": 246, "bank": "0xC1", "ptr_pos": "0x013136", "str_pos": "0x0140F0", "length": 19}
+{"str_num": 246, "bank": "0xC1", "ptr_pos": "0x013136", "str_pos": "0x0140F0", "length": 19, "table": "normal"}
 #アイテム246の助けてーーーーーーー
 
-
-{"str_num": 247, "bank": "0xC1", "ptr_pos": "0x013138", "str_pos": "0x014104", "length": 19}
+{"str_num": 247, "bank": "0xC1", "ptr_pos": "0x013138", "str_pos": "0x014104", "length": 19, "table": "normal"}
 #アイテム247の助けてーーーーーーー
 
-
-{"str_num": 248, "bank": "0xC1", "ptr_pos": "0x01313A", "str_pos": "0x014118", "length": 19}
+{"str_num": 248, "bank": "0xC1", "ptr_pos": "0x01313A", "str_pos": "0x014118", "length": 19, "table": "normal"}
 #アイテム248の助けてーーーーーーー
 
-
-{"str_num": 249, "bank": "0xC1", "ptr_pos": "0x01313C", "str_pos": "0x01412C", "length": 19}
+{"str_num": 249, "bank": "0xC1", "ptr_pos": "0x01313C", "str_pos": "0x01412C", "length": 19, "table": "normal"}
 #アイテム249の助けてーーーーーーー
 
-
-{"str_num": 250, "bank": "0xC1", "ptr_pos": "0x01313E", "str_pos": "0x014140", "length": 19}
+{"str_num": 250, "bank": "0xC1", "ptr_pos": "0x01313E", "str_pos": "0x014140", "length": 19, "table": "normal"}
 #アイテム250の助けてーーーーーーー
 
-
-{"str_num": 251, "bank": "0xC1", "ptr_pos": "0x013140", "str_pos": "0x014154", "length": 19}
+{"str_num": 251, "bank": "0xC1", "ptr_pos": "0x013140", "str_pos": "0x014154", "length": 19, "table": "normal"}
 #アイテム251の助けてーーーーーーー
 
-
-{"str_num": 252, "bank": "0xC1", "ptr_pos": "0x013142", "str_pos": "0x014168", "length": 19}
+{"str_num": 252, "bank": "0xC1", "ptr_pos": "0x013142", "str_pos": "0x014168", "length": 19, "table": "normal"}
 #アイテム252の助けてーーーーーーー
 
-
-{"str_num": 253, "bank": "0xC1", "ptr_pos": "0x013144", "str_pos": "0x01417C", "length": 19}
+{"str_num": 253, "bank": "0xC1", "ptr_pos": "0x013144", "str_pos": "0x01417C", "length": 19, "table": "normal"}
 #アイテム253の助けてーーーーーーー
 
-
-{"str_num": 254, "bank": "0xC1", "ptr_pos": "0x013146", "str_pos": "0x014190", "length": 19}
+{"str_num": 254, "bank": "0xC1", "ptr_pos": "0x013146", "str_pos": "0x014190", "length": 19, "table": "normal"}
 #アイテム254の助けてーーーーーーー
 
-
-{"str_num": 255, "bank": "0xC1", "ptr_pos": "0x013148", "str_pos": "0x0141A4", "length": 0}
+{"str_num": 255, "bank": "0xC1", "ptr_pos": "0x013148", "str_pos": "0x0141A4", "length": 0, "table": "normal"}
 #
 
-
-{"str_num": 256, "bank": "0xC1", "ptr_pos": "0x01314A", "str_pos": "0x0144FD", "length": 4}
+{"str_num": 256, "bank": "0xC1", "ptr_pos": "0x01314A", "str_pos": "0x0144FD", "length": 4, "table": "normal"}
 #ット[Sword]
-
 

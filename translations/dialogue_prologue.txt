@@ -1,200 +1,98 @@
-{"str_num": 0, "bank": "0xDB", "str_pos": "0x1BAA0F", "length": 4}
+{"str_num": 0, "bank": "0xDB", "str_pos": "0x1BAA0F", "length": 26, "table": "prologue"}
 #産婆
+#このままじゃあ、レミーは危ないねえ。
 Midwife
-
-
-{"str_num": 1, "bank": "0xDB", "str_pos": "0x1BAA14", "length": 20}
-# このままじゃあ、レミーは危ないねえ。
 At this rate, Remy won't make it...
 
-
-{"str_num": 2, "bank": "0xDB", "str_pos": "0x1BAA29", "length": 5}
-#<FE>ガラハド
-Galahad
-
-
-{"str_num": 3, "bank": "0xDB", "str_pos": "0x1BAA2F", "length": 21}
-# ふざけんな！ お前、レミーが死ぬって
-Cut the crap! You saying Remy is gonna
-
-
-{"str_num": 4, "bank": "0xDB", "str_pos": "0x1BAA45", "length": 6}
+{"str_num": 1, "bank": "0xDB", "str_pos": "0x1BAA2A", "length": 34, "table": "prologue"}
+#ガラハド
+#ふざけんな！ お前、レミーが死ぬって
 #いうのか！？
-die?!
+Galahad
+Cut the crap! You saying
+Remy is gonna die?!
 
-
-{"str_num": 5, "bank": "0xDB", "str_pos": "0x1BAA4C", "length": 5}
-#<FE>産婆
-Midwife
-
-
-{"str_num": 6, "bank": "0xDB", "str_pos": "0x1BAA52", "length": 19}
-# まだ、そうと決まったわけじゃない。
-Nothing is certain yet.
-
-
-{"str_num": 7, "bank": "0xDB", "str_pos": "0x1BAA66", "length": 20}
-# でも、お腹の子を助けるとなると、
-But if we are to save the baby,
-
-
-{"str_num": 8, "bank": "0xDB", "str_pos": "0x1BAA7B", "length": 9}
+{"str_num": 2, "bank": "0xDB", "str_pos": "0x1BAA4D", "length": 56, "table": "prologue"}
+#産婆
+#まだ、そうと決まったわけじゃない。
+#でも、お腹の子を助けるとなると、
 #レミーの体は……
+Midwife
+Nothing is certain yet.
+But to save the baby,
 Remy's body won't hold out...
 
-
-{"str_num": 9, "bank": "0xDB", "str_pos": "0x1BAA85", "length": 5}
-#<FE>ガラハド
+{"str_num": 3, "bank": "0xDB", "str_pos": "0x1BAA86", "length": 45, "table": "prologue"}
+#ガラハド
+#馬鹿いうな！ レミーを助けろ！
+#何としても、レミーを助けるんだ！
 Galahad
-
-
-{"str_num": 10, "bank": "0xDB", "str_pos": "0x1BAA8B", "length": 19}
-# 馬鹿いうな！ レミーを助けろ！
 Cut that out! Save Remy!
-
-
-{"str_num": 11, "bank": "0xDB", "str_pos": "0x1BAA9F", "length": 19}
-# 何としても、レミーを助けるんだ！
 Do whatever it takes to save Remy!
 
-
-{"str_num": 12, "bank": "0xDB", "str_pos": "0x1BAAB3", "length": 0}
-#
-
-
-{"str_num": 13, "bank": "0xDB", "str_pos": "0x1BAAB4", "length": 4}
+{"str_num": 4, "bank": "0xDB", "str_pos": "0x1BAAB4", "length": 38, "table": "prologue"}
 #産婆
-Midwife
-
-
-{"str_num": 14, "bank": "0xDB", "str_pos": "0x1BAAB9", "length": 20}
-# ……じゃあ、お前さん。お腹の子を
-...So then, are you telling me
-
-
-{"str_num": 15, "bank": "0xDB", "str_pos": "0x1BAACE", "length": 11}
+#……じゃあ、お前さん。お腹の子を
 #殺せっていうのかね？
+Midwife
+...So then, are you telling me
 to kill the unborn child?
 
-
-{"str_num": 16, "bank": "0xDB", "str_pos": "0x1BAADA", "length": 5}
-#<FE>ガラハド
-Galahad
-
-
-{"str_num": 17, "bank": "0xDB", "str_pos": "0x1BAAE0", "length": 20}
-# な、何も、俺はそんなことをいってん
-N-No, I'm not saying that!
-
-
-{"str_num": 18, "bank": "0xDB", "str_pos": "0x1BAAF5", "length": 19}
+{"str_num": 5, "bank": "0xDB", "str_pos": "0x1BAADB", "length": 58, "table": "prologue"}
+#ガラハド
+#な、何も、俺はそんなことをいってん
 #じゃねえさ。で、でも、おりゃあ、レミー
-B-But... if Remy dies...
-
-
-{"str_num": 19, "bank": "0xDB", "str_pos": "0x1BAB09", "length": 11}
 #が死んじまったら……
+Galahad
+N-No, I'm not saying that!
+B-But... if Remy dies...
 I couldn't bear it...
 
-
-{"str_num": 20, "bank": "0xDB", "str_pos": "0x1BAB15", "length": 0}
-#
-
-
-{"str_num": 21, "bank": "0xDB", "str_pos": "0x1BAB16", "length": 4}
+{"str_num": 6, "bank": "0xDB", "str_pos": "0x1BAB16", "length": 50, "table": "prologue"}
 #産婆
+#うまれてくる子供に真任はないよ。
+#ガラハド、馬鹿なことを考えないで……
 Midwife
-
-
-{"str_num": 22, "bank": "0xDB", "str_pos": "0x1BAB1B", "length": 21}
-# うまれてくる子供に真任はないよ。
 The unborn child is blameless.
-
-
-{"str_num": 23, "bank": "0xDB", "str_pos": "0x1BAB31", "length": 22}
-# ガラハド、馬鹿なことを考えないで……
 Galahad, don't think foolish thoughts...
 
-
-{"str_num": 24, "bank": "0xDB", "str_pos": "0x1BAB48", "length": 5}
-#<FE>産婆
+{"str_num": 7, "bank": "0xDB", "str_pos": "0x1BAB49", "length": 19, "table": "prologue"}
+#産婆
+#ぐー、ぐー、すー、すー、
 Midwife
-
-
-{"str_num": 25, "bank": "0xDB", "str_pos": "0x1BAB4E", "length": 13}
-# ぐー、ぐー、すー、すー、
 Zzz... Zzz... Snoore...
 
-
-{"str_num": 26, "bank": "0xDB", "str_pos": "0x1BAB5C", "length": 5}
-#<FE>ガラハド
-Galahad
-
-
-{"str_num": 27, "bank": "0xDB", "str_pos": "0x1BAB62", "length": 18}
-# おい、こらばあさん！ こんなときに
-Hey! Old woman! Don't you dare
-
-
-{"str_num": 28, "bank": "0xDB", "str_pos": "0x1BAB75", "length": 17}
+{"str_num": 8, "bank": "0xDB", "str_pos": "0x1BAB5D", "length": 72, "table": "prologue"}
+#ガラハド
+#おい、こらばあさん！ こんなときに
 #調子こいて寝てんじゃねえぞ！
-doze off at a time like this!
-
-
-{"str_num": 29, "bank": "0xDB", "str_pos": "0x1BAB87", "length": 23}
-# あ、ありゃ？ 何だか、俺まで急に眠く
-Huh? What's going on? Even I'm feeling
-
-
-{"str_num": 30, "bank": "0xDB", "str_pos": "0x1BAB9F", "length": 5}
+#あ、ありゃ？ 何だか、俺まで急に眠く
 #なって……
+Galahad
+Hey! Old woman! Don't you dare
+doze off at a time like this!
+Huh? What's going on? Even I'm feeling
 so sleepy...
 
-
-{"str_num": 31, "bank": "0xDB", "str_pos": "0x1BABA5", "length": 5}
-#<FE>ガラハド
-Galahad
-
-
-{"str_num": 32, "bank": "0xDB", "str_pos": "0x1BABAB", "length": 17}
-# ぐがー、すぴー、ぐごー、ぶしゅる
-Zzz... *snort*... *wheeze*...
-
-
-{"str_num": 33, "bank": "0xDB", "str_pos": "0x1BABBD", "length": 4}
+{"str_num": 9, "bank": "0xDB", "str_pos": "0x1BABA6", "length": 28, "table": "prologue"}
+#ガラハド
+#ぐがー、すぴー、ぐごー、ぶしゅる
 #るる……
+Galahad
+Zzz... *snort*... *wheeze*...
 zzz...
 
-
-{"str_num": 34, "bank": "0xDB", "str_pos": "0x1BABC2", "length": 7}
-#<FE>優しい声
-Gentle Voice
-
-
-{"str_num": 35, "bank": "0xDB", "str_pos": "0x1BABCA", "length": 3}
-# [protag]。
-[protag].
-
-
-{"str_num": 36, "bank": "0xDB", "str_pos": "0x1BABCE", "length": 18}
+{"str_num": 10, "bank": "0xDB", "str_pos": "0x1BABC3", "length": 67, "table": "prologue"}
+#優しい声
+#[protag]。
 #これからうまれて来るレミーの子。
-Child of Remy, soon to be born.
-
-
-{"str_num": 37, "bank": "0xDB", "str_pos": "0x1BABE1", "length": 9}
 #あなたの名は[protag]。
-Your name is [protag].
-
-
-{"str_num": 38, "bank": "0xDB", "str_pos": "0x1BABEB", "length": 23}
 #あなたは、大天使ボルサークの生まれ変わ
-You are the reincarnation of
-
-
-{"str_num": 39, "bank": "0xDB", "str_pos": "0x1BAC03", "length": 2}
 #り。
+Gentle Voice
+[protag].
+Child of Remy, soon to be born.
+Your name is [protag].
+You are the reincarnation of
 the Archangel Borsark.
 
-
-{"str_num": 40, "bank": "0xDB", "str_pos": "0x1BAC06", "length": 0}
-#
