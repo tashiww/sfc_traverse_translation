@@ -46,10 +46,10 @@ SPECIAL_TOKEN_WIDTHS = {
     "[Axe]": 16,
     "[Shield]": 16,
     "[Armor]": 16,
-    # Dynamic user-supplied names (all 3 share the identical 8-character max limit)
-    "[protag]": 52, # 8-character worst-case budget
-    "[sub]": 52,
-    "[pet]": 52,
+    # Dynamic user-supplied names (8-character absolute mathematical worst case: 8 * 8px = 64px, e.g. WWWWWWWW)
+    "[protag]": 64,
+    "[sub]": 64,
+    "[pet]": 64,
     # Native Japanese symbols / full-width characters (16 px)
     "★": 16,
     "☆": 16,
@@ -229,7 +229,7 @@ def smart_wrap_text(text: str, max_px: int = 216) -> list[str]:
     - Respects existing manual line breaks.
     - Preserves leading indentation (for choice options, e.g. '  Family').
     - Measures exact proportional pixel widths from CHAR_WIDTHS (loaded from vwf_widths.bin).
-    - Budgets [protag], [sub], and [pet] equally at 52px (worst-case 8-character uppercase name).
+    - Budgets [protag], [sub], and [pet] equally at 64px (absolute worst-case 8 * 8px, e.g. WWWWWWWW).
     - Wraps any line exceeding max_px at natural word boundaries.
     """
     manual_lines = text.split("\n")
