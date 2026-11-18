@@ -286,13 +286,15 @@ def dump_location_names(data: bytes, out_file: Path, tbl: dict = None):
 
 def dump_prologue(data: bytes, out_file: Path, tbl: dict = None):
     """
-    Dumps the 11 prologue dialogue boxes from Bank $DB (0x1BAA0F - 0x1BAC07).
-    Boxes are cleanly delimited by \\xFF\\xFE and \\xFF\\xFF.
+    Dumps all 68 prologue dialogue boxes from Bank $DB (0x1BAA0F - 0x1BB7CA).
+    Includes the birth drama Part 1, the 12 Goddess personality survey questions,
+    interactive 3-choice options (<choice_menu>), Goddess blessings, and birth drama Part 2.
+    Boxes are cleanly delimited by \\xFF\\xFE, \\xFF\\x01, and \\xFF\\xFF.
     Speaker name appears on Line 1, dialogue lines on Line 2+.
     Sets table to 'prologue'.
     """
     pos = 0x1BAA0F
-    end_limit = 0x1BAC07
+    end_limit = 0x1BB7CA
 
     # Load existing translations if present
     existing_tl = {}
@@ -309,19 +311,18 @@ def dump_prologue(data: bytes, out_file: Path, tbl: dict = None):
     box_idx = 0
 
     while cur < end_limit:
-        m_end1 = data.find(b"\xff\xfe", cur)
-        m_end2 = data.find(b"\xff\xff", cur)
         cand = []
-        if m_end1 != -1 and m_end1 < end_limit:
-            cand.append(m_end1)
-        if m_end2 != -1 and m_end2 < end_limit:
-            cand.append(m_end2)
+        for term_bytes, term_type in [(b"\xff\xfe", "<end_box>"), (b"\xff\x01", "<choice_menu>"), (b"\xff\xff", "<end_scene>")]:
+            m = data.find(term_bytes, cur)
+            if m != -1 and m < end_limit:
+                cand.append((m, term_bytes, term_type))
         if not cand:
             break
-        box_end = min(cand)
+        cand.sort(key=lambda x: x[0])
+        box_end, term_bytes, term_type = cand[0]
         box_bytes = data[cur : box_end + 1]
-        lines = [l for l in box_bytes.split(b"\xff") if l]
-        dec_lines = [decode_string(l, tbl).strip() for l in lines if l]
+        lines = [l for l in data[cur : box_end].split(b"\xff") if l]
+        dec_lines = [decode_string(l, tbl).rstrip() for l in lines if l]
 
         pc_hex = f"0x{cur:06X}".lower()
         tl = existing_tl.get(pc_hex, "")
@@ -331,6 +332,7 @@ def dump_prologue(data: bytes, out_file: Path, tbl: dict = None):
             "bank": "0xDB",
             "str_pos": f"0x{cur:06X}",
             "length": len(box_bytes),
+            "term": term_type,
             "table": "prologue",
             "lines": dec_lines,
             "translation": tl,
@@ -338,12 +340,13 @@ def dump_prologue(data: bytes, out_file: Path, tbl: dict = None):
         box_idx += 1
         cur = box_end + 2
 
-    # Standard English translations for the 11 prologue cutscene boxes:
+    # Standard English translations for all 68 prologue cutscene boxes:
     default_tl = [
+        # 00 - 10: Birth Scene Part 1
         "Midwife\nAt this rate, Remy won't make it...",
         "Galahad\nCut the crap! You saying\nRemy is gonna die?!",
         "Midwife\nNothing is certain yet.\nBut to save the baby,\nRemy's body won't hold out...",
-        "Galahad\nCut that out! Save Remy!\nDo whatever it takes to save Remy!",
+        "Galahad\nDon't be ridiculous! Save Remy!\nDo whatever it takes to save Remy!",
         "Midwife\n...So then, are you telling me\nto kill the unborn child?",
         "Galahad\nN-No, I'm not saying that!\nB-But... if Remy dies...\nI couldn't bear it...",
         "Midwife\nThe unborn child is blameless.\nGalahad, don't think foolish thoughts...",
@@ -351,6 +354,93 @@ def dump_prologue(data: bytes, out_file: Path, tbl: dict = None):
         "Galahad\nHey! Old woman! Don't you dare\ndoze off at a time like this!\nHuh? What's going on? Even I'm feeling\nso sleepy...",
         "Galahad\nZzz... *snort*... *wheeze*...\nzzz...",
         "Gentle Voice\n[protag].\nChild of Remy, soon to be born.\nYour name is [protag].\nYou are the reincarnation of\nthe Archangel Borsark.",
+
+        # 11 - 12: Gentle Voice introduces 12 Goddesses
+        "Gentle Voice\nWe, the Twelve Goddesses of Fate,\nshall watch over and protect your life.\nCome, [protag].\nNow, answer our questions.",
+        "Gentle Voice\nWe wish to know what kind of person\nyou will grow up to be.",
+
+        # 13 - 15: Rosanne (Fire)
+        "Rosanne\nI am Rosanne, Goddess of Fire.\nAnswer my question.\nYour home is engulfed in flames.\nYou can save only one person.",
+        "Now, who will you save?\n  Family\n  Lover\n  Best Friend",
+        "Rosanne\nHehe... I see.\nI understand. May your life be blessed\nwith great fortune, [protag].",
+
+        # 16 - 19: Majorca (Water)
+        "Majorca\nI am Majorca, Goddess of Water.\nAnswer my question.\nLost in the desert, your throat is\nparched with burning thirst.",
+        "Majorca\nYet only a single drop of water\nremains in your canteen.",
+        "Now, what will you do?\n  Drink it all now\n  Endure a little longer\n  Take just a single sip",
+        "Majorca\nHehe... I see.\nI understand. May your life be blessed\nwith great fortune, [protag].",
+
+        # 20 - 22: Chanii (Earth)
+        "Chanii\nI am Chanii, Goddess of Earth.\nAnswer my question.",
+        "Among all the blessings of the earth,\nwhich do you consider most wonderful?\n  Lush nature\n  Ores and mineral resources\n  Bountiful food of all kinds",
+        "Chanii\nHehe... I see.\nI understand. May your life be blessed\nwith great fortune, [protag].",
+
+        # 23 - 25: Gloria (Sky)
+        "Gloria\nI am Gloria, Goddess of the Sky.\nAnswer my question.\nAs you are summoned to the heavens,\nyou look up at the sky.",
+        "At that moment, what kind of sky\ndo you wish to behold?\n  A clear, cloudless blue sky\n  An overcast sky ready to rain\n  A raging thunderstorm",
+        "Gloria\nHehe... I see.\nI understand. May your life be blessed\nwith great fortune, [protag].",
+
+        # 26 - 28: Jeanne (Wind)
+        "Jeanne\nI am Jeanne, Goddess of Wind.\nAnswer my question.\nThe wind has carried happiness to you.",
+        "From which direction do you believe\nthat wind blew?\n  From the east\n  From the west\n  From the south",
+        "Jeanne\nHehe... I see.\nI understand. May your life be blessed\nwith great fortune, [protag].",
+
+        # 29 - 32: Isabella (Forest)
+        "Isabella\nI am Isabella, Goddess of Forests.\nAnswer my question.\nYou are lost deep within the forest.",
+        "Isabella\nBefore your eyes lie three paths.",
+        "Which path will you take?\n  A bright, clear path\n  A steep, perilous shortcut\n  An untrodden beast trail",
+        "Isabella\nHehe... I see.\nI understand. May your life be blessed\nwith great fortune, [protag].",
+
+        # 33 - 35: Christina (Light)
+        "Christina\nI am Christina, Goddess of Light.\nAnswer my question.\nLight and shadow--the world cannot\nexist without both.",
+        "Which of the two draws your heart?\n  Light\n  Shadow\n  Neither",
+        "Christina\nHehe... I see.\nI understand. May your life be blessed\nwith great fortune, [protag].",
+
+        # 36 - 38: Natasia (Darkness)
+        "Natasia\nI am Natasia, Goddess of Darkness.\nAnswer my question.\nAlone in the pitch-black darkness,\nwhat crosses your mind?",
+        "What do you think of?\n  The fear of solitude\n  The solace of tranquility\n  Nothing at all",
+        "Natasia\nHehe... I see.\nI understand. May your life be blessed\nwith great fortune, [protag].",
+
+        # 39 - 41: Elena (Beauty)
+        "Elena\nI am Elena, Goddess of Beauty.\nAnswer my question.",
+        "What is the true essence of beauty\nto you?\n  Beauty is eternal\n  Beauty is fleeting\n  Beauty cannot be put into words",
+        "Elena\nHehe... I see.\nI understand. May your life be blessed\nwith great fortune, [protag].",
+
+        # 42 - 44: Elizabeth (Wisdom)
+        "Elizabeth\nI am Elizabeth, Goddess of Wisdom.\nAnswer my question.",
+        "Among these three, who do you believe\npossesses the greatest wisdom?\n  One who hides true intent\n  One who deceives without guilt\n  One who puts others before self",
+        "Elizabeth\nHehe... I see.\nI understand. May your life be blessed\nwith great fortune, [protag].",
+
+        # 45 - 48: Cynthia (Love)
+        "Cynthia\nI am Cynthia, Goddess of Love.\nAnswer my question.\nYou have found someone you truly love.",
+        "Cynthia\nTo spend more time together, your love\nasks you to sacrifice one thing in life.",
+        "What would you sacrifice?\n  Time spent working\n  Time spent on hobbies\n  Time spent with friends",
+        "Cynthia\nHehe... I see.\nI understand. May your life be blessed\nwith great fortune, [protag].",
+
+        # 49 - 51: Jordy (Fate)
+        "Jordy\nI am Jordy, Goddess of Fate.\nAnswer my question.",
+        "Which of these words do you cherish\nmost of all?\n  Perseverance\n  Miracle\n  Hope",
+        "Jordy\nHehe... I see.\nI understand. May your life be blessed\nwith great fortune, [protag].",
+
+        # 52 - 53: Gentle Voice Sendoff
+        "Gentle Voice\n[protag]. We look forward to\nwatching you grow into a splendid soul,\nand we shall always watch over you.",
+        "Gentle Voice\nNow, receive your life in this world.\nAnd journey forth into your new life!",
+
+        # 54 - 67: Birth Scene Part 2
+        "Galahad\nUrrgh... Urrggghhh...",
+        "Galahad\nWhoa! What in the world is this?!\nThe baby's already born!",
+        "Galahad\nHey, old lady, wake up!",
+        "Midwife\nGood gracious!",
+        "Midwife\nGalahad, you did quite a job yourself.\nCare to take over my trade?",
+        "Galahad\nQuit your nonsense! I didn't do anything!\nThat brat was born all on its own!",
+        "Galahad\nThis baby... is it really human?",
+        "Midwife\n...More importantly, look at Remy.",
+        "Galahad\nWhat? H-Hey! Remy!!\nRemy, stay with me! Hold on!",
+        "Midwife\n...It's too late. She has been taken\nto heaven. But look, you've been blessed\nwith such a precious new life.\nYou have to stay strong.",
+        "Galahad\nWhat did you say?! This brat is precious?!\nThis monster that killed my Remy?!\n...This thing is a demon!\nA demon's child!",
+        "Midwife\nHow could you say such a terrible thing?!\nBlaming such a sweet little baby...\nHave some decency!",
+        "Galahad\nShut up! This... this thing...\nIt's hard to curse without a name.\n...Fine. [protag].\n[protag]!",
+        "Galahad\nI just came up with the perfect name\nfor this demon child!\nI will never acknowledge this thing as\nmy child! It's the demon that killed Remy!",
     ]
 
     with open(out_file, "w", encoding="utf-8") as f:
@@ -360,6 +450,7 @@ def dump_prologue(data: bytes, out_file: Path, tbl: dict = None):
                 "bank": b["bank"],
                 "str_pos": b["str_pos"],
                 "length": b["length"],
+                "term": b["term"],
                 "table": b["table"],
             }
             f.write(json.dumps(meta) + "\n")

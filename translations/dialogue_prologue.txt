@@ -1,46 +1,46 @@
-{"str_num": 0, "bank": "0xDB", "str_pos": "0x1BAA0F", "length": 26, "table": "prologue"}
+{"str_num": 0, "bank": "0xDB", "str_pos": "0x1BAA0F", "length": 26, "term": "<end_box>", "table": "prologue"}
 #産婆
-#このままじゃあ、レミーは危ないねえ。
+# このままじゃあ、レミーは危ないねえ。
 Midwife
 At this rate, Remy won't make it...
 
-{"str_num": 1, "bank": "0xDB", "str_pos": "0x1BAA2A", "length": 34, "table": "prologue"}
+{"str_num": 1, "bank": "0xDB", "str_pos": "0x1BAA2A", "length": 34, "term": "<end_box>", "table": "prologue"}
 #ガラハド
-#ふざけんな！ お前、レミーが死ぬって
+# ふざけんな！ お前、レミーが死ぬって
 #いうのか！？
 Galahad
 Cut the crap! You saying
 Remy is gonna die?!
 
-{"str_num": 2, "bank": "0xDB", "str_pos": "0x1BAA4D", "length": 56, "table": "prologue"}
+{"str_num": 2, "bank": "0xDB", "str_pos": "0x1BAA4D", "length": 56, "term": "<end_box>", "table": "prologue"}
 #産婆
-#まだ、そうと決まったわけじゃない。
-#でも、お腹の子を助けるとなると、
+# まだ、そうと決まったわけじゃない。
+# でも、お腹の子を助けるとなると、
 #レミーの体は……
 Midwife
 Nothing is certain yet.
 But to save the baby,
 Remy's body won't hold out...
 
-{"str_num": 3, "bank": "0xDB", "str_pos": "0x1BAA86", "length": 45, "table": "prologue"}
+{"str_num": 3, "bank": "0xDB", "str_pos": "0x1BAA86", "length": 45, "term": "<end_scene>", "table": "prologue"}
 #ガラハド
-#馬鹿いうな！ レミーを助けろ！
-#何としても、レミーを助けるんだ！
+# 馬鹿いうな！ レミーを助けろ！
+# 何としても、レミーを助けるんだ！
 Galahad
 Cut that out! Save Remy!
 Do whatever it takes to save Remy!
 
-{"str_num": 4, "bank": "0xDB", "str_pos": "0x1BAAB4", "length": 38, "table": "prologue"}
+{"str_num": 4, "bank": "0xDB", "str_pos": "0x1BAAB4", "length": 38, "term": "<end_box>", "table": "prologue"}
 #産婆
-#……じゃあ、お前さん。お腹の子を
+# ……じゃあ、お前さん。お腹の子を
 #殺せっていうのかね？
 Midwife
 ...So then, are you telling me
 to kill the unborn child?
 
-{"str_num": 5, "bank": "0xDB", "str_pos": "0x1BAADB", "length": 58, "table": "prologue"}
+{"str_num": 5, "bank": "0xDB", "str_pos": "0x1BAADB", "length": 58, "term": "<end_scene>", "table": "prologue"}
 #ガラハド
-#な、何も、俺はそんなことをいってん
+# な、何も、俺はそんなことをいってん
 #じゃねえさ。で、でも、おりゃあ、レミー
 #が死んじまったら……
 Galahad
@@ -48,25 +48,25 @@ N-No, I'm not saying that!
 B-But... if Remy dies...
 I couldn't bear it...
 
-{"str_num": 6, "bank": "0xDB", "str_pos": "0x1BAB16", "length": 50, "table": "prologue"}
+{"str_num": 6, "bank": "0xDB", "str_pos": "0x1BAB16", "length": 50, "term": "<end_box>", "table": "prologue"}
 #産婆
-#うまれてくる子供に真任はないよ。
-#ガラハド、馬鹿なことを考えないで……
+# うまれてくる子供に真任はないよ。
+# ガラハド、馬鹿なことを考えないで……
 Midwife
 The unborn child is blameless.
 Galahad, don't think foolish thoughts...
 
-{"str_num": 7, "bank": "0xDB", "str_pos": "0x1BAB49", "length": 19, "table": "prologue"}
+{"str_num": 7, "bank": "0xDB", "str_pos": "0x1BAB49", "length": 19, "term": "<end_box>", "table": "prologue"}
 #産婆
-#ぐー、ぐー、すー、すー、
+# ぐー、ぐー、すー、すー、
 Midwife
 Zzz... Zzz... Snoore...
 
-{"str_num": 8, "bank": "0xDB", "str_pos": "0x1BAB5D", "length": 72, "table": "prologue"}
+{"str_num": 8, "bank": "0xDB", "str_pos": "0x1BAB5D", "length": 72, "term": "<end_box>", "table": "prologue"}
 #ガラハド
-#おい、こらばあさん！ こんなときに
+# おい、こらばあさん！ こんなときに
 #調子こいて寝てんじゃねえぞ！
-#あ、ありゃ？ 何だか、俺まで急に眠く
+# あ、ありゃ？ 何だか、俺まで急に眠く
 #なって……
 Galahad
 Hey! Old woman! Don't you dare
@@ -74,17 +74,17 @@ doze off at a time like this!
 Huh? What's going on? Even I'm feeling
 so sleepy...
 
-{"str_num": 9, "bank": "0xDB", "str_pos": "0x1BABA6", "length": 28, "table": "prologue"}
+{"str_num": 9, "bank": "0xDB", "str_pos": "0x1BABA6", "length": 28, "term": "<end_box>", "table": "prologue"}
 #ガラハド
-#ぐがー、すぴー、ぐごー、ぶしゅる
+# ぐがー、すぴー、ぐごー、ぶしゅる
 #るる……
 Galahad
 Zzz... *snort*... *wheeze*...
 zzz...
 
-{"str_num": 10, "bank": "0xDB", "str_pos": "0x1BABC3", "length": 67, "table": "prologue"}
+{"str_num": 10, "bank": "0xDB", "str_pos": "0x1BABC3", "length": 67, "term": "<end_scene>", "table": "prologue"}
 #優しい声
-#[protag]。
+# [protag]。
 #これからうまれて来るレミーの子。
 #あなたの名は[protag]。
 #あなたは、大天使ボルサークの生まれ変わ
@@ -95,4 +95,548 @@ Child of Remy, soon to be born.
 Your name is [protag].
 You are the reincarnation of
 the Archangel Borsark.
+
+{"str_num": 11, "bank": "0xDB", "str_pos": "0x1BAC07", "length": 74, "term": "<end_scene>", "table": "prologue"}
+# 私たち女神十二神があなたの人生を見守
+#り助けてあげましょう。
+# さあ、[protag]。
+#これから私たちの質問に答えてください。
+Gentle Voice
+We, the Twelve Goddesses of Fate,
+shall watch over and protect your life.
+Come, [protag].
+Now, answer our questions.
+
+{"str_num": 12, "bank": "0xDB", "str_pos": "0x1BAC52", "length": 32, "term": "<end_box>", "table": "prologue"}
+# あなたがどんな人間に育つか、知ってお
+#きたいのです。
+Gentle Voice
+We wish to know what kind of person
+you will grow up to be.
+
+{"str_num": 13, "bank": "0xDB", "str_pos": "0x1BAC73", "length": 72, "term": "<end_scene>", "table": "prologue"}
+#ロザンヌ
+# 私は火の女神ロザンヌ。私の質問に答え
+#てください。あなた[Armor]が火事になった。
+# 助けられるのは一人だけ。
+Rosanne
+I am Rosanne, Goddess of Fire.
+Answer my question.
+Your home is engulfed in flames.
+You can save only one person.
+
+{"str_num": 14, "bank": "0xDB", "str_pos": "0x1BACBC", "length": 35, "term": "<choice_menu>", "table": "prologue"}
+# さあ、誰を助けますか？
+#  家族
+#  恋人
+#  親友
+Now, who will you save?
+  Family
+  Lover
+  Best Friend
+
+{"str_num": 15, "bank": "0xDB", "str_pos": "0x1BACE0", "length": 45, "term": "<end_box>", "table": "prologue"}
+#ロザンヌ
+# うふふ……そうですか。
+# わかりました。では、幸の多い人生を、
+#[protag]。
+Rosanne
+Hehe... I see.
+I understand. May your life be blessed
+with great fortune, [protag].
+
+{"str_num": 16, "bank": "0xDB", "str_pos": "0x1BAD0E", "length": 71, "term": "<end_scene>", "table": "prologue"}
+#マジョルカ
+# 私は水の女神マジョルカ。私の質問に
+#答えてください。砂漠の迷い子となった
+#あなた。喉が乾いてカラカラ。
+Majorca
+I am Majorca, Goddess of Water.
+Answer my question.
+Lost in the desert, your throat is
+parched with burning thirst.
+
+{"str_num": 17, "bank": "0xDB", "str_pos": "0x1BAD56", "length": 29, "term": "<end_scene>", "table": "prologue"}
+#でも、水筒にはあと少しの水しか残って
+#いない。
+Majorca
+Yet only a single drop of water
+remains in your canteen.
+
+{"str_num": 18, "bank": "0xDB", "str_pos": "0x1BAD74", "length": 52, "term": "<choice_menu>", "table": "prologue"}
+# さあ、どうしますか？
+#  今全部飲む
+#  まだ我慢する
+#  とりあえず一口だけ飲む
+Now, what will you do?
+  Drink it all now
+  Endure a little longer
+  Take just a single sip
+
+{"str_num": 19, "bank": "0xDB", "str_pos": "0x1BADA9", "length": 46, "term": "<end_box>", "table": "prologue"}
+#マジョルカ
+# うふふ……そうですか。
+# わかりました。では、幸の多い人生を、
+#[protag]。
+Majorca
+Hehe... I see.
+I understand. May your life be blessed
+with great fortune, [protag].
+
+{"str_num": 20, "bank": "0xDB", "str_pos": "0x1BADD8", "length": 41, "term": "<end_scene>", "table": "prologue"}
+#チャニィ
+# 私は大地の女神チャニィ。私の質問に
+#答えて下さい。
+Chanii
+I am Chanii, Goddess of Earth.
+Answer my question.
+
+{"str_num": 21, "bank": "0xDB", "str_pos": "0x1BAE02", "length": 73, "term": "<choice_menu>", "table": "prologue"}
+# 大地から受ける恵みであなたがもっと
+#も素晴らしいと思うものは？
+#  緑の自然
+#  鉱石など資源
+#  あらゆる食物
+Among all the blessings of the earth,
+which do you consider most wonderful?
+  Lush nature
+  Ores and mineral resources
+  Bountiful food of all kinds
+
+{"str_num": 22, "bank": "0xDB", "str_pos": "0x1BAE4C", "length": 45, "term": "<end_box>", "table": "prologue"}
+#チャニィ
+# うふふ……そうですか。
+# わかりました。では、幸の多い人生を、
+#[protag]。
+Chanii
+Hehe... I see.
+I understand. May your life be blessed
+with great fortune, [protag].
+
+{"str_num": 23, "bank": "0xDB", "str_pos": "0x1BAE7A", "length": 69, "term": "<end_scene>", "table": "prologue"}
+#グロリア
+# 私は天空の女神グロリア。私の質問に
+#答えてください。あなたが天界に召される
+#とき、ふと空を見る。
+Gloria
+I am Gloria, Goddess of the Sky.
+Answer my question.
+As you are summoned to the heavens,
+you look up at the sky.
+
+{"str_num": 24, "bank": "0xDB", "str_pos": "0x1BAEC0", "length": 74, "term": "<choice_menu>", "table": "prologue"}
+# その時、どんな空であることを望みます
+#か？
+#  雲一つない青空
+#  今にも雨が降りそうな曇り空
+#  荒れ狂う雷雨
+At that moment, what kind of sky
+do you wish to behold?
+  A clear, cloudless blue sky
+  An overcast sky ready to rain
+  A raging thunderstorm
+
+{"str_num": 25, "bank": "0xDB", "str_pos": "0x1BAF0B", "length": 45, "term": "<end_box>", "table": "prologue"}
+#グロリア
+# うふふ……そうですか。
+# わかりました。では、幸の多い人生を、
+#[protag]。
+Gloria
+Hehe... I see.
+I understand. May your life be blessed
+with great fortune, [protag].
+
+{"str_num": 26, "bank": "0xDB", "str_pos": "0x1BAF39", "length": 63, "term": "<end_scene>", "table": "prologue"}
+#ジャンヌ
+# 私は風の女神ジャンヌ。私の質問に
+#答えてください。風があなたの元に幸せを
+#運んでくれた。
+Jeanne
+I am Jeanne, Goddess of Wind.
+Answer my question.
+The wind has carried happiness to you.
+
+{"str_num": 27, "bank": "0xDB", "str_pos": "0x1BAF79", "length": 33, "term": "<choice_menu>", "table": "prologue"}
+# さあ、その幸せとは？
+#  お金
+#  名誉
+#  権力
+From which direction do you believe
+that wind blew?
+  From the east
+  From the west
+  From the south
+
+{"str_num": 28, "bank": "0xDB", "str_pos": "0x1BAF9B", "length": 45, "term": "<end_box>", "table": "prologue"}
+#ジャンヌ
+# うふふ……そうですか。
+# わかりました。では、幸の多い人生を、
+#[protag]。
+Jeanne
+Hehe... I see.
+I understand. May your life be blessed
+with great fortune, [protag].
+
+{"str_num": 29, "bank": "0xDB", "str_pos": "0x1BAFC9", "length": 97, "term": "<end_scene>", "table": "prologue"}
+#イザベラ
+# 私は慈悲の女神イザベラ。私の質問に
+#答えてください。あなたに子供ができた。
+# その子供が盗みを働いた。何度注意して
+#も盗み癖が直らない。
+Isabella
+I am Isabella, Goddess of Forests.
+Answer my question.
+You are lost deep within the forest.
+
+{"str_num": 30, "bank": "0xDB", "str_pos": "0x1BB02B", "length": 51, "term": "<choice_menu>", "table": "prologue"}
+# さあ、あなたはどうする？
+#  子供を殴る
+#  神に祈る
+#  仕方ないので放っておく
+Isabella
+Before your eyes lie three paths.
+
+{"str_num": 31, "bank": "0xDB", "str_pos": "0x1BB05F", "length": 45, "term": "<end_box>", "table": "prologue"}
+#イザベラ
+# うふふ……そうですか。
+# わかりました。では、幸の多い人生を、
+#[protag]。
+Which path will you take?
+  A bright, clear path
+  A steep, perilous shortcut
+  An untrodden beast trail
+
+{"str_num": 32, "bank": "0xDB", "str_pos": "0x1BB08D", "length": 81, "term": "<end_scene>", "table": "prologue"}
+#クリスティーナ
+# 私は戦いの女神クリスティーナ。私の
+#質問に答えてください。
+# あなたは、とても強い男とどうしても
+#戦わなければならない。
+Isabella
+Hehe... I see.
+I understand. May your life be blessed
+with great fortune, [protag].
+
+{"str_num": 33, "bank": "0xDB", "str_pos": "0x1BB0DF", "length": 26, "term": "<end_scene>", "table": "prologue"}
+# まともに戦えば殺されることはわかって
+#いる。
+Christina
+I am Christina, Goddess of Light.
+Answer my question.
+Light and shadow--the world cannot
+exist without both.
+
+{"str_num": 34, "bank": "0xDB", "str_pos": "0x1BB0FA", "length": 66, "term": "<choice_menu>", "table": "prologue"}
+# さあ、どうする？
+#  正々堂々と戦い殺される
+#  卑怯な手を使ってでも勝つ
+#  地の果てまでも逃げる
+Which of the two draws your heart?
+  Light
+  Shadow
+  Neither
+
+{"str_num": 35, "bank": "0xDB", "str_pos": "0x1BB13D", "length": 48, "term": "<end_box>", "table": "prologue"}
+#クリスティーナ
+# うふふ……そうですか。
+# わかりました。では、幸の多い人生を、
+#[protag]。
+Christina
+Hehe... I see.
+I understand. May your life be blessed
+with great fortune, [protag].
+
+{"str_num": 36, "bank": "0xDB", "str_pos": "0x1BB16E", "length": 65, "term": "<end_scene>", "table": "prologue"}
+#ナターシア
+# 私は光の女神ナターシア。私の質問に
+#答えてください。あなたの目の前にまばゆ
+#い光が現れた。
+Natasia
+I am Natasia, Goddess of Darkness.
+Answer my question.
+Alone in the pitch-black darkness,
+what crosses your mind?
+
+{"str_num": 37, "bank": "0xDB", "str_pos": "0x1BB1B0", "length": 62, "term": "<choice_menu>", "table": "prologue"}
+# さあ、その光の向こうにはどんな世界が
+#あると思う？
+#  花畑
+#  大都会
+#  何もない無の世界
+What do you think of?
+  The fear of solitude
+  The solace of tranquility
+  Nothing at all
+
+{"str_num": 38, "bank": "0xDB", "str_pos": "0x1BB1EF", "length": 46, "term": "<end_box>", "table": "prologue"}
+#ナターシア
+# うふふ……そうですか。
+# わかりました。では、幸の多い人生を、
+#[protag]。
+Natasia
+Hehe... I see.
+I understand. May your life be blessed
+with great fortune, [protag].
+
+{"str_num": 39, "bank": "0xDB", "str_pos": "0x1BB21E", "length": 38, "term": "<end_scene>", "table": "prologue"}
+#エレナ
+# 私は美の女神エレナ。私の質問に答えて
+#ください。
+Elena
+I am Elena, Goddess of Beauty.
+Answer my question.
+
+{"str_num": 40, "bank": "0xDB", "str_pos": "0x1BB245", "length": 74, "term": "<choice_menu>", "table": "prologue"}
+# 美の本質とは、あなたにとって何？
+#  美は永遠である
+#  美は一瞬のものである
+#  美は、言葉では表せないものである
+What is the true essence of beauty
+to you?
+  Beauty is eternal
+  Beauty is fleeting
+  Beauty cannot be put into words
+
+{"str_num": 41, "bank": "0xDB", "str_pos": "0x1BB290", "length": 44, "term": "<end_box>", "table": "prologue"}
+#エレナ
+# うふふ……そうですか。
+# わかりました。では、幸の多い人生を、
+#[protag]。
+Elena
+Hehe... I see.
+I understand. May your life be blessed
+with great fortune, [protag].
+
+{"str_num": 42, "bank": "0xDB", "str_pos": "0x1BB2BD", "length": 44, "term": "<end_scene>", "table": "prologue"}
+#エリザベス
+# 私は知恵の女神エリザベス。私の質問に
+#答えてください。
+Elizabeth
+I am Elizabeth, Goddess of Wisdom.
+Answer my question.
+
+{"str_num": 43, "bank": "0xDB", "str_pos": "0x1BB2EA", "length": 110, "term": "<choice_menu>", "table": "prologue"}
+# あなたは次の三人の中で誰が最も知恵の
+#ある人間だと思う？
+#  建て前と本音を使い分ける人間
+#  平気で人を騙せる人間
+#  自分よりも他人を考えられる人間
+Among these three, who do you believe
+possesses the greatest wisdom?
+  One who hides true intent
+  One who deceives without guilt
+  One who puts others before self
+
+{"str_num": 44, "bank": "0xDB", "str_pos": "0x1BB359", "length": 46, "term": "<end_box>", "table": "prologue"}
+#エリザベス
+# うふふ……そうですか。
+# わかりました。では、幸の多い人生を、
+#[protag]。
+Elizabeth
+Hehe... I see.
+I understand. May your life be blessed
+with great fortune, [protag].
+
+{"str_num": 45, "bank": "0xDB", "str_pos": "0x1BB388", "length": 57, "term": "<end_scene>", "table": "prologue"}
+#シンシア
+# 私は愛の女神シンシア。私の質問に
+#答えてください。
+# あなたに愛する人ができた。
+Cynthia
+I am Cynthia, Goddess of Love.
+Answer my question.
+You have found someone you truly love.
+
+{"str_num": 46, "bank": "0xDB", "str_pos": "0x1BB3C2", "length": 52, "term": "<end_scene>", "table": "prologue"}
+# 愛する人は、二人の時間を作るために
+#何か一つを犠牲にしてほしいといって
+#きた。
+Cynthia
+To spend more time together, your love
+asks you to sacrifice one thing in life.
+
+{"str_num": 47, "bank": "0xDB", "str_pos": "0x1BB3F7", "length": 57, "term": "<choice_menu>", "table": "prologue"}
+# あなたは、何を犠牲にするか？
+#  仕事の時間
+#  趣味の時間
+#  友人との付き合い
+What would you sacrifice?
+  Time spent working
+  Time spent on hobbies
+  Time spent with friends
+
+{"str_num": 48, "bank": "0xDB", "str_pos": "0x1BB431", "length": 45, "term": "<end_box>", "table": "prologue"}
+#シンシア
+# うふふ……そうですか。
+# わかりました。では、幸の多い人生を、
+#[protag]。
+Cynthia
+Hehe... I see.
+I understand. May your life be blessed
+with great fortune, [protag].
+
+{"str_num": 49, "bank": "0xDB", "str_pos": "0x1BB45F", "length": 46, "term": "<end_scene>", "table": "prologue"}
+#ジョールディ
+# 私は運命の女神ジョールディ。私の
+#質問に答えてください。
+Jordy
+I am Jordy, Goddess of Fate.
+Answer my question.
+
+{"str_num": 50, "bank": "0xDB", "str_pos": "0x1BB48E", "length": 50, "term": "<choice_menu>", "table": "prologue"}
+# 次の中であなたのもっとも好きな言葉は
+#何？
+#  努力
+#  奇跡
+#  希望
+Which of these words do you cherish
+most of all?
+  Perseverance
+  Miracle
+  Hope
+
+{"str_num": 51, "bank": "0xDB", "str_pos": "0x1BB4C1", "length": 47, "term": "<end_box>", "table": "prologue"}
+#ジョールディ
+# うふふ……そうですか。
+# わかりました。では、幸の多い人生を、
+#[protag]。
+Jordy
+Hehe... I see.
+I understand. May your life be blessed
+with great fortune, [protag].
+
+{"str_num": 52, "bank": "0xDB", "str_pos": "0x1BB4F1", "length": 62, "term": "<end_scene>", "table": "prologue"}
+#優しい声
+# [protag]。あなたが立派な人間
+#として成長していくことを楽しみに、
+#私たちは見守っていますよ。
+Gentle Voice
+[protag]. We look forward to
+watching you grow into a splendid soul,
+and we shall always watch over you.
+
+{"str_num": 53, "bank": "0xDB", "str_pos": "0x1BB530", "length": 45, "term": "<end_box>", "table": "prologue"}
+# さあ、この世に生を受けなさい。
+# そして、新たな人生へと旅立つのです。
+Gentle Voice
+Now, receive your life in this world.
+And journey forth into your new life!
+
+{"str_num": 54, "bank": "0xDB", "str_pos": "0x1BB55E", "length": 18, "term": "<end_box>", "table": "prologue"}
+#ガラハド
+# う…うーーーーーん……
+Galahad
+Urrgh... Urrggghhh...
+
+{"str_num": 55, "bank": "0xDB", "str_pos": "0x1BB571", "length": 41, "term": "<end_box>", "table": "prologue"}
+#ガラハド
+# やっ！ こりゃあ、どういうこった？
+# 赤ん坊が生まれてやがる。
+Galahad
+Whoa! What in the world is this?!
+The baby's already born!
+
+{"str_num": 56, "bank": "0xDB", "str_pos": "0x1BB59B", "length": 15, "term": "<end_box>", "table": "prologue"}
+# おい、ばあさん、起きろ。
+Galahad
+Hey, old lady, wake up!
+
+{"str_num": 57, "bank": "0xDB", "str_pos": "0x1BB5AB", "length": 11, "term": "<end_box>", "table": "prologue"}
+#産婆
+# ありゃ！
+Midwife
+Good gracious!
+
+{"str_num": 58, "bank": "0xDB", "str_pos": "0x1BB5B7", "length": 35, "term": "<end_scene>", "table": "prologue"}
+# ガラハド、あんたも大したも
+#んだねえ。私の跡取りになるかい？
+Midwife
+Galahad, you did quite a job yourself.
+Care to take over my trade?
+
+{"str_num": 59, "bank": "0xDB", "str_pos": "0x1BB5DB", "length": 56, "term": "<end_box>", "table": "prologue"}
+#ガラハド
+# 馬鹿いってんな。俺は何もしてねえさ。
+# あの赤ん坊は一人で生まれてきたんだ
+#よ！
+Galahad
+Quit your nonsense! I didn't do anything!
+That brat was born all on its own!
+
+{"str_num": 60, "bank": "0xDB", "str_pos": "0x1BB614", "length": 25, "term": "<end_scene>", "table": "prologue"}
+#ガラハド
+# この赤ん坊人間なんだろうな？
+Galahad
+This baby... is it really human?
+
+{"str_num": 61, "bank": "0xDB", "str_pos": "0x1BB62E", "length": 19, "term": "<end_box>", "table": "prologue"}
+#産婆
+# ……それより、レミーが。
+Midwife
+...More importantly, look at Remy.
+
+{"str_num": 62, "bank": "0xDB", "str_pos": "0x1BB642", "length": 34, "term": "<end_box>", "table": "prologue"}
+#ガラハド
+# え？ お、おい！ レミー！！
+# レミー、しっかりしろ！
+Galahad
+What? H-Hey! Remy!!
+Remy, stay with me! Hold on!
+
+{"str_num": 63, "bank": "0xDB", "str_pos": "0x1BB665", "length": 80, "term": "<end_box>", "table": "prologue"}
+#産婆
+# ……もう、だめだよ。天に召されたの
+#さ。それより、お前さんはこんなにかわい
+#らしい新しい命を授かったんじゃないか。
+# しっかりおしよ。
+Midwife
+...It's too late. She has been taken
+to heaven. But look, you've been blessed
+with such a precious new life.
+You have to stay strong.
+
+{"str_num": 64, "bank": "0xDB", "str_pos": "0x1BB6B6", "length": 81, "term": "<end_box>", "table": "prologue"}
+#ガラハド
+# 何だと？ この赤ん坊が、かわいらし
+#い？ 俺のレミーを殺した、この赤ん坊
+#が？ ……こいつは悪魔だ。こいつは悪魔
+#の子だよ！
+Galahad
+What did you say?! This brat is precious?!
+This monster that killed my Remy?!
+...This thing is a demon!
+A demon's child!
+
+{"str_num": 65, "bank": "0xDB", "str_pos": "0x1BB708", "length": 54, "term": "<end_scene>", "table": "prologue"}
+#産婆
+# なんてこというんだね、お前さんは。
+#こんなかわいらしい赤ちゃん捕まえて、
+#ひどいもんだ。
+Midwife
+How could you say such a terrible thing?!
+Blaming such a sweet little baby...
+Have some decency!
+
+{"str_num": 66, "bank": "0xDB", "str_pos": "0x1BB73F", "length": 52, "term": "<end_scene>", "table": "prologue"}
+#ガラハド
+# うるさい！ この、この……名前がない
+#と呼びづらいな。
+# ……そうだ、[protag]だ。
+# [protag]。
+Galahad
+Shut up! This... this thing...
+It's hard to curse without a name.
+...Fine. [protag].
+[protag]!
+
+{"str_num": 67, "bank": "0xDB", "str_pos": "0x1BB774", "length": 85, "term": "<end_box>", "table": "prologue"}
+# この悪魔の子にぴったりの名前をたった
+#今思いついちまったよ。
+# 俺は、こいつを自分の子供だなんて思わ
+#ないよ！ レミーを殺した悪魔さ！
+Galahad
+I just came up with the perfect name
+for this demon child!
+I will never acknowledge this thing as
+my child! It's the demon that killed Remy!
 

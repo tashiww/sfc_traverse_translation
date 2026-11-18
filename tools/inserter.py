@@ -377,7 +377,7 @@ class ScriptInserter:
                     clean_text = entry["en_text"].strip()
                     encoded = encode_text_with_tbl(clean_text, tbl) + b"\xFF"
                 elif table_mode == "prologue":
-                    lines = [l.strip() for l in re.split(r"\n|<wait_auto>", entry["en_text"]) if l.strip()]
+                    lines = [l.rstrip() for l in re.split(r"\n|<wait_auto>", entry["en_text"]) if l.strip()]
                     encoded_b = bytearray()
                     for l_idx, line in enumerate(lines):
                         encoded_b.extend(encode_text_with_tbl(line, tbl))
