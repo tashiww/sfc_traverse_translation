@@ -47,7 +47,7 @@ SPECIAL_TOKEN_WIDTHS = {
     "[Shield]": 16,
     "[Armor]": 16,
     # Dynamic user-supplied names (estimated pixel budget for pre-break)
-    "[protag]": 48, # ~6-8 letters
+    "[protag]": 50, # Worst-case 8-character uppercase name budget (e.g. MARGARET)
     "[sub]": 48,
     "[pet]": 40,
     # Native Japanese symbols / full-width characters (16 px)
@@ -210,31 +210,65 @@ KNOWN_SPEAKERS = {
 
 def get_token_px_width(token: str) -> int:
     if "[protag]" in token or "[sub]" in token or "[pet]" in token:
-        t = token.replace("[protag]", "Gant").replace("[sub]", "Soni").replace("[pet]", "Boan")
-        return sum(CHAR_WIDTHS.get(c, 6) for c in t)
+        w = 0
+        tokens = re.findall(r"\[[^\]]+\]|[^\[\]]+", token)
+        for tok in tokens:
+            if tok in SPECIAL_TOKEN_WIDTHS:
+                w += SPECIAL_TOKEN_WIDTHS[tok]
+            else:
+                w += sum(CHAR_WIDTHS.get(c, 6) for c in tok)
+        return w
+    if token in SPECIAL_TOKEN_WIDTHS:
+        return SPECIAL_TOKEN_WIDTHS[token]
     return sum(CHAR_WIDTHS.get(c, 6) for c in token)
 
 
-def word_wrap_to_lines(text: str, max_px: int = 216) -> list[str]:
-    words = text.split()
-    lines = []
-    cur_line = []
-    cur_px = 0
+def smart_wrap_text(text: str, max_px: int = 216) -> list[str]:
+    """
+    Intelligently word-wraps dialogue text:
+    - Respects existing manual line breaks.
+    - Preserves leading indentation (for choice options, e.g. '  Family').
+    - Measures exact proportional pixel widths from CHAR_WIDTHS (loaded from vwf_widths.bin).
+    - Budgets [protag] at 50px (worst-case 8-character uppercase name), [sub] at 48px, [pet] at 40px.
+    - Wraps any line exceeding max_px at natural word boundaries.
+    """
+    manual_lines = text.split("\n")
+    final_lines = []
     space_px = CHAR_WIDTHS.get(" ", 4)
 
-    for word in words:
-        w_px = get_token_px_width(word)
-        needed = w_px if not cur_line else space_px + w_px
-        if cur_line and cur_px + needed > max_px:
-            lines.append(" ".join(cur_line))
-            cur_line = [word]
-            cur_px = w_px
-        else:
-            cur_line.append(word)
-            cur_px += needed
-    if cur_line:
-        lines.append(" ".join(cur_line))
-    return lines
+    for m_line in manual_lines:
+        line_clean = m_line.rstrip()
+        if not line_clean:
+            continue
+
+        indent = len(line_clean) - len(line_clean.lstrip())
+        indent_str = " " * indent
+
+        words = line_clean.split()
+        if not words:
+            continue
+
+        cur_line = []
+        cur_px = indent * space_px
+
+        for w in words:
+            w_px = get_token_px_width(w)
+            needed = w_px if not cur_line else space_px + w_px
+            if cur_line and cur_px + needed > max_px:
+                final_lines.append(indent_str + " ".join(cur_line))
+                cur_line = [w]
+                cur_px = indent * space_px + w_px
+            else:
+                cur_line.append(w)
+                cur_px += needed
+        if cur_line:
+            final_lines.append(indent_str + " ".join(cur_line))
+
+    return final_lines
+
+
+def word_wrap_to_lines(text: str, max_px: int = 216) -> list[str]:
+    return smart_wrap_text(text, max_px=max_px)
 
 
 def encode_text_with_tbl(text: str, tbl: dict) -> bytes:
@@ -254,15 +288,30 @@ def encode_text_with_tbl(text: str, tbl: dict) -> bytes:
     return bytes(res)
 
 
-def encode_dialogue_string(text: str, tbl: dict) -> bytes:
-    """Encodes translated dialogue string preserving native line breaks (\xFE\x00)."""
-    parts = [p.strip() for p in re.split(r"\n|<wait_auto>", text) if p.strip()]
+def encode_dialogue_string(text: str, tbl: dict, max_px: int = 216) -> bytes:
+    """
+    Encodes translated dialogue string with smart word-wrapping and pagination:
+    - Splits on blank lines / <page> into pages.
+    - Smart-wraps lines within each page (respecting manual breaks, wrapping overflow at <= 216px).
+    - Joins lines within a page with \xFE\x00 (in-box line break).
+    - Joins pages with \xFA (page prompt / wait for button press).
+    - Terminates with \xFF.
+    """
+    paras = re.split(r"\n\s*\n|<page>", text)
     res = bytearray()
 
-    for idx, part in enumerate(parts):
-        if idx > 0:
-            res.extend(b"\xFE\x00")
-        res.extend(encode_text_with_tbl(part, tbl))
+    for p_idx, para in enumerate(paras):
+        para = para.strip()
+        if not para:
+            continue
+        if p_idx > 0:
+            res.append(0xFA)  # Prompt break between explicit pages
+
+        lines = smart_wrap_text(para, max_px=max_px)
+        for l_idx, line in enumerate(lines):
+            if l_idx > 0:
+                res.extend(b"\xFE\x00")  # Native line break
+            res.extend(encode_text_with_tbl(line, tbl))
 
     res.append(0xFF)  # Dialogue box terminator!
     return bytes(res)
@@ -377,7 +426,7 @@ class ScriptInserter:
                     clean_text = entry["en_text"].strip()
                     encoded = encode_text_with_tbl(clean_text, tbl) + b"\xFF"
                 elif table_mode == "prologue":
-                    lines = [l.rstrip() for l in re.split(r"\n|<wait_auto>", entry["en_text"]) if l.strip()]
+                    lines = smart_wrap_text(entry["en_text"], max_px=216)
                     encoded_b = bytearray()
                     for l_idx, line in enumerate(lines):
                         encoded_b.extend(encode_text_with_tbl(line, tbl))
