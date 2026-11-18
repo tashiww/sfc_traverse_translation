@@ -32,6 +32,16 @@ org $C01B63
 org $C034A4
     JML Engine2_CharBlit
 
+; Universal Hook into Status Bar Location Setup at $C0:36E1
+; Intercepts character-by-character tile loop:
+; - If Japanese location string (first char >= $80), preserves native Japanese tile rendering
+; - If English location string, dynamically renders true proportional VWF!
+org $C036E1
+    JSL LocationVWF_Hook
+    PLB
+    RTS
+    padbyte $EA : pad $C03703
+
 
 ; ----------------------------------------------------------------------------
 ; Dynamic String Redirection Table in Bank $CA
@@ -1122,6 +1132,332 @@ Engine2_CleanShadowMask:
     %E2_MaskRow($7E8210+4)  : %E2_MaskRow($7E8210+6)
     %E2_MaskRow($7E8210+8)  : %E2_MaskRow($7E8210+10)
     %E2_MaskRow($7E8210+12) : %E2_MaskRow($7E8210+14)
+    RTS
+
+
+; ----------------------------------------------------------------------------
+; LocationVWF_Hook:
+; Check if location string is English (first char < $80) or Japanese (>= $80).
+; ----------------------------------------------------------------------------
+LocationVWF_Hook:
+    SEP #$20            ; 8-bit Accumulator
+    LDA.l $C10000,X     ; Read first char from Bank $C1
+    CMP #$80
+    BCS .native_jp      ; If >= $80, it's native Japanese!
+    JML LocationVWF_Setup
+
+.native_jp:
+    ; Clean native ROM character-by-character loop:
+    LDA.l $C10000,X
+    CMP #$FF
+    BEQ .done_jp
+    ASL A
+    STA $F000,Y
+    INC A
+    STA $F040,Y
+    TDC
+    ADC #$22
+    STA $F001,Y
+    STA $F041,Y
+    INX
+    INY : INY
+    BRA .native_jp
+
+.done_jp:
+    RTL
+
+; ----------------------------------------------------------------------------
+; LocationVWF_Setup:
+; Intercepts location setup at $C0:36E1 for English strings.
+; Left-aligned: starts at Column 0 of banner ($7F:F054 / $7F:F094).
+; Inputs:
+;   X = 16-bit string pointer in Bank $C1
+; ----------------------------------------------------------------------------
+LocationVWF_Setup:
+    PHP
+    PHB
+    PHX                 ; Save string pointer X on stack ($01,S)
+    PHY
+
+    REP #$30            ; 16-bit A, X, Y
+
+    ; 1. Populate status bar BG3 tilemap in Bank $7F (Left-aligned):
+    ; Top row: tiles $E0, $E2, $E4 ... with attr $22
+    ; Bottom row: tiles $E1, $E3, $E5 ... with attr $22
+    LDA #$22E0 : STA.l $7FF054
+    LDA #$22E2 : STA.l $7FF056
+    LDA #$22E4 : STA.l $7FF058
+    LDA #$22E6 : STA.l $7FF05A
+    LDA #$22E8 : STA.l $7FF05C
+    LDA #$22EA : STA.l $7FF05E
+    LDA #$22EC : STA.l $7FF060
+    LDA #$22EE : STA.l $7FF062
+    LDA #$22F0 : STA.l $7FF064
+    LDA #$22F2 : STA.l $7FF066
+    LDA #$22F4 : STA.l $7FF068
+    LDA #$22F6 : STA.l $7FF06A
+
+    LDA #$22E1 : STA.l $7FF094
+    LDA #$22E3 : STA.l $7FF096
+    LDA #$22E5 : STA.l $7FF098
+    LDA #$22E7 : STA.l $7FF09A
+    LDA #$22E9 : STA.l $7FF09C
+    LDA #$22EB : STA.l $7FF09E
+    LDA #$22ED : STA.l $7FF0A0
+    LDA #$22EF : STA.l $7FF0A2
+    LDA #$22F1 : STA.l $7FF0A4
+    LDA #$22F3 : STA.l $7FF0A6
+    LDA #$22F5 : STA.l $7FF0A8
+    LDA #$22F7 : STA.l $7FF0AA
+
+    ; 2. Clear 384-byte RAM tile buffer at $7F:E400..$7F:E57F to 0:
+    LDX #$0000
+    TXA
+-   STA.l $7FE400,X
+    INX : INX
+    CPX #$0180
+    BCC -
+
+    ; 3. Render location string into $7F:E400:
+    LDA $03,S           ; Restore string pointer X
+    TAX
+    JSR LocationVWF_Render
+
+    ; 4. Wait for VBlank and DMA 384 bytes to VRAM $3700:
+    SEP #$20
+    LDA.l $004210
+-   LDA.l $004210
+    BPL -
+
+    REP #$20
+    LDA #$1801 : STA.l $004300  ; Mode 1, dest $2118
+    LDA #$E400 : STA.l $004302  ; Source = $E400
+    SEP #$20
+    LDA #$7F   : STA.l $004304  ; Bank = $7F
+    REP #$20
+    LDA #$0180 : STA.l $004305  ; Size = 384 bytes
+    LDA #$3700 : STA.l $002116  ; VRAM word address = $3700
+    SEP #$20
+    LDA #$01   : STA.l $00420B  ; Fire DMA channel 0!
+
+    PLY
+    PLX
+    PLB
+    PLP
+    RTL
+
+; ----------------------------------------------------------------------------
+; LocationVWF_Render:
+; Left-aligned proportional VWF renderer for location banner.
+; ----------------------------------------------------------------------------
+LocationVWF_Render:
+    PHP
+    PHB
+    PHK : PLB           ; DB = Bank $CA (to read FontVWF and WidthTableVWF)
+    REP #$30            ; 16-bit A, X, Y
+
+    ; Preserve DP scratch variables:
+    LDA $D4 : PHA
+    LDA $D6 : PHA
+    LDA $D8 : PHA
+    LDA $DA : PHA
+    LDA $EA : PHA
+    LDA $EC : PHA
+
+    STX $D8             ; $D8 = string read pointer
+    STZ $D6             ; $D6 = cursor_x = 0 (Left-aligned!)
+
+.blit_loop:
+    LDX $D8
+    SEP #$20            ; 8-bit A
+    LDA.l $C10000,X     ; Read char byte from Bank $C1
+    CMP #$FF            ; String terminator?
+    BEQ .blit_done
+    INX
+    STX $D8             ; Advance string pointer
+
+    REP #$20            ; 16-bit A
+    AND #$00FF
+    PHA                 ; Push char_code on stack ($01,S)
+
+    BEQ .is_space
+
+    ; Non-space char: look up proportional width:
+    TAX
+    SEP #$20
+    LDA.w WidthTableVWF,X
+    REP #$20
+    AND #$00FF
+    PHA                 ; Push char_width on stack ($01,S), char_code is ($03,S)
+    BRA .do_blit
+
+.is_space:
+    LDA #$0004
+    PHA                 ; Space width = 4 pixels ($01,S)
+    BRA .skip_char
+
+.do_blit:
+    ; Check if cursor_x >= 96 (fits in 12 columns):
+    LDA $D6             ; cursor_x
+    CMP #$0060          ; 96 pixels = 0x0060
+    BCS .skip_char
+
+    ; $EA = bit_shift = cursor_x & 7:
+    AND #$0007
+    STA $EA
+
+    ; col = cursor_x >> 3:
+    LDA $D6
+    LSR : LSR : LSR     ; A = col (0..11)
+    CMP #$000C          ; col >= 12?
+    BCS .skip_char
+
+    ; tile_offset = col * 32:
+    ASL : ASL : ASL : ASL : ASL
+    STA $EC             ; $EC = tile_offset
+
+    ; font_ptr = char_code * 32:
+    LDA $03,S           ; 16-bit char_code
+    ASL : ASL : ASL : ASL : ASL
+    TAY                 ; Y = font_ptr in FontVWF
+
+    ; Blit glyph:
+    JSR LocationVWF_BlitGlyph
+
+.skip_char:
+    REP #$20
+    PLA                 ; Pull char_width
+    CLC
+    ADC $D6
+    STA $D6             ; cursor_x += char_width
+    PLA                 ; Pull char_code
+    BRA .blit_loop
+
+.blit_done:
+    JSR LocationVWF_CleanShadow
+
+    ; Restore DP scratch variables:
+    PLA : STA $EC
+    PLA : STA $EA
+    PLA : STA $DA
+    PLA : STA $D8
+    PLA : STA $D6
+    PLA : STA $D4
+
+    PLB
+    PLP
+    RTS
+
+; ----------------------------------------------------------------------------
+; LocationVWF_BlitGlyph:
+; Blits top tile (FontVWF+0..15) and bottom tile (FontVWF+16..31) into $7F:E400.
+; ----------------------------------------------------------------------------
+macro Loc_BlitRow(fg_off, sh_off, base_addr, p0_off, p1_off)
+    LDA.w FontVWF+<fg_off>,Y
+    BEQ ?no_fg
+    XBA
+    LDA #$00
+    REP #$20
+    JSR Loc_ShiftWord
+    SEP #$20
+    XBA
+    ORA.l <base_addr>+<p0_off>,X
+    STA.l <base_addr>+<p0_off>,X
+    XBA
+    BEQ ?no_fg
+    CPX #$0160
+    BCS ?no_fg
+    ORA.l <base_addr>+32+<p0_off>,X
+    STA.l <base_addr>+32+<p0_off>,X
+?no_fg:
+    LDA.w FontVWF+<sh_off>,Y
+    BEQ ?no_sh
+    XBA
+    LDA #$00
+    REP #$20
+    JSR Loc_ShiftWord
+    SEP #$20
+    XBA
+    ORA.l <base_addr>+<p1_off>,X
+    STA.l <base_addr>+<p1_off>,X
+    XBA
+    BEQ ?no_sh
+    CPX #$0160
+    BCS ?no_sh
+    ORA.l <base_addr>+32+<p1_off>,X
+    STA.l <base_addr>+32+<p1_off>,X
+?no_sh:
+endmacro
+
+LocationVWF_BlitGlyph:
+    LDX $EC             ; X = tile_offset
+    SEP #$20
+
+    ; Top tile rows 0..7:
+    %Loc_BlitRow(0, 8,   $7FE400, 0,  1)
+    %Loc_BlitRow(1, 9,   $7FE400, 2,  3)
+    %Loc_BlitRow(2, 10,  $7FE400, 4,  5)
+    %Loc_BlitRow(3, 11,  $7FE400, 6,  7)
+    %Loc_BlitRow(4, 12,  $7FE400, 8,  9)
+    %Loc_BlitRow(5, 13,  $7FE400, 10, 11)
+    %Loc_BlitRow(6, 14,  $7FE400, 12, 13)
+    %Loc_BlitRow(7, 15,  $7FE400, 14, 15)
+
+    ; Bottom tile rows 8..15:
+    %Loc_BlitRow(16, 24, $7FE410, 0,  1)
+    %Loc_BlitRow(17, 25, $7FE410, 2,  3)
+    %Loc_BlitRow(18, 26, $7FE410, 4,  5)
+    %Loc_BlitRow(19, 27, $7FE410, 6,  7)
+    %Loc_BlitRow(20, 28, $7FE410, 8,  9)
+    %Loc_BlitRow(21, 29, $7FE410, 10, 11)
+    %Loc_BlitRow(22, 30, $7FE410, 12, 13)
+    %Loc_BlitRow(23, 31, $7FE410, 14, 15)
+
+    REP #$20
+    RTS
+
+; ----------------------------------------------------------------------------
+; Loc_ShiftWord:
+; Shifts 16-bit A right by $EA (0..7). Preserves X.
+; ----------------------------------------------------------------------------
+Loc_ShiftWord:
+    PHX
+    LDX $EA
+    BEQ .done
+-   LSR A
+    DEX
+    BNE -
+.done:
+    PLX
+    RTS
+
+; ----------------------------------------------------------------------------
+; LocationVWF_CleanShadow:
+; Masks Plane 1 &= ~Plane 0 for all 12 columns of 8x16 tiles in $7F:E400.
+; ----------------------------------------------------------------------------
+LocationVWF_CleanShadow:
+    LDX #$0000
+.loop:
+    SEP #$20
+    macro LocMaskRow(off)
+        LDA.l $7FE400+<off>,X
+        EOR #$FF
+        AND.l $7FE400+<off>+1,X
+        STA.l $7FE400+<off>+1,X
+    endmacro
+    %LocMaskRow(0)  : %LocMaskRow(2)  : %LocMaskRow(4)  : %LocMaskRow(6)
+    %LocMaskRow(8)  : %LocMaskRow(10) : %LocMaskRow(12) : %LocMaskRow(14)
+    %LocMaskRow(16) : %LocMaskRow(18) : %LocMaskRow(20) : %LocMaskRow(22)
+    %LocMaskRow(24) : %LocMaskRow(26) : %LocMaskRow(28) : %LocMaskRow(30)
+
+    REP #$20
+    TXA
+    CLC : ADC #$0020
+    TAX
+    CPX #$0180
+    BCS .done
+    JMP .loop
+.done:
     RTS
 
 ; ----------------------------------------------------------------------------
