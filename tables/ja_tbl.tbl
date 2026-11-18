@@ -1032,7 +1032,3 @@ fdff=詩
 
 # --- Dialogue Control Codes & Item Tags ---
 fe00=<wait_auto>
-48e1=[Sword]
-48e2=[Axe]
-48e6=[Shield]
-48f8=[Armor]

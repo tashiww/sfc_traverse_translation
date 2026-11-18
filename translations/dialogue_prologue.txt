@@ -117,7 +117,7 @@ you will grow up to be.
 {"str_num": 13, "bank": "0xDB", "str_pos": "0x1BAC73", "length": 72, "term": "<end_scene>", "table": "prologue"}
 #ロザンヌ
 # 私は火の女神ロザンヌ。私の質問に答え
-#てください。あなた[Armor]が火事になった。
+#てください。あなたの家が火事になった。
 # 助けられるのは一人だけ。
 Rosanne
 I am Rosanne, Goddess of Fire.
